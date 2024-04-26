@@ -1,0 +1,54 @@
+{
+    "studenten": [
+        {
+            "naam": "Alice",
+            "leeftijd": 22,
+            "specialisatie": "Frontend"
+        },
+        {
+            "naam": "Bob",
+            "leeftijd": 23,
+            "specialisatie": "Backend"
+        },
+        {
+            "naam": "Charlie",
+            "leeftijd": 21,
+            "specialisatie": "Frontend"
+        },
+        {
+            "naam": "David",
+            "leeftijd": 24,
+            "specialisatie": "Backend"
+        },
+        {
+            "naam": "Eva",
+            "leeftijd": 20,
+            "specialisatie": "Frontend"
+        },
+        {
+            "naam": "Frank",
+            "leeftijd": 22,
+            "specialisatie": "Backend"
+        },
+        {
+            "naam": "Grace",
+            "leeftijd": 23,
+            "specialisatie": "Frontend"
+        },
+        {
+            "naam": "Henry",
+            "leeftijd": 21,
+            "specialisatie": "Backend"
+        },
+        {
+            "naam": "Ivy",
+            "leeftijd": 22,
+            "specialisatie": "Frontend"
+        },
+        {
+            "naam": "Jack",
+            "leeftijd": 24,
+            "specialisatie": "Backend"
+        }
+    ]
+}
