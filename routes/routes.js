@@ -1,3 +1,5 @@
+import connectDB from "../config/db.js"
+
 export default function (app) {
     app.get('/', async (req, res) => {
         res.render('pages/index', { title: 'Home of techGirlsss', layouts: 'default.ejs' },)
@@ -5,6 +7,7 @@ export default function (app) {
 
     app.get('/login', async (req, res) => {
         res.render('pages/login', { title: 'Login' })
+        connectDB();
     })
 
     app.get('/register', async (req, res) => {

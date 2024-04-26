@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import routes from './routes/routes.js'
 import expressLayouts from 'express-ejs-layouts'
+
 dotenv.config()
 
 const app = express()
@@ -15,5 +16,5 @@ app.use(expressLayouts)
 routes(app)
 
 app.listen(port, function () {
-    console.log(`Example app listening on port http://localhost:${port}`)
+    console.log(`De app werkt op http://localhost:${port}`)
 });
