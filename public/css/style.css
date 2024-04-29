@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --white: #d9d9d9;
+    --black: #1f1f1f;
+
+    --padding: 1em;
+    --margin: 1em;
+    --border-radius: 0.5em;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1f1f1f;
+        --black: #d9d9d9;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--white);
+    color: var(--black);
+}
+
+header,
+main,
+footer {
+    padding: var(--padding);
+}

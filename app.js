@@ -2,6 +2,7 @@ import express from 'express'
 import dotenv from 'dotenv'
 import routes from './routes/routes.js'
 import expressLayouts from 'express-ejs-layouts'
+import connectDB from "./config/db.js"
 
 dotenv.config()
 
@@ -17,4 +18,9 @@ routes(app)
 
 app.listen(port, function () {
     console.log(`De app werkt op http://localhost:${port}`)
+    try {
+        connectDB();
+    } catch (err) {
+        console.error(err.message);
+    }
 });
