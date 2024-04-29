@@ -22,7 +22,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
+    - name: Install dependencies
+      run: npm install
+
+    - name: Install Gulp
+      run: npm install --save-dev gulp
+
     - name: Build
-      run: |
-        npm install
-        gulp
+      run: gulp
