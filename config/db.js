@@ -1,24 +1,23 @@
 import mongoose from "mongoose"
-import dotenv from 'dotenv'
 
-dotenv.config()
+export default async function connectDB(url = process.env.mongoURI || null) {
+    if (!url) {
+        console.log("Geen MONOGO_URI gevonden in .env bestand. Voeg deze toe en probeer opnieuw.");
+        return
+    }
 
-export default function connectDB() {
-    const url = process.env.mongoURI
+    const dbConnection = mongoose.connection
+    dbConnection.on("error", (err) => {
+        console.log(`connection error: ${err}`)
+    })
+
+    dbConnection.once("open", (_) => {
+        console.log(`Database connected: ${url}`)
+    })
 
     try {
-        mongoose.connect(url);
+        await mongoose.connect(url);
     } catch (err) {
-        console.error(err.message);
-        process.exit(1);
+        console.log(`Error connecting to the database: ${err}`);
     }
-    const dbConnection = mongoose.connection;
-    dbConnection.once("open", (_) => {
-        console.log(`Database connected: ${url}`);
-    });
-
-    dbConnection.on("error", (err) => {
-        console.error(`connection error: ${err}`);
-    });
-    return;
 }

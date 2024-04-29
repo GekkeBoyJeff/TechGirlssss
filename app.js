@@ -7,20 +7,15 @@ import connectDB from "./config/db.js"
 dotenv.config()
 
 const app = express()
-const port = process.env.port
+const port = process.env.port || 3000
 
 app.set('view engine', 'ejs')
 app.set('layout', 'layouts/default');
-app.use(express.static('public'))
-app.use(expressLayouts)
+app.use(express.static('public'), expressLayouts)
 
 routes(app)
 
 app.listen(port, function () {
     console.log(`De app werkt op http://localhost:${port}`)
-    try {
-        connectDB();
-    } catch (err) {
-        console.error(err.message);
-    }
+    connectDB();
 });
