@@ -9,9 +9,9 @@
         <%- body %>
     </main>
     <%- include('../partials/footer'); %>
-    <% if (script) { %>
-        <% script.forEach(function(scripts) { %>
-            <script src="/js/<%= scripts %>.js"></script>
+    <% if (scripts) { %>
+        <% scripts.forEach(function(script) { %>
+            <script src="js/<%= script %>.js"></script>
         <% }) %>
     <% } %>
 </body>
