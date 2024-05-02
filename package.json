@@ -1,10 +1,10 @@
 {
-  "name": "my-app",
+  "name": "techGirlssss",
   "version": "1.0.0",
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js"
+    "dev": "nodemon --inspect app.js"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

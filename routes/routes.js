@@ -1,3 +1,5 @@
+import pageNotFoundHandler from '../middlewares/404Handler.js'; 
+
 const routes = {
     '/' : { view: 'pages/index', title: 'Home of techGirlsss', layouts: 'default.ejs', scripts: ['script', 'test'] },
     '/login' : { view: 'pages/login', title: 'Login', scripts: null },
@@ -12,4 +14,6 @@ export default function (app) {
             res.render(route.view, route); // route is an object with view, title, layouts, and scripts properties
         });
     }
+
+    app.use(pageNotFoundHandler); // if no route is found, the 404Handler is called, which renders the 404 page
 }
