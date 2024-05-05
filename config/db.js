@@ -17,6 +17,7 @@ export default async function connectDB(url = process.env.mongoURI || null) {
 
     try {
         await mongoose.connect(url);
+        // console.log(mongoose.connection)
     } catch (err) {
         console.log(`Error connecting to the database: ${err}`);
     }
