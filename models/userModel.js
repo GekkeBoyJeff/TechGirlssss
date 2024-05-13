@@ -7,6 +7,12 @@ const userSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
+    username: {
+        type: String,
+        required: true,
+        unique: true,
+        trim: true
+    },
     password: {
         type: String,
         required: true,
@@ -18,6 +24,10 @@ const userSchema = new mongoose.Schema({
         default: '',
         required: false
     },
+    date: {
+        type: Date,
+        default: Date.now
+    }
 }, {
     timestamps: true
 })

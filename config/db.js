@@ -1,5 +1,8 @@
 import mongoose from "mongoose"
 
+mongoose.set("strictQuery", false);
+// https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose
+
 export default async function connectDB(url = process.env.mongoURI || null) {
     if (!url) {
         console.log("Geen MONOGO_URI gevonden in .env bestand. Voeg deze toe en probeer opnieuw.");
