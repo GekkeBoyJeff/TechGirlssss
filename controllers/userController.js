@@ -1,4 +1,5 @@
 import User from '../models/userModel.js'
+import bcrypt from 'bcrypt'
 
 export async function registerUser(req, res) {
     console.log('start registerUser', req.body)
@@ -23,4 +24,15 @@ export async function registerUser(req, res) {
     }
 
     res.redirect('/')
+}
+
+export async function encryptPassword(req, res) {
+    try {
+        const salt = await bcrypt.genSalt(10);
+        const hashedPassword = await bcrypt.hash(req.body.password, salt);
+        console.log('hashedPassword', hashedPassword);
+        return hashedPassword;
+    } catch (err) {
+        console.error(err);
+    }
 }
