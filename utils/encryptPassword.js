@@ -9,6 +9,5 @@ export function encryptPassword(password) {
     }
 
     const hash = bcrypt.hashSync(password, saltRounds);
-    console.log('hash', hash)
     return hash;
 }

@@ -15,7 +15,6 @@ export async function registerUser(req, res) {
             password: hash,
         })
         await newUser.save()
-        console.log('User saved', newUser)
     }
     catch (err) {
         console.error(err);
