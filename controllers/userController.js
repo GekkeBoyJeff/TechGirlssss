@@ -3,15 +3,6 @@ import { encryptPassword } from '../utils/encryptPassword.js'
 import { decryptPassword } from '../utils/decryptPassword.js'
 import { validate } from '../utils/inputValidation.js'
 
-function renderError(res, route, errors) {
-    res.render(`pages${route}`, { 
-        errors,
-        title: route.title,
-        scripts: route.scripts,
-        functions: route.functions  
-    })
-}
-
 export async function registerUser(req, res) {
     const validationErrors = validate(req.body, req.route)
     if (validationErrors) {
@@ -64,4 +55,13 @@ export async function loginUser(req, res) {
         console.error(err)
         renderError(res, '/login', [{ msg: 'An error occurred while logging in' }])
     }
+}
+
+function renderError(res, route, errors) {
+    res.render(`pages${route}`, { 
+        errors,
+        title: route.title,
+        scripts: route.scripts,
+        functions: route.functions  
+    })
 }
