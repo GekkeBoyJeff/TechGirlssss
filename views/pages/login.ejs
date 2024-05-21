@@ -1,12 +1,14 @@
 <section>
     <h1>Login</h1>
+    <%- include('../partials/components/errors') %>
     <form action="/login" method="post">
         <label for="email">Email</label>
         <input type="email" id="email" name="email">
 
         <label for="password">Password</label>
-        <input type="password" id="password" name="password">
-    <button type="submit">Login</button>
+        <input type="password" id="password" name="password" minLength="6">
+        
+        <button type="submit">Login</button>
 </form>
 
 <a href="/register">Register</a>
