@@ -24,4 +24,4 @@ app.use(pageNotFoundHandler)
 app.listen(port, function () {
     console.log(`De app werkt op http://localhost:${port}`)
     connectDB()
-});
+})

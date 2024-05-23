@@ -1,14 +1,8 @@
 import User from '../models/userModel.js'
 import { encryptPassword } from '../utils/encryptPassword.js'
 import { decryptPassword } from '../utils/decryptPassword.js'
-import { validate } from '../utils/inputValidation.js'
 
 export async function registerUser(req, res) {
-    const validationErrors = validate(req.body, req.route)
-    if (validationErrors) {
-        renderError(res, req.path, validationErrors)
-        return
-    }
     try {
         const user = await User.findOne({ email: req.body.email })
         if (user) {
@@ -22,20 +16,15 @@ export async function registerUser(req, res) {
             password: hash,
         })
         await newUser.save()
+        res.redirect(req.url)
     }
     catch (err) {
         console.error(err)
-        renderError(res, '/register', [{ msg: 'An error occurred while registering' }])
+        renderError(res, req.path , [{ msg: 'An error occurred while registering' }])
     }
-    res.redirect('/login')
 }
 
 export async function loginUser(req, res) {
-    const validationErrors = validate(req.body, req.route)
-    if (validationErrors) {
-        renderError(res, req.path, validationErrors)
-        return
-    }
     try {
         const user = await User.findOne({ email: req.body.email })
         if (!user) {
@@ -44,7 +33,7 @@ export async function loginUser(req, res) {
         }
         const isMatch = decryptPassword(req.body.password, user.password )
         if (!isMatch) {
-            renderError(res, '/login', [{ msg: 'Incorrect password' }])
+            renderError(res, req.url, [{ msg: 'Incorrect password' }])
             return
         }
 
@@ -53,11 +42,11 @@ export async function loginUser(req, res) {
     }
     catch (err) {
         console.error(err)
-        renderError(res, '/login', [{ msg: 'An error occurred while logging in' }])
+        renderError(res, req.url, [{ msg: 'An error occurred while logging in' }])
     }
 }
 
-function renderError(res, route, errors) {
+function renderError(res, route, errors) { 
     res.render(`pages${route}`, { 
         errors,
         title: route.title,

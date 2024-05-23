@@ -8,14 +8,16 @@ const messages = {
 }
 
 export function validate(data, route) {
+  console.log(data)
 
   let rules = {
-    email: 'required|email',
-    password: 'required|min:6|regex:/[A-Z]/|regex:/\d/|regex:/[^a-zA-Z0-9]/',
+    email: 'required|email|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
+    password: 'required|min:6',
   }
   
   if (route.path !== '/login') {
     rules.username = 'required|min:3|regex:/^[^\\s]*$/'
+    rules.password += '|regex:/[A-Z]/|regex:/\d/|regex:/[^a-zA-Z0-9]/'
   }
 
   const validation = new Validator(data, rules, messages)

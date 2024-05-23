@@ -15,7 +15,7 @@ export default async function connectDB(url = process.env.mongoURI || null) {
     })
 
     dbConnection.once("open", (_) => {
-        console.log(`Database connected: ${url}`)
+        // console.log(`Database connected: ${url}`)
     })
 
     try {
