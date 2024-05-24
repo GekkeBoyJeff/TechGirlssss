@@ -24,6 +24,10 @@ const userSchema = new mongoose.Schema({
         default: '',
         required: false
     },
+    completedWelcome:{
+        type: Boolean,
+        default: false
+    },
     date: {
         type: Date,
         default: Date.now
