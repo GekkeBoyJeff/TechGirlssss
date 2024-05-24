@@ -1,12 +1,19 @@
 import User from '../models/userModel.js'
 import { encryptPassword } from '../utils/encryptPassword.js'
 import { decryptPassword } from '../utils/decryptPassword.js'
+import { errorReporter } from './formErrorHandler.js'
+import { validate } from '../utils/inputValidation.js'
 
 export async function registerUser(req, res) {
     try {
+        const errors = validate(req.body, req.route)
+        if (errors) {
+            errorReporter(req, res, errors)
+            return
+        }
         const user = await User.findOne({ email: req.body.email })
         if (user) {
-            renderError(res, req.url, [{ msg: 'User already exists' }])
+            errorReporter(req, res, [{ msg: 'User already exists' }, true])
             return
         }
         const hash = encryptPassword(req.body.password)
@@ -16,41 +23,51 @@ export async function registerUser(req, res) {
             password: hash,
         })
         await newUser.save()
-        res.redirect(req.url)
+        console.log('User registered', newUser)
+        res.redirect('/login')
     }
     catch (err) {
         console.error(err)
-        renderError(res, req.path , [{ msg: 'An error occurred while registering' }])
+        errorReporter(req, res, [{ msg:'An error occurred while registering' }, true])
     }
 }
 
 export async function loginUser(req, res) {
     try {
+        const errors = validate(req.body, req.route)
+        if (errors) {
+            errorReporter(req, res, errors)
+            return
+        }
         const user = await User.findOne({ email: req.body.email })
         if (!user) {
-            renderError(res, req.url, [{ msg: 'User does not exist' }])
+            errorReporter(req, res, [{ msg: 'User does not exist' }, true])
             return
         }
         const isMatch = decryptPassword(req.body.password, user.password )
         if (!isMatch) {
-            renderError(res, req.url, [{ msg: 'Incorrect password' }])
+            errorReporter(req, res, [{ msg: 'Incorrect password' }, true])
             return
         }
 
         console.log('User logged in', user)
+        console.log('User id', user._id)
+        req.session.userId = user._id
         res.redirect('/')
     }
     catch (err) {
         console.error(err)
-        renderError(res, req.url, [{ msg: 'An error occurred while logging in' }])
+        errorReporter(req, res, [{ msg: 'An error occurred while logging in' }, true])
     }
 }
 
-function renderError(res, route, errors) { 
-    res.render(`pages${route}`, { 
-        errors,
-        title: route.title,
-        scripts: route.scripts,
-        functions: route.functions  
+export const logoutUser = (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            console.error(err)
+            return
+        }
+        res.clearCookie('connect.sid')
+        res.redirect('/')
     })
 }

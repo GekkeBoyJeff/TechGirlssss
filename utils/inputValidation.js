@@ -8,10 +8,11 @@ const messages = {
 }
 
 export function validate(data, route) {
-  console.log(data)
+
+  console.log('Data to validate:', data) // Add this line
 
   let rules = {
-    email: 'required|email|regex:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/',
+    email: 'required|email',
     password: 'required|min:6',
   }
   
@@ -25,6 +26,6 @@ export function validate(data, route) {
   if (validation.fails()) {
     const errors = validation.errors.all()
     console.log(errors)
-    return Object.keys(errors).map((key) => ({ field: key, msg: errors[key] }))}
-  return null
+    return Object.keys(errors).map((key) => ({ field: key, msg: errors[key] }))
+  }
 }
