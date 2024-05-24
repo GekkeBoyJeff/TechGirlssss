@@ -9,7 +9,7 @@ const messages = {
 
 export function validate(data, route) {
 
-  console.log('Data to validate:', data) // Add this line
+  console.log('Data to validate:', data) 
 
   let rules = {
     email: 'required|email',
