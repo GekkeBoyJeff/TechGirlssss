@@ -16,7 +16,7 @@ const port = process.env.port || 3000
 
 app.set('view engine', 'ejs')
 app.set('layout', 'layouts/default')
-app.use(express.static('public'), expressLayouts, express.urlencoded({ extended: true }), express.json())
+app.use(express.static('static'), expressLayouts, express.urlencoded({ extended: true }), express.json())
 
 sessionMiddleware(app)
 app.use(fetchUserData)
