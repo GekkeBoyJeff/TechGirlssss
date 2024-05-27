@@ -17,7 +17,7 @@ export function validate(data, route) {
   }
   
   if (route.path !== '/login') {
-    rules.username = 'required|min:3|regex:/^[^\\s]*$/'
+    rules.name = 'required|min:2' 
     rules.password += '|regex:/[A-Z]/|regex:/\d/|regex:/[^a-zA-Z0-9]/'
   }
 
