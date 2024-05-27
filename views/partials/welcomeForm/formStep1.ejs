@@ -1,0 +1,15 @@
+<h1>Welcome <%= user.name %></h1>
+<form action="/Welcome" method="post">
+    <fieldset>
+        <label for="age">Hi, my name is <span><% user.name %></span>, I'm </label>
+        <input type="number" id="age" name="age">
+        <label for="age">years old.</label>
+    </fieldset>
+    <fieldset>
+        <label for="country">I live in</label>
+        <input type="text" id="country" name="country">
+        <label for="language">and I speak</label>
+        <input type="text" id="language" name="language">
+    </fieldset>
+    <button type="submit">Next</button>
+</form>
