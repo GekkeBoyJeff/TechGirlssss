@@ -13,7 +13,7 @@ export default async function fetchUserData(req, res, next){
                 currentStep: user.currentStep
             }
 
-            if(!user.introduction){
+            if(user.introduction == false){
                 console.log('introduction not completed yet')
                 if(req.originalUrl !== '/Welcome'){
                     return res.redirect('/Welcome')
