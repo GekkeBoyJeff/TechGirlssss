@@ -19,8 +19,10 @@ export async function registerUser(req, res) {
         const hash = encryptPassword(req.body.password)
         const newUser = new User({
             email: req.body.email,
-            username: req.body.username,
+            name: req.body.name,
             password: hash,
+            completedWelcome: false,
+            currentStep: 0
         })
         await newUser.save()
         console.log('User registered', newUser)

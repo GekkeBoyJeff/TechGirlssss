@@ -1,5 +1,5 @@
 import {routes} from './routes.js'
-import xssMiddleware from '../middlewares/xssMiddleware.js';
+import xssMiddleware from '../middlewares/xssMiddleware.js'
 
 export default function(app){
     for (const [path, route] of Object.entries(routes)) {

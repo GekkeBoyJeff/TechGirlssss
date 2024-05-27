@@ -7,10 +7,9 @@ const userSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
-    username: {
+    name: {
         type: String,
         required: true,
-        unique: true,
         trim: true
     },
     password: {
@@ -19,14 +18,13 @@ const userSchema = new mongoose.Schema({
         trim: true,
         minlength: 6
     },
-    profilePic: {
-        type: String,
-        default: '',
-        required: false
-    },
     completedWelcome:{
         type: Boolean,
         default: false
+    },
+    currentStep:{
+        type: Number,
+        default: 0
     },
     date: {
         type: Date,
