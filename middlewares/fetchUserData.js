@@ -1,8 +1,8 @@
 import User from '../models/userModel.js'
 
 export default async function fetchUserData(req, res, next){
-    if(req.session.userId && req.originalUrl !== '/favicon.ico'){
-        console.log("fetchUserData middleware triggered for:", req.originalUrl); 
+    if(req.session.userId && req.originalUrl !== '/favicon.ico' && req.originalUrl !== '/logout'){
+        console.log("fetchUserData middleware triggered for: ", req.originalUrl); 
         try{
             const user = await User.findById(req.session.userId)
             res.locals.user = {

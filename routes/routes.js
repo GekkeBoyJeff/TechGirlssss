@@ -8,5 +8,5 @@ export const routes = {
     '/about': { view: 'pages/about', title: 'About', scripts: [], functions: [], middleware: [], errors: [] },
     '/contact': { view: 'pages/contact', title: 'Contact', scripts: [], functions: [], errors: [] },
     '/logout': { title: 'Logout', scripts: [], functions: [logoutUser], errors: [], onlyPost: true },
-    '/Welcome': { view: 'pages/Welcome', title: 'Introduction', scripts: [], functions: [], errors: [] },
+    '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [], errors: [], requiresAuth: true },
 }
