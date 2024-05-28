@@ -1,4 +1,3 @@
 export async function fetchApi(req, res){
-    console.log("Hoi")
-    return
+    console.log('hoi');
 }
