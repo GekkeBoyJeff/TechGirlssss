@@ -1,3 +1,24 @@
+@font-face {
+    font-family:  "NeueMontreal Bold";
+    src: url(../fonts/NeueMontreal-Bold.otf);
+}
+
+@font-face {
+    font-family:  "NeueMontreal Medium";
+    src: url(../fonts/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+    font-family: "NeueMontreal Regular";
+    src: url(../fonts/NeueMontreal-regular.otf);
+}
+
+@font-face {
+    font-family: "PPMondwest Regular";
+    src: url(../fonts/PPMondwest-Regular.otf);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -27,13 +48,64 @@ body {
     color: var(--black);
 }
 
-header,
-main,
-footer {
-    padding: var(--padding);
-}
 
 /*///////////////*/
 /*💻💻BANNER HOMEPAGE💻💻*/
 /*//////////////*/
 
+.home_banner {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+}
+
+.home_banner h1 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    z-index: 100;
+}
+
+.home_banner span {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+.home_banner p {
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    z-index: 100;
+    margin-top: 18rem;
+}
+
+.home_banner img:nth-of-type(1) {
+    width: 100%;
+    height: auto;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 0;
+}
+
+.home_banner img:nth-of-type(2) {
+    width: 100%;
+    height: auto;
+
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 0;
+}
