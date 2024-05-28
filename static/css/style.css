@@ -14,7 +14,7 @@
 /* ///////////////////////////// */
 
 :root {
-    --white: #d9d9d9;
+    --white: #ffffff;
     --black: #1f1f1f;
 
     --padding: 1em;
@@ -29,6 +29,12 @@
     }
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--white);
+    color: var(--black);
+}
+
 a {
     color: var(--black);
     text-decoration: none;
@@ -38,10 +44,9 @@ h4 {
     font-size: 2.5rem;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-    background: var(--white);
-    color: var(--black);
+.secondary-button {
+    border: 3rem var(--black);
+    border-radius: 50%;
 }
 
 header,
@@ -58,10 +63,12 @@ section.ticker {
     height: auto;
     width: 100%;
     background: var(--white);
+    padding: 1rem 0;
+    border: 1rem var(--black);
 }
 
 section.ticker a {
-    height: 2rem;
+    height: 2.875rem;
 }
 
 section.ticker svg, img {
@@ -80,6 +87,7 @@ section.ticker svg, img {
 
 article.transition {
     display: flex;
+    align-items: center;
     gap: 2rem;
 	white-space: nowrap;
 	padding: 0 100% 0 0;
