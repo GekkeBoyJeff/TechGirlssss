@@ -1,9 +1,17 @@
+/* ///////////////////// */
+/* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧*/
+/* ///////////////////// */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
 }
+
+/* //////////////////////////////*/
+/* 🫶🏼🫶🏼🫶🏼 CUSTOM PROPERTIES 🫶🏼🫶🏼🫶🏼 */
+/* ///////////////////////////// */
 
 :root {
     --white: #d9d9d9;
@@ -21,6 +29,15 @@
     }
 }
 
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     background: var(--white);
@@ -31,4 +48,48 @@ header,
 main,
 footer {
     padding: var(--padding);
+}
+
+/* ////////////////////////////////// */
+/* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
+/* ////////////////////////////////// */
+
+section.ticker {
+    height: auto;
+    width: 100%;
+    background: var(--white);
+}
+
+section.ticker a {
+    height: 2rem;
+}
+
+section.ticker svg, img {
+    height: 100%;
+}
+
+/* TICKER ANIMATION */
+@keyframes ticker {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-100%, 0, 0);
+	}
+}
+
+article.transition {
+    display: flex;
+    gap: 2rem;
+	white-space: nowrap;
+	padding: 0 100% 0 0;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	animation-name: ticker;
+	animation-duration: 20s;
+}
+
+article.transition:hover {
+	animation-play-state: paused;
+	cursor: pointer;
 }
