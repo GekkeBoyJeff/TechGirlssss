@@ -108,7 +108,7 @@ body {
     grid-column-end: 2;
     grid-row-start: 1;
     z-index: 100;
-    margin-top: 18rem;
+    margin-top: 17rem;
 }
 
 .home_banner img:nth-of-type(1) {
