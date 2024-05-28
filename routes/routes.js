@@ -1,6 +1,6 @@
 import { registerUser, loginUser, logoutUser } from '../controllers/userController.js'
 import { errorReporter } from '../controllers/formErrorHandler.js'
-import fetchApi from '../api/fetchEventbride.js' 
+import { fetchApi } from '../api/fetchEventbride.js' 
 
 export const routes = {
     '/': { view: 'pages/index', title: 'Home of techGirlsss', layouts: 'default.ejs', scripts: ['script', 'test'], functions: [fetchApi], errors: [] },
