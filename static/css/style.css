@@ -62,7 +62,7 @@ footer {
 
 section.ticker {
     height: auto;
-    width: 100%;
+    width: auto;
     background: var(--white);
     padding: 1.2rem 0;
     border-top: 0.1rem var(--black) solid;
@@ -81,13 +81,17 @@ section.ticker svg, img {
     margin-top: 0.4rem;
 }
 
+section.wrapper {
+    width: 50%;
+}
+
 /* TICKER ANIMATION */
 @keyframes ticker1 {
 	0% {
 		transform: translate3d(-20%, 0, 0);
 	}
 	100% {
-		transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-80%, 0, 0);
 	}
 }
 
@@ -96,7 +100,7 @@ section.ticker svg, img {
 		transform: translate3d(-10%, 0, 0);
 	}
 	100% {
-		transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-70%, 0, 0);
 	}
 }
 
@@ -114,28 +118,28 @@ article.transition {
     align-items: center;
     gap: 2rem;
 	white-space: nowrap;
-	padding: 0 40% 0 0;
+	padding: 0 80% 0 0;
 }
 
 article.animation1 {
     animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-name: ticker1;
-	animation-duration: 80s;
+	animation-duration: 10s;
 }
 
 article.animation2 {
     animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-name: ticker2;
-	animation-duration: 80s;
+	animation-duration: 10s;
 }
 
 article.animation3 {
     animation-iteration-count: infinite;
 	animation-timing-function: linear;
 	animation-name: ticker3;
-	animation-duration: 80s;
+	animation-duration: 10s;
 }
 
 article.transition:hover {
