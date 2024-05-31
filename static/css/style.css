@@ -45,8 +45,9 @@ h4 {
 }
 
 .secondary-button {
-    border: 3rem var(--black);
-    border-radius: 50%;
+    padding: 0.3rem 0.8rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: 2rem;
 }
 
 header,
@@ -63,12 +64,16 @@ section.ticker {
     height: auto;
     width: 100%;
     background: var(--white);
-    padding: 1rem 0;
-    border: 1rem var(--black);
+    padding: 1.2rem 0;
+    border-top: 0.1rem var(--black) solid;
 }
 
 section.ticker a {
     height: 2.875rem;
+}
+
+section.ticker a:has(h4) {
+    height: unset;
 }
 
 section.ticker svg, img {
@@ -100,4 +105,12 @@ article.transition {
 article.transition:hover {
 	animation-play-state: paused;
 	cursor: pointer;
+}
+
+section.ticker:nth-of-type(2) {
+    padding: 0.8rem 0;
+}
+
+section.ticker:last-of-type {
+    border-bottom: 0.1rem var(--black) solid;
 }
