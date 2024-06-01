@@ -1,5 +1,6 @@
 import { registerUser, loginUser, logoutUser } from '../controllers/userController.js'
 import { errorReporter } from '../controllers/formErrorHandler.js'
+import { welcomeHandler } from '../controllers/welcomeHandler.js'
 
 export const routes = {
     '/': { view: 'pages/index', title: 'Home of techGirlsss', layouts: 'default.ejs', scripts: ['script', 'test'], functions: [], errors: [] },
@@ -8,5 +9,5 @@ export const routes = {
     '/about': { view: 'pages/about', title: 'About', scripts: [], functions: [], middleware: [], errors: [] },
     '/contact': { view: 'pages/contact', title: 'Contact', scripts: [], functions: [], errors: [] },
     '/logout': { title: 'Logout', scripts: [], functions: [logoutUser], errors: [], onlyPost: true },
-    '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [], errors: [], requiresAuth: true },
+    '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [welcomeHandler], errors: [], requiresAuth: true },
 }

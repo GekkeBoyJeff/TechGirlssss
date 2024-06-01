@@ -35,8 +35,7 @@ export const registerUser = async (req, res) => {
 }
 
 export const loginUser = async (req, res) => {
-    console.log('hey' + req)
-    if(!req.body.email || !req.body.password) {
+    if(req.body.email && req.body.password) {
         try {
             const errors = validate(req.body, req.route)
             if (errors) {
@@ -64,7 +63,6 @@ export const loginUser = async (req, res) => {
             errorReporter(req, res, [{ msg: 'An error occurred while logging in' }, true])
         }
     }
-    
 }
 
 export const logoutUser = (req, res) => {
