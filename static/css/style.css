@@ -124,31 +124,42 @@ p {
 
 /* Section card + titel etc */
 .popularEvents{
-margin-left: 4.5rem;
+/* margin-left: 4.5rem; */
 display: flex;
 flex-direction: column;
 gap: 1rem;
-
 }
 
 /* 3x Multiple Cards*/
-.popularEvents article{
+.popularEvents ul{
+
+    /* padding-left: 4.5rem; */
+    padding-right: 4.5rem;
+    
     display: flex;
     gap: 2.8rem ;
-    flex-wrap: nowrap;
-    overflow-x: hidden;
-    overflow-x: scroll;
-    flex: 0 0 auto;
+    overflow-x: auto;
+
+    list-style: none;
+    scroll-snap-type: x mandatory;  
+    scroll-padding: 4.5rem;
+
+    /* margin-left: -4.5rem; */
 }
 
+.popularEvents ul li{
+scroll-snap-align: start;   
+flex-shrink: 0;   
+
+}
 
 /* Card + HeartButton*/
-.popularEvents article article{
-    width: 400px;
+.popularEvents ul li article{
+    width: 24rem; 
 }
 
 /* Card image + text*/
-.popularEvents article article a {
+.popularEvents article a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -157,11 +168,20 @@ gap: 1rem;
 }
 
 /* Image event */
-.popularEvents article article img{
+.popularEvents article img{
     height: 15.5rem;
     width: 100%;
     border-radius: 1.8rem;
     margin-bottom: 0.5rem;
     object-fit: cover; 
     border: 0.15rem solid var(--black);
+}
+
+
+.popularEvents > *:not(ul) {
+    margin: 0 4.5rem;
+}
+
+.popularEvents ul li:first-of-type article {
+    margin-left: 4.5em;
 }
