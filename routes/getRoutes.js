@@ -10,8 +10,9 @@ export default function (app) {
         }
         if (!route.onlyPost) {
             app.get(path, middlewares, (req, res) => { 
+                console.log(req.acceptsLanguages()) // get user language https://expressjs.com/en/api.html#req.acceptsLanguages
                 res.render(route.view, route);
-            });
+            })
         }
     }
 }
