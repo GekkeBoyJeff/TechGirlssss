@@ -159,3 +159,8 @@ section.ticker:last-of-type {
 section.ticker:nth-of-type(2) article.transition {
     gap: 0.6rem;
 }
+
+.dots {
+    font-size: 2.5rem;
+    height: 3rem;
+}
