@@ -292,10 +292,19 @@ p {
 
 /* Section card + titel etc */
 .popularEvents{
-/* margin-left: 4.5rem; */
-display: flex;
-flex-direction: column;
-gap: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center
+}
+
+.popularEvents h2{
+    flex: 50%;
+}
+
+/* p naar volgende regel */
+.popularEvents p{
+    flex: 50%;
 }
 
 /* 3x Multiple Cards*/
