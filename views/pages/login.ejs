@@ -1,15 +1,37 @@
-<section>
-    <h1>Login</h1>
-    <%- include('../partials/components/errors') %>
-    <form action="/login" method="post">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email">
+<section class="loginForm">
 
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" minLength="6">
+        <h1>Sign in and join us</h1>
+        <p>Already have an account? <span>Sign in</span></p>
+        <!-- <%- include('../partials/components/errors') %> -->
+        <form action="/login" method="post">
+            <label for="Naam">Name</label>
+            <input type="naam" id="naam" name="naam">
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minLength="6">
+
+            <div>
+                <input type="checkbox" id="checkbox" name="checkbox">
+                <label for="scales">I agree to the terms and Privacy policy</label>
+            </div>
+            
+            <button type="submit">Let's join</button>
+        </form>
+
         
-        <button type="submit">Login</button>
-</form>
+            <p>or</p>
 
-<a href="/register">Register</a>
+            <ul>
+                <li></li>
+            </ul>
+        
+
+        
+        
+
+        <!-- <a href="/register">Let’s join</a> -->
+
 </section>

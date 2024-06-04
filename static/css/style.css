@@ -194,3 +194,101 @@ flex-shrink: 0;
 /*///////////////////////////////////////////////////////////////////////////*/
 /*********************📸📸SocialMediaWall📸📸*******************************/
 /*//////////////////////////////////////////////////////////////////////*/
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*********************🪪🪪Login🪪🪪*******************************/
+/*//////////////////////////////////////////////////////////////////////*/
+
+.loginForm h1{
+    font-weight: 300;
+    font-size: 3rem; 
+}
+
+
+.loginForm{
+    background-image: url("../images/girlwithart.jpeg");
+    background-color: antiquewhite;
+    background-size: 50%;
+    background-position: right center; /* Positioneert de afbeelding aan de rechterkant en in het midden */
+    background-repeat: no-repeat;
+
+    margin: 4.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    border-radius: 50px;
+}
+
+.loginForm h1{
+    padding-top: 3.5rem;
+}
+
+.loginForm h1,
+.loginForm p,
+.loginForm form{
+    padding-left: 4.5rem;
+}
+
+
+/* hele form */
+.loginForm form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 40%;
+}
+
+/* invoerveld */
+.loginForm form input{
+    border: none;
+    border-bottom: 1px solid black; /* standaard border dikte in de root? */
+    background-color: transparent;
+    margin-bottom: 1rem;
+}
+
+/* label titel */
+.loginForm form label{
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    font-weight: 300; /* text dikgedrukt, lukt niet? */
+    letter-spacing: 1.5px;
+
+    display: inline-block;
+    vertical-align: middle;
+    
+} 
+
+/* let's join button */
+.loginForm form button{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+    align-self: center;
+}
+
+.loginForm form div{
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+}
+
+input[type="checkbox"] {
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid green;
+    border-radius: 0.5rem;
+  }
+  
