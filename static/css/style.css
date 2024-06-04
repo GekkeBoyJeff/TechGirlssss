@@ -40,6 +40,9 @@
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
+
+    --medium: 100;
+    --spacing: 0.7px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -72,6 +75,16 @@ h4 {
     border-radius: 2rem;
 }
 
+.tertiary-button {
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+}
+
 h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
@@ -92,7 +105,7 @@ p {
     font-family: "NeueMontreal Regular";
     font-size: 1rem;
     line-height: 23px;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
 }
 
 /*///////////////*/
@@ -352,13 +365,29 @@ section.ticker:nth-of-type(2) article.transition {
 footer {
     color: var(--white);
     background-color: var(--black);
+}
 
+footer section {
+    display: grid;
+    grid-template-columns: 0.07fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
+}
+
+footer article:first-of-type {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+footer article:first-of-type p {
+    margin-top: 0.6rem;
 }
 
 footer article:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-row-start: 4;
     display: flex;
     justify-content: flex-start;
-    gap: 4rem;
+    gap: 15%;
 }
 
 footer a {
@@ -369,10 +398,48 @@ footer p {
     font-size: 0.938rem;
 }
 
-footer ul:nth-of-type(3) {
-    display: flex;
+footer svg {
+    width: 2rem;
+    height: 2rem;
 }
 
-footer ul li:first-of-type p {
+footer article:nth-of-type(2) div:nth-of-type(3) ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+}
+
+footer article:nth-of-type(2) ul li:first-of-type p {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.grow {
+    flex-basis: 100%;
+}
+
+.break {
+    flex-grow: 1;
+}
+
+.input-footer {
+    width: 19rem;
+    height: 2rem;
+    border: none;
+    border-bottom: 0.063rem var(--white) solid;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.6rem;
+    margin: 1rem 1rem 1rem 0;
+    outline: none;
+}
+
+.tech-girls {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
