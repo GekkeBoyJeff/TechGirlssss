@@ -80,10 +80,11 @@ nav ul {
 }
 
 nav ul li a {
+    cursor: pointer;
     text-decoration: none;
     color: var(--black);
     font-family: var(--titel1);
-    transition: color .5s ease;
+    transition: color .3s ease;
 }
 
 nav ul li a:hover {
@@ -102,16 +103,27 @@ li a svg {
     flex-direction: column;
     position: absolute;
     z-index: 102;
-    padding: 1.5em 2.5em 1.5em 1.5em;
+
+    padding: 1.5em 3em 1.5em 1.5em;
     overflow: hidden;
     top: 4em;
-    background: white;
-    border-radius: 1em;
     white-space: nowrap;
+
+    background: white;
+    border-radius: 0.8em;
+    transition: all .25s ease, opacity .25s ease;
 }
 
 .hidden {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
 }
 
 
@@ -206,4 +218,9 @@ p {
     grid-row-start: 1;
     grid-row-end: 2;
     z-index: 0;
+}
+
+
+@media screen {
+    
 }
