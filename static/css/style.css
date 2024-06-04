@@ -27,8 +27,16 @@
 }
 
 :root {
-    --white: #d9d9d9;
+    /* Colours */
+    --white: #ffffff;
     --black: #1f1f1f;
+    --peach: #F2B199;
+
+
+    /* fonts */
+    --titel1: "NeueMontreal Medium";
+    --titel2: "PPMondwest Regular";
+    --text: "NeueMontreal Regular";
 
     --padding: 1em;
     --margin: 1em;
@@ -38,7 +46,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --white: #1f1f1f;
-        --black: #d9d9d9;
+        --black: #ffffff;
     }
 }
 
@@ -47,6 +55,58 @@ body {
     background: var(--white);
     color: var(--black);
 }
+
+/*///////////////*/
+/*🤩🤩navigatie menu🤩🤩*/
+/*///////////////*/
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: white;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    gap: 1em;
+    flex-wrap:wrap;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--titel1);
+}
+
+li a svg {
+    top: -1em;
+}
+
+/* dropdown menu */
+.mega-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 102;
+    padding: 1.5em 2.5em 1.5em 1.5em;
+    overflow: hidden;
+    top: 4em;
+    background: white;
+    border-radius: 1em;
+    white-space: nowrap;
+}
+
+.hidden {
+    display: none;
+}
+
 
 h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
@@ -67,7 +127,7 @@ h1 {
     font-size: 1rem;
     line-height: 23px;
     letter-spacing: 1.5px;
-    background-color: #F2B199;
+    background-color: var(--peach);
     text-decoration: none;
     color: black;
     transition: background-color .5s ease, transform .5s
@@ -84,7 +144,7 @@ h1 {
 
 /*titel tekst 2*/
 .pixel_text {
-    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    font-family: var(--titel2);
     font-size: 4rem;
 }
 
@@ -98,6 +158,16 @@ p {
 /*///////////////*/
 /*💻💻BANNER HOMEPAGE💻💻*/
 /*//////////////*/
+
+
+
+  .container_primarybtn {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 2rem;
+}
 
 .home_banner {
     margin: 0;
