@@ -86,8 +86,10 @@ nav ul li a {
 }
 
 li a svg {
-    top: -1em;
+    margin-right: 0.5em;
+    vertical-align: middle; 
 }
+
 
 /* dropdown menu */
 .mega-menu {
@@ -112,6 +114,13 @@ h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 4rem;
+}
+
+p {
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
 }
 
 /*///////////////*/
@@ -148,18 +157,10 @@ h1 {
     font-size: 4rem;
 }
 
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
-}
 
 /*///////////////*/
 /*💻💻BANNER HOMEPAGE💻💻*/
 /*//////////////*/
-
-
 
   .container_primarybtn {
     grid-column-start: 1;
