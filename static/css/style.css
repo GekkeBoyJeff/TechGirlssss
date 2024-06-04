@@ -358,6 +358,24 @@ section.ticker:nth-of-type(2) article.transition {
     height: 3rem;
 }
 
+/* /////////////////// */
+/* 📷📷📷 PROFILE 📷📷📷 */
+/* /////////////////// */
+
+section.profile img:first-of-type {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+section.profile div {
+    border-radius: 2.5rem;
+}
+
+section.profile article {
+    display: flex;
+    flex-direction: column;
+}
+
 /* ////////////////// */
 /* 👀👀👀 FOOTER 👀👀👀 */
 /* ////////////////// */
