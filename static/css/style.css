@@ -18,28 +18,6 @@
     src: url(../fonts/PPMondwest-Regular.otf);
 }
 
-
-@font-face {
-    font-family:  "NeueMontreal Bold";
-    src: url(../fonts/NeueMontreal-Bold.otf);
-}
-
-@font-face {
-    font-family:  "NeueMontreal Medium";
-    src: url(../fonts/NeueMontreal-Medium.otf);
-}
-
-@font-face {
-    font-family: "NeueMontreal Regular";
-    src: url(../fonts/NeueMontreal-regular.otf);
-}
-
-@font-face {
-    font-family: "PPMondwest Regular";
-    src: url(../fonts/PPMondwest-Regular.otf);
-}
-
-
 /* ///////////////////// */
 /* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧*/
 /* ///////////////////// */
@@ -72,25 +50,12 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'NeueMontreal Regular', sans-serif;
     background: var(--white);
     color: var(--black);
 }
 
-a {
-    color: var(--black);
-    text-decoration: none;
-}
-
-h4 {
-    font-size: 2.5rem;
-}
-
-.secondary-button {
-    padding: 0.3rem 0.8rem;
-    border: 0.1rem var(--black) solid;
-    border-radius: 2rem;
-}
+/* a en links kleur laten aanpassen naar tekstkleur van light/dark mode? */
 
 a {
     color: var(--black);
@@ -113,16 +78,21 @@ h1 {
     font-size: 4rem;
 }
 
+h2 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
 .pixel_text {
     font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
-    font-size: 4rem;
 }
 
 p {
     font-family: "NeueMontreal Regular";
     font-size: 1rem;
     line-height: 23px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
 }
 
 /*///////////////*/
@@ -373,4 +343,36 @@ section.ticker:nth-of-type(2) article.transition {
 .dots {
     font-size: 2.5rem;
     height: 3rem;
+}
+
+/* ////////////////// */
+/* 👀👀👀 FOOTER 👀👀👀 */
+/* ////////////////// */
+
+footer {
+    color: var(--white);
+    background-color: var(--black);
+
+}
+
+footer article:nth-of-type(2) {
+    display: flex;
+    justify-content: flex-start;
+    gap: 4rem;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer p {
+    font-size: 0.938rem;
+}
+
+footer ul:nth-of-type(3) {
+    display: flex;
+}
+
+footer ul li:first-of-type p {
+    font-weight: 300;
 }
