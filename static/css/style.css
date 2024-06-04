@@ -83,6 +83,11 @@ nav ul li a {
     text-decoration: none;
     color: var(--black);
     font-family: var(--titel1);
+    transition: color .5s ease;
+}
+
+nav ul li a:hover {
+    color: var(--peach);
 }
 
 li a svg {
