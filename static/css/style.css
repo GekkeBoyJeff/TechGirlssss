@@ -83,7 +83,7 @@ nav ul li a {
     cursor: pointer;
     text-decoration: none;
     color: var(--black);
-    font-family: var(--titel1);
+    font-family: var(--text);
     transition: color .3s ease;
 }
 
@@ -124,6 +124,10 @@ ul li:focus-within > ul,
 ul li ul:hover {
     visibility: visible;
     opacity: 1;
+}
+
+.hamburger {
+    display: none;
 }
 
 
@@ -219,6 +223,7 @@ p {
     grid-row-end: 2;
     z-index: 0;
 }
+
 
 
 @media screen {
