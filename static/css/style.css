@@ -18,28 +18,6 @@
     src: url(../fonts/PPMondwest-Regular.otf);
 }
 
-
-@font-face {
-    font-family:  "NeueMontreal Bold";
-    src: url(../fonts/NeueMontreal-Bold.otf);
-}
-
-@font-face {
-    font-family:  "NeueMontreal Medium";
-    src: url(../fonts/NeueMontreal-Medium.otf);
-}
-
-@font-face {
-    font-family: "NeueMontreal Regular";
-    src: url(../fonts/NeueMontreal-regular.otf);
-}
-
-@font-face {
-    font-family: "PPMondwest Regular";
-    src: url(../fonts/PPMondwest-Regular.otf);
-}
-
-
 /* ///////////////////// */
 /* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧*/
 /* ///////////////////// */
@@ -71,6 +49,9 @@
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
+
+    --medium: 100;
+    --spacing: 0.7px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -81,25 +62,12 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'NeueMontreal Regular', sans-serif;
     background: var(--white);
     color: var(--black);
 }
 
-a {
-    color: var(--black);
-    text-decoration: none;
-}
-
-h4 {
-    font-size: 2.5rem;
-}
-
-.secondary-button {
-    padding: 0.3rem 0.8rem;
-    border: 0.1rem var(--black) solid;
-    border-radius: 2rem;
-}
+/* a en links kleur laten aanpassen naar tekstkleur van light/dark mode? */
 
 a {
     color: var(--black);
@@ -114,6 +82,16 @@ h4 {
     padding: 0.3rem 0.8rem;
     border: 0.1rem var(--black) solid;
     border-radius: 2rem;
+}
+
+.tertiary-button {
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -122,16 +100,21 @@ h1 {
     font-size: 4rem;
 }
 
+h2 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
 .pixel_text {
     font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
-    font-size: 4rem;
 }
 
 p {
     font-family: "NeueMontreal Regular";
     font-size: 1rem;
     line-height: 23px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 /*///////////////*/
@@ -268,4 +251,90 @@ p {
     to {
         transform: translateX(-100%);
     }
+}
+
+/* ////////////////// */
+/* 👀👀👀 FOOTER 👀👀👀 */
+/* ////////////////// */
+
+footer {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+footer section {
+    display: grid;
+    grid-template-columns: 0.07fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
+}
+
+footer article:first-of-type {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+footer article:first-of-type p {
+    margin-top: 0.6rem;
+}
+
+footer article:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer p {
+    font-size: 0.938rem;
+}
+
+footer svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+footer article:nth-of-type(2) div:nth-of-type(3) ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+}
+
+footer article:nth-of-type(2) ul li:first-of-type p {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.grow {
+    flex-basis: 100%;
+}
+
+.break {
+    flex-grow: 1;
+}
+
+.input-footer {
+    width: 19rem;
+    height: 2rem;
+    border: none;
+    border-bottom: 0.063rem var(--white) solid;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.6rem;
+    margin: 1rem 1rem 1rem 0;
+    outline: none;
+}
+
+.tech-girls {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
