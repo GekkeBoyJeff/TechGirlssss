@@ -38,6 +38,10 @@
     --titel2: "PPMondwest Regular";
     --text: "NeueMontreal Regular";
 
+    /*sizes*/
+    --h1: 4rem;
+    --p: 1rem;
+
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
@@ -91,6 +95,7 @@ nav ul li a {
     text-decoration: none;
     color: var(--black);
     font-family: var(--text);
+    font-size: var(--p);
     transition: color .3s ease;
 }
 
@@ -119,8 +124,8 @@ li a svg {
 
     background: white;
     border-radius: 0.8em;
-    transition: opacity .25s ease;
-    transition-delay: 400ms;
+    transition: opacity 0.10s ease, visibility 0.10s ease;
+    transition-delay: 300ms;
 }
 
 /* Hidden state */
@@ -129,19 +134,22 @@ li a svg {
     opacity: 0;
 }
 
+
+/* dropdown hover */
 .dropdown:hover > .mega-menu,
 .dropdown:focus-within > .mega-menu,
 .mega-menu:hover,
 .mega-menu:focus-within {
     visibility: visible;
     opacity: 1;
-    transition: opacity 0.25s ease;
-    transition-delay: 0;
+    transition: opacity 0.10s ease, visibility 0.10s ease;
+    transition-delay: 0ms;
 }
 
 
 .hamburger {
     display: none;
+    cursor: pointer;
 }
 
 
@@ -240,6 +248,7 @@ p {
 
 
 
-@media screen {
+@media (max-width: 768px){
+    
     
 }
