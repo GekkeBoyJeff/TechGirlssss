@@ -123,7 +123,7 @@ h1 {
 }
 
 /*///////////////*/
-/*🧸🧸primary button🧸🧸*/
+/*🧸🧸PRIMARY BUTTON🧸🧸*/
 /*///////////////*/
 
 .primary_button {
@@ -150,7 +150,7 @@ h1 {
     background-color: black;
 }
 
-/*titel tekst 2*/
+/*TITEL TEXT 2*/
 .pixel_text {
     font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
     font-size: 4rem;
@@ -230,11 +230,13 @@ p {
     z-index: 0;
 }
 
-/* responsive mobile*/
+/*/////////////*/
+/*RESPONSIVE DEVICE*/
+/*/////////////*/
 @media (max-width: 768px ) {
 
 /*///////////////*/
-/*🧸🧸primary button🧸🧸*/
+/*🧸🧸PRIMARY BUTTON🧸🧸*/
 /*///////////////*/
     
     .primary_button {
@@ -264,7 +266,7 @@ p {
     }
 
 
-    /*basic styling*/
+    /*BASIC STYLING RESPONSIVE*/
 
     h1, .pixel_text {
         font-size: 2.2rem;
