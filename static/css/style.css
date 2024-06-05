@@ -271,16 +271,12 @@ p {
         transform: translateX(-100vw);
     }
     
-    nav ul {
-        padding: 1em 1em 0em 1em;
-    }
-    
-    nav li {
+    nav ul li {
         width: 100%;
+        padding: 1em;
     }
 
     nav ul li a {
-        top: -5em;
         padding: 0;
         margin: 0;
         
