@@ -61,7 +61,7 @@ body {
 }
 
 /*///////////////*/
-/*🤩🤩navigatie menu🤩🤩*/
+/*🤩🤩navigation menu🤩🤩*/
 /*///////////////*/
 
 header {
@@ -254,6 +254,8 @@ p {
 
 /*Responsive mobile*/
 @media (max-width: 768px) {
+
+    /* navigation menu*/
     .hamburger {
         display: block;
     }
@@ -262,17 +264,31 @@ p {
         position: absolute;
         left: 0;
         top: 0;
-        height: 100%;
+        height: 100vh;
         width: 80vw;
         z-index: 103;
         background: white;
-                transform: translateX(-100vw);
+        transform: translateX(-100vw);
+    }
+    
+    nav ul {
+        padding: 1em 1em 0em 1em;
+    }
+    
+    nav li {
+        width: 100%;
     }
 
-    nav li {
-     width: 100%;
-    padding: 1em;
-    background: gray;
+    nav ul li a {
+        top: -5em;
+        padding: 0;
+        margin: 0;
+        
+    }
+
+    .mega-menu {
+        padding: 0;
+        background: none;
     }
 
 }
