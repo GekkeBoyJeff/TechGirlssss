@@ -247,8 +247,15 @@ p {
 }
 
 
+/*Responsive mobile*/
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
 
-@media (max-width: 768px){
-    
-    
+
 }
