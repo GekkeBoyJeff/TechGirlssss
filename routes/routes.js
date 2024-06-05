@@ -10,4 +10,5 @@ export const routes = {
     '/contact': { view: 'pages/contact', title: 'Contact', scripts: [], functions: [], errors: [] },
     '/logout': { title: 'Logout', scripts: [], functions: [logoutUser], errors: [], onlyPost: true },
     '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [welcomeHandler], errors: [], requiresAuth: true },
+    '/profile': { view: 'pages/profile', title: 'Profile', scripts: [], functions: [], errors: [], requiresAuth: true },
 }
