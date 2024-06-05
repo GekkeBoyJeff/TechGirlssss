@@ -9,14 +9,10 @@ export default function (app) {
             middlewares.push(isAuthenticated);
         }
         if (!route.onlyPost) {
-            app.get(path, middlewares, async (req, res) => { 
-                if (route.functions && route.functions.length > 0) {
-                    for (const func of route.functions) {
-                        await func(req, res);
-                    }
-                }
+            app.get(path, middlewares, (req, res) => { 
+                console.log(req.acceptsLanguages()) // get user language https://expressjs.com/en/api.html#req.acceptsLanguages
                 res.render(route.view, route);
-            });
+            })
         }
     }
 }

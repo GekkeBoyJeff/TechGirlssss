@@ -19,6 +19,31 @@
 }
 
 
+@font-face {
+    font-family:  "NeueMontreal Bold";
+    src: url(../fonts/NeueMontreal-Bold.otf);
+}
+
+@font-face {
+    font-family:  "NeueMontreal Medium";
+    src: url(../fonts/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+    font-family: "NeueMontreal Regular";
+    src: url(../fonts/NeueMontreal-regular.otf);
+}
+
+@font-face {
+    font-family: "PPMondwest Regular";
+    src: url(../fonts/PPMondwest-Regular.otf);
+}
+
+
+/* ///////////////////// */
+/* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧*/
+/* ///////////////////// */
+
 * {
     margin: 0;
     padding: 0;
@@ -26,8 +51,21 @@
     list-style: none;
 }
 
+.hidden{
+    position:absolute;
+    top:-100vh;
+    left:-100vw;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+/* //////////////////////////////*/
+/* 🫶🏼🫶🏼🫶🏼 CUSTOM PROPERTIES 🫶🏼🫶🏼🫶🏼 */
+/* ///////////////////////////// */
+
 :root {
-    --white: #d9d9d9;
+    --white: #ffffff;
     --black: #1f1f1f;
 
     --padding: 1em;
@@ -46,6 +84,36 @@ body {
     font-family: 'Roboto', sans-serif;
     background: var(--white);
     color: var(--black);
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+.secondary-button {
+    padding: 0.3rem 0.8rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: 2rem;
+}
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+.secondary-button {
+    padding: 0.3rem 0.8rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: 2rem;
 }
 
 h1 {
@@ -209,4 +277,103 @@ p {
 
 
     
+}
+
+/* ////////////////////////////////// */
+/* //////  jeffrey's 'ticker' /////// */
+/* ////////////////////////////////// */
+
+.sponsors {
+    overflow: hidden;
+}
+
+.sponsors img {
+    height: 70%;
+}
+
+.sponsors a, .sponsors a svg, .sponsors a {
+    height: 3em;
+    display: flex;
+    align-items: center;
+}
+
+.sponsors h3 {
+    font-size: 2em;
+    padding: .4em;
+    border: 1px solid black;
+    border-radius: 1em;
+    width: max-content;
+}
+
+.sponsors .unset h3 {
+    border: none;
+    font-size: 2.5em;
+}
+
+.sponsors > li{
+    border-top:0.1rem var(--black) solid;
+}
+
+.sponsors li {
+    display: flex;
+    transition:.2s;
+}
+
+.sponsors > li:last-of-type {
+    border-bottom: 0.1rem var(--black) solid;
+}
+
+.sponsors li ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    height: 6em;
+    animation: marquee 20s linear infinite;
+}
+
+.sponsors li:hover ul {
+    animation-play-state: paused;
+}
+
+.sponsors ul li::before {
+    content: '';
+    height: .6em;
+    width: .6em;
+    border-radius: 50%;
+    background: var(--black);
+    place-self: center;
+    margin-right: 1.5em;
+    margin-left: .5em;
+}
+
+.sponsors li:hover ul li {
+    filter: opacity(0.7);
+}
+
+.sponsors li ul li:hover {
+    filter: opacity(1);
+    transform: scale(1.05);
+}
+
+.sponsors li:nth-of-type(even) ul li::before {
+    content: url(../images/arrow.svg);
+    background: unset;
+    height: unset;
+    width: unset;
+}
+.sponsors li:nth-of-type(even) ul li:first-of-type::before {
+    content: '';
+    background: unset;
+    height: unset;
+    width: unset;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
 }
