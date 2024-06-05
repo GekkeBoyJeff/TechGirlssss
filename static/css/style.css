@@ -122,6 +122,13 @@ h1 {
     font-size: 4rem;
 }
 
+p {
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+}
+
 /*///////////////*/
 /*🧸🧸PRIMARY BUTTON🧸🧸*/
 /*///////////////*/
@@ -154,13 +161,6 @@ h1 {
 .pixel_text {
     font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
     font-size: 4rem;
-}
-
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
 }
 
 /*///////////////*/
