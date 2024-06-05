@@ -147,7 +147,7 @@ li a svg {
 }
 
 
-.hamburger {
+.hamburger, .close {
     display: none;
     cursor: pointer;
 }
@@ -252,9 +252,15 @@ p {
     .hamburger {
         display: block;
     }
-    nav ul {
-        flex-direction: column;
-        width: 100%;
+    
+    nav {
+        transform: translateX(-100vw);
+        height: 100%;
+        width: 80vw;
+    }
+
+    .show {
+        transform:translateX(0)
     }
 
 
