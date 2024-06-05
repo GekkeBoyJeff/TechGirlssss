@@ -69,6 +69,13 @@ header {
     flex-wrap:wrap;
 }
 
+header a img {
+    width: 45%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
 nav {
     display: flex;
 }
@@ -89,6 +96,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--peach);
+    transition: color .3s ease;
 }
 
 li a svg {
@@ -105,26 +113,32 @@ li a svg {
     z-index: 102;
 
     padding: 1.5em 3em 1.5em 1.5em;
+    top: 5em;
     overflow: hidden;
-    top: 4em;
     white-space: nowrap;
 
     background: white;
     border-radius: 0.8em;
-    transition: all .25s ease, opacity .25s ease;
+    transition: opacity .25s ease;
+    transition-delay: 400ms;
 }
 
+/* Hidden state */
 .hidden {
     visibility: hidden;
     opacity: 0;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover {
+.dropdown:hover > .mega-menu,
+.dropdown:focus-within > .mega-menu,
+.mega-menu:hover,
+.mega-menu:focus-within {
     visibility: visible;
     opacity: 1;
+    transition: opacity 0.25s ease;
+    transition-delay: 0;
 }
+
 
 .hamburger {
     display: none;
