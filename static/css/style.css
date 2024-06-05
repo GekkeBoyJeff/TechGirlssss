@@ -257,18 +257,25 @@ p {
 /* 📷📷📷 PROFILE 📷📷📷 */
 /* /////////////////// */
 
-section.profile img:first-of-type {
-    object-fit: cover;
-    border-radius: 50%;
-}
-
 section.profile div {
-    border-radius: 2.5rem;
+    height: 20rem;
+    width: 100%;
+    border-radius: 2rem;
+    margin: 3rem;
 }
 
-section.profile article {
-    display: flex;
-    flex-direction: column;
+section.profile .profileBanner {
+    background-image: url("images/gradient.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+section.profile article img {
+    height: 10rem;
+    width: 10rem;
+    border: var(--white) 0.5rem solid;
+    border-radius: 50%;
 }
 
 /* ////////////////// */
