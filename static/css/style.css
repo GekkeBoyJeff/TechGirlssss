@@ -152,6 +152,11 @@ li a svg {
     cursor: pointer;
 }
 
+.show {
+        transform:translateX(0);
+        transition: 0.5s;
+}
+
 
 h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
@@ -254,14 +259,20 @@ p {
     }
     
     nav {
-        transform: translateX(-100vw);
+        position: absolute;
+        left: 0;
+        top: 0;
         height: 100%;
         width: 80vw;
+        z-index: 103;
+        background: white;
+                transform: translateX(-100vw);
     }
 
-    .show {
-        transform:translateX(0)
+    nav li {
+     width: 100%;
+    padding: 1em;
+    background: gray;
     }
-
 
 }
