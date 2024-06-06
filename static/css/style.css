@@ -353,6 +353,10 @@ section.profile article.upcoming-events {
     background-color: beige;
 }
 
+section.profile .hidden {
+    display: none;
+}
+
 /* ////////////////// */
 /* 👀👀👀 FOOTER 👀👀👀 */
 /* ////////////////// */
