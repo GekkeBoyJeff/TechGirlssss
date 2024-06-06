@@ -241,6 +241,9 @@ flex-shrink: 0;
     background-size: 50%;
     background-position: right center; 
     background-repeat: no-repeat;
+    background-size: contain;
+
+
 
     margin: 4.5rem;
     padding: 3rem 4.5rem 4.5rem 4.5rem;
