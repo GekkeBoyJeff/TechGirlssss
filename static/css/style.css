@@ -33,7 +33,7 @@
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
-    --max-width: 10rem 10rem;
+    --marginSides: 8rem;
     --border-radius: 2rem;
 }
 
@@ -200,7 +200,7 @@ flex-shrink: 0;
 
 /* Titel + img's */
 .socialMediaWall {
-    margin: 8rem; 
+    margin: var(--marginSides); 
     display: flex;
     flex-direction: column;
     gap: 2rem;
