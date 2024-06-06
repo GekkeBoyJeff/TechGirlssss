@@ -345,6 +345,14 @@ section.profile article.switch-buttons div p {
     font-size: 1.125rem;
 }
 
+section.profile article.saved-events {
+    background-color: pink;
+}
+
+section.profile article.upcoming-events {
+    background-color: beige;
+}
+
 /* ////////////////// */
 /* 👀👀👀 FOOTER 👀👀👀 */
 /* ////////////////// */
