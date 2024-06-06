@@ -35,6 +35,8 @@
     --border-radius: 0.5em;
     --max-width: 10rem 10rem;
     --border-radius: 2rem;
+
+        --spaceSides: 8rem;
 }
 
 
@@ -128,9 +130,12 @@ p {
 /* Section card + titel etc */
 .popularEvents{
 display: flex;
-gap: 1rem;
+gap: 0.5rem;
 flex-wrap: wrap;
-align-items: center
+align-items: center;
+padding-top: 1rem;
+padding-bottom: 8rem;
+
 }
 
 .popularEvents h2{
@@ -144,7 +149,8 @@ align-items: center
 
 /* 3x Multiple Cards*/
 .popularEvents ul{
-    padding-right: 4.5rem;
+    margin-top: 2rem;
+    padding-right: 8rem;
     
     display: flex;
     gap: 2.8rem ;
@@ -152,7 +158,7 @@ align-items: center
 
     list-style: none;
     scroll-snap-type: x mandatory;  
-    scroll-padding: 4.5rem;
+    scroll-padding: 8rem;
 }
 
 .popularEvents ul li{
@@ -163,7 +169,7 @@ flex-shrink: 0;
 
 /* Card + HeartButton*/
 .popularEvents ul li article{
-    width: 20rem; 
+    width: 28rem; 
 }
 
 /* Card image + text*/
@@ -177,7 +183,7 @@ flex-shrink: 0;
 
 /* Image event */
 .popularEvents ul li article img{
-    height: 11.5rem;
+    height: 15rem;
     width: 100%;
     border-radius: 1.8rem;
     margin-bottom: 0.5rem;
@@ -185,13 +191,43 @@ flex-shrink: 0;
     border: 0.15rem solid var(--black);
 }
 
+/* text event */
+.popularEvents ul li article h3,
+.popularEvents ul li article p{
+padding-left: 1rem;
+}
 
 .popularEvents > *:not(ul) {
-    margin: 0 4.5rem;
+    margin: 0 8rem;
 }
 
 .popularEvents ul li:first-of-type article {
-    margin-left: 4.5em;
+    margin-left: 8rem;
+}
+
+.popularEvents div{
+    display: flex;
+    gap: 3rem;
+}
+
+.popularEvents article{
+    position: relative;
+}
+
+.popularEvents article button{
+    position: absolute;
+
+    right: 0;
+    margin-top: 1.5rem; /* Voeg een marge toe om de knop iets naar beneden te verplaatsen */
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
