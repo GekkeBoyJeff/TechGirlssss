@@ -203,18 +203,20 @@ flex-shrink: 0;
     display: flex;
     gap: 2rem;
     flex-direction: column;
-    justify-content: space-between
+
 }
 
 .socialMediaWall ul{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    justify-content: space-between;
+    gap: 1rem
 }
 
 .socialMediaWall ul li img{
-    width: 12rem;
-    height: 12rem;
-    border-radius: var(--border-radius);
+    width: 10vw;
+    height: 10vw;
+    border-radius: 20%;
+    object-fit: cover;
 
 }
