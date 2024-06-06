@@ -265,6 +265,10 @@ p {
         display: none;
     }
 
+    .primary_button svg {
+        width: 1.5em;
+    }
+
 
     /*BASIC STYLING RESPONSIVE*/
 
