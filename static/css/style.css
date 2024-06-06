@@ -33,7 +33,10 @@
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
+    --max-width: 10rem 12rem;
+    --border-radius: 2rem;
 }
+
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -196,6 +199,22 @@ flex-shrink: 0;
 /*//////////////////////////////////////////////////////////////////////*/
 
 .socialMediaWall{
-    margin: 4.5rem;
+    margin: var(--max-width);
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between
 }
 
+.socialMediaWall ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.socialMediaWall ul li img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: var(--border-radius);
+
+}
