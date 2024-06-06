@@ -65,6 +65,7 @@ body {
     font-family: 'NeueMontreal Regular', sans-serif;
     background: var(--white);
     color: var(--black);
+    letter-spacing: var(--spacing);
 }
 
 /* a en links kleur laten aanpassen naar tekstkleur van light/dark mode? */
@@ -84,7 +85,6 @@ h4 {
     border-radius: 2rem;
     font-size: 1.125rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    letter-spacing: var(--spacing);
 }
 
 .tertiary-button {
@@ -95,7 +95,6 @@ h4 {
     text-decoration: none;
     font-size: 1.125rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    letter-spacing: var(--spacing);
 }
 
 .tertiary-button-black {
@@ -107,7 +106,6 @@ h4 {
     text-decoration: none;
     font-size: 1.125rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    letter-spacing: var(--spacing);
 }
 
 h1 {
@@ -137,9 +135,9 @@ p {
     letter-spacing: 1px;
 }
 
-/*///////////////*/
-/*💻💻BANNER HOMEPAGE💻💻*/
-/*//////////////*/
+/*///////////////////////////*/
+/*💻💻💻 BANNER HOMEPAGE 💻💻💻*/
+/*///////////////////////////*/
 
 .home_banner {
     margin: 0;
@@ -277,14 +275,12 @@ p {
 /* 📷📷📷 PROFILE 📷📷📷 */
 /* /////////////////// */
 
-section.profile div {
+section.profile .profileBanner {
     height: 20rem;
     width: auto;
     border-radius: 2rem;
     margin: 2rem;
-}
 
-section.profile .profileBanner {
     background-image: url("../images/gradient.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -294,8 +290,8 @@ section.profile .profileBanner {
 
 section.profile article.bio {
     display: grid;
-    grid-template-columns: 5.5rem 1fr 0.6fr 0.2fr;
-    grid-template-rows: 0.4fr auto 1fr;
+    grid-template-columns: 5.5rem 0.8fr 0.6fr 0.2fr;
+    grid-template-rows: 0.4fr auto auto;
 }
 
 section.profile article.bio img {
@@ -310,21 +306,44 @@ section.profile article.bio img {
 }
 
 section.profile article.bio article {
+    display: flex;
+    gap: 1rem;
     grid-column-start: 3;
     grid-row-start: 1;
+    justify-self: end;
 }
 
 section.profile h1 {
     grid-column-start: 2;
     grid-row-start: 2;
+    margin-top: 0.5rem;
 }
 
 section.profile article.bio p {
     grid-column-start: 2;
     grid-row-start: 3;
+    margin-top: 1rem;
 }
 
+/* Switch button */
+section.profile article.switch-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    margin: 2rem 5.5rem;
+}
 
+section.profile article.switch-buttons div {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+section.profile article.switch-buttons div p {
+    font-size: 1.125rem;
+}
 
 /* ////////////////// */
 /* 👀👀👀 FOOTER 👀👀👀 */
