@@ -118,20 +118,84 @@ p {
 }
 
 /*///////////////*/
+/*🧸🧸PRIMARY BUTTON🧸🧸*/
+/*///////////////*/
+
+.primary_button {
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    margin: 0;
+    border-radius: 10rem;
+
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+    background-color: #F2B199;
+    text-decoration: none;
+    color: black;
+    transition: background-color .5s ease, transform .5s
+}
+
+.primary_button svg {
+    vertical-align: middle;
+}
+
+.primary_button:hover {
+    color: white;
+    background-color: black;
+}
+
+/*TITEL TEXT 2*/
+.pixel_text {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+/*///////////////*/
 /*💻💻BANNER HOMEPAGE💻💻*/
 /*//////////////*/
+
+  .home_banner h1 {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    z-index: 100;
+    margin: 2rem;
+  }
+
+  .home_banner p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: flex-start;
+    margin: 14rem 0rem 0rem 2rem;
+    padding: 0;
+  }
+
+  .container_primarybtn {
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 2rem;
+}
 
 .home_banner {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 0;
     height: 80vh;
 }
 
 .home_banner img:nth-of-type(1) {
-    filter: contrast(108%) brightness(100%);
+    filter: contrast(105%) brightness(100%) grayscale(10%);
     width: 100%;
     height: 75vh;
     object-fit: cover;
@@ -143,7 +207,7 @@ p {
 }
 
 .home_banner img:nth-of-type(2) {
-    filter: contrast(115%) brightness(105%);
+    filter: contrast(120%) brightness(100%) grayscale(10%);
     width: 100%;
     height: 75vh;
     object-fit: cover;
@@ -152,6 +216,58 @@ p {
     grid-row-start: 1;
     grid-row-end: 2;
     z-index: 0;
+}
+
+/*/////////////*/
+/*RESPONSIVE DEVICE*/
+/*/////////////*/
+@media (max-width: 768px ) {
+
+/*///////////////*/
+/*🧸🧸PRIMARY BUTTON🧸🧸*/
+/*///////////////*/
+    
+    .primary_button {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+    }
+
+    .primary_button:active {
+        color: white;
+        background-color: black;
+    }
+
+/*///////////////*/
+/*💻💻BANNER HOMEPAGE💻💻*/
+/*//////////////*/
+
+    .container_primarybtn {
+        margin: 22rem 0rem 0rem 2rem;
+    }
+    
+    .home_banner p {
+        margin: 14rem 2rem 0rem 2rem; 
+    }
+
+    .home_banner p br:nth-child(1), br:nth-child(2) {
+        display: none;
+    }
+
+    .primary_button svg {
+        width: 1.5em;
+    }
+
+
+    /*BASIC STYLING RESPONSIVE*/
+
+    h1, .pixel_text {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+    
 }
 
 /* ////////////////////////////////// */
