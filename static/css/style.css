@@ -334,16 +334,25 @@ section.profile article.switch-buttons {
     margin: 2rem 5.5rem;
 }
 
-section.profile article.switch-buttons div {
+section.profile article.switch-buttons button {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+
+    --webkit-appearance: none;
+    background-color: transparent;
+    border: none;
 }
 
-section.profile article.switch-buttons div p {
+section.profile article.switch-buttons button p {
     font-size: 1.125rem;
+    color: #808080;
 }
+
+/* section.profile article.switch-buttons button p svg path {
+    stroke: #808080;
+} */
 
 section.profile article.saved-events {
     background-color: pink;
@@ -355,6 +364,15 @@ section.profile article.upcoming-events {
 
 section.profile .hidden {
     display: none;
+}
+
+section.profile article.switch-buttons .clicked {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    color: var(--black);
+}
+
+.clicked-svg {
+    stroke-width: 2.2;
 }
 
 /* ////////////////// */
