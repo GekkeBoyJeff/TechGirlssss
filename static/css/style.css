@@ -238,6 +238,9 @@ padding-left: 1rem;
 /*//////////////////////////////////////////////////////////////////////*/
 
 .socialMediaWall{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 margin: 8rem;
 }
 
@@ -247,13 +250,15 @@ margin: 8rem;
     margin: 0; /* Verwijder standaard marges */
     display: grid; /* Gebruik grid layout */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Responsieve kolommen */
-    gap: 10px; /* Ruimte tussen de items */
+    gap: 1.2rem; /* Ruimte tussen de items */
     justify-content: center; /* Centreer de items */
 }
 
 .socialMediaWall li {
     margin: 0; /* Verwijder marge van de li's */
     padding: 0; /* Verwijder padding van de li's */
+    transition: transform 0.1s ease-in-out; /* Voeg een soepele overgang toe */
+    transform-origin: center center;
 }
 
 .socialMediaWall img {
@@ -262,9 +267,34 @@ margin: 8rem;
     aspect-ratio: 1 / 1; /* Maak de afbeelding vierkant */
     object-fit: cover; /* Zorg ervoor dat de afbeelding het vierkant vult en de juiste verhouding behoudt */
     display: block; /* Verwijder eventuele onderlijning door de link */
+    border-radius: 1.5rem;
+}
+
+.socialMediaWall ul li:hover {
+    transform: scale(1.03);
 }
 
 
+/* evt voor ipad */
+@media (max-width: 1100px){
+    .socialMediaWall ul{
+        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
+    }
+    
+}
 
+@media (max-width: 768px){
+    .socialMediaWall ul{
+        grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
+    }
 
+    .socialMediaWall{
+        margin: 2rem;
+    }
+
+    .socialMediaWall ul li:nth-of-type(5),
+    .socialMediaWall ul li:nth-of-type(6){
+        display: none;
+    }
+}
 
