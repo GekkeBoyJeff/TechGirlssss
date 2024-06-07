@@ -154,16 +154,20 @@ padding-bottom: 8rem;
     
     display: flex;
     gap: 2.8rem ;
-    overflow-x: auto;
+    overflow-x: scroll;
 
     list-style: none;
     scroll-snap-type: x mandatory;  
     scroll-padding: 8rem;
+
+scroll-behavior: smooth;
 }
+
+
 
 .popularEvents ul li{
 scroll-snap-align: start;   
-flex-shrink: 0;   
+/* flex-shrink: 0;    */
 
 }
 
