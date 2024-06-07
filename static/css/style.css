@@ -617,6 +617,8 @@ padding-left: 1rem;
 background-color: white;
 border: solid var(--black) 0.15rem;
 height: fit-content;
+display: flex;
+gap: 2rem;
 }
 
 .popularEvents > a:hover{
