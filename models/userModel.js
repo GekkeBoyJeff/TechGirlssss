@@ -7,10 +7,9 @@ const userSchema = new mongoose.Schema({
         unique: true,
         trim: true
     },
-    username: {
+    name: {
         type: String,
         required: true,
-        unique: true,
         trim: true
     },
     password: {
@@ -19,16 +18,50 @@ const userSchema = new mongoose.Schema({
         trim: true,
         minlength: 6
     },
-    profilePic: {
-        type: String,
-        default: '',
-        required: false
+    completedWelcome:{
+        type: Boolean,
+        default: false
+    },
+    currentStep:{
+        type: Number,
+        default: 0
     },
     date: {
         type: Date,
         default: Date.now
-    }
-}, {
+    },
+    age:{
+        type: Number
+    },
+    country:{
+        type: String
+    },
+    language:{
+        type: String
+    },
+    activeTime:{
+        type: String
+    },
+    social:{
+        type: String
+    },
+    wantToDiscover:{
+        type: Array
+    },
+    spendingTimePreferences:{
+        type: Array
+    },
+    preferredArtForm:{
+        type: Array
+    },
+    musicStyle:{
+        type: Array
+    },
+    emotion:{
+        type: Array
+    },
+}, 
+{
     timestamps: true
 })
 

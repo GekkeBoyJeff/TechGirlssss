@@ -9,13 +9,16 @@ const messages = {
 
 export function validate(data, route) {
 
+  console.log('Data to validate:', data) 
+
   let rules = {
     email: 'required|email',
-    password: 'required|min:6|regex:/[A-Z]/|regex:/\d/|regex:/[^a-zA-Z0-9]/',
+    password: 'required|min:6',
   }
   
   if (route.path !== '/login') {
-    rules.username = 'required|min:3|regex:/^[^\\s]*$/'
+    rules.name = 'required|min:2' 
+    rules.password += '|regex:/[A-Z]/|regex:/\d/|regex:/[^a-zA-Z0-9]/'
   }
 
   const validation = new Validator(data, rules, messages)
@@ -23,6 +26,6 @@ export function validate(data, route) {
   if (validation.fails()) {
     const errors = validation.errors.all()
     console.log(errors)
-    return Object.keys(errors).map((key) => ({ field: key, msg: errors[key] }))}
-  return null
+    return Object.keys(errors).map((key) => ({ field: key, msg: errors[key] }))
+  }
 }
