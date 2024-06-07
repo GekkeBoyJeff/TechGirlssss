@@ -29,11 +29,20 @@
 }
 
 :root {
-    --white: #d9d9d9;
+    /* Colours */
+    --white: #ffffff;
     --black: #1f1f1f;
-    --peach: rgba(242, 177, 153, 0.3);
-    
-    
+    --peach: #F2B199;
+
+
+    /* fonts */
+    --titel1: "NeueMontreal Medium";
+    --titel2: "PPMondwest Regular";
+    --text: "NeueMontreal Regular";
+
+    /*sizes*/
+    --h1: 4rem;
+    --p: 1rem;
 
     --padding: 1em;
     --margin: 1em;
@@ -43,8 +52,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --white: #1f1f1f;
-        --black: #d9d9d9;
-
+        --black: #ffffff;
     }
 }
 
@@ -53,6 +61,103 @@ body {
     background: var(--white);
     color: var(--black);
 }
+
+/*///////////////*/
+/*🤩🤩navigation menu🤩🤩*/
+/*///////////////*/
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: white;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+header a img {
+    width: 45%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    gap: 1em;
+    flex-wrap:wrap;
+}
+
+nav ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--text);
+    font-size: var(--p);
+    transition: color .3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--peach);
+    transition: color .3s ease;
+}
+
+li a svg {
+    margin-right: 0.5em;
+    vertical-align: middle; 
+}
+
+
+/* dropdown menu */
+.mega-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 102;
+
+    padding: 1.5em 3em 1.5em 1.5em;
+    top: 5em;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background: white;
+    border-radius: 0.8em;
+    transition: opacity 0.10s ease, visibility 0.10s ease;
+    transition-delay: 300ms;
+}
+
+/* Hidden state */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+
+/* dropdown hover */
+.dropdown:hover > .mega-menu,
+.dropdown:focus-within > .mega-menu,
+.mega-menu:hover,
+.mega-menu:focus-within {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.10s ease, visibility 0.10s ease;
+    transition-delay: 0ms;
+}
+
+.hamburger, .close {
+    display: none;
+    cursor: pointer;
+}
+
+.show {
+        transform:translateX(0);
+        transition: 0.5s;
+}
+
 
 h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
@@ -73,11 +178,6 @@ h3{
 }
 
 
-.pixel_text {
-    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
-    font-size: 4rem;
-}
-
 p {
     font-family: "NeueMontreal Regular";
     font-size: 1rem;
@@ -85,17 +185,162 @@ p {
     letter-spacing: 1.5px;
 }
 
-/*///////////////////////////////////////////////////////////////////////////*/
-/*********************🪪🪪Login🪪🪪*******************************/
-/*//////////////////////////////////////////////////////////////////////*/
-/* */ 
+/*///////////////*/
+/*🧸🧸primary button🧸🧸*/
+/*///////////////*/
 
+.primary_button {
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    margin: 0;
+    border-radius: 10rem;
 
-.loginForm h2{
-    font-size: 1.4rem; 
     font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
     letter-spacing: 1.5px;
+    background-color: var(--peach);
+    text-decoration: none;
+    color: black;
+    transition: background-color .5s ease, transform .5s
 }
+
+.primary_button svg {
+    vertical-align: middle;
+}
+
+.primary_button:hover {
+    color: white;
+    background-color: black;
+}
+
+/*titel tekst 2*/
+.pixel_text {
+    font-family: var(--titel2);
+    font-size: 4rem;
+}
+
+
+/*///////////////*/
+/*💻💻BANNER HOMEPAGE💻💻*/
+/*//////////////*/
+
+  .container_primarybtn {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 2rem;
+}
+
+.home_banner {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 0;
+    height: 80vh;
+}
+
+.home_banner img:nth-of-type(1) {
+    filter: contrast(105%) brightness(100%) grayscale(10%);
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 0;
+}
+
+.home_banner img:nth-of-type(2) {
+    filter: contrast(120%) brightness(100%) grayscale(10%);
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 0;
+}
+
+
+/*Responsive mobile*/
+@media (max-width: 768px) {
+
+    /* navigation menu*/
+    .hamburger {
+        display: block;
+    }
+    
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 75vw;
+        z-index: 103;
+        background: white;
+        transform: translateX(-100vw);
+    }
+
+
+    nav.show {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        gap: 0;
+        padding: 0;
+        align-content: flex-start;
+        margin-top: 6rem;
+    }
+    
+    nav ul li {
+        width: 100%;
+        padding: 1em 0em 0em 2em;
+    }
+
+    nav ul li a {
+        font-size: 1.8rem;
+    }
+
+
+    .mega-menu {
+        opacity: 0;
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        opacity: 0;
+    }
+
+    .open {
+        display: block;
+        opacity: 1;
+    }
+
+    .mega-menu li  {
+        padding: 0.5em;
+    }
+
+    /*arrow icon*/
+    .rotate {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+  }
+
+
+}
+
+.loginForm a:visited { text-decoration: none; color: var(--black); }
+.loginForm a:hover {    text-decoration: underline;}
+.loginForm a:focus { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
 
 .loginForm h2 span{
     font-family:  "NeueMontreal Bold";
@@ -106,34 +351,3 @@ p {
     text-decoration: none;
     font-family:  "NeueMontreal Bold";
 }
-
-.loginForm a:visited { text-decoration: none; color: var(--black); }
-.loginForm a:hover {    text-decoration: underline;}
-.loginForm a:focus { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
