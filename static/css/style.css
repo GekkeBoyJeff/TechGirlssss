@@ -713,130 +713,63 @@ p{
 /*********************📸📸SocialMediaWall📸📸*******************************/
 /*//////////////////////////////////////////////////////////////////////*/
 
-/* Titel + img's */
-.socialMediaWall {
-    margin: 8rem; 
+.socialMediaWall{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    margin: 8rem;
 }
 
-/* ul row */
 .socialMediaWall ul {
-    display: flex;
-    flex-wrap: nowrap; 
-    gap: 2;
+    list-style-type: none; /* Verwijder de standaard bullets */
+    padding: 0; /* Verwijder de standaard padding */
+    margin: 0; /* Verwijder standaard marges */
+    display: grid; /* Gebruik grid layout */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Responsieve kolommen */
+    gap: 1.2rem; /* Ruimte tussen de items */
+    justify-content: center; /* Centreer de items */
 }
 
-/* container img */
-.socialMediaWall ul li {
-    overflow-y: hidden;
-    width: 100%;
-    max-height: 13rem;
-    transition: transform 0.3s ease; 
+.socialMediaWall li {
+    margin: 0; /* Verwijder marge van de li's */
+    padding: 0; /* Verwijder padding van de li's */
+    transition: transform 0.1s ease-in-out; /* Voeg een soepele overgang toe */
+    transform-origin: center center;
+}
+
+.socialMediaWall img {
+    width: 100%; /* Zorg ervoor dat de afbeelding de breedte van het grid-item vult */
+    height: auto; /* Zorg dat de hoogte automatisch wordt aangepast */
+    aspect-ratio: 1 / 1; /* Maak de afbeelding vierkant */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding het vierkant vult en de juiste verhouding behoudt */
+    display: block; /* Verwijder eventuele onderlijning door de link */
+    border-radius: 1.5rem;
 }
 
 .socialMediaWall ul li:hover {
-    transform: scale(1.05); /* Schaal de li met 105% */
-}
-
-/* img */
-.socialMediaWall ul li img {
-    width: 100%; 
-    height: 100%; 
-    border-radius: 10%;
-    object-fit: cover; 
+    transform: scale(1.03);
 }
 
 
-.socialMediaWall ul li img {
-    aspect-ratio: 1; /* (vierkant) */
+/* evt voor ipad */
+@media (max-width: 1100px){
+    .socialMediaWall ul{
+        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
+    }
+    
 }
 
-/* ////////////////// */
-/* 👀👀👀 FOOTER 👀👀👀 */
-/* ////////////////// */
+@media (max-width: 768px){
+    .socialMediaWall ul{
+        grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
+    }
 
-footer {
-    color: var(--white);
-    background-color: var(--black);
+    .socialMediaWall{
+        margin: 2rem;
+    }
+
+    .socialMediaWall ul li:nth-of-type(5),
+    .socialMediaWall ul li:nth-of-type(6){
+        display: none;
+    }
 }
-
-footer section {
-    display: grid;
-    grid-template-columns: 0.07fr 1fr;
-    grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
-}
-
-footer article:first-of-type {
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-
-footer article:first-of-type p {
-    margin-top: 0.6rem;
-}
-
-footer article:nth-of-type(2) {
-    grid-column-start: 2;
-    grid-row-start: 4;
-    display: flex;
-    justify-content: flex-start;
-    gap: 15%;
-}
-
-footer a {
-    color: var(--white);
-}
-
-footer p {
-    font-size: 0.938rem;
-}
-
-footer svg {
-    width: 2rem;
-    height: 2rem;
-}
-
-footer article:nth-of-type(2) div:nth-of-type(3) ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 8rem;
-}
-
-footer article:nth-of-type(2) ul li:first-of-type p {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    margin: 1.5rem 0;
-}
-
-.grow {
-    flex-basis: 100%;
-}
-
-.break {
-    flex-grow: 1;
-}
-
-.input-footer {
-    width: 19rem;
-    height: 2rem;
-    border: none;
-    border-bottom: 0.063rem var(--white) solid;
-    color: var(--white);
-    background-color: var(--black);
-    padding: 0.6rem;
-    margin: 1rem 1rem 1rem 0;
-    outline: none;
-}
-
-.tech-girls {
-    grid-row-start: 5;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
-}
-
-
