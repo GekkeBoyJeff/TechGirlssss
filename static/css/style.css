@@ -45,7 +45,6 @@
 :root {
     /* Colours */
     --white: #ffffff;
-    --white: #ffffff;
     --black: #1f1f1f;
     --peach: #F2B199;
 
@@ -55,9 +54,11 @@
     --titel2: "PPMondwest Regular";
     --text: "NeueMontreal Regular";
 
-    /*sizes*/
+    /*font sizes big screen*/
     --h1: 4rem;
     --p: 1rem;
+
+    /*font sizes small screen screen*/
 
     --padding: 1em;
     --margin: 1em;
@@ -79,6 +80,31 @@ body {
     background: var(--white);
     color: var(--black);
 }
+
+
+h1 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+h2 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
+p {
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+}
+
+.pixel_text {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+}
+
 
 /*///////////////*/
 /*🤩🤩navigation menu🤩🤩*/
@@ -177,6 +203,8 @@ li a svg {
 }
 
 
+/*Wat is dit onderdeel?*/
+
 /* a en links kleur laten aanpassen naar tekstkleur van light/dark mode? */
 
 a {
@@ -187,6 +215,8 @@ a {
 h4 {
     font-size: 2.5rem;
 }
+
+/*//////////////////////*/
 
 .secondary-button {
     padding: 0.3rem 0.8rem;
@@ -202,36 +232,6 @@ h4 {
     text-decoration: none;
     font-size: 1.125rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-}
-
-h1 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 4rem;
-}
-
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
-}
-
-h2 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 2.5rem;
-}
-
-.pixel_text {
-    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
-}
-
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1px;
 }
 
 /*///////////////*/
@@ -261,13 +261,6 @@ p {
     color: white;
     background-color: black;
 }
-
-/*TITEL TEXT 2*/
-.pixel_text {
-    font-family: var(--titel2);
-    font-size: 4rem;
-}
-
 
 /*///////////////*/
 /*💻💻BANNER HOMEPAGE💻💻*/
@@ -347,6 +340,72 @@ p {
 /*RESPONSIVE DEVICE*/
 /*/////////////*/
 @media (max-width: 768px ) {
+
+    /* navigation menu*/
+    .hamburger {
+        display: block;
+    }
+    
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 75vw;
+        z-index: 103;
+        background: white;
+        transform: translateX(-100vw);
+    }
+
+
+    nav.show {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        gap: 0;
+        padding: 0;
+        align-content: flex-start;
+        margin-top: 6rem;
+    }
+    
+    nav ul li {
+        width: 100%;
+        padding: 1em 0em 0em 2em;
+    }
+
+    nav ul li a {
+        font-size: 1.8rem;
+    }
+
+
+    .mega-menu {
+        opacity: 0;
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        opacity: 0;
+    }
+
+    .open {
+        display: block;
+        opacity: 1;
+    }
+
+    .mega-menu li  {
+        padding: 0.5em;
+    }
+
+    /*arrow icon*/
+    .rotate {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+  }
 
 /*///////////////*/
 /*🧸🧸PRIMARY BUTTON🧸🧸*/
@@ -587,74 +646,3 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 }
 
 
-/*Responsive mobile*/
-@media (max-width: 768px) {
-
-    /* navigation menu*/
-    .hamburger {
-        display: block;
-    }
-    
-    nav {
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100vh;
-        width: 75vw;
-        z-index: 103;
-        background: white;
-        transform: translateX(-100vw);
-    }
-
-
-    nav.show {
-        transform: translateX(0);
-    }
-
-    nav ul {
-        gap: 0;
-        padding: 0;
-        align-content: flex-start;
-        margin-top: 6rem;
-    }
-    
-    nav ul li {
-        width: 100%;
-        padding: 1em 0em 0em 2em;
-    }
-
-    nav ul li a {
-        font-size: 1.8rem;
-    }
-
-
-    .mega-menu {
-        opacity: 0;
-        display: none;
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 0;
-        margin: 0;
-        background: transparent;
-        opacity: 0;
-    }
-
-    .open {
-        display: block;
-        opacity: 1;
-    }
-
-    .mega-menu li  {
-        padding: 0.5em;
-    }
-
-    /*arrow icon*/
-    .rotate {
-        transform: rotate(180deg);
-        transition: transform 0.3s ease;
-  }
-
-
-}
