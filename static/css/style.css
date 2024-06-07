@@ -60,6 +60,9 @@
 
     /*font sizes small screen screen*/
 
+
+    /*Default margin*/
+
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
@@ -155,7 +158,6 @@ li a svg {
     vertical-align: middle; 
 }
 
-
 /* dropdown menu */
 .mega-menu {
     display: flex;
@@ -179,7 +181,6 @@ li a svg {
     visibility: hidden;
     opacity: 0;
 }
-
 
 /* dropdown hover */
 .dropdown:hover > .mega-menu,
