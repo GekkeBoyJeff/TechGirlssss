@@ -19,6 +19,11 @@
 }
 
 
+/* ///////////////////// */
+/* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧*/
+/* ///////////////////// */
+
+
 * {
     margin: 0;
     padding: 0;
@@ -27,36 +32,66 @@
 }
 
 :root {
-    --white: #d9d9d9;
+    /* Colours */
+    --white: #ffffff;
     --black: #1f1f1f;
+    --peach: #F2B199;
+
+
+    /* fonts */
+    --titel1: "NeueMontreal Medium";
+    --titel2: "PPMondwest Regular";
+    --text: "NeueMontreal Regular";
+
+    /*font sizes big screen*/
+    --h1: 4rem;
+    --p: 1rem;
+
+    /*font sizes small screen screen*/
+    --h1-small: 2.2rem;
+    --p-small: 0.8rem;
+
+
+    /*Desktop margin*/
+
+
+    /*phone margin*/
+    --margin-small: 2rem;
 
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
+
     --max-width: 10rem 10rem;
     --border-radius: 2rem;
 
         --spaceSides: 8rem;
+
+    --medium: 100;
+    --spacing: 0.7px;
+
 }
 
 
 @media (prefers-color-scheme: dark) {
     :root {
         --white: #1f1f1f;
-        --black: #d9d9d9;
+        --black: #ffffff;
     }
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'NeueMontreal Regular', sans-serif;
     background: var(--white);
     color: var(--black);
 }
+
 
 h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 4rem;
+
 }
 
 h2{
@@ -77,11 +112,176 @@ h3{
     font-size: 4rem;
 }
 
+h2 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+
 p {
     font-family: "NeueMontreal Regular";
     font-size: 1rem;
     line-height: 23px;
     letter-spacing: 1.5px;
+}
+
+.pixel_text {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+}
+
+
+/*///////////////*/
+/*🤩🤩navigation menu🤩🤩*/
+/*///////////////*/
+
+header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: white;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+header a img {
+    width: 45%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    gap: 1em;
+    flex-wrap:wrap;
+}
+
+nav ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--text);
+    font-size: var(--p);
+    transition: color .3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--peach);
+    transition: color .3s ease;
+}
+
+li a svg {
+    margin-right: 0.5em;
+    vertical-align: middle; 
+}
+
+/* dropdown menu */
+.mega-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 102;
+
+    padding: 1.5em 3em 1.5em 1.5em;
+    top: 5em;
+    overflow: hidden;
+    white-space: nowrap;
+
+    background: white;
+    border-radius: 0.8em;
+    transition: opacity 0.10s ease, visibility 0.10s ease;
+    transition-delay: 300ms;
+}
+
+/* Hidden state */
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* dropdown hover */
+.dropdown:hover > .mega-menu,
+.dropdown:focus-within > .mega-menu,
+.mega-menu:hover,
+.mega-menu:focus-within {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.10s ease, visibility 0.10s ease;
+    transition-delay: 0ms;
+}
+
+.hamburger, .close {
+    display: none;
+    cursor: pointer;
+}
+
+.show {
+        transform:translateX(0);
+        transition: 0.5s;
+}
+
+
+/*Wat is dit onderdeel?*/
+
+/* a en links kleur laten aanpassen naar tekstkleur van light/dark mode? */
+
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+h4 {
+    font-size: 2.5rem;
+}
+
+/*//////////////////////*/
+
+.secondary-button {
+    padding: 0.3rem 0.8rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: 2rem;
+}
+
+.tertiary-button {
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+}
+
+/*///////////////*/
+/*🧸🧸PRIMARY BUTTON🧸🧸*/
+/*///////////////*/
+
+.primary_button {
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    margin: 0;
+    border-radius: 10rem;
+
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+    background-color: var(--peach);
+    text-decoration: none;
+    color: black;
+    transition: background-color .5s ease, transform .5s
+}
+
+.primary_button svg {
+    vertical-align: middle;
+}
+
+.primary_button:hover {
+    color: white;
+    background-color: black;
 }
 
 
@@ -90,17 +290,25 @@ p {
 /*💻💻BANNER HOMEPAGE💻💻*/
 /*//////////////*/
 
+  .container_primarybtn {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 2rem;
+}
+
 .home_banner {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 0;
     height: 80vh;
 }
 
 .home_banner img:nth-of-type(1) {
-    filter: contrast(108%) brightness(100%);
+    filter: contrast(105%) brightness(100%) grayscale(10%);
     width: 100%;
     height: 75vh;
     object-fit: cover;
@@ -112,7 +320,7 @@ p {
 }
 
 .home_banner img:nth-of-type(2) {
-    filter: contrast(115%) brightness(105%);
+    filter: contrast(120%) brightness(100%) grayscale(10%);
     width: 100%;
     height: 75vh;
     object-fit: cover;
@@ -122,13 +330,166 @@ p {
     grid-row-end: 2;
     z-index: 0;
 }
+  .home_banner h1 {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    z-index: 100;
+    margin: 2rem 0rem 0rem 4rem;
+  }
+
+  .home_banner p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
+
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: flex-start;
+    margin: 14rem 0rem 0rem 4rem;
+    padding: 0;
+  }
+
+  .container_primarybtn {
+    grid-column: 1 / 3;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 4rem;
+}
+
+/*/////////////*/
+/*RESPONSIVE DEVICE*/
+/*/////////////*/
+@media (max-width: 768px ) {
+
+    /* navigation menu*/
+    .hamburger {
+        display: block;
+    }
+    
+    nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 75vw;
+        z-index: 103;
+        background: white;
+        transform: translateX(-100vw);
+    }
+
+
+    nav.show {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        gap: 0;
+        padding: 0;
+        align-content: flex-start;
+        margin-top: 6rem;
+    }
+    
+    nav ul li {
+        width: 100%;
+        padding: 1em 0em 0em 2em;
+    }
+
+    nav ul li a {
+        font-size: 1.8rem;
+    }
+
+
+    .mega-menu {
+        opacity: 0;
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+        opacity: 0;
+    }
+
+    .open {
+        display: block;
+        opacity: 1;
+    }
+
+    .mega-menu li  {
+        padding: 0.5em;
+    }
+
+    /*arrow icon*/
+    .rotate {
+        transform: rotate(180deg);
+        transition: transform 0.3s ease;
+  }
+
+/*///////////////*/
+/*🧸🧸PRIMARY BUTTON🧸🧸*/
+/*///////////////*/
+    
+    .primary_button {
+        font-size: 0.8rem;
+        padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+    }
+
+    .primary_button:active {
+        color: white;
+        background-color: black;
+    }
+
+/*//////////////////////////////////////////////////////////////////////*/
+/**********************💻💻BANNER HOMEPAGE💻💻********************************/
+/*//////////////////////////////////////////////////////////////////////*/
+
+    .home_banner h1 {
+        margin: 2rem;
+    }
+
+
+    .home_banner p {
+        margin: 14rem 2rem 0rem 2rem; 
+    }
+
+    .container_primarybtn {
+        margin: 22rem 0rem 0rem 2rem;
+    }
+    
+
+    .home_banner p br:nth-child(1), br:nth-child(2) {
+        display: none;
+    }
+
+    .primary_button svg {
+        width: 1.5em;
+    }
+
+
+    /*BASIC STYLING RESPONSIVE*/
+
+    h1, .pixel_text {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+    
+}
 
 /*//////////////////////////////////////////////////////////////////////*/
 /**********************🃏🃏DetailCards🃏🃏********************************/
 /*//////////////////////////////////////////////////////////////////////*/
 
 /* Section card + titel etc */
-.popularEvents{
+/* .popularEvents{
 display: flex;
 gap: 0.5rem;
 flex-wrap: wrap;
@@ -136,19 +497,30 @@ align-items: center;
 padding-top: 1rem;
 padding-bottom: 8rem;
 
+} */
+
+.popularEvents{
+display: grid;
+grid-template-columns: 1fr auto;
+grid-template-rows: 0.1fr 0.1fr 1fr;
+gap: 1rem;
 }
 
 .popularEvents h2{
     flex: 50%;
+    grid-column-start: 1;
 }
 
 /* p naar volgende regel */
 .popularEvents p{
     flex: 50%;
+    grid-column-start: 1;
 }
 
 /* 3x Multiple Cards*/
 .popularEvents ul{
+    margin-top: 2rem;
+    padding-right: 8rem;
     margin-top: 2rem;
     padding-right: 8rem;
     
@@ -161,7 +533,11 @@ padding-bottom: 8rem;
     scroll-padding: 8rem;
 
 scroll-behavior: smooth;
+
+grid-column: 1 / 3;
 }
+
+
 
 
 .popularEvents ul li{
@@ -170,7 +546,7 @@ scroll-snap-align: start;
 
 }
 
-/* Card + HeartButton*/
+/* Card + HeartButton + text everything*/
 .popularEvents ul li article{
     width: 28rem; 
 }
@@ -184,6 +560,11 @@ scroll-snap-align: start;
     color: initial;
 }
 
+/* margin left first card */
+.popularEvents ul li:first-of-type article {
+    margin-left: 8rem;
+}
+
 /* Image event */
 .popularEvents ul li article img{
     height: 15rem;
@@ -194,18 +575,150 @@ scroll-snap-align: start;
     border: 0.15rem solid var(--black);
 }
 
-/* text event */
+/* text event, iets van de kant mooi */
 .popularEvents ul li article h3,
 .popularEvents ul li article p{
 padding-left: 1rem;
 }
 
-.popularEvents > *:not(ul) {
-    margin: 0 8rem;
+/* margin-sides */
+.popularEvents h2,
+.popularEvents > p {
+    margin-left: 8rem;
 }
 
+/* margin-sides */
+.popularEvents div,
+.popularEvents > a {
+    margin-right: 8rem;
+}
+
+/* pijlen buttons samen */
+.popularEvents div{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3rem;
+}
+
+/* relative zodat heart button absolute kan */
+.popularEvents article{
+    position: relative;
+}
+
+.popularEvents div button{
+    background-color: transparent;
+    border: none;
+}
+
+/* heart button --> achter sara's code button zetten want nu overbodige extra code*/
+.popularEvents article button{
+    position: absolute;
+    right: 0;
+    margin-top: 1.5rem; 
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* See all Button --> achter sara's code button zetten want nu overbodige extra code*/
+.popularEvents > a {
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    border-radius: 10rem;
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+    border: solid 0.15rem var(--black);
+    text-decoration: none;
+    color: black;
+    transition: background-color .5s ease, transform .5s;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    height: fit-content;
+    align-self: center;
+}
+
+.popularEvents > a:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* evt voor ipad */
+/* @media (max-width: 946px){
+    .popularEvents h2{
+        color: red;
+    }
+} */
+
+@media (max-width: 768px){
+h1{
+    font-size: 2.2rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+    .popularEvents h2,
+    .popularEvents > p,
+    .popularEvents > a{
+        margin-left: 2rem;
+    }
+
+   /* Pijlen buttons */
+    .popularEvents > div{
+        display: none;
+    }
+
+    /* Seel al button */
+    .popularEvents > a {
+        grid-column-start: 1;
+        width: fit-content;
+    }
+
+    /* subtekst */
+    .popularEvents p{
+        flex: 50%;
+        grid-row-start: 2;
+    }
+
+    /* Image event */
+.popularEvents ul li article img{
+    height: 10rem;
+}
+
+/* 1 card event */
+.popularEvents ul li article{
+    width: 18rem; 
+}
+
+/* all cards */
+.popularEvents ul{
+    scroll-padding: 2rem;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+/* space zijkant */
 .popularEvents ul li:first-of-type article {
-    margin-left: 8rem;
+
+margin-left: 8rem;
 }
 
 .popularEvents div{
@@ -241,7 +754,7 @@ padding-left: 1rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-margin: 8rem;
+    margin: 8rem;
 }
 
 .socialMediaWall ul {
@@ -297,4 +810,91 @@ margin: 8rem;
         display: none;
     }
 }
+
+/* ////////////////// */
+/* 👀👀👀 FOOTER 👀👀👀 */
+/* ////////////////// */
+
+footer {
+    color: var(--white);
+    background-color: var(--black);
+}
+
+footer section {
+    display: grid;
+    grid-template-columns: 0.07fr 1fr;
+    grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
+}
+
+footer article:first-of-type {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+footer article:first-of-type p {
+    margin-top: 0.6rem;
+}
+
+footer article:nth-of-type(2) {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15%;
+}
+
+footer a {
+    color: var(--white);
+}
+
+footer p {
+    font-size: 0.938rem;
+}
+
+footer svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+footer article:nth-of-type(2) div:nth-of-type(3) ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 8rem;
+}
+
+footer article:nth-of-type(2) ul li:first-of-type p {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+.grow {
+    flex-basis: 100%;
+}
+
+.break {
+    flex-grow: 1;
+}
+
+.input-footer {
+    width: 19rem;
+    height: 2rem;
+    border: none;
+    border-bottom: 0.063rem var(--white) solid;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.6rem;
+    margin: 1rem 1rem 1rem 0;
+    outline: none;
+}
+
+.tech-girls {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 0.8rem;
+    text-align: center;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
 

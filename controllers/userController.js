@@ -4,7 +4,7 @@ import { decryptPassword } from '../utils/decryptPassword.js'
 import { errorReporter } from './formErrorHandler.js'
 import { validate } from '../utils/inputValidation.js'
 
-export async function registerUser(req, res) {
+export const registerUser = async (req, res) => {
     try {
         const errors = validate(req.body, req.route)
         if (errors) {
@@ -34,32 +34,34 @@ export async function registerUser(req, res) {
     }
 }
 
-export async function loginUser(req, res) {
-    try {
-        const errors = validate(req.body, req.route)
-        if (errors) {
-            errorReporter(req, res, errors)
-            return
+export const loginUser = async (req, res) => {
+    if(req.body.email && req.body.password) {
+        try {
+            const errors = validate(req.body, req.route)
+            if (errors) {
+                errorReporter(req, res, errors)
+                return
+            }
+            const user = await User.findOne({ email: req.body.email })
+            if (!user) {
+                errorReporter(req, res, [{ msg: 'User does not exist' }, true])
+                return
+            }
+            const isMatch = decryptPassword(req.body.password, user.password )
+            if (!isMatch) {
+                errorReporter(req, res, [{ msg: 'Incorrect password' }, true])
+                return
+            }
+    
+            console.log('User logged in', user)
+            console.log('User id', user._id)
+            req.session.userId = user._id
+            res.redirect('/')
         }
-        const user = await User.findOne({ email: req.body.email })
-        if (!user) {
-            errorReporter(req, res, [{ msg: 'User does not exist' }, true])
-            return
+        catch (err) {
+            console.error(err)
+            errorReporter(req, res, [{ msg: 'An error occurred while logging in' }, true])
         }
-        const isMatch = decryptPassword(req.body.password, user.password )
-        if (!isMatch) {
-            errorReporter(req, res, [{ msg: 'Incorrect password' }, true])
-            return
-        }
-
-        console.log('User logged in', user)
-        console.log('User id', user._id)
-        req.session.userId = user._id
-        res.redirect('/')
-    }
-    catch (err) {
-        console.error(err)
-        errorReporter(req, res, [{ msg: 'An error occurred while logging in' }, true])
     }
 }
 
