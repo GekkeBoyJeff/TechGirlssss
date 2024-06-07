@@ -98,6 +98,7 @@ h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 4rem;
+    margin-left: 8rem;
 }
 
 h2 {
@@ -115,6 +116,7 @@ p {
     font-size: 1rem;
     line-height: 23px;
     letter-spacing: 1px;
+    margin: 0rem 0rem 5rem 8rem;
 }
 
 /*///////////////*/
