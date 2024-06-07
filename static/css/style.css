@@ -59,9 +59,15 @@
     --p: 1rem;
 
     /*font sizes small screen screen*/
+    --h1-small: 2.2rem;
+    --p-small: 0.8rem;
 
 
-    /*Default margin*/
+    /*Desktop margin*/
+
+
+    /*phone margin*/
+    --margin-small: 2rem;
 
     --padding: 1em;
     --margin: 1em;
