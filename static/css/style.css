@@ -260,7 +260,8 @@ h4 {
 /*🧸🧸PRIMARY BUTTON🧸🧸*/
 /*///////////////*/
 
-.primary_button {
+.primary_button,
+.popularEvents > a {
     padding: 0.8rem 1.8rem 0.8rem 1.8rem;
     margin: 0;
     border-radius: 10rem;
@@ -608,7 +609,7 @@ padding-left: 1rem;
     border: none;
 }
 
-/* heart button --> achter sara's code button zetten want nu overbodige extra code*/
+/* heart button */
 .popularEvents article button{
     position: absolute;
     right: 0;
@@ -626,21 +627,9 @@ padding-left: 1rem;
 
 /* See all Button --> achter sara's code button zetten want nu overbodige extra code*/
 .popularEvents > a {
-    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
-    border-radius: 10rem;
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
-    border: solid 0.15rem var(--black);
-    text-decoration: none;
-    color: black;
-    transition: background-color .5s ease, transform .5s;
-    align-items: center;
-    display: flex;
-    gap: 2rem;
-    height: fit-content;
-    align-self: center;
+background-color: white;
+border: solid var(--black) 0.15rem;
+height: fit-content;
 }
 
 .popularEvents > a:hover{
