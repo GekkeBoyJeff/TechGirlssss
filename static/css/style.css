@@ -234,6 +234,20 @@ padding-left: 1rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.popularEvents > a {
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    border-radius: 10rem;
+
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+    background-color: #F2B199;
+    text-decoration: none;
+    color: black;
+    transition: background-color .5s ease, transform .5s
+}
+
 /*///////////////////////////////////////////////////////////////////////////*/
 /*********************📸📸SocialMediaWall📸📸*******************************/
 /*//////////////////////////////////////////////////////////////////////*/
