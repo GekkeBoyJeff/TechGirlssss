@@ -1,7 +1,7 @@
 @font-face {
     font-family:  "NeueMontreal Bold";
     src: url(../fonts/NeueMontreal-Bold.otf);
-    font-family: 'Courier New', Courier, monospace; /* error check */
+    font-family: 'Courier New'; /* error check */
 }
 
 @font-face {
@@ -112,9 +112,6 @@ p {
 .loginForm a:focus { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
 
 
-.loginForm{
-    x
-}
 
 
 
@@ -131,170 +128,11 @@ p {
 
 
 
-/* 
-.loginForm h2{
-    font-size: 1.4rem; 
-    font-family: "NeueMontreal Regular";
-    letter-spacing: 1.5px;
-}
-
-.loginForm h2 span{
-    font-family:  "NeueMontreal Bold";
-    color: var(--black);
-}
-
-.loginForm a{
-    text-decoration: none;
-    font-family:  "NeueMontreal Bold";
-}
-
-.loginForm a:visited { text-decoration: none; color: var(--black); }
-.loginForm a:hover {    text-decoration: underline;}
-.loginForm a:focus { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
 
 
 
 
-.loginForm{
-    background-image: url("../images/girlwithart.jpeg");
-    background-color: var(--peach);
-    background-size: 50%;
-    background-position: right center; 
-    background-repeat: no-repeat;
-    background-size: contain;
 
-
-
-    margin: 4.5rem;
-    padding: 3rem 4.5rem 4.5rem 4.5rem;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 0.8rem; 
-    border-radius: 50px;
-
-    max-height: calc(100vh - 14.3rem);
-    
-}
-
-
-/* form */
-.loginForm form{
-    margin: 2rem 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    width: 50%;
-    padding-right: 4.5rem;
-}
-
-/* label titel */
-.loginForm form label{
-    font-family:  "NeueMontreal Medium";
-    font-size: 1.2rem;
-    letter-spacing: 1.5px;
-    display: inline-block;
-    vertical-align: middle;
-} 
-
-/* invoerveld */
-.loginForm form input{
-    border: none;
-    border-bottom: 0.1rem solid black; /* standaard border dikte in de root? */
-    background-color: transparent;
-    margin-bottom: 2rem;
-    height: 1.5rem;
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
-    font-family: "NeueMontreal Regular";
-
-}
-
-/* invoerveld geselecteerd */
-.loginForm form input:focus {
-    background-color: transparent;
-    border: none;
-    outline-color: black;
-}
-
-/* Checkbox privacy + tekst */
-.loginForm form div{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-input[type="checkbox"] {
-    margin: 0;
-    width: 2rem; 
-    height: 2rem; 
-    accent-color: var(--black);
-  }
-  
-
-#checkbox{
-    margin: 0;
-}
-
-/* space between password & checkbox privacy */
-.loginForm form input:nth-of-type(3){
-    margin-bottom: 1rem;
-}
-
-/* let's join button */
-.loginForm form button{
-    background-color: black;
-    border: 1px solid var(--black);
-    color: white;
-    width: fit-content;
-    padding: 1.2rem 2.5rem;
-    border-radius: 50px;
-    border: none;
-    align-self: center;
-    font-size: 1.2rem;
-}
-
-/* or + socials */
-.loginForm article{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 4.5rem
-}
-
-/* or */
-.loginForm p{
-    display: flex; 
-    flex-direction: row; 
-    font-size: 1.3rem;
-    width: 50%;
-} 
-
-.loginForm p:before, 
-.loginForm p:after { 
-    content: ""; 
-    flex: 1 1; 
-    border-bottom: 2px solid #000; 
-    margin: auto 1rem ;
-} 
-
-
-
-/* socials --> gebruik abby's opmaak uit footer*/
-.loginForm ul{
-    display: flex;
-    flex-direction: row;
-    gap: 4rem;
-    width: 40%;
-    justify-content: center;
-    margin-top: 2rem;
-} */
-
-
-  
 
 
 
