@@ -242,10 +242,13 @@ padding-left: 1rem;
     font-size: 1rem;
     line-height: 23px;
     letter-spacing: 1.5px;
-    background-color: #F2B199;
+    border: solid 0.15rem var(--black);
     text-decoration: none;
     color: black;
-    transition: background-color .5s ease, transform .5s
+    transition: background-color .5s ease, transform .5s;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
 }
 
 /*///////////////////////////////////////////////////////////////////////////*/
