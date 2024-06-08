@@ -6,6 +6,7 @@
 @font-face {
     font-family:  "NeueMontreal Medium";
     src: url(../fonts/NeueMontreal-Medium.otf);
+    
 }
 
 @font-face {
@@ -36,6 +37,7 @@
     --white: #ffffff;
     --black: #1f1f1f;
     --peach: #F2B199;
+    --peachLight: rgba(242,177,153,0.4);
 
 
     /* fonts */
@@ -302,6 +304,7 @@ h4 {
 }
 
 .home_banner {
+    background-color: red;
     margin: 0;
     padding: 0;
     display: grid;
@@ -845,4 +848,328 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     font-size: 0.8rem;
     text-align: center;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+/*////////////////////////////////////////////////////////*/
+/*//////🪪🪪Signup + login🪪🪪/////////////////////////////*/
+/*////////////////////////////////////////////////////////*/
+
+.loginForm h1,
+.loginForm h2,
+.loginForm form,
+.loginForm article,
+.loginForm p,
+.loginForm ul{
+padding-left: 5rem;
+padding-right: 5rem;
+}
+
+h1{
+    padding-top: 2.8rem;
+    font-size: 3rem;
+}
+
+.loginForm h2{
+    font-size: 1.2rem; 
+    font-family: "NeueMontreal Regular";
+    letter-spacing: 1.5px;
+}
+
+.loginForm h2 span{
+    font-family: "NeueMontreal Bold";
+    color: var(--black);
+}
+
+/* back button */
+.loginForm > a{
+    display: none;
+}
+
+/* all links */
+.loginForm form a:visited,
+.loginForm h2 a,
+.loginForm li a,
+.loginForm > a 
+{ text-decoration: none; color: var(--black); }
+
+/* linkjes signup+terms etc */
+.loginForm form a,
+.loginForm h2 a{
+    text-decoration: none;
+    font-family: "NeueMontreal Bold";
+    color: var(--black);
+}
+
+/* hover: linkjes signup+terms etc */
+.loginForm form a:hover,
+.loginForm h2 a:hover
+ {    text-decoration: underline;}
+
+ .loginForm form a:focus,
+ .loginForm h2 a:focus 
+ { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
+
+/* pagina */
+.loginForm{
+    margin: 3rem;
+    background-color: var(--peachLight);
+    height: 80vh;
+    border-radius: 3rem;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto 1fr;
+    grid-template-columns: auto 55%;
+    gap: 0.5rem;
+}
+
+/* img */
+.loginForm > img{
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 6; 
+ 
+    height: inherit;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 0 3rem 3rem 0;
+}
+
+/* formulier */
+.loginForm form{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+/* label titel */
+.loginForm form label{
+    font-family:  "NeueMontreal Medium";
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    display: inline-block;
+    vertical-align: middle;
+} 
+
+/* invoerveld */
+.loginForm form input{
+    border: none;
+    border-bottom: 0.1rem solid black; /* standaard border dikte in de root? */
+    background-color: transparent;
+    margin-bottom: 2rem;
+    height: 1.8rem;
+    font-size: 1.2rem;
+    letter-spacing: 1.5px;
+    font-family: "NeueMontreal Regular";
+    padding: 0.2rem;
+
+}
+
+/* invoerveld geselecteerd */
+.loginForm form input:focus {
+    background-color: transparent;
+    border: none;
+    outline-color: black;
+}
+
+
+/* Password veld + oog */
+.loginForm form div:first-of-type{
+    position: relative;
+}
+
+/* Password veld */
+.loginForm form div:first-of-type input{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* oog icoon */
+.loginForm form div:first-of-type button{
+    position: absolute;
+    top: 0;
+    right: 0.3rem;
+    background-color: transparent;
+    border: none;
+
+    z-index: 1;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.loginForm form div:first-of-type button:hover{
+    color: var(--peach);
+}
+
+/* Checkbox privacy + tekst */
+.loginForm form div:last-of-type{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    margin: 0;
+    width: 2rem; 
+    height: 2rem; 
+    accent-color: var(--black);
+}
+  
+
+#checkbox{
+    margin: 0;
+}
+
+/* space between password & checkbox privacy */
+.loginForm form input:nth-of-type(3){
+    margin-bottom: 0.1rem;
+}
+
+/* let's join button */
+section.loginForm a[href="/profile"]{
+    font-family: "NeueMontreal Regular";
+    background-color: var(--black);
+    color: white;
+    width: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: solid var(--black) 0.15rem;
+    align-self: center;
+    font-size: 1rem;
+    transition: background-color .5s ease, transform .5s
+}
+
+section.loginForm a[href="/profile"]:hover{
+    color: var(--black);
+    transition: background-color .5s ease, transform .5s;
+    background-color: transparent;
+    border: solid var(--black) 0.15rem;
+}
+
+/* or */
+.loginForm p{
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem 0;
+}
+
+/* ---- or ----- */
+.loginForm p:before, .loginForm p:after{
+    content: "";
+    width: 10rem;
+    border-bottom: 0.1rem solid var(--black);
+    margin: auto;
+  }
+
+  .loginForm p:before {
+    margin-right: 10px
+  }
+  .loginForm p:after {
+    margin-left: 10px
+  }
+
+/* social media */
+.loginForm ul{
+    display: flex;
+    gap: 2rem;
+    justify-self: center;
+}
+
+.loginForm ul li{
+    transition: transform 0.2s ease-in-out;         
+}
+
+.loginForm ul li:hover{
+    transform: scale(1.1);     
+}
+
+/* ipad formaat */
+@media (max-width: 1350px) {
+    .loginForm{
+        grid-template-columns: auto 30%; 
+    }
+
+    .loginForm h1,
+    .loginForm h2,
+    .loginForm form,
+    .loginForm article,
+    .loginForm p,
+    .loginForm ul{
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    }
+
+    h1{
+        padding-top: 2rem;
+    }
+
+}
+
+
+/* phone formaat */
+@media (max-width: 768px) {
+
+    .loginForm > a{
+        display: block;
+        z-index: 3;
+        position: absolute;
+        margin: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        background-color: rgb(255, 255, 255);
+        padding: 0.5rem 1rem; 
+        border-radius: 50px;
+        font-family: "NeueMontreal Regular";
+        font-size: 1rem;
+        text-decoration: none;
+        transition: background-color .5s ease, transform .5s
+    }
+
+    header{
+        display: none;
+    }
+
+    .loginForm h1{
+        margin-top: -5rem;
+        color: var(--peach);
+        background-color: white;
+        border-top-left-radius: 20px; /* Adjust the value as needed */
+        border-top-right-radius: 20px;
+
+        font-size: 2.5rem;
+    }
+
+    .loginForm h2{
+        font-size: 1rem;
+    }
+
+    .loginForm form label,
+    .loginForm form input{
+        font-size: 0.8rem;
+    }
+    
+
+    .loginForm{
+        margin: 0;
+        height: 80vh;
+        background-color: rgb(255, 255, 255);
+        display: grid;
+        grid-template-rows: 17rem auto auto auto auto minmax(0, 1fr);
+        grid-template-columns: auto;
+        gap: 0.6rem;
+        height: 92vh;
+    }
+    
+    .loginForm img{
+        grid-column-start: 1;
+        grid-row-start: 1;
+        grid-row-end: 2; 
+        border-radius: 0;
+        height: -webkit-fill-available;
+    }
 }
