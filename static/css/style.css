@@ -267,11 +267,13 @@ p {
 
 .filter-dropdown {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
     position: relative;
+    z-index: 0;
     margin: 2rem 8rem 2rem 8rem;
+    gap: 1rem;
 }
 
 .filter-bttn {
@@ -279,7 +281,6 @@ p {
     border-radius: 2rem;
     border: 1.5px solid black;
     padding: 0.5rem 0.8rem;
-    width: 17vw;
     font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
     font-size: 1rem;
     cursor: pointer;
@@ -289,7 +290,7 @@ p {
     vertical-align: middle;
     flex-shrink: 0;
     margin-left: 4rem;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 }
 
 
@@ -297,40 +298,42 @@ p {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    flex-grow: auto;
     position: absolute;
     z-index: 1;
-    background: rgb(226, 226, 226);
-    min-width: 17vw;
+    background: rgb(232, 232, 232);
+    width: 17vw;
     height: 20vh;
     top: 3rem;
     border-radius: 1rem;
     scroll-behavior: smooth;
-    scroll-snap-type: mandatory;
     scrollbar-width: 0.5rem;
     overflow-y: scroll;
     transition: opacity 300ms ease;
     opacity: 1;
 }
 
+
 .hide-dropdown {
     display: none;
     opacity: 0;
 }
 
-.filter-dropdown-items button {
-    background: none;
-    border: none;
-    outline: none;
+.filter-dropdown-items a {
     padding: 0.5rem 1rem;
     cursor: pointer;
     width: 100%;
     text-align: left;
 }
 
+.filter-dropdown-items a:hover {
+    color: #4380c2;
+    text-decoration: underline;
+}
+
 .filter-bttn.active svg {
     transform: rotate(180deg);
 }
-
 
 /*/////////////*/
 /*RESPONSIVE DEVICE*/
