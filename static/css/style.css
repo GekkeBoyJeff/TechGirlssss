@@ -137,6 +137,13 @@ scroll-behavior: smooth;
 grid-column: 1 / 3;
 }
 
+.grid{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+padding-right: none;
+}
+
 .slider li{
 scroll-snap-align: start;   
 /* flex-shrink: 0;    */
