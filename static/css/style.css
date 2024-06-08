@@ -482,15 +482,22 @@ input[type="checkbox"] {
 
 /* let's join button */
 .loginForm form button{
-    background-color: black;
-    border: 1px solid var(--black);
+    background-color: var(--black);
     color: white;
     width: fit-content;
     padding: 1rem 2rem;
     border-radius: 50px;
-    border: none;
+    border: solid var(--black) 0.15rem;
     align-self: center;
     font-size: 1rem;
+    transition: background-color .5s ease, transform .5s
+}
+
+.loginForm form button:hover{
+    color: var(--black);
+    transition: background-color .5s ease, transform .5s;
+    background-color: transparent;
+    border: solid var(--black) 0.15rem;
 }
 
 .loginForm p{
@@ -520,6 +527,10 @@ input[type="checkbox"] {
     display: flex;
     gap: 2rem;
     justify-self: center;
+}
+
+.loginForm ul li a{
+           
 }
 
 /* ipad formaat */
@@ -564,10 +575,7 @@ input[type="checkbox"] {
         font-family: "NeueMontreal Regular";
         font-size: 1rem;
         text-decoration: none;
-    }
-
-    .loginForm > a{
-        
+        transition: background-color .5s ease, transform .5s
     }
 
     header{
