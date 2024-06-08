@@ -219,6 +219,48 @@ p {
     margin: 14rem 0rem 0rem 4rem;
 }
 
+/*///////////////*/
+/*FILTER SECTION*/
+/*//////////////*/
+
+.search-container {
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.search-container form {
+    position: relative;
+}
+
+.filter-search {
+    border-radius: 2rem;
+    padding: 0.8rem 0.8rem 0.8rem 3rem;
+    width: 70vw;
+    height: auto;
+    border: black solid 1.5px;
+    background: white;
+    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.search-container input::placeholder {
+    color: #b7b7b7;
+}
+
+.search-container ::-ms-input-placeholder {
+    color: #b7b7b7;
+}
+
+
+.search-container form svg {
+    position: absolute;
+    top: 0.6rem;
+    bottom: 0.5rem;
+    left: 0.8rem;
+}
+
 /*/////////////*/
 /*RESPONSIVE DEVICE*/
 /*/////////////*/
