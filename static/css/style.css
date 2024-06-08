@@ -135,8 +135,9 @@ scroll-snap-align: start;
 }
 
 /* Card + HeartButton + text everything*/
-.slider li article{
+.detailCard{
     width: 28rem; 
+    position: relative;
 }
 
 /* Card image + text*/
@@ -154,7 +155,7 @@ scroll-snap-align: start;
 }
 
 /* Image event */
-.slider li article img{
+.detailCard img{
     height: 15rem;
     width: 100%;
     border-radius: 1.8rem;
@@ -164,8 +165,8 @@ scroll-snap-align: start;
 }
 
 /* text event, iets van de kant mooi */
-.slider li article h3,
-.slider li article p{
+.detailCard h3,
+.detailCard p{
 padding-left: 1rem;
 }
 
@@ -189,18 +190,13 @@ padding-left: 1rem;
     gap: 3rem;
 }
 
-/* relative zodat heart button absolute kan */
-.slider article{
-    position: relative;
-}
-
 .popularEvents div button{
     background-color: transparent;
     border: none;
 }
 
 /* heart button --> achter sara's code button zetten want nu overbodige extra code*/
-.slider article button{
+.detailCard button{
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -287,12 +283,12 @@ p{
     }
 
     /* Image event */
-.slider li article img{
+.detailCard img{
     height: 10rem;
 }
 
 /* 1 card event */
-.slider li article{
+.detailCard{
     width: 18rem; 
 }
 
