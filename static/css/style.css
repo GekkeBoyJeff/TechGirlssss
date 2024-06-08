@@ -107,53 +107,6 @@ nav ul li a:hover {
 }
 
 
-/* dropdown menu */
-.mega-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 102;
-
-    padding: 1.5em 3em 1.5em 1.5em;
-    top: 5em;
-    overflow: hidden;
-    white-space: nowrap;
-
-    background: white;
-    border-radius: 0.8em;
-    transition: opacity 0.10s ease, visibility 0.10s ease;
-    transition-delay: 300ms;
-}
-
-/* Hidden state */
-.hidden {
-    visibility: hidden;
-    opacity: 0;
-}
-
-
-/* dropdown hover */
-.dropdown:hover > .mega-menu,
-.dropdown:focus-within > .mega-menu,
-.mega-menu:hover,
-.mega-menu:focus-within {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.10s ease, visibility 0.10s ease;
-    transition-delay: 0ms;
-}
-
-.hamburger, .close {
-    display: none;
-    cursor: pointer;
-}
-
-.show {
-        transform:translateX(0);
-        transition: 0.5s;
-}
-
-
 h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
@@ -336,7 +289,7 @@ p {
 
 
 /*////////////////////////////////////////////////////////*/
-/*//////🪪🪪Signup🪪🪪/////////////////////////////*/
+/*//////🪪🪪Signup + login🪪🪪/////////////////////////////*/
 /*////////////////////////////////////////////////////////*/
 
 .loginForm h1,
@@ -657,10 +610,6 @@ section.loginForm a[href="/profile"]:hover{
         border-radius: 0;
         height: -webkit-fill-available;
     }
-
-
-    
- 
 }
 
 
