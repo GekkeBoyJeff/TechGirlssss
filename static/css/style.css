@@ -382,6 +382,7 @@ h1{
 .loginForm h2 a{
     text-decoration: none;
     font-family: "NeueMontreal Bold";
+    color: var(--black);
 }
 
 /* hover: linkjes signup+terms etc */
