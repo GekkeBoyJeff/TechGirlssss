@@ -181,7 +181,6 @@ p {
 }
 
 .home_banner {
-    background-color: red;
     margin: 0;
     padding: 0;
     display: grid;
@@ -302,7 +301,7 @@ padding-left: 5rem;
 padding-right: 5rem;
 }
 
-h1{
+.loginForm h1{
     padding-top: 2.8rem;
     font-size: 3rem;
 }
@@ -540,7 +539,7 @@ section.loginForm a[href="/profile"]:hover{
     padding-right: 2.5rem;
     }
 
-    h1{
+    .loginForm h1{
         padding-top: 2rem;
     }
 
@@ -568,7 +567,7 @@ section.loginForm a[href="/profile"]:hover{
         transition: background-color .5s ease, transform .5s
     }
 
-    header{
+    .loginForm header{
         display: none;
     }
 
