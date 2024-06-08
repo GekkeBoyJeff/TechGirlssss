@@ -111,7 +111,7 @@ gap: 1rem;
 }
 
 /* 3x Multiple Cards*/
-.popularEvents ul{
+.slider{
     margin-top: 2rem;
     padding-right: 8rem;
     
@@ -128,19 +128,19 @@ scroll-behavior: smooth;
 grid-column: 1 / 3;
 }
 
-.popularEvents ul li{
+.slider li{
 scroll-snap-align: start;   
 /* flex-shrink: 0;    */
 
 }
 
 /* Card + HeartButton + text everything*/
-.popularEvents ul li article{
+.slider li article{
     width: 28rem; 
 }
 
 /* Card image + text*/
-.popularEvents ul li article a {
+.slider li article a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -149,12 +149,12 @@ scroll-snap-align: start;
 }
 
 /* margin left first card */
-.popularEvents ul li:first-of-type article {
+.slider li:first-of-type article {
     margin-left: 8rem;
 }
 
 /* Image event */
-.popularEvents ul li article img{
+.slider li article img{
     height: 15rem;
     width: 100%;
     border-radius: 1.8rem;
@@ -164,8 +164,8 @@ scroll-snap-align: start;
 }
 
 /* text event, iets van de kant mooi */
-.popularEvents ul li article h3,
-.popularEvents ul li article p{
+.slider li article h3,
+.slider li article p{
 padding-left: 1rem;
 }
 
@@ -190,17 +190,17 @@ padding-left: 1rem;
 }
 
 /* relative zodat heart button absolute kan */
-.popularEvents article{
+.slider article{
     position: relative;
 }
 
-.popularEvents div button{
+.slider div button{
     background-color: transparent;
     border: none;
 }
 
 /* heart button --> achter sara's code button zetten want nu overbodige extra code*/
-.popularEvents article button{
+.slider article button{
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -287,24 +287,24 @@ p{
     }
 
     /* Image event */
-.popularEvents ul li article img{
+.slider li article img{
     height: 10rem;
 }
 
 /* 1 card event */
-.popularEvents ul li article{
+.slider li article{
     width: 18rem; 
 }
 
 /* all cards */
-.popularEvents ul{
+.slider{
     scroll-padding: 2rem;
     gap: 2rem;
     margin-top: 1rem;
 }
 
 /* space zijkant */
-.popularEvents ul li:first-of-type article {
+.slider li:first-of-type article {
     margin-left: 2rem;
 }
 
