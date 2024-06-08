@@ -365,23 +365,26 @@ h1{
     color: var(--black);
 }
 
-.loginForm form a,
-.loginForm h2 a{
-    text-decoration: none;
-    font-family: "NeueMontreal Bold";
-}
-
 /* back button */
 .loginForm > a{
     display: none;
 }
 
+/* all links */
 .loginForm form a:visited,
 .loginForm h2 a,
 .loginForm li a,
 .loginForm > a 
 { text-decoration: none; color: var(--black); }
 
+/* linkjes signup+terms etc */
+.loginForm form a,
+.loginForm h2 a{
+    text-decoration: none;
+    font-family: "NeueMontreal Bold";
+}
+
+/* hover: linkjes signup+terms etc */
 .loginForm form a:hover,
 .loginForm h2 a:hover
  {    text-decoration: underline;}
@@ -390,7 +393,7 @@ h1{
  .loginForm h2 a:focus 
  { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
 
-
+/* pagina */
 .loginForm{
     margin: 3rem;
     background-color: var(--peachLight);
@@ -403,7 +406,7 @@ h1{
     gap: 0.6rem;
 }
 
-
+/* img */
 .loginForm > img{
     grid-column-start: 2;
     grid-row-start: 1;
@@ -416,14 +419,12 @@ h1{
     border-radius: 0 3rem 3rem 0;
 }
 
-
-/* form */
+/* formulier */
 .loginForm form{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-    /* width: 80%; */
 }
 
 /* label titel */
@@ -463,6 +464,7 @@ h1{
     margin-bottom: 1.1rem;
 }
 
+/* Checkbox */
 input[type="checkbox"] {
     margin: 0;
     width: 2rem; 
@@ -500,12 +502,14 @@ input[type="checkbox"] {
     border: solid var(--black) 0.15rem;
 }
 
+/* or */
 .loginForm p{
     display: flex;
     flex-direction: row;
     margin: 1.5rem 0;
 }
 
+/* ---- or ----- */
 .loginForm p:before, .loginForm p:after{
     content: "";
     width: 10rem;
@@ -520,17 +524,19 @@ input[type="checkbox"] {
     margin-left: 10px
   }
 
-
-
-
+/* social media */
 .loginForm ul{
     display: flex;
     gap: 2rem;
     justify-self: center;
 }
 
-.loginForm ul li a{
-           
+.loginForm ul li{
+    transition: transform 0.2s ease-in-out;         
+}
+
+.loginForm ul li:hover{
+    transform: scale(1.1);     
 }
 
 /* ipad formaat */
@@ -560,7 +566,6 @@ input[type="checkbox"] {
 @media (max-width: 768px) {
 
     .loginForm > a{
-        font-family: ;
         display: block;
         z-index: 3;
         position: absolute;
@@ -611,7 +616,6 @@ input[type="checkbox"] {
         grid-template-columns: auto;
         gap: 0.6rem;
         height: 92vh;
-        overflow: none;
     }
     
     .loginForm img{
