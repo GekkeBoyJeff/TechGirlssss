@@ -1,6 +1,6 @@
 <!--<div class="menu">-->
 <header>
-  <a href="#">
+  <a href="index.ejs">
     <img src="/images/logo_cr8.png" alt="cr8">
   </a>
   <nav>
@@ -48,6 +48,7 @@
   hamBurger.addEventListener("click", () => {
     nav.classList.toggle("show");
 
+  /*dropdown phone*/
     dropdowns.forEach(dropdown => {
       const link = dropdown.querySelector('a');
       const svg = link.querySelector('svg');
