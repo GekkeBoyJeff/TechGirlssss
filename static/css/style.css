@@ -104,6 +104,8 @@ gap: 1rem;
     grid-template-columns: 1fr auto;
     grid-template-rows: auto 1fr;
     gap: 1rem; 
+    background-color: var();
+    padding: 2rem 0;
 }
 
 .popularEvents h2{
