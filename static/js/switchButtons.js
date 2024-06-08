@@ -17,10 +17,10 @@ upcomingEventsButton.addEventListener("click", function() {
     upcomingEvents.classList.remove("hidden");
     savedEvents.classList.add("hidden");
     
-    eventsText.classList.add("clicked");
-    eventsSvg.classList.add("clicked-svg");
-    wishlistText.classList.remove("clicked");
-    wishlistSvg.classList.remove("clicked-svg");
+    // eventsText.classList.add("clicked");
+    // eventsSvg.classList.add("clicked-svg");
+    // wishlistText.classList.remove("clicked");
+    // wishlistSvg.classList.remove("clicked-svg");
 });
 
 wishlistButton.addEventListener("click", function() {
@@ -28,8 +28,8 @@ wishlistButton.addEventListener("click", function() {
     upcomingEvents.classList.add("hidden");
     savedEvents.classList.remove("hidden");
     
-    wishlistText.classList.add("clicked");
-    wishlistSvg.classList.add("clicked-svg");
-    eventsText.classList.remove("clicked");
-    eventsSvg.classList.remove("clicked-svg");
+    // wishlistText.classList.add("clicked");
+    // wishlistSvg.classList.add("clicked-svg");
+    // eventsText.classList.remove("clicked");
+    // eventsSvg.classList.remove("clicked-svg");
 });
