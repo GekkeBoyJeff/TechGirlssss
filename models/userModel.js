@@ -29,8 +29,39 @@ const userSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
-    }
-}, {
+    },
+    age:{
+        type: Number
+    },
+    country:{
+        type: String
+    },
+    language:{
+        type: String
+    },
+    activeTime:{
+        type: String
+    },
+    social:{
+        type: String
+    },
+    wantToDiscover:{
+        type: Array
+    },
+    spendingTimePreferences:{
+        type: Array
+    },
+    preferredArtForm:{
+        type: Array
+    },
+    musicStyle:{
+        type: Array
+    },
+    emotion:{
+        type: Array
+    },
+}, 
+{
     timestamps: true
 })
 
