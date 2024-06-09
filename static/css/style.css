@@ -209,12 +209,6 @@ li a svg {
 .hidden {
     visibility: hidden;
     opacity: 0;
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1px;
-    margin: 0rem 0rem 5rem 8rem;
 }
 
 /* Dropdown hover */
