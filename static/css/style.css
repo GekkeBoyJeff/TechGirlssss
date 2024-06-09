@@ -29,6 +29,8 @@
 :root {
     --white: #ffffff;
     --black: #1f1f1f;
+    --peach: #F2B199;
+    --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
 
     --padding: 1em;
@@ -36,6 +38,7 @@
     --border-radius: 0.5em;
     --max-width: 10rem 10rem;
     --border-radius: 2rem;
+
         --spaceSides: 8rem;
 }
 
@@ -89,7 +92,7 @@ p {
 
 
 /*//////////////////////////////////////////////////////////////////////*/
-/**********************🃏🃏DetailCards🃏🃏********************************/
+/**********************🃏🃏DetailCards (cards general)🃏🃏***************/
 /*//////////////////////////////////////////////////////////////////////*/
 
 .popularEvents{
@@ -97,16 +100,6 @@ display: grid;
 grid-template-columns: 1fr auto;
 grid-template-rows: 0.1fr 0.1fr 1fr;
 gap: 1rem;
-}
-
-.categories{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
-    gap: 1rem; 
-    background-color: var(--peachLight);
-    padding-top: 2rem;
-    padding-bottom: 1rem;
 }
 
 .popularEvents h2{
@@ -124,25 +117,18 @@ gap: 1rem;
 .slider{
     margin-top: 2rem;
     padding-right: 8rem;
-    
+    padding-bottom: 3rem;
     display: flex;
     gap: 2.8rem ;
     overflow-x: scroll;
-
     list-style: none;
     scroll-snap-type: x mandatory;  
     scroll-padding: 8rem;
+    scroll-behavior: smooth;
+    grid-column: 1 / 3;
 
-scroll-behavior: smooth;
-
-grid-column: 1 / 3;
-
-}
-
-.categories .slider{
-    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(223, 223, 219, 0.2);
+    scrollbar-color: var(--peachLight) rgba(223, 223, 219, 0.4);
     scrollbar-width: thin;
-    padding-bottom: 1.5rem;
 }
 
 .slider li{
@@ -152,12 +138,13 @@ scroll-snap-align: start;
 }
 
 /* Card + HeartButton + text everything*/
-.slider li article{
+.detailCard{
     width: 28rem; 
+    position: relative;
 }
 
 /* Card image + text*/
-.slider li article a {
+.detailCard a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -171,7 +158,7 @@ scroll-snap-align: start;
 }
 
 /* Image event */
-.slider li article img{
+.detailCard img{
     height: 15rem;
     width: 100%;
     border-radius: 1.8rem;
@@ -181,8 +168,8 @@ scroll-snap-align: start;
 }
 
 /* text event, iets van de kant mooi */
-.slider li article h3,
-.slider li article p{
+.detailCard h3,
+.detailCard p{
 padding-left: 1rem;
 }
 
@@ -206,18 +193,13 @@ padding-left: 1rem;
     gap: 3rem;
 }
 
-/* relative zodat heart button absolute kan */
-.slider article{
-    position: relative;
-}
-
 .popularEvents div button{
     background-color: transparent;
     border: none;
 }
 
 /* heart button --> achter sara's code button zetten want nu overbodige extra code*/
-.slider article button{
+.detailCard button{
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -304,12 +286,12 @@ p{
     }
 
     /* Image event */
-.slider li article img{
+.detailCard img{
     height: 10rem;
 }
 
 /* 1 card event */
-.slider li article{
+.detailCard{
     width: 18rem; 
 }
 
@@ -327,5 +309,135 @@ p{
 
 }
 
-/* categories */
-    
+/******🃏🃏Impression cards🃏🃏********/
+
+.impression .detailCard p,
+.impression .detailCard h3,
+.impression .detailCard button{
+    display: none;
+}
+
+.impression{
+    grid-template-rows: 0.1fr auto;
+}
+
+/******categories cards🃏🃏********/
+
+.categories .detailCard p,
+.categories .detailCard button{
+display: none;
+}
+
+.popularEvents.categories{
+    grid-template-rows: 0.1fr auto;
+    background-color: var(--peachLight);
+    padding: 3rem 0;
+}
+
+/******grid cards🃏🃏********/
+
+.overviewGrid ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    margin: 5rem 8rem;
+    justify-content: center;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem; */
+}
+
+.overviewGrid .detailCard{
+    width: 100%;
+}
+
+/* ipad */
+@media (max-width: 1400px){
+
+    .overviewGrid ul{
+        grid-template-columns: auto auto;
+    }
+
+    .overviewGrid .detailCard{
+        width: 100%;
+    }
+  
+}
+
+/* phone */
+@media (max-width: 1100px){
+
+    .overviewGrid ul{
+        grid-template-columns: auto;
+        margin: 4rem 2rem;
+        gap: 3rem;
+    }
+
+    .overviewGrid .detailCard{
+        width: 100%;
+    }
+}
+
+/******recommended cards🃏🃏********/
+
+.recommended{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 8rem;
+}
+
+
+.recommended ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.recommended .detailCard{
+    width: 100%;
+}
+
+@media (max-width: 1400px){
+
+    .recommended ul{
+        grid-template-columns: auto auto;
+    }
+
+    .recommended .detailCard{
+        width: 100%;
+    }
+
+    .recommended ul li:nth-of-type(2){
+        display: none;
+    }
+
+}
+
+/* phone */
+@media (max-width: 1100px){
+
+    .recommended ul{
+        grid-template-columns: auto;
+        gap: 3rem;
+        justify-content: unset;
+    }
+
+    .recommended .detailCard{
+        width: 100%;
+    }
+
+    .recommended{
+        margin: 0 2rem;
+    }
+
+    .recommended ul li:nth-of-type(3){
+        display: none;
+    }
+
+}
