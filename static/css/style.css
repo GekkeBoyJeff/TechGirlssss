@@ -382,6 +382,12 @@ display: none;
 
 /******recommended cards🃏🃏********/
 
+.recommended{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 8rem;
+}
 
 
 .recommended ul{
@@ -389,8 +395,11 @@ display: none;
     grid-template-columns: auto auto auto;
     gap: 4rem;
     grid-template-rows: auto;
-    margin: 5rem 8rem;
     justify-content: center;
+}
+
+.recommended .detailCard{
+    width: 100%;
 }
 
 @media (max-width: 1400px){
@@ -402,7 +411,11 @@ display: none;
     .recommended .detailCard{
         width: 100%;
     }
-  
+
+    .recommended ul li:nth-of-type(2){
+        display: none;
+    }
+
 }
 
 /* phone */
@@ -410,13 +423,22 @@ display: none;
 
     .recommended ul{
         grid-template-columns: auto;
-        margin: 4rem 2rem;
         gap: 3rem;
+        justify-content: unset;
     }
 
     .recommended .detailCard{
         width: 100%;
     }
+
+    .recommended{
+        margin: 0 2rem;
+    }
+
+    .recommended ul li:nth-of-type(3){
+        display: none;
+    }
+
 }
 
 
