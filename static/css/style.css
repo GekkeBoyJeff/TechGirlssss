@@ -265,74 +265,207 @@ p {
 /*🍭🍭FILTERS🍭🍭*/
 /*//////////////*/
 
-.filter-dropdown {
+.filters{
     display: flex;
-    align-items: flex-start;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative;
-    z-index: 0;
-    margin: 2rem 8rem 2rem 8rem;
     gap: 1rem;
+    margin: 3rem 8rem 1rem 8rem;
 }
 
-.filter-bttn {
-    background: white;
-    border-radius: 2rem;
-    border: 1.5px solid black;
-    padding: 0.5rem 0.8rem;
-    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+.filter-dropdown {
+    position: relative;
+    transition: margin-bottom 0.3s ease; /* Smooth transition for margin */
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
+    min-width: 13rem;
+    height: auto;
+    padding: 0.5rem 0.8rem;
+    border-radius: 1.5rem;
+    background: white;
+    border: 1.5px black solid;
+    font-size: 1rem;
+    font-family: "NeueMontreal Regular";
 }
 
-.filter-bttn svg {
-    vertical-align: middle;
-    flex-shrink: 0;
-    margin-left: 4rem;
-    transition: transform .3s ease;
+.filter-dropdown:last-child .filter-btn {
+    color: white;
+    background: black;
 }
 
+.filter-btn svg {
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+}
 
 .filter-dropdown-items {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: auto;
-    position: absolute;
-    z-index: 1;
-    background: rgb(232, 232, 232);
-    width: 17vw;
-    height: 20vh;
-    top: 3rem;
-    border-radius: 1rem;
-    scroll-behavior: smooth;
-    scrollbar-width: 0.5rem;
-    overflow-y: scroll;
-    transition: opacity 300ms ease;
-    opacity: 1;
-}
-
-
-.hide-dropdown {
     display: none;
-    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid black;
+    width: 100%;
+    height: 20vh;
+    z-index: 103;
+    border-radius: 1rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    margin-top: 0.5rem;
+    transition: margin-top .5s ease, opacity .5s ease;
 }
+
+.filter-dropdown:last-child .filter-dropdown-items {
+    background-color: black;
+}
+
+.filter-dropdown:last-child .filter-dropdown-items a {
+    color: #ffffff;
+}
+
+.filter-dropdown:last-child .filter-dropdown-items a:hover {
+    color: white;
+}
+
 
 .filter-dropdown-items a {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
+    display: block;
+    padding: 0.5rem 0.8rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    font-family: "NeueMontreal Regular";
 }
 
 .filter-dropdown-items a:hover {
-    color: #4380c2;
+    color: darkblue;
     text-decoration: underline;
 }
 
-.filter-bttn.active svg {
-    transform: rotate(180deg);
+.show-dropdown {
+    display: block;
+}
+
+.icon-rotate {
+    transform: rotate(180deg); /* Rotate the icon */
+}
+
+.filter-dropdown.expanded {
+    margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
+}
+
+/*/////////////////*/
+/*NUMBER CONTROLS*/
+/*/////////////////*/
+.number-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 0.8rem;
+}
+
+.number-controls input[type="number"] {
+    width: 60%;
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.number-controls button {
+    background-color: #ffffff;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.number-controls button:hover {
+    background-color: #ccc;
+}
+
+/*/////////////////*/
+/*PRICE RANGE*/
+/*////////////////*/
+
+.price-input {
+    max-width: 100%;
+    margin: 1rem;
+}
+
+.price-input .field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 5vh;
+}
+
+.field input {
+    height: 100%;
+    width: 100%;
+    margin-left: 1rem;
+    border: 1px solid rgb(132, 132, 132);
+    border-radius: 0.5rem;
+    outline: none;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.price-input input[type="number"]::-webkit-outer-spin-button,
+.price-input input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+.price-input .separator {
+    font-size: 1rem;
+    width: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filter-dropdown .slider {
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    position: relative;
+    margin: 0.8rem 1rem 0.8rem 1rem;
+}
+
+.filter-dropdown .slider .progress {
+    height: 0.5rem;
+    border-radius: 0.5rem;
+    background: #F2B199;
+    position: absolute;
+    left: 25%;
+    right: 25%;
+}
+
+.range-input {
+    position: relative;
+}
+
+.range-input input {
+    position: absolute;
+    height: 0.5rem;
+    width: 100%;
+    background: none;
+    appearance: none;
+    pointer-events: none;
+}
+
+.range-input input[type="range"]::-webkit-slider-thumb {
+    height: 1rem;
+    width: 1rem;
+    appearance: none;
+    background: #F2B199;
+    border-radius: 50%;
+    pointer-events: auto;
 }
 
 /*/////////////*/

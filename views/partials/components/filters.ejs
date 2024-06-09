@@ -1,4 +1,5 @@
 <!-- bron:https://nikitahl.com/search-icon-inside-input -->
+<!--Search bar-->
 <div class="search-container">
   <form role="search" name="search">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -15,121 +16,251 @@
   </form>
 </div>
 
-<div class="filter-dropdown">
-  <button class="filter-bttn" id="filterButton">Categories<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item1 hide-dropdown" id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+<!--Filters-->
+<div class="filters">
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Categories
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+        <a href="#">d</a>
+        <a href="#">e</a>
+        <a href="#">f</a>
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Amount of people<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item2 hide-dropdown" id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Amount of people
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <div class="number-controls">
+          <button class="decrement">-</button>
+          <input type="number" id="numberInput" min="0" max="100" value="50">
+          <button class="increment">+</button>
+        </div>
+        <input type="range" id="rangeInput" min="0" max="100" value="50">
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Location<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item3 hide-dropdown" id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Location
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Price<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item4 hide-dropdown" id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Price
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <div class="price-input">
+          <div class="field">
+            <span>Min</span>
+            <input type="number" class="input-min" value="5">
+          </div>
+          <div class="separator">-</div>
+          <div class="field">
+            <span>Max</span>
+            <input type="number" class="input-min" value="50">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="progress"></div>
+          <div class="range-input">
+            <input type="range" class="range-min" min="0" max="100" value="5" step="0">
+            <input type="range" class="range-max" min="0" max="100" value="50" step="0">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Date<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item5 hide-dropdown" id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Date
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Time<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item6 hide-dropdown " id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Time
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Language<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item7 hide-dropdown " id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Language
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
   </div>
-  <button class="filter-bttn" id="filterButton">Popularity<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg></button>
-  <div class="filter-dropdown-items item8 hide-dropdown" id="dropdownItems">
-    <a href="#">a</a>
-    <a href="#">b</a>
-    <a href="#">c</a>
-    <a href="#">d</a>
-    <a href="#">e</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
-    <a href="#">f</a>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Popularity
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
   </div>
 </div>
-
 <script>
+  //// dropdown filter items
   document.addEventListener('DOMContentLoaded', function() {
-    const filterButton = document.getElementById('filterButton');
-    const dropdownItems = document.getElementById('dropdownItems');
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-    filterButton.addEventListener('click', function() {
-      dropdownItems.classList.toggle('hide-dropdown');
-      filterButton.classList.toggle('active');
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const dropdown = button.nextElementSibling;
+        const parent = button.closest('.filter-dropdown');
+        const icon = button.querySelector('svg');
+        dropdown.classList.toggle('show-dropdown');
+        dropdown.classList.toggle('hide-dropdown');
+        icon.classList.toggle('icon-rotate');
+        parent.classList.toggle('expanded');
+      });
     });
   });
+
+  ///Price range
+
+  const rangeInput = document.querySelectorAll(".range-input input");
+  priceInput = document.querySelectorAll(".price-input input");
+  progress = document.querySelector(".slider .progress");
+  let priceGap = 30;
+
+  priceInput.forEach(input => {
+    input.addEventListener("input", e => {
+      let minVal = parseInt(priceInput[0].value),
+        maxVal = parseInt(priceInput[1].value);
+
+      if ((maxVal - minVal >= priceGap) && maxVal <= 100) {
+        if (e.target.className === "input-min") {
+          rangeInput[0].value = minVal;
+          progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        } else {
+          rangeInput[1].value = maxVal;
+          progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+      } 
+    });
+  })
+
+   rangeInput.forEach(input => {
+    input.addEventListener("input", e => {
+      let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+      if (maxVal - minVal < priceGap) {
+        if (e.target.className === "range-min") {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+      }
+    });
+  })
+
+
+  //// adding numbers
+
+  /*document.addEventListener('DOMContentLoaded', function() {
+    const rangeInput = document.getElementById('rangeInput');
+    const numberInput = document.getElementById('numberInput');
+    const decrementButton = document.querySelector('.decrement');
+    const incrementButton = document.querySelector('.increment');
+
+    // Functie om de waarde van de range slider bij te werken
+    function updateRangeValue() {
+      rangeInput.value = numberInput.value;
+    }
+
+    // Functie om de waarde van het nummer invoerveld bij te werken
+    function updateNumberInput() {
+      if (parseInt(numberInput.value) >= parseInt(numberInput.min) && parseInt(numberInput.value) <= parseInt(numberInput.max)) {
+        numberInput.value = parseInt(numberInput.value);
+        rangeInput.value = parseInt(numberInput.value);
+      }
+    }
+
+    // Event listener voor de range slider 
+    rangeInput.addEventListener('input', updateNumberInput);
+
+    // Event listener voor het nummer invoerveld 
+    numberInput.addEventListener('input', updateRangeValue);
+
+    // Event listener voor de decrement knop 
+    decrementButton.addEventListener('click', function() {
+      if (parseInt(numberInput.value) > parseInt(numberInput.min)) {
+        numberInput.value = parseInt(numberInput.value) - 1;
+        updateRangeValue();
+      }
+    });
+
+    // Event listener voor de increment knop
+    incrementButton.addEventListener('click', function() {
+      if (parseInt(numberInput.value)
+
+        <
+        parseInt(numberInput.max)) {
+        numberInput.value = parseInt(numberInput.value) + 1;
+        updateRangeValue();
+      }
+    })
+  }); */
 </script>
