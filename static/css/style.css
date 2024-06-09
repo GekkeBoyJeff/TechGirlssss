@@ -34,6 +34,51 @@
 :root {
     --white: #ffffff;
     --black: #1f1f1f;
+
+
+    /* fonts */
+    --titel1: "NeueMontreal Medium";
+    --titel2: "PPMondwest Regular";
+    --text: "NeueMontreal Regular";
+
+    /*font sizes big screen*/
+    --h1: 4rem;
+    --p: 1rem;
+
+    /*font sizes small screen screen*/
+    --h1-small: 2.2rem;
+    --p-small: 0.8rem;
+
+
+    /*Desktop margin*/
+
+
+    /*phone margin*/
+    --margin-small: 2rem;
+    --peach: #F2B199;
+    --peachLight: rgba(242,177,153,0.4);
+
+
+    /* fonts */
+    --titel1: "NeueMontreal Medium";
+    --titel2: "PPMondwest Regular";
+    --text: "NeueMontreal Regular";
+
+    /*font sizes big screen*/
+    --h1: 4rem;
+    --p: 1rem;
+
+    /*font sizes small screen screen*/
+    --h1-small: 2.2rem;
+    --p-small: 0.8rem;
+
+
+    /*Desktop margin*/
+
+
+    /*phone margin*/
+    --margin-small: 2rem;
+    --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
 
 
@@ -323,6 +368,30 @@ grid-column: 1 / 3;
     padding-bottom: 1.5rem;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+    margin: 8rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+    margin: 8rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 4rem;
+    margin: 8rem;
+}
+
 .slider li{
 scroll-snap-align: start;   
 /* flex-shrink: 0;    */
@@ -330,12 +399,13 @@ scroll-snap-align: start;
 }
 
 /* Card + HeartButton + text everything*/
-.slider li article{
+.detailCard{
     width: 28rem; 
+    position: relative;
 }
 
 /* Card image + text*/
-.slider li article a {
+.detailCard a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -349,7 +419,7 @@ scroll-snap-align: start;
 }
 
 /* Image event */
-.slider li article img{
+.detailCard img{
     height: 15rem;
     width: 100%;
     border-radius: 1.8rem;
@@ -359,8 +429,8 @@ scroll-snap-align: start;
 }
 
 /* text event, iets van de kant mooi */
-.slider li article h3,
-.slider li article p{
+.detailCard h3,
+.detailCard p{
 padding-left: 1rem;
 }
 
@@ -384,18 +454,13 @@ padding-left: 1rem;
     gap: 3rem;
 }
 
-/* relative zodat heart button absolute kan */
-.slider article{
-    position: relative;
-}
-
 .popularEvents div button{
     background-color: transparent;
     border: none;
 }
 
 /* heart button --> achter sara's code button zetten want nu overbodige extra code*/
-.slider article button{
+.detailCard button{
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -482,12 +547,12 @@ p{
     }
 
     /* Image event */
-.slider li article img{
+.detailCard img{
     height: 10rem;
 }
 
 /* 1 card event */
-.slider li article{
+.detailCard{
     width: 18rem; 
 }
 
