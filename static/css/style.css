@@ -30,7 +30,6 @@
     --white: #ffffff;
     --black: #1f1f1f;
     --peach: #F2B199;
-    --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
 
     --padding: 1em;
@@ -441,3 +440,4 @@ display: none;
     }
 
 }
+
