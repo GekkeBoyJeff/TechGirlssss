@@ -771,7 +771,7 @@ section.ticker svg, img {
 }
 
 /* TICKER ANIMATION */
-@keyframes ticker1 {
+/* @keyframes ticker1 {
     0% {
         transform: translate3d(-20%, 0, 0);
     }
@@ -796,7 +796,7 @@ section.ticker svg, img {
     100% {
         transform: translate3d(-100%, 0, 0);
     }
-}
+} */
 
 article.transition {
     display: flex;
