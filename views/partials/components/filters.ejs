@@ -1,0 +1,221 @@
+<!-- bron:https://nikitahl.com/search-icon-inside-input -->
+<!--Search bar-->
+<div class="search-container">
+  <form role="search" name="search">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10.7828 18.8276C12.3741 18.8298 13.9302 18.3601 15.2544 17.4781C16.5785 16.596 17.6112 15.3413 18.2216 13.8726C18.832 12.4039 18.9929 10.7872 18.6837 9.2271C18.3746 7.66702 17.6093 6.23364 16.4849 5.10831C15.3604 3.98299 13.9272 3.2163 12.3666 2.90525C10.8061 2.5942 9.18823 2.75277 7.71786 3.3609C6.24748 3.96902 4.99062 4.99937 4.10632 6.32158C3.22202 7.64379 2.75 9.19844 2.75 10.7888C2.75 12.919 3.59596 14.9621 5.10209 16.4693C6.60821 17.9766 8.65135 18.8248 10.7828 18.8276Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M16.4883 16.491L21.25 21.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <input class="filter-search" aria-label="Search for events & workshops" type="search" name="search" placeholder="What are you looking for?" autocomplete="off" list="search-suggestions">
+    <datalist id="search-suggestions">
+      <option value="JavaScript">
+      <option value="CSS">
+      <option value="Accessibility">
+      <option value="Web Design">
+    </datalist>
+  </form>
+</div>
+
+<!--Filters-->
+<div class="filters">
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Categories
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+        <a href="#">d</a>
+        <a href="#">e</a>
+        <a href="#">f</a>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Amount of people
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <div class="number-controls">
+          <button class="decrement">-</button>
+          <input type="number" id="numberInput" min="0" max="100" value="50">
+          <button class="increment">+</button>
+        </div>
+        <div class="amount-range">
+        <input type="range" min="0" max="100" value="50">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Location
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Price
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <div class="price-input">
+          <div class="field">
+            <span>Min</span>
+            <input type="number" class="input-min" value="20">
+          </div>
+          <div class="separator">-</div>
+          <div class="field">
+            <span>Max</span>
+            <input type="number" class="input-min" value="60">
+          </div>
+        </div>
+        <div class="slider">
+          <div class="progress"></div>
+          <div class="range-input">
+            <input type="range" class="range-min" min="0" max="100" value="20" step="0">
+            <input type="range" class="range-max" min="0" max="100" value="60" step="0">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Date
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Time
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Language
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
+  </div>
+  <div class="filter-dropdown">
+    <div class="filter-menu">
+      <button class="filter-btn" aria-expanded="false">Popularity
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="filter-dropdown-items hide-dropdown">
+        <a href="#">a</a>
+        <a href="#">b</a>
+        <a href="#">c</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  //// dropdown filter items
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const dropdown = button.nextElementSibling;
+        const parent = button.closest('.filter-dropdown');
+        const icon = button.querySelector('svg');
+        dropdown.classList.toggle('show-dropdown');
+        dropdown.classList.toggle('hide-dropdown');
+        icon.classList.toggle('icon-rotate');
+        parent.classList.toggle('expanded');
+      });
+    });
+  });
+
+  ///Price range
+
+  const rangeInput = document.querySelectorAll(".range-input input");
+  priceInput = document.querySelectorAll(".price-input input");
+  progress = document.querySelector(".slider .progress");
+  let priceGap = 30;
+
+  priceInput.forEach(input => {
+    input.addEventListener("input", e => {
+      let minVal = parseInt(priceInput[0].value),
+        maxVal = parseInt(priceInput[1].value);
+
+      if ((maxVal - minVal >= priceGap) && maxVal <= 100) {
+        if (e.target.className === "input-min") {
+          rangeInput[0].value = minVal;
+          progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        } else {
+          rangeInput[1].value = maxVal;
+          progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+        }
+      } 
+    });
+  })
+
+   rangeInput.forEach(input => {
+    input.addEventListener("input", e => {
+      let minVal = parseInt(rangeInput[0].value),
+        maxVal = parseInt(rangeInput[1].value);
+
+      if (maxVal - minVal < priceGap) {
+        if (e.target.className === "range-min") {
+          rangeInput[0].value = maxVal - priceGap;
+        } else {
+          rangeInput[1].value = minVal + priceGap;
+        }
+      } else {
+        priceInput[0].value = minVal;
+        priceInput[1].value = maxVal;
+        progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
+        progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+      }
+    });
+  })
+
+</script>
