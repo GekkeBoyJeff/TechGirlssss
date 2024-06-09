@@ -48,7 +48,9 @@
           <input type="number" id="numberInput" min="0" max="100" value="50">
           <button class="increment">+</button>
         </div>
-        <input type="range" id="rangeInput" min="0" max="100" value="50">
+        <div class="amount-range">
+        <input type="range" min="0" max="100" value="50">
+        </div>
       </div>
     </div>
   </div>
@@ -216,51 +218,4 @@
     });
   })
 
-
-  //// adding numbers
-
-  /*document.addEventListener('DOMContentLoaded', function() {
-    const rangeInput = document.getElementById('rangeInput');
-    const numberInput = document.getElementById('numberInput');
-    const decrementButton = document.querySelector('.decrement');
-    const incrementButton = document.querySelector('.increment');
-
-    // Functie om de waarde van de range slider bij te werken
-    function updateRangeValue() {
-      rangeInput.value = numberInput.value;
-    }
-
-    // Functie om de waarde van het nummer invoerveld bij te werken
-    function updateNumberInput() {
-      if (parseInt(numberInput.value) >= parseInt(numberInput.min) && parseInt(numberInput.value) <= parseInt(numberInput.max)) {
-        numberInput.value = parseInt(numberInput.value);
-        rangeInput.value = parseInt(numberInput.value);
-      }
-    }
-
-    // Event listener voor de range slider 
-    rangeInput.addEventListener('input', updateNumberInput);
-
-    // Event listener voor het nummer invoerveld 
-    numberInput.addEventListener('input', updateRangeValue);
-
-    // Event listener voor de decrement knop 
-    decrementButton.addEventListener('click', function() {
-      if (parseInt(numberInput.value) > parseInt(numberInput.min)) {
-        numberInput.value = parseInt(numberInput.value) - 1;
-        updateRangeValue();
-      }
-    });
-
-    // Event listener voor de increment knop
-    incrementButton.addEventListener('click', function() {
-      if (parseInt(numberInput.value)
-
-        <
-        parseInt(numberInput.max)) {
-        numberInput.value = parseInt(numberInput.value) + 1;
-        updateRangeValue();
-      }
-    })
-  }); */
 </script>
