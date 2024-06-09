@@ -1,0 +1,337 @@
+@font-face {
+    font-family:  "NeueMontreal Bold";
+    src: url(../fonts/NeueMontreal-Bold.otf);
+}
+
+@font-face {
+    font-family:  "NeueMontreal Medium";
+    src: url(../fonts/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+    font-family: "NeueMontreal Regular";
+    src: url(../fonts/NeueMontreal-regular.otf);
+}
+
+@font-face {
+    font-family: "PPMondwest Regular";
+    src: url(../fonts/PPMondwest-Regular.otf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --white: #ffffff;
+    --black: #1f1f1f;
+    --peachLight: rgba(242,177,153,0.4);
+
+    --padding: 1em;
+    --margin: 1em;
+    --border-radius: 0.5em;
+    --max-width: 10rem 10rem;
+    --border-radius: 2rem;
+        --spaceSides: 8rem;
+}
+
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1f1f1f;
+        --black: #d9d9d9;
+    }
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: var(--white);
+    color: var(--black);
+}
+
+h1 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+h2{
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: 2.5rem; 
+    font-weight: 300; 
+}
+
+h3{
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 300; 
+}
+
+
+.pixel_text {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+}
+
+p {
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+}
+
+
+
+
+
+/*//////////////////////////////////////////////////////////////////////*/
+/**********************🃏🃏DetailCards🃏🃏********************************/
+/*//////////////////////////////////////////////////////////////////////*/
+
+.popularEvents{
+display: grid;
+grid-template-columns: 1fr auto;
+grid-template-rows: 0.1fr 0.1fr 1fr;
+gap: 1rem;
+}
+
+.popularEvents h2{
+    flex: 50%;
+    grid-column-start: 1;
+}
+
+/* p naar volgende regel */
+.popularEvents p{
+    flex: 50%;
+    grid-column-start: 1;
+}
+
+/* 3x Multiple Cards*/
+.slider{
+    margin-top: 2rem;
+    padding-right: 8rem;
+    
+    display: flex;
+    gap: 2.8rem ;
+    overflow-x: scroll;
+
+    list-style: none;
+    scroll-snap-type: x mandatory;  
+    scroll-padding: 8rem;
+
+scroll-behavior: smooth;
+
+grid-column: 1 / 3;
+
+}
+
+.slider li{
+scroll-snap-align: start;   
+/* flex-shrink: 0;    */
+
+}
+
+/* Card + HeartButton + text everything*/
+.slider li article{
+    width: 28rem; 
+}
+
+/* Card image + text*/
+.slider li article a {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-decoration: none; 
+    color: initial;
+}
+
+/* margin left first card */
+.slider li:first-of-type article {
+    margin-left: 8rem;
+}
+
+/* Image event */
+.slider li article img{
+    height: 15rem;
+    width: 100%;
+    border-radius: 1.8rem;
+    margin-bottom: 0.5rem;
+    object-fit: cover; 
+    border: 0.15rem solid var(--black);
+}
+
+/* text event, iets van de kant mooi */
+.slider li article h3,
+.slider li article p{
+padding-left: 1rem;
+}
+
+/* margin-sides */
+.popularEvents h2,
+.popularEvents > p {
+    margin-left: 8rem;
+}
+
+/* margin-sides */
+.popularEvents div,
+.popularEvents > a {
+    margin-right: 8rem;
+}
+
+/* pijlen buttons samen */
+.popularEvents div{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3rem;
+}
+
+/* relative zodat heart button absolute kan */
+.slider article{
+    position: relative;
+}
+
+.popularEvents div button{
+    background-color: transparent;
+    border: none;
+}
+
+/* heart button --> achter sara's code button zetten want nu overbodige extra code*/
+.slider article button{
+    position: absolute;
+    right: 0;
+    margin-top: 1.5rem; 
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* See all Button --> achter sara's code button zetten want nu overbodige extra code*/
+.popularEvents > a {
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+    border-radius: 10rem;
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+    border: solid 0.15rem var(--black);
+    text-decoration: none;
+    color: black;
+    transition: background-color .5s ease, transform .5s;
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    height: fit-content;
+    align-self: center;
+}
+
+.popularEvents > a:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* evt voor ipad */
+/* @media (max-width: 946px){
+    .popularEvents h2{
+        color: red;
+    }
+} */
+
+@media (max-width: 768px){
+h1{
+    font-size: 2.2rem;
+}
+
+h2{
+    font-size: 1.8rem;
+}
+
+h3{
+    font-size: 1.2rem;
+}
+
+p{
+    font-size: 0.8rem;
+}
+
+    .popularEvents h2,
+    .popularEvents > p,
+    .popularEvents > a{
+        margin-left: 2rem;
+    }
+
+   /* Pijlen buttons */
+    .popularEvents > div{
+        display: none;
+    }
+
+    /* Seel al button */
+    .popularEvents > a {
+        grid-column-start: 1;
+        width: fit-content;
+    }
+
+    /* subtekst */
+    .popularEvents p{
+        flex: 50%;
+        grid-row-start: 2;
+    }
+
+    /* Image event */
+.slider li article img{
+    height: 10rem;
+}
+
+/* 1 card event */
+.slider li article{
+    width: 18rem; 
+}
+
+/* all cards */
+.slider{
+    scroll-padding: 2rem;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+
+/* space zijkant */
+.slider li:first-of-type article {
+    margin-left: 2rem;
+}
+
+}
+
+
+.categories,
+.impression{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 1rem; 
+    background-color: var(--peachLight);
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.impression{
+    background-color: white;
+}
+
+.categories .slider{
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(223, 223, 219, 0.2);
+    scrollbar-width: thin;
+    padding-bottom: 1.5rem;
+}
+
+/*impression*/
