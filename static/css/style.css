@@ -350,10 +350,6 @@ section.profile article.switch-buttons button p {
     color: #808080;
 }
 
-/* section.profile article.switch-buttons button p svg path {
-    stroke: #808080;
-} */
-
 section.profile article.saved-events {
     background-color: pink;
 }
@@ -373,6 +369,7 @@ section.profile article.switch-buttons .clicked {
 
 .clicked-svg {
     stroke-width: 2.2;
+    stroke: var(--black);
 }
 
 /* ////////////////// */
