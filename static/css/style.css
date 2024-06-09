@@ -91,7 +91,7 @@ p {
 
 
 /*//////////////////////////////////////////////////////////////////////*/
-/**********************🃏🃏DetailCards (cards general)🃏🃏********************************/
+/**********************🃏🃏DetailCards (cards general)🃏🃏***************/
 /*//////////////////////////////////////////////////////////////////////*/
 
 .popularEvents{
@@ -338,9 +338,13 @@ display: none;
 .overviewGrid ul{
     display: grid;
     grid-template-columns: auto auto auto;
-    justify-content: center;
     gap: 4rem;
     grid-template-rows: auto;
     margin: 5rem 8rem;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem; */
 }
 
