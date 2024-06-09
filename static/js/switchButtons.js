@@ -20,7 +20,8 @@ upcomingEventsButton.addEventListener("click", function() {
     eventsText.classList.add("clicked");
 
     svgElements.forEach(function(elements) {
-        elements.classList.add(".clicked-svg")
+        console.log("elements werkt");
+        elements.classList.add("clicked-svg");
     })
     wishlistText.classList.remove("clicked");
     wishlistSvg.classList.remove("clicked-svg");
@@ -34,5 +35,9 @@ wishlistButton.addEventListener("click", function() {
     wishlistText.classList.add("clicked");
     wishlistSvg.classList.add("clicked-svg");
     eventsText.classList.remove("clicked");
-    eventsSvg.classList.remove("clicked-svg");
+    
+    svgElements.forEach(function(elements) {
+        console.log("elements werkt");
+        elements.classList.remove("clicked-svg");
+    })
 });
