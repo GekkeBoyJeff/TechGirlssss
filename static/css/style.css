@@ -981,6 +981,7 @@ display: none;
     grid-template-rows: auto;
     margin: 5rem 8rem;
     justify-content: center;
+    justify-content: center;
 
     /* display: flex;
     flex-wrap: wrap;
