@@ -11,5 +11,6 @@ export const routes = {
     '/logout': { title: 'Logout', scripts: [], functions: [logoutUser], errors: [], onlyPost: true },
     '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [welcomeHandler], errors: [], requiresAuth: true },
     '/profile': { view: 'pages/profile', title: 'Profile', scripts: [], functions: [], errors: [], requiresAuth: true },
-    '/events': { view: 'pages/events_workshops', title: 'Events & workshops', scripts: [], functions: [], errors: []},
+    '/events': { view: 'pages/events_workshops', title: 'Events & workshops', scripts: [], functions: [], errors: [] },
+    '/detailevent': { view: 'pages/detail_event', title: 'Event', scripts: [], functions: [], errors: [] },
 }
