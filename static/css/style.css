@@ -75,10 +75,6 @@ a {
     text-decoration: none;
 }
 
-h4 {
-    font-size: 2.5rem;
-}
-
 .secondary-button {
     padding: 0.6rem 1.2rem;
     border: 0.1rem var(--black) solid;
@@ -90,7 +86,7 @@ h4 {
 .tertiary-button {
     background-color: var(--white);
     border: none;
-    border-radius: 2rem;
+    border-radius: 2.5rem;
     padding: 0.6rem 1.2rem;
     text-decoration: none;
     font-size: 1.125rem;
@@ -126,6 +122,7 @@ h2 {
 
 .pixel_text {
     font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    font-style: normal;
 }
 
 p {
@@ -172,103 +169,112 @@ p {
     z-index: 0;
 }
 
-/* ////////////////////////////////// */
-/* //////  jeffrey's 'ticker' /////// */
-/* ////////////////////////////////// */
-
-.sponsors {
-    overflow: hidden;
+section.ticker {
+    height: auto;
+    width: auto;
+    background: var(--white);
+    padding: 1.2rem 0;
+    border-top: 0.1rem var(--black) solid;
 }
 
-.sponsors img {
+section.ticker a {
+    height: 2.875rem;
+}
+
+section.ticker em {
+    font-size: 3rem;
+}
+
+section.ticker a:has(h2) {
+    height: unset;
+}
+
+section.ticker svg, img {
     height: 70%;
+    margin-top: 0.4rem;
 }
 
-.sponsors a, .sponsors a svg, .sponsors a {
-    height: 3em;
+section.ticker h2.secondary-button {
+    font-size: 2.5rem;
+}
+
+.dots {
+    font-size: 2.5rem;
+}
+
+/* TICKER ANIMATION */
+/* @keyframes ticker1 {
+    0% {
+        transform: translate3d(-20%, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker2 {
+    0% {
+        transform: translate3d(-10%, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker3 {
+    0% {
+        transform: translate3d(-40%, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+} */
+
+article.transition {
     display: flex;
     align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+    padding: 0 40% 0 0;
 }
 
-.sponsors h3 {
-    font-size: 2em;
-    padding: .4em;
-    border: 1px solid black;
-    border-radius: 1em;
-    width: max-content;
+article.animation1 {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker1;
+    animation-duration: 80s;
 }
 
-.sponsors .unset h3 {
-    border: none;
-    font-size: 2.5em;
+article.animation2 {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker2;
+    animation-duration: 80s;
 }
 
-.sponsors > li{
-    border-top:0.1rem var(--black) solid;
+article.animation3 {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker3;
+    animation-duration: 80s;
 }
 
-.sponsors li {
-    display: flex;
-    transition:.2s;
+article.transition:hover {
+    animation-play-state: paused;
+    cursor: pointer;
 }
 
-.sponsors > li:last-of-type {
+section.ticker:nth-of-type(2) {
+    padding: 0.8rem 0;
+}
+
+section.ticker:last-of-type {
     border-bottom: 0.1rem var(--black) solid;
 }
 
-.sponsors li ul {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    gap: 1em;
-    height: 6em;
-    animation: marquee 20s linear infinite;
-}
-
-.sponsors li:hover ul {
-    animation-play-state: paused;
-}
-
-.sponsors ul li::before {
-    content: '';
-    height: .6em;
-    width: .6em;
-    border-radius: 50%;
-    background: var(--black);
-    place-self: center;
-    margin-right: 1.5em;
-    margin-left: .5em;
-}
-
-.sponsors li:hover ul li {
-    filter: opacity(0.7);
-}
-
-.sponsors li ul li:hover {
-    filter: opacity(1);
-    transform: scale(1.05);
-}
-
-.sponsors li:nth-of-type(even) ul li::before {
-    content: url(../images/arrow.svg);
-    background: unset;
-    height: unset;
-    width: unset;
-}
-.sponsors li:nth-of-type(even) ul li:first-of-type::before {
-    content: '';
-    background: unset;
-    height: unset;
-    width: unset;
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
+/* Smaller gap between items in second ticker */
+section.ticker:nth-of-type(2) article.transition {
+    gap: 0.6rem;
 }
 
 /* /////////////////// */
