@@ -20,9 +20,9 @@
 }
 
 
-/* ///////////////////// */
-/* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧*/
-/* ///////////////////// */
+/* ////////////////////// */
+/* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧 */
+/* ////////////////////// */
 
 
 * {
@@ -40,24 +40,24 @@
     --peachLight: rgba(242,177,153,0.4);
 
 
-    /* fonts */
+    /* Fonts */
     --titel1: "NeueMontreal Medium";
     --titel2: "PPMondwest Regular";
     --text: "NeueMontreal Regular";
 
-    /*font sizes big screen*/
+    /* Font sizes big screen */
     --h1: 4rem;
     --p: 1rem;
 
-    /*font sizes small screen screen*/
+    /* Font sizes small screen screen */
     --h1-small: 2.2rem;
     --p-small: 0.8rem;
 
 
-    /*Desktop margin*/
+    /* Desktop margin */
 
 
-    /*phone margin*/
+    /* Phone margin */
     --margin-small: 2rem;
     --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
@@ -76,6 +76,9 @@
 
 }
 
+/* /////////////////////////// */
+/* 🪩🪩🪩 LIGHT/DARK MODE 🪩🪩🪩 */
+/* /////////////////////////// */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -84,8 +87,12 @@
     }
 }
 
+/* /////////////////////////// */
+/* ❤️‍🔥❤️‍🔥❤️‍🔥 TEXT FORMATTING ❤️‍🔥❤️‍🔥❤️‍🔥 */
+/* /////////////////////////// */
+
 body {
-    font-family: 'NeueMontreal Regular', sans-serif;
+    font-family: 'NeueMontreal Regular', Arial, Helvetica, sans-serif;
     background: var(--white);
     color: var(--black);
 }
@@ -98,28 +105,16 @@ h1 {
 
 }
 
-h2{
+h2 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-size: 2.5rem; 
     font-weight: 300; 
 }
 
-h3{
+h3 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-size: 1.5rem; 
     font-weight: 300; 
-}
-
-
-.pixel_text {
-    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
-    font-size: 4rem;
-}
-
-h2 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 2.5rem;
 }
 
 p {
@@ -129,14 +124,19 @@ p {
     letter-spacing: 1.5px;
 }
 
+a {
+    color: var(--black);
+    text-decoration: none;
+}
+
 .pixel_text {
     font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
 }
 
 
-/*///////////////*/
-/*🤩🤩navigation menu🤩🤩*/
-/*///////////////*/
+/* /////////////////////////// */
+/* 🤩🤩🤩 NAVIGATION MENU 🤩🤩🤩 */
+/* /////////////////////////// */
 
 header {
     justify-content: space-between;
@@ -183,7 +183,7 @@ li a svg {
     vertical-align: middle; 
 }
 
-/* dropdown menu */
+/* Dropdown menu */
 .mega-menu {
     display: flex;
     flex-direction: column;
@@ -207,7 +207,7 @@ li a svg {
     opacity: 0;
 }
 
-/* dropdown hover */
+/* Dropdown hover */
 .dropdown:hover > .mega-menu,
 .dropdown:focus-within > .mega-menu,
 .mega-menu:hover,
@@ -228,41 +228,9 @@ li a svg {
         transition: 0.5s;
 }
 
-
-/*Wat is dit onderdeel?*/
-
-/* a en links kleur laten aanpassen naar tekstkleur van light/dark mode? */
-
-a {
-    color: var(--black);
-    text-decoration: none;
-}
-
-h4 {
-    font-size: 2.5rem;
-}
-
-/*//////////////////////*/
-
-.secondary-button {
-    padding: 0.3rem 0.8rem;
-    border: 0.1rem var(--black) solid;
-    border-radius: 2rem;
-}
-
-.tertiary-button {
-    background-color: var(--white);
-    border: none;
-    border-radius: 2rem;
-    padding: 0.4rem 1.2rem;
-    text-decoration: none;
-    font-size: 1.125rem;
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-}
-
-/*///////////////*/
-/*🧸🧸PRIMARY BUTTON🧸🧸*/
-/*///////////////*/
+/*/////////////////////*/
+/* 🧸🧸🧸 BUTTONS 🧸🧸🧸 */
+/*/////////////////////*/
 
 .primary_button,
 .popularEvents > a {
@@ -289,19 +257,25 @@ h4 {
     background-color: black;
 }
 
-
-
-/*///////////////*/
-/*💻💻BANNER HOMEPAGE💻💻*/
-/*//////////////*/
-
-  .container_primarybtn {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    z-index: 100;
-    align-self: center;
-    margin: 14rem 0rem 0rem 2rem;
+.secondary-button {
+    padding: 0.3rem 0.8rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: 2rem;
 }
+
+.tertiary-button {
+    background-color: var(--white);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.4rem 1.2rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+}
+
+/* /////////////////////////// */
+/* 💻💻💻 BANNER HOMEPAGE 💻💻💻 */
+/* /////////////////////////// */
 
 .home_banner {
     margin: 0;
@@ -335,7 +309,8 @@ h4 {
     grid-row-end: 2;
     z-index: 0;
 }
-  .home_banner h1 {
+
+.home_banner h1 {
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 
@@ -343,9 +318,9 @@ h4 {
     grid-row-start: 1;
     z-index: 100;
     margin: 2rem 0rem 0rem 4rem;
-  }
+}
 
-  .home_banner p {
+.home_banner p {
     color: white;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 
@@ -355,9 +330,17 @@ h4 {
     align-self: flex-start;
     margin: 14rem 0rem 0rem 4rem;
     padding: 0;
-  }
+}
 
-  .container_primarybtn {
+.container_primarybtn {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 2rem;
+}
+
+.container_primarybtn {
     grid-column: 1 / 3;
     grid-row-start: 1;
     z-index: 100;
@@ -365,12 +348,13 @@ h4 {
     margin: 14rem 0rem 0rem 4rem;
 }
 
-/*/////////////*/
-/*RESPONSIVE DEVICE*/
-/*/////////////*/
+/* ///////////////////////////// */
+/* 🌶️🌶️🌶️ RESPONSIVE DEVICE 🌶️🌶️🌶️ */
+/* ///////////////////////////// */
+
 @media (max-width: 768px ) {
 
-    /* navigation menu*/
+    /* Navigation menu*/
     .hamburger {
         display: block;
     }
@@ -430,16 +414,16 @@ h4 {
         padding: 0.5em;
     }
 
-    /*arrow icon*/
+    /* Arrow icon*/
     .rotate {
         transform: rotate(180deg);
         transition: transform 0.3s ease;
   }
 
-/*///////////////*/
-/*🧸🧸PRIMARY BUTTON🧸🧸*/
-/*///////////////*/
-    
+/* ////////////////////////// */
+/* 🧸🧸🧸 PRIMARY BUTTON 🧸🧸🧸 */
+/* ////////////////////////// */
+        
     .primary_button {
         font-size: 0.8rem;
         padding: 0.6rem 1.5rem 0.6rem 1.5rem;
@@ -450,9 +434,9 @@ h4 {
         background-color: black;
     }
 
-/*///////////////*/
-/*💻💻BANNER HOMEPAGE💻💻*/
-/*//////////////*/
+/* /////////////////////////// */
+/* 💻💻💻 BANNER HOMEPAGE 💻💻💻 */
+/* /////////////////////////// */
 
     .home_banner h1 {
         margin: 2rem;
@@ -476,9 +460,7 @@ h4 {
         width: 1.5em;
     }
 
-
-    /*BASIC STYLING RESPONSIVE*/
-
+    /* BASIC STYLING RESPONSIVE */
     h1, .pixel_text {
         font-size: 2.2rem;
     }
@@ -489,30 +471,30 @@ h4 {
     
 }
 
-/*//////////////////////////////////////////////////////////////////////*/
-/**********************🃏🃏DetailCards🃏🃏********************************/
-/*//////////////////////////////////////////////////////////////////////*/
+/* //////////////////////// */
+/* 🃏🃏🃏 DETAIL CARDS 🃏🃏🃏 */
+/* //////////////////////// */
 
-.popularEvents{
+.popularEvents {
 display: grid;
 grid-template-columns: 1fr auto;
 grid-template-rows: 0.1fr 0.1fr 1fr;
 gap: 1rem;
 }
 
-.popularEvents h2{
+.popularEvents h2 {
     flex: 50%;
     grid-column-start: 1;
 }
 
 /* p naar volgende regel */
-.popularEvents p{
+.popularEvents p {
     flex: 50%;
     grid-column-start: 1;
 }
 
 /* 3x Multiple Cards*/
-.slider{
+.slider {
     margin-top: 2rem;
     padding-right: 8rem;
     padding-bottom: 3rem;
@@ -529,14 +511,14 @@ gap: 1rem;
     scrollbar-width: thin;
 }
 
-.slider li{
+.slider li {
 scroll-snap-align: start;   
 /* flex-shrink: 0;    */
 
 }
 
 /* Card + HeartButton + text everything*/
-.detailCard{
+.detailCard {
     width: 28rem; 
     position: relative;
 }
@@ -550,13 +532,13 @@ scroll-snap-align: start;
     color: initial;
 }
 
-/* margin left first card */
+/* Margin left first card */
 .slider li:first-of-type article {
     margin-left: 8rem;
 }
 
 /* Image event */
-.detailCard img{
+.detailCard img {
     height: 15rem;
     width: 100%;
     border-radius: 1.8rem;
@@ -565,39 +547,39 @@ scroll-snap-align: start;
     border: 0.15rem solid var(--black);
 }
 
-/* text event, iets van de kant mooi */
+/* Text event, iets van de kant mooi */
 .detailCard h3,
-.detailCard p{
+.detailCard p {
 padding-left: 1rem;
 }
 
-/* margin-sides */
+/* Margin-sides */
 .popularEvents h2,
 .popularEvents > p {
     margin-left: 8rem;
 }
 
-/* margin-sides */
+/* Margin-sides */
 .popularEvents div,
 .popularEvents > a {
     margin-right: 8rem;
 }
 
-/* pijlen buttons samen */
-.popularEvents div{
+/* Pijlen buttons samen */
+.popularEvents div {
     display: flex;
     align-items: center;
     justify-content: end;
     gap: 3rem;
 }
 
-.popularEvents div button{
+.popularEvents div button {
     background-color: transparent;
     border: none;
 }
 
-/* heart button */
-.detailCard button{
+/* Heart button */
+.detailCard button {
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -621,43 +603,44 @@ display: flex;
 gap: 2rem;
 }
 
-.popularEvents > a:hover{
+.popularEvents > a:hover {
     background-color: var(--black);
     color: var(--white);
 }
 
-/* evt voor ipad */
+/* Evt voor ipad */
 /* @media (max-width: 946px){
     .popularEvents h2{
         color: red;
     }
 } */
 
-@media (max-width: 768px){
-h1{
-    font-size: 2.2rem;
-}
+@media (max-width: 768px) {
 
-h2{
-    font-size: 1.8rem;
-}
+    h1 {
+        font-size: 2.2rem;
+    }
 
-h3{
-    font-size: 1.2rem;
-}
+    h2 {
+        font-size: 1.8rem;
+    }
 
-p{
-    font-size: 0.8rem;
-}
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
 
     .popularEvents h2,
     .popularEvents > p,
-    .popularEvents > a{
+    .popularEvents > a {
         margin-left: 2rem;
     }
 
    /* Pijlen buttons */
-    .popularEvents > div{
+    .popularEvents > div {
         display: none;
     }
 
@@ -667,42 +650,40 @@ p{
         width: fit-content;
     }
 
-    /* subtekst */
-    .popularEvents p{
+    /* Subtekst */
+    .popularEvents p {
         flex: 50%;
         grid-row-start: 2;
     }
 
     /* Image event */
-.detailCard img{
-    height: 10rem;
+    .detailCard img {
+        height: 10rem;
+    }
+
+    /* 1 card event */
+    .detailCard {
+        width: 18rem; 
+    }
+
+    /* all cards */
+    .slider {
+        scroll-padding: 2rem;
+        gap: 2rem;
+        margin-top: 1rem;
 }
 
-/* 1 card event */
-.detailCard{
-    width: 18rem; 
-}
-
-/* all cards */
-.slider{
-    scroll-padding: 2rem;
-    gap: 2rem;
-    margin-top: 1rem;
-}
-
-/* space zijkant */
-.slider li:first-of-type article {
-    margin-left: 2rem;
-}
-
-
+    /* space zijkant */
+    .slider li:first-of-type article {
+        margin-left: 2rem;
+    }
 
 }
-/*///////////////////////////////////////////////////////////////////////////*/
-/*********************📸📸SocialMediaWall📸📸*******************************/
-/*//////////////////////////////////////////////////////////////////////*/
+/* ///////////////////////////// */
+/* 📸📸📸 SOCIAL MEDIA WALL 📸📸📸 */
+/* ///////////////////////////// */
 
-.socialMediaWall{
+.socialMediaWall {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -733,10 +714,40 @@ p{
     object-fit: cover; /* Zorg ervoor dat de afbeelding het vierkant vult en de juiste verhouding behoudt */
     display: block; /* Verwijder eventuele onderlijning door de link */
     border-radius: 1.5rem;
+}
 
-/* ////////////////////////////////// */
+.socialMediaWall ul li:hover {
+    transform: scale(1.03);
+}
+
+/* evt voor ipad */
+@media (max-width: 1100px) {
+    
+    .socialMediaWall ul{
+        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
+    }
+    
+}
+
+@media (max-width: 768px) {
+    
+    .socialMediaWall ul{
+        grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
+    }
+
+    .socialMediaWall{
+        margin: 2rem;
+    }
+
+    .socialMediaWall ul li:nth-of-type(5),
+    .socialMediaWall ul li:nth-of-type(6){
+        display: none;
+    }
+}
+
+/* ///////////////////////////////// */
 /* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
-/* ////////////////////////////////// */
+/* ///////////////////////////////// */
 
 section.ticker {
     height: auto;
@@ -757,34 +768,6 @@ section.ticker a:has(h2) {
 section.ticker svg, img {
     height: 70%;
     margin-top: 0.4rem;
-}
-
-.socialMediaWall ul li:hover {
-    transform: scale(1.03);
-}
-
-
-/* evt voor ipad */
-@media (max-width: 1100px){
-    .socialMediaWall ul{
-        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
-    }
-    
-}
-
-@media (max-width: 768px){
-    .socialMediaWall ul{
-        grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
-    }
-
-    .socialMediaWall{
-        margin: 2rem;
-    }
-
-    .socialMediaWall ul li:nth-of-type(5),
-    .socialMediaWall ul li:nth-of-type(6){
-        display: none;
-    }
 }
 
 /* ////////////////// */
@@ -865,67 +848,70 @@ section.ticker:nth-of-type(2) article.transition {
     gap: 0.6rem;
 }
 
-/*////////////////////////////////////////////////////////*/
-/*//////🪪🪪Signup + login🪪🪪/////////////////////////////*/
-/*////////////////////////////////////////////////////////*/
+/* //////////////////////////// */
+/* 🪪🪪🪪 SIGN UP + LOG IN 🪪🪪🪪 */
+/* //////////////////////////// */
 
 .loginForm h1,
 .loginForm h2,
 .loginForm form,
 .loginForm article,
 .loginForm p,
-.loginForm ul{
+.loginForm ul {
 padding-left: 5rem;
 padding-right: 5rem;
 }
 
-.loginForm h1{
+.loginForm h1 {
     padding-top: 2.8rem;
     font-size: 3rem;
 }
 
-.loginForm h2{
+.loginForm h2 {
     font-size: 1.2rem; 
     font-family: "NeueMontreal Regular";
     letter-spacing: 1.5px;
 }
 
-.loginForm h2 span{
+.loginForm h2 span {
     font-family: "NeueMontreal Bold";
     color: var(--black);
 }
 
-/* back button */
-.loginForm > a{
+/* Back button */
+.loginForm > a {
     display: none;
 }
 
-/* all links */
+/* All links */
 .loginForm form a:visited,
 .loginForm h2 a,
 .loginForm li a,
-.loginForm > a 
-{ text-decoration: none; color: var(--black); }
+.loginForm > a { 
+    text-decoration: none; color: var(--black);
+}
 
-/* linkjes signup+terms etc */
+/* Linkjes signup+terms etc */
 .loginForm form a,
-.loginForm h2 a{
+.loginForm h2 a {
     text-decoration: none;
     font-family: "NeueMontreal Bold";
     color: var(--black);
 }
 
-/* hover: linkjes signup+terms etc */
+/* Hover: linkjes signup+terms etc */
 .loginForm form a:hover,
-.loginForm h2 a:hover
- {    text-decoration: underline;}
+.loginForm h2 a:hover {    
+    text-decoration: underline;
+}
 
  .loginForm form a:focus,
- .loginForm h2 a:focus 
- { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
+ .loginForm h2 a:focus { 
+    text-decoration: underline; color: rgba(0, 0, 0, 0.458); 
+}
 
-/* pagina */
-.loginForm{
+/* Pagina */
+.loginForm {
     margin: 3rem;
     background-color: var(--peachLight);
     height: 80vh;
@@ -937,8 +923,8 @@ padding-right: 5rem;
     gap: 0.5rem;
 }
 
-/* img */
-.loginForm > img{
+/* Img */
+.loginForm > img {
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 6; 
@@ -950,16 +936,16 @@ padding-right: 5rem;
     border-radius: 0 3rem 3rem 0;
 }
 
-/* formulier */
-.loginForm form{
+/* Formulier */
+.loginForm form {
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
 
-/* label titel */
-.loginForm form label{
+/* Label titel */
+.loginForm form label {
     font-family:  "NeueMontreal Medium";
     font-size: 1rem;
     letter-spacing: 1.5px;
@@ -967,8 +953,8 @@ padding-right: 5rem;
     vertical-align: middle;
 } 
 
-/* invoerveld */
-.loginForm form input{
+/* Invoerveld */
+.loginForm form input {
     border: none;
     border-bottom: 0.1rem solid black; /* standaard border dikte in de root? */
     background-color: transparent;
@@ -978,10 +964,9 @@ padding-right: 5rem;
     letter-spacing: 1.5px;
     font-family: "NeueMontreal Regular";
     padding: 0.2rem;
-
 }
 
-/* invoerveld geselecteerd */
+/* Invoerveld geselecteerd */
 .loginForm form input:focus {
     background-color: transparent;
     border: none;
@@ -990,18 +975,18 @@ padding-right: 5rem;
 
 
 /* Password veld + oog */
-.loginForm form div:first-of-type{
+.loginForm form div:first-of-type {
     position: relative;
 }
 
 /* Password veld */
-.loginForm form div:first-of-type input{
+.loginForm form div:first-of-type input {
     width: 100%;
     margin-bottom: 1rem;
 }
 
-/* oog icoon */
-.loginForm form div:first-of-type button{
+/* Oog icoon */
+.loginForm form div:first-of-type button {
     position: absolute;
     top: 0;
     right: 0.3rem;
@@ -1013,12 +998,12 @@ padding-right: 5rem;
     transition-duration: 0.4s;
 }
 
-.loginForm form div:first-of-type button:hover{
+.loginForm form div:first-of-type button:hover {
     color: var(--peach);
 }
 
 /* Checkbox privacy + tekst */
-.loginForm form div:last-of-type{
+.loginForm form div:last-of-type {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1033,18 +1018,17 @@ input[type="checkbox"] {
     accent-color: var(--black);
 }
   
-
-#checkbox{
+#checkbox {
     margin: 0;
 }
 
-/* space between password & checkbox privacy */
-.loginForm form input:nth-of-type(3){
+/* Space between password & checkbox privacy */
+.loginForm form input:nth-of-type(3) {
     margin-bottom: 0.1rem;
 }
 
 /* let's join button */
-section.loginForm a[href="/profile"]{
+section.loginForm a[href="/profile"] {
     font-family: "NeueMontreal Regular";
     background-color: var(--black);
     color: white;
@@ -1057,7 +1041,7 @@ section.loginForm a[href="/profile"]{
     transition: background-color .5s ease, transform .5s
 }
 
-section.loginForm a[href="/profile"]:hover{
+section.loginForm a[href="/profile"]:hover {
     color: var(--black);
     transition: background-color .5s ease, transform .5s;
     background-color: transparent;
@@ -1065,45 +1049,47 @@ section.loginForm a[href="/profile"]:hover{
 }
 
 /* or */
-.loginForm p{
+.loginForm p {
     display: flex;
     flex-direction: row;
     margin: 1.5rem 0;
 }
 
 /* ---- or ----- */
-.loginForm p:before, .loginForm p:after{
+.loginForm p:before, .loginForm p:after {
     content: "";
     width: 10rem;
     border-bottom: 0.1rem solid var(--black);
     margin: auto;
-  }
+}
 
-  .loginForm p:before {
+.loginForm p:before {
     margin-right: 10px
-  }
-  .loginForm p:after {
-    margin-left: 10px
-  }
+}
 
-/* social media */
-.loginForm ul{
+.loginForm p:after {
+    margin-left: 10px
+}
+
+/* Social media */
+.loginForm ul {
     display: flex;
     gap: 2rem;
     justify-self: center;
 }
 
-.loginForm ul li{
+.loginForm ul li {
     transition: transform 0.2s ease-in-out;         
 }
 
-.loginForm ul li:hover{
+.loginForm ul li:hover {
     transform: scale(1.1);     
 }
 
 /* ipad formaat */
 @media (max-width: 1350px) {
-    .loginForm{
+
+    .loginForm {
         grid-template-columns: auto 30%; 
     }
 
@@ -1112,22 +1098,21 @@ section.loginForm a[href="/profile"]:hover{
     .loginForm form,
     .loginForm article,
     .loginForm p,
-    .loginForm ul{
+    .loginForm ul {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     }
 
-    .loginForm h1{
+    .loginForm h1 {
         padding-top: 2rem;
     }
 
 }
 
-
 /* phone formaat */
 @media (max-width: 768px) {
 
-    .loginForm > a{
+    .loginForm > a {
         display: block;
         z-index: 3;
         position: absolute;
@@ -1145,11 +1130,11 @@ section.loginForm a[href="/profile"]:hover{
         transition: background-color .5s ease, transform .5s
     }
 
-    .loginForm header{
+    .loginForm header {
         display: none;
     }
 
-    .loginForm h1{
+    .loginForm h1 {
         margin-top: -5rem;
         color: var(--peach);
         background-color: white;
@@ -1159,17 +1144,16 @@ section.loginForm a[href="/profile"]:hover{
         font-size: 2.5rem;
     }
 
-    .loginForm h2{
+    .loginForm h2 {
         font-size: 1rem;
     }
 
     .loginForm form label,
-    .loginForm form input{
+    .loginForm form input {
         font-size: 0.8rem;
     }
-    
 
-    .loginForm{
+    .loginForm {
         margin: 0;
         height: 80vh;
         background-color: rgb(255, 255, 255);
@@ -1180,7 +1164,7 @@ section.loginForm a[href="/profile"]:hover{
         height: 92vh;
     }
     
-    .loginForm img{
+    .loginForm img {
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 2; 
