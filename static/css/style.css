@@ -317,21 +317,6 @@ grid-template-rows: 0.1fr 0.1fr 1fr;
 gap: 1rem;
 }
 
-.categories,
-.impression{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
-    gap: 1rem; 
-    background-color: var(--peachLight);
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-}
-
-.impression{
-    background-color: white;
-}
-
 .popularEvents h2{
     flex: 50%;
     grid-column-start: 1;
@@ -360,12 +345,6 @@ scroll-behavior: smooth;
 
 grid-column: 1 / 3;
 
-}
-
-.categories .slider{
-    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(223, 223, 219, 0.2);
-    scrollbar-width: thin;
-    padding-bottom: 1.5rem;
 }
 
 .grid{
@@ -569,4 +548,26 @@ p{
     margin-left: 2rem;
 }
 
+}
+
+
+.categories,
+.impression{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto 1fr;
+    gap: 1rem; 
+    background-color: var(--peachLight);
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.impression{
+    background-color: white;
+}
+
+.categories .slider{
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(223, 223, 219, 0.2);
+    scrollbar-width: thin;
+    padding-bottom: 1.5rem;
 }
