@@ -770,6 +770,81 @@ section.ticker svg, img {
     margin-top: 0.4rem;
 }
 
+/* TICKER ANIMATION */
+@keyframes ticker1 {
+    0% {
+        transform: translate3d(-20%, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker2 {
+    0% {
+        transform: translate3d(-10%, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+@keyframes ticker3 {
+    0% {
+        transform: translate3d(-40%, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+
+article.transition {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+    padding: 0 40% 0 0;
+}
+
+article.animation1 {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker1;
+    animation-duration: 80s;
+}
+
+article.animation2 {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker2;
+    animation-duration: 80s;
+}
+
+article.animation3 {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-name: ticker3;
+    animation-duration: 80s;
+}
+
+article.transition:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+section.ticker:nth-of-type(2) {
+    padding: 0.8rem 0;
+}
+
+section.ticker:last-of-type {
+    border-bottom: 0.1rem var(--black) solid;
+}
+
+/* Smaller gap between items in second ticker */
+section.ticker:nth-of-type(2) article.transition {
+    gap: 0.6rem;
+}
+
 /* ////////////////// */
 /* 👀👀👀 FOOTER 👀👀👀 */
 /* ////////////////// */
