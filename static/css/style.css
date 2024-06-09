@@ -491,7 +491,7 @@ li a svg {
 }
 
 /*/////////////////*/
-/*NUMBER CONTROLS*/
+/*NUMBER CONTROLS FOR AMOUNT OF PEOPLE*/
 /*/////////////////*/
 .number-controls {
     display: flex;
@@ -522,7 +522,7 @@ li a svg {
 }
 
 /*/////////////////*/
-/*PRICE RANGE*/
+/*PRICE RANGE FILTER*/
 /*////////////////*/
 
 .price-input {
@@ -599,6 +599,27 @@ li a svg {
     border-radius: 50%;
     pointer-events: auto;
 }
+
+/*/////////////////*/
+/*🍉🍉EVENT DESCRIPTION🍉🍉*/
+/*////////////////*/
+
+.event-description-container dl {
+    display: grid;
+    grid-template-columns: 0.2fr auto;
+    margin: 5rem 8rem;
+    gap: 1rem;
+}
+
+.event-description-container dt {
+    grid-column: 1;
+    font-family: var(--p);
+}
+
+.event-description-container dd {
+    grid-column: 2;
+}
+
 
 /*/////////////*/
 /*RESPONSIVE DEVICE*/
