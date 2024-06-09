@@ -348,15 +348,15 @@ padding-right: 5rem;
 
 /* pagina */
 .loginForm{
-    margin: 3rem;
+    margin: 2.5rem;
     background-color: var(--peachLight);
-    height: 80vh;
+    height: 81vh;
     border-radius: 3rem;
 
     display: grid;
     grid-template-rows: auto auto auto auto 1fr;
     grid-template-columns: auto 55%;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 /* img */
@@ -395,19 +395,12 @@ padding-right: 5rem;
     border-bottom: 0.1rem solid black; /* standaard border dikte in de root? */
     background-color: transparent;
     margin-bottom: 2rem;
-    height: 1.8rem;
+    height: 2.2rem;
     font-size: 1.2rem;
     letter-spacing: 1.5px;
     font-family: "NeueMontreal Regular";
     padding: 0.2rem;
-
-}
-
-/* invoerveld geselecteerd */
-.loginForm form input:focus {
-    background-color: transparent;
-    border: none;
-    outline-color: black;
+    outline: none;
 }
 
 
@@ -450,8 +443,8 @@ padding-right: 5rem;
 /* Checkbox */
 input[type="checkbox"] {
     margin: 0;
-    width: 2rem; 
-    height: 2rem; 
+    width: 1.5rem; 
+    height: 1.5rem; 
     accent-color: var(--black);
 }
   
@@ -476,7 +469,7 @@ section.loginForm a[href="/profile"]{
     border: solid var(--black) 0.15rem;
     align-self: center;
     font-size: 1rem;
-    transition: background-color .5s ease, transform .5s
+    transition: background-color .5s ease, transform .5s;
 }
 
 section.loginForm a[href="/profile"]:hover{
@@ -490,7 +483,7 @@ section.loginForm a[href="/profile"]:hover{
 .loginForm p{
     display: flex;
     flex-direction: row;
-    margin: 1.5rem 0;
+    margin: 0.7rem 0;
 }
 
 /* ---- or ----- */
