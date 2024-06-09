@@ -586,7 +586,7 @@ section.loginForm a[href="/profile"]:hover{
 
     .loginForm{
         margin: 0;
-        height: 80vh;
+        height: 75vh;
         background-color: rgb(255, 255, 255);
         display: grid;
         grid-template-rows: 17rem auto auto auto auto minmax(0, 1fr);
