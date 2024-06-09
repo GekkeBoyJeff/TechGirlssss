@@ -31,6 +31,8 @@
     --black: #1f1f1f;
     --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
+    --peach: #F2B199;
+    --peachLight: rgba(242,177,153,0.4);
 
     --padding: 1em;
     --margin: 1em;
@@ -91,7 +93,7 @@ p {
 
 
 /*//////////////////////////////////////////////////////////////////////*/
-/**********************🃏🃏DetailCards (cards general)🃏🃏********************************/
+/**********************🃏🃏DetailCards (cards general)🃏🃏***************/
 /*//////////////////////////////////////////////////////////////////////*/
 
 .popularEvents{
@@ -305,6 +307,139 @@ p{
 .slider li:first-of-type article {
     margin-left: 2rem;
 }
+
+}
+
+/******🃏🃏Impression cards🃏🃏********/
+
+.impression .detailCard p,
+.impression .detailCard h3,
+.impression .detailCard button{
+    display: none;
+}
+
+.impression{
+    grid-template-rows: 0.1fr auto;
+}
+
+/******categories cards🃏🃏********/
+
+.categories .detailCard p,
+.categories .detailCard button{
+display: none;
+}
+
+.popularEvents.categories{
+    grid-template-rows: 0.1fr auto;
+    background-color: var(--peachLight);
+    padding: 3rem 0;
+}
+
+/******grid cards🃏🃏********/
+
+.overviewGrid ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    margin: 5rem 8rem;
+    justify-content: center;
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem; */
+}
+
+.overviewGrid .detailCard{
+    width: 100%;
+}
+
+/* ipad */
+@media (max-width: 1400px){
+
+    .overviewGrid ul{
+        grid-template-columns: auto auto;
+    }
+
+    .overviewGrid .detailCard{
+        width: 100%;
+    }
+  
+}
+
+/* phone */
+@media (max-width: 1100px){
+
+    .overviewGrid ul{
+        grid-template-columns: auto;
+        margin: 4rem 2rem;
+        gap: 3rem;
+    }
+
+    .overviewGrid .detailCard{
+        width: 100%;
+    }
+}
+
+/******recommended cards🃏🃏********/
+
+.recommended{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 8rem;
+}
+
+
+.recommended ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.recommended .detailCard{
+    width: 100%;
+}
+
+@media (max-width: 1400px){
+
+    .recommended ul{
+        grid-template-columns: auto auto;
+    }
+
+    .recommended .detailCard{
+        width: 100%;
+    }
+
+    .recommended ul li:nth-of-type(2){
+        display: none;
+    }
+
+}
+
+/* phone */
+@media (max-width: 1100px){
+
+    .recommended ul{
+        grid-template-columns: auto;
+        gap: 3rem;
+        justify-content: unset;
+    }
+
+    .recommended .detailCard{
+        width: 100%;
+    }
+
+    .recommended{
+        margin: 0 2rem;
+    }
+
+    .recommended ul li:nth-of-type(3){
+        display: none;
+    }
 
 }
 
