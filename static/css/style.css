@@ -733,6 +733,30 @@ p{
     object-fit: cover; /* Zorg ervoor dat de afbeelding het vierkant vult en de juiste verhouding behoudt */
     display: block; /* Verwijder eventuele onderlijning door de link */
     border-radius: 1.5rem;
+
+/* ////////////////////////////////// */
+/* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
+/* ////////////////////////////////// */
+
+section.ticker {
+    height: auto;
+    width: auto;
+    background: var(--white);
+    padding: 1.2rem 0;
+    border-top: 0.1rem var(--black) solid;
+}
+
+section.ticker a {
+    height: 2.875rem;
+}
+
+section.ticker a:has(h2) {
+    height: unset;
+}
+
+section.ticker svg, img {
+    height: 70%;
+    margin-top: 0.4rem;
 }
 
 .socialMediaWall ul li:hover {
@@ -828,23 +852,16 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     flex-grow: 1;
 }
 
-.input-footer {
-    width: 19rem;
-    height: 2rem;
-    border: none;
-    border-bottom: 0.063rem var(--white) solid;
-    color: var(--white);
-    background-color: var(--black);
-    padding: 0.6rem;
-    margin: 1rem 1rem 1rem 0;
-    outline: none;
+section.ticker:nth-of-type(2) {
+    padding: 0.8rem 0;
 }
 
-.tech-girls {
-    grid-row-start: 5;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    font-size: 0.8rem;
-    text-align: center;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+section.ticker:last-of-type {
+    border-bottom: 0.1rem var(--black) solid;
 }
+
+/* Smaller gap between items in second ticker */
+section.ticker:nth-of-type(2) article.transition {
+    gap: 0.6rem;
+}
+
