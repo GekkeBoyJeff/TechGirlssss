@@ -14,7 +14,7 @@ section.ticker a {
     height: 2.875rem;
 }
 
-section.ticker a:has(h4) {
+section.ticker a:has(h2) {
     height: unset;
 }
 
