@@ -11,7 +11,7 @@
         <p>Avid street art admirer, indie film buff, vinyl collector, and latte art enthusiast. Let's vibe over cool tunes, quirky crafts, and spontaneous city adventures. Always up for swapping stories and sparking new creative collabs!  👀🍸🪩💗👋🔥</p>
     </article>
     <article class="switch-buttons">
-        <button class="saved-events-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="saved-events-button button-clicked"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path class="wishlistSvg clicked-svg" class="clicked-svg" d="M12 7.2294C10.2671 3.30561 6.23596 2.95683 4.35874 4.66804C2.83049 6.04137 2.09645 9.33298 3.49233 12.363C5.89902 17.573 12 20.3087 12 20.3087C12 20.3087 18.101 17.573 20.5076 12.363C21.9036 9.33298 21.1695 6.04137 19.6413 4.66804C17.764 2.95683 13.7328 3.30561 12 7.2294Z" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg><p id="wishlistText" class="clicked">Your saved events</p></button>
         <button class="upcoming-events-button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,10 +23,48 @@
             </svg><p id="eventsText">Upcoming events</p></button>
     </article>
     <article class="saved-events">
-        <p>hoi</p>
+        <ul>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+        </ul>
     </article>
     <article class="upcoming-events hidden">
-        <p>hoi</p>
+        <ul>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+            <li>
+                <%- include('../components/detailCard.ejs') %>
+            </li>
+        </ul>
     </article>
 </section>
 <section>

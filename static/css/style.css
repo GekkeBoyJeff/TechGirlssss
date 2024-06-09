@@ -345,10 +345,15 @@ section.profile article.switch-buttons button {
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
+    padding: 0 0.5rem 0.8rem 0.5rem;
 
     --webkit-appearance: none;
     background-color: transparent;
     border: none;
+}
+
+section.profile article.switch-buttons button.button-clicked {
+    border-bottom: var(--black) 0.15rem solid;
 }
 
 section.profile article.switch-buttons button p {
@@ -357,11 +362,11 @@ section.profile article.switch-buttons button p {
 }
 
 section.profile article.saved-events {
-    background-color: pink;
+    
 }
 
 section.profile article.upcoming-events {
-    background-color: beige;
+    
 }
 
 section.profile .hidden {

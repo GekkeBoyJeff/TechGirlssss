@@ -12,6 +12,8 @@ let eventsText = document.querySelector("#eventsText");
 let wishlistSvg = document.querySelector(".wishlistSvg");
 let svgElements = document.querySelectorAll(".eventsSvg");
 
+let line = document.querySelector(".button-clicked");
+
 upcomingEventsButton.addEventListener("click", function() {
     console.log("Upcoming events werkt");
     upcomingEvents.classList.remove("hidden");
@@ -25,6 +27,9 @@ upcomingEventsButton.addEventListener("click", function() {
     })
     wishlistText.classList.remove("clicked");
     wishlistSvg.classList.remove("clicked-svg");
+
+    wishlistButton.classList.remove("button-clicked");
+    upcomingEventsButton.classList.add("button-clicked");
 });
 
 wishlistButton.addEventListener("click", function() {
@@ -40,4 +45,7 @@ wishlistButton.addEventListener("click", function() {
         console.log("elements werkt");
         elements.classList.remove("clicked-svg");
     })
+
+    upcomingEventsButton.classList.remove("button-clicked");
+    wishlistButton.classList.add("button-clicked");
 });
