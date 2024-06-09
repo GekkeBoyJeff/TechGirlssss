@@ -1021,12 +1021,12 @@ padding-right: 5rem;
 
 /* Label titel */
 .loginForm form label {
-    font-family:  "NeueMontreal Medium";
+    font-family: "NeueMontreal Medium";
     font-size: 1rem;
     letter-spacing: 1.5px;
     display: inline-block;
     vertical-align: middle;
-} 
+}
 
 /* Invoerveld */
 .loginForm form input {
