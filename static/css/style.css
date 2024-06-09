@@ -59,7 +59,6 @@ h1 {
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 4rem;
-    margin-left: 8rem;
 }
 
 h2{
@@ -86,10 +85,6 @@ p {
     line-height: 23px;
     letter-spacing: 1.5px;
 }
-
-
-
-
 
 
 
@@ -262,185 +257,14 @@ h3{
     font-size: 1.2rem;
 }
 
-/*///////////////*/
-/*🔎🔎SEARCH BAR🔎🔎*/
-/*//////////////*/
-
-.search-container {
-    display: flex;
-    align-self: start;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.home_banner img:nth-of-type(1) {
-    filter: contrast(105%) brightness(100%) grayscale(10%);
-    width: 100%;
-    height: 75vh;
-    object-fit: cover;
-
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    z-index: 0;
-}
-
-/* evt voor ipad */
-/* @media (max-width: 946px){
-    .popularEvents h2{
-        color: red;
-    }
-} */
-
-@media (max-width: 768px){
-h1{
-    font-size: 2.2rem;
-}
-
-h2{
-    font-size: 1.8rem;
-}
-
-h3{
-    font-size: 1.2rem;
-}
-
-/*///////////////*/
-/*🔎🔎SEARCH BAR🔎🔎*/
-/*//////////////*/
-
-.search-container {
-    display: flex;
-    align-self: start;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.search-container form {
-    position: relative;
-}
-
-.filter-search {
-    border-radius: 2rem;
-    padding: 0.8rem 0.8rem 0.8rem 3rem;
-    width: 65vw;
-    height: auto;
-    border: black solid 1.5px;
-    background: white;
-    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-}
-
-.search-container input::placeholder {
-    color: #b7b7b7;
-}
-
-.search-container ::-ms-input-placeholder {
-    color: #b7b7b7;
-}
-
-
-.search-container form svg {
-    position: absolute;
-    top: 0.6rem;
-    bottom: 0.5rem;
-    left: 0.8rem;
-}
-
-/*///////////////*/
-/*🍭🍭FILTERS🍭🍭*/
-/*//////////////*/
-
-.filter-dropdown {
-    display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-    z-index: 0;
-    margin: 2rem 8rem 2rem 8rem;
-    gap: 1rem;
-}
-
-.filter-bttn {
-    background: white;
-    border-radius: 2rem;
-    border: 1.5px solid black;
-    padding: 0.5rem 0.8rem;
-    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-.filter-bttn svg {
-    vertical-align: middle;
-    flex-shrink: 0;
-    margin-left: 4rem;
-    transition: transform .3s ease;
-}
-
-
-.filter-dropdown-items {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-grow: auto;
-    position: absolute;
-    z-index: 1;
-    background: rgb(232, 232, 232);
-    width: 17vw;
-    height: 20vh;
-    top: 3rem;
-    border-radius: 1rem;
-    scroll-behavior: smooth;
-    scrollbar-width: 0.5rem;
-    overflow-y: scroll;
-    transition: opacity 300ms ease;
-    opacity: 1;
-}
-
-
-.hide-dropdown {
-    display: none;
-    opacity: 0;
-}
-
-.filter-dropdown-items a {
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    width: 100%;
-    text-align: left;
-}
-
-.filter-dropdown-items a:hover {
-    color: #4380c2;
-    text-decoration: underline;
-}
-
-.filter-bttn.active svg {
-    transform: rotate(180deg);
-}
-
 p{
     font-size: 0.8rem;
 }
 
-    .primary_button:active {
-        color: white;
-        background-color: black;
-    }
-
-/*///////////////*/
-/*🍭🍭FILTERS🍭🍭*/
-/*//////////////*/
-
-    .home_banner h1 {
-        margin: 2rem;
-    }
-
-
-    .home_banner p {
-        margin: 14rem 2rem 0rem 2rem; 
+    .popularEvents h2,
+    .popularEvents > p,
+    .popularEvents > a{
+        margin-left: 2rem;
     }
 
    /* Pijlen buttons */
