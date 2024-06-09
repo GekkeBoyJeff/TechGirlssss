@@ -177,7 +177,6 @@ nav ul li a {
 nav ul li a:hover {
     color: var(--peach);
     transition: color .3s ease;
-    margin-left: 8rem;
 }
 
 li a svg {
