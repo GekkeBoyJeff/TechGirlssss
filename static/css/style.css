@@ -81,6 +81,9 @@ a {
     border-radius: 2rem;
     font-size: 1.125rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    text-wrap: nowrap;
+    margin: 0;
+    width: fit-content;
 }
 
 .tertiary-button {
@@ -96,12 +99,15 @@ a {
 .tertiary-button-black {
     background-color: var(--black);
     color: var(--white);
-    border: none;
+    border: 0.1rem var(--black) solid;
     border-radius: 2rem;
     padding: 0.6rem 1.2rem;
     text-decoration: none;
     font-size: 1.125rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    text-wrap: nowrap;
+    margin: 0;
+    width: fit-content;
 }
 
 h1 {
@@ -362,14 +368,6 @@ section.profile article.switch-buttons button p {
     color: #808080;
 }
 
-section.profile article.saved-events {
-    
-}
-
-section.profile article.upcoming-events {
-    
-}
-
 section.profile .hidden {
     display: none;
 }
@@ -385,8 +383,40 @@ section.profile article.switch-buttons .clicked {
 }
 
 /* 📷 PROFILE RESPONSIVE 📷 */
-@media (max-width: 1400px) {
-    
+@media (max-width: 768px) {
+
+    section.profile .profileBanner {
+        height: 15rem;
+    }
+
+    section.profile article.bio img {
+        height: 7rem;
+        width: 7rem;
+        border: var(--white) 0.3rem solid;
+        left: 5rem;
+        top: 19rem;
+    }
+
+    section.profile article.bio p.secondary-button,
+    section.profile article.bio p.tertiary-button-black {
+        font-size: 1rem;
+    }
+
+    section.profile article.switch-buttons {
+        gap: 2.5rem;
+    }
+
+    section.profile article.switch-buttons button {
+        padding: 0 0.3rem 0.5rem 0.3rem;
+    }
+
+    section.profile article.switch-buttons button svg {
+        width: 1.2rem;
+    }
+
+    section.profile article.switch-buttons button p {
+        font-size: 1rem;
+    }
 }
 
 /* //////////////////////// */
@@ -611,7 +641,7 @@ article.upcoming-events ul li section {
 article.upcoming-events ul li a:first-of-type {
     display: flex;
     flex-direction: row;
-    gap: 10rem;
+    gap: 8%;
 }
 
 /* Image grootte aanpassen, naar vierkant */
@@ -636,7 +666,7 @@ article.upcoming-events ul li article.detailCard > button {
 }
 
 /* Upcoming events buttons display */
-#upcoming-events-buttons {
+.newArticle {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -659,9 +689,45 @@ article.upcoming-events ul li article.detailCard > button {
     text-decoration: underline;
 }
 
-/* 🫶🏼 RESPONSIVE CARDS WISHLIST 🫶🏼 */
+/* 🫶🏼 RESPONSIVE CARDS UPCOMING EVENTS 🫶🏼 */
 @media (max-width: 1400px) {
-    
+
+    article.upcoming-events ul li a:first-of-type {
+        justify-content: center;
+    }
+
+    article.upcoming-events ul li section {
+        justify-content: flex-start;
+    }
+
+    .newArticle {
+        flex-direction: row;
+        gap: 1.5rem;
+        position: absolute;
+        top: 75%;
+        right: 31.5%;
+    }
+
+    article.upcoming-events ul li article.detailCard > button {
+        left: 8%;
+        position: absolute;
+    }   
+
+}
+
+@media (max-width: 1100px) {
+
+}
+
+@media (max-width: 768px) {
+
+    article.upcoming-events ul {
+        margin: 3rem 5.5rem 4rem 5.5rem;
+    }
+
+    article.upcoming-events ul li a:first-of-type img {
+        height: 10rem;
+    }
 }
 
 p.category {
