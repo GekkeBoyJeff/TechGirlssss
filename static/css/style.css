@@ -491,116 +491,6 @@ li a svg {
 }
 
 /*/////////////////*/
-/*NUMBER CONTROLS FOR AMOUNT OF PEOPLE*/
-/*/////////////////*/
-.number-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 0.8rem;
-}
-
-.number-controls input[type="number"] {
-    width: 60%;
-    padding: 0.2rem 0.8rem;
-    border-radius: 1rem;
-    border: 1px solid black;
-}
-
-.number-controls button {
-    background-color: #ffffff;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.8rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.number-controls button:hover {
-    background-color: #ccc;
-}
-
-/*/////////////////*/
-/*PRICE RANGE FILTER*/
-/*////////////////*/
-
-.price-input {
-    max-width: 100%;
-    margin: 1rem;
-}
-
-.price-input .field {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 5vh;
-}
-
-.field input {
-    height: 100%;
-    width: 100%;
-    margin-left: 1rem;
-    border: 1px solid rgb(132, 132, 132);
-    border-radius: 0.5rem;
-    outline: none;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.price-input input[type="number"]::-webkit-outer-spin-button,
-.price-input input[type="number"]::-webkit-inner-spin-button {
-    appearance: none;
-}
-
-.price-input .separator {
-    font-size: 1rem;
-    width: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.filter-dropdown .slider {
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    background: #d9d9d9;
-    position: relative;
-    margin: 0.8rem 1rem 0.8rem 1rem;
-}
-
-.filter-dropdown .slider .progress {
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    background: #F2B199;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-}
-
-.range-input {
-    position: relative;
-}
-
-.range-input input {
-    position: absolute;
-    height: 0.5rem;
-    width: 100%;
-    background: none;
-    appearance: none;
-    pointer-events: none;
-}
-
-.range-input input[type="range"]::-webkit-slider-thumb {
-    height: 1rem;
-    width: 1rem;
-    appearance: none;
-    background: #F2B199;
-    border-radius: 50%;
-    pointer-events: auto;
-}
-
-/*/////////////////*/
 /*🍉🍉EVENT DESCRIPTION🍉🍉*/
 /*////////////////*/
 
@@ -666,6 +556,7 @@ li a svg {
   margin-top: 0;
   border: none; /* Remove the border from the map container */
   transition: max-height 0.3s ease-out;
+  border-radius: 1rem;
   overflow: hidden;
   max-height: 0; /* default state when hidden */
 }
