@@ -20,11 +20,6 @@
 }
 
 
-/* ////////////////////// */
-/* 🎧🎧🎧 CSS REMEDY 🎧🎧🎧 */
-/* ////////////////////// */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -37,46 +32,22 @@
     --white: #ffffff;
     --black: #1f1f1f;
     --peach: #F2B199;
-    --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
 
 
-    /* Fonts */
+    /* fonts */
     --titel1: "NeueMontreal Medium";
     --titel2: "PPMondwest Regular";
     --text: "NeueMontreal Regular";
 
-    /* Font sizes big screen */
+    /*sizes*/
     --h1: 4rem;
     --p: 1rem;
 
-    /* Font sizes small screen screen */
-    --h1-small: 2.2rem;
-    --p-small: 0.8rem;
-
-
-    /* Desktop margin */
-
-
-    /* Phone margin */
-    --margin-small: 2rem;
     --padding: 1em;
     --margin: 1em;
     --border-radius: 0.5em;
-
-    --max-width: 10rem 10rem;
-    --border-radius: 2rem;
-
-        --spaceSides: 8rem;
-
-    --medium: 100;
-    --spacing: 0.7px;
-
 }
-
-/* /////////////////////////// */
-/* 🪩🪩🪩 LIGHT/DARK MODE 🪩🪩🪩 */
-/* /////////////////////////// */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -85,65 +56,23 @@
     }
 }
 
-/* /////////////////////////// */
-/* ❤️‍🔥❤️‍🔥❤️‍🔥 TEXT FORMATTING ❤️‍🔥❤️‍🔥❤️‍🔥 */
-/* /////////////////////////// */
-
 body {
-    font-family: 'NeueMontreal Regular', Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background: var(--white);
     color: var(--black);
 }
 
-
-h1 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 4rem;
-
-}
-
-h2 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-size: 2.5rem; 
-    font-weight: 300; 
-}
-
-h3 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-size: 1.5rem; 
-    font-weight: 300; 
-}
-
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
-}
-
-a {
-    color: var(--black);
-    text-decoration: none;
-}
-
-.pixel_text {
-    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
-}
-
-
-/* /////////////////////////// */
-/* 🤩🤩🤩 NAVIGATION MENU 🤩🤩🤩 */
-/* /////////////////////////// */
+/*///////////////*/
+/*🤩🤩navigation menu🤩🤩*/
+/*///////////////*/
 
 header {
     justify-content: space-between;
     align-items: center;
     padding: 1em;
     background: white;
-    display: flex;
-    flex-wrap: wrap;
-    box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
+    display:flex;
+    flex-wrap:wrap;
 }
 
 header a img {
@@ -177,64 +106,38 @@ nav ul li a:hover {
     transition: color .3s ease;
 }
 
-li a svg {
-    margin-right: 0.5em;
-    vertical-align: middle; 
+
+h1 {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 4rem;
 }
 
-/* Dropdown menu */
-.mega-menu {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    z-index: 102;
-
-    padding: 1.5em 3em 1.5em 1.5em;
-    top: 5.5em;
-    overflow: hidden;
-    white-space: nowrap;
-
-    background: rgb(255, 255, 255);
-    border-radius: 0.8em;
-    box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
-
-    transition: opacity 0.10s ease, visibility 0.10s ease;
-    transition-delay: 300ms;
+h2{
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: 2.5rem; 
+    font-weight: 300; 
 }
 
-/* Hidden state */
-.hidden {
-    visibility: hidden;
-    opacity: 0;
+h3{
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem; 
+    font-weight: 300; 
 }
 
-/* Dropdown hover */
-.dropdown:hover > .mega-menu,
-.dropdown:focus-within > .mega-menu,
-.mega-menu:hover,
-.mega-menu:focus-within {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.10s ease, visibility 0.10s ease;
-    transition-delay: 0ms;
+
+p {
+    font-family: "NeueMontreal Regular";
+    font-size: 1rem;
+    line-height: 23px;
+    letter-spacing: 1.5px;
 }
 
-.hamburger, .close {
-    display: none;
-    cursor: pointer;
-}
+/*///////////////*/
+/*🧸🧸primary button🧸🧸*/
+/*///////////////*/
 
-.show {
-        transform:translateX(0);
-        transition: 0.5s;
-}
-
-/*/////////////////////*/
-/* 🧸🧸🧸 BUTTONS 🧸🧸🧸 */
-/*/////////////////////*/
-
-.primary_button,
-.popularEvents > a {
+.primary_button {
     padding: 0.8rem 1.8rem 0.8rem 1.8rem;
     margin: 0;
     border-radius: 10rem;
@@ -258,25 +161,24 @@ li a svg {
     background-color: black;
 }
 
-.secondary-button {
-    padding: 0.3rem 0.8rem;
-    border: 0.1rem var(--black) solid;
-    border-radius: 2rem;
+/*titel tekst 2*/
+.pixel_text {
+    font-family: var(--titel2);
+    font-size: 4rem;
 }
 
-.tertiary-button {
-    background-color: var(--white);
-    border: none;
-    border-radius: 2rem;
-    padding: 0.4rem 1.2rem;
-    text-decoration: none;
-    font-size: 1.125rem;
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-}
 
-/* /////////////////////////// */
-/* 💻💻💻 BANNER HOMEPAGE 💻💻💻 */
-/* /////////////////////////// */
+/*///////////////*/
+/*💻💻BANNER HOMEPAGE💻💻*/
+/*//////////////*/
+
+  .container_primarybtn {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 100;
+    align-self: center;
+    margin: 14rem 0rem 0rem 2rem;
+}
 
 .home_banner {
     margin: 0;
@@ -311,336 +213,24 @@ li a svg {
     z-index: 0;
 }
 
-.home_banner h1 {
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
 
-    grid-column: 1 / 3;
-    grid-row-start: 1;
-    z-index: 100;
-    margin: 2rem 0rem 0rem 4rem;
-}
+/*Responsive mobile*/
+@media (max-width: 768px) {
 
-.home_banner p {
-    color: white;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25);
-
-    grid-column: 1 / 3;
-    grid-row-start: 1;
-    z-index: 100;
-    align-self: flex-start;
-    margin: 14rem 0rem 0rem 4rem;
-    padding: 0;
-}
-
-.container_primarybtn {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    z-index: 100;
-    align-self: center;
-    margin: 14rem 0rem 0rem 2rem;
-}
-
-.container_primarybtn {
-    grid-column: 1 / 3;
-    grid-row-start: 1;
-    z-index: 100;
-    align-self: center;
-    margin: 14rem 0rem 0rem 4rem;
-}
-
-/*///////////////*/
-/*🔎🔎SEARCH BAR🔎🔎*/
-/*//////////////*/
-
-.search-container {
-    display: flex;
-    align-self: start;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.search-container form {
-    position: relative;
-}
-
-.filter-search {
-    border-radius: 2rem;
-    padding: 0.8rem 0.8rem 0.8rem 3rem;
-    width: 65vw;
-    height: auto;
-    border: black solid 1.5px;
-    background: white;
-    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-}
-
-.search-container input::placeholder {
-    color: #b7b7b7;
-}
-
-.search-container ::-ms-input-placeholder {
-    color: #b7b7b7;
-}
-
-
-.search-container form svg {
-    position: absolute;
-    top: 0.6rem;
-    bottom: 0.5rem;
-    left: 0.8rem;
-}
-
-/*///////////////*/
-/*🍭🍭FILTERS🍭🍭*/
-/*//////////////*/
-
-.filters{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 3rem 8rem 1rem 8rem;
-}
-
-.filter-dropdown {
-    position: relative;
-    transition: margin-bottom 0.3s ease; /* Smooth transition for margin */
-}
-
-.filter-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    min-width: 13rem;
-    height: auto;
-    padding: 0.5rem 0.8rem;
-    border-radius: 1.5rem;
-    background: white;
-    border: 1.5px black solid;
-    font-size: 1rem;
-    font-family: "NeueMontreal Regular";
-}
-
-.filter-dropdown:last-child .filter-btn {
-    color: white;
-    background: black;
-}
-
-.filter-btn svg {
-    transition: transform 0.3s ease; /* Smooth transition for rotation */
-}
-
-.filter-dropdown-items {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 5px 0 rgba(48, 49, 51, 0.1), 0 2px 5px 0 rgba(36, 38, 40, 0.1);;
-    width: 100%;
-    height: 20vh;
-    z-index: 103;
-    border-radius: 1rem;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    margin-top: 0.5rem;
-    transition: margin-top .5s ease, opacity .5s ease;
-}
-
-.filter-dropdown:last-child .filter-dropdown-items {
-    background-color: black;
-}
-
-.filter-dropdown:last-child .filter-dropdown-items a {
-    color: #ffffff;
-}
-
-.filter-dropdown:last-child .filter-dropdown-items a:hover {
-    color: white;
-}
-
-
-.filter-dropdown-items a {
-    display: block;
-    padding: 0.5rem 0.8rem;
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-    font-family: "NeueMontreal Regular";
-}
-
-.filter-dropdown-items a:hover {
-    color: darkblue;
-    text-decoration: underline;
-}
-
-.show-dropdown {
-    display: block;
-}
-
-.icon-rotate {
-    transform: rotate(180deg); /* Rotate the icon */
-}
-
-.filter-dropdown.expanded {
-    margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
-}
-
-/*/////////////////*/
-/*NUMBER CONTROLS FOR AMOUNT OF PEOPLE*/
-/*/////////////////*/
-.number-controls {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    gap: 0.8rem;
-}
-
-.number-controls input[type="number"] {
-    width: 60%;
-    padding: 0.2rem 0.8rem;
-    border-radius: 1rem;
-    border: 1px solid black;
-}
-
-.number-controls button {
-    background-color: #ffffff;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 0.5rem;
-    padding: 0.5rem 0.8rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.number-controls button:hover {
-    background-color: #ccc;
-}
-
-/*/////////////////*/
-/*PRICE RANGE FILTER*/
-/*////////////////*/
-
-.price-input {
-    max-width: 100%;
-    margin: 1rem;
-}
-
-.price-input .field {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 5vh;
-}
-
-.field input {
-    height: 100%;
-    width: 100%;
-    margin-left: 1rem;
-    border: 1px solid rgb(132, 132, 132);
-    border-radius: 0.5rem;
-    outline: none;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.price-input input[type="number"]::-webkit-outer-spin-button,
-.price-input input[type="number"]::-webkit-inner-spin-button {
-    appearance: none;
-}
-
-.price-input .separator {
-    font-size: 1rem;
-    width: 0.8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.filter-dropdown .slider {
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    background: #d9d9d9;
-    position: relative;
-    margin: 0.8rem 1rem 0.8rem 1rem;
-}
-
-.filter-dropdown .slider .progress {
-    height: 0.5rem;
-    border-radius: 0.5rem;
-    background: #F2B199;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-}
-
-.range-input {
-    position: relative;
-}
-
-.range-input input {
-    position: absolute;
-    height: 0.5rem;
-    width: 100%;
-    background: none;
-    appearance: none;
-    pointer-events: none;
-}
-
-.range-input input[type="range"]::-webkit-slider-thumb {
-    height: 1rem;
-    width: 1rem;
-    appearance: none;
-    background: #F2B199;
-    border-radius: 50%;
-    pointer-events: auto;
-}
-
-/*/////////////////*/
-/*🍉🍉EVENT DESCRIPTION🍉🍉*/
-/*////////////////*/
-
-.event-description-container dl {
-    display: grid;
-    grid-template-columns: 0.2fr auto;
-    margin: 5rem 8rem;
-    gap: 1rem;
-}
-
-.event-description-container dt {
-    grid-column: 1;
-    font-family: var(--p);
-}
-
-.event-description-container dd {
-    grid-column: 2;
-}
-
-
-/*/////////////*/
-/*RESPONSIVE DEVICE*/
-/*/////////////*/
-@media (max-width: 768px ) {
-
-/* /////////////////////////// */
-/* 🤩🤩🤩 NAVIGATION MENU 🤩🤩🤩 */
-/* /////////////////////////// */
+    /* navigation menu*/
     .hamburger {
         display: block;
     }
     
     nav {
-        position: fixed;
+        position: absolute;
         left: 0;
         top: 0;
         height: 100vh;
-        width: 80vw;
+        width: 75vw;
         z-index: 103;
         background: white;
         transform: translateX(-100vw);
-        box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
     }
 
 
@@ -661,8 +251,9 @@ li a svg {
     }
 
     nav ul li a {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
+
 
     .mega-menu {
         opacity: 0;
@@ -675,7 +266,6 @@ li a svg {
         margin: 0;
         background: transparent;
         opacity: 0;
-        box-shadow: none;
     }
 
     .open {
@@ -687,721 +277,74 @@ li a svg {
         padding: 0.5em;
     }
 
-    /* Arrow icon*/
+    /*arrow icon*/
     .rotate {
         transform: rotate(180deg);
         transition: transform 0.3s ease;
   }
 
-/* ////////////////////////// */
-/* 🧸🧸🧸 PRIMARY BUTTON 🧸🧸🧸 */
-/* ////////////////////////// */
-        
-    .primary_button {
-        font-size: 0.8rem;
-        padding: 0.6rem 1.5rem 0.6rem 1.5rem;
-    }
 
-    .primary_button:active {
-        color: white;
-        background-color: black;
-    }
-
-/* /////////////////////////// */
-/* 💻💻💻 BANNER HOMEPAGE 💻💻💻 */
-/* /////////////////////////// */
-
-    .home_banner h1 {
-        margin: 2rem;
-    }
-
-
-    .home_banner p {
-        margin: 14rem 2rem 0rem 2rem; 
-    }
-
-    .container_primarybtn {
-        margin: 22rem 0rem 0rem 2rem;
-    }
-    
-
-    .home_banner p br:nth-child(1), br:nth-child(2) {
-        display: none;
-    }
-
-    .primary_button svg {
-        width: 1.5em;
-    }
-
-    /* BASIC STYLING RESPONSIVE */
-    h1, .pixel_text {
-        font-size: 2.2rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-    
-}
-
-/* //////////////////////// */
-/* 🃏🃏🃏 DETAIL CARDS 🃏🃏🃏 */
-/* //////////////////////// */
-
-.popularEvents {
-display: grid;
-grid-template-columns: 1fr auto;
-grid-template-rows: 0.1fr 0.1fr 1fr;
-gap: 1rem;
-}
-
-.popularEvents h2 {
-    flex: 50%;
-    grid-column-start: 1;
-}
-
-/* p naar volgende regel */
-.popularEvents p {
-    flex: 50%;
-    grid-column-start: 1;
-}
-
-/* ul 3x Multiple Cards*/
-.slider {
-    margin-bottom: 8rem;
-    padding-right: 8rem;
-    display: flex;
-    gap: 2.8rem ;
-    overflow-x: scroll;
-    list-style: none;
-    scroll-snap-type: x mandatory;  
-    scroll-padding: 8rem;
-    scroll-behavior: smooth;
-    grid-column: 1 / 3;
-    scrollbar-width: none; /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-.slider li {
-scroll-snap-align: start;   
-/* flex-shrink: 0;    */
-
-}
-
-/* Card + HeartButton + text everything*/
-.detailCard {
-    width: 28rem; 
-    position: relative;
-}
-
-/* Card image + text*/
-.detailCard a {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    text-decoration: none; 
-    color: initial;
-}
-
-/* Margin left first card */
-.slider li:first-of-type article {
-    margin-left: 8rem;
-}
-
-/* Image event */
-.detailCard img {
-    height: 15rem;
-    width: 100%;
-    border-radius: 1.8rem;
-    margin-bottom: 0.5rem;
-    object-fit: cover; 
-    border: 0.15rem solid var(--black);
-}
-
-/* Text event, iets van de kant mooi */
-.detailCard h3,
-.detailCard p {
-padding-left: 1rem;
-}
-
-/* Margin-sides */
-.popularEvents h2,
-.popularEvents > p {
-    margin-left: 8rem;
-}
-
-/* Margin-sides */
-.popularEvents div,
-.popularEvents > a {
-    margin-right: 8rem;
-}
-
-/* Pijlen buttons samen */
-.popularEvents div {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    gap: 3rem;
-}
-
-.popularEvents div button {
-    background-color: transparent;
-    border: none;
-}
-
-/* Heart button */
-.detailCard button {
-    position: absolute;
-    right: 0;
-    margin-top: 1.5rem; 
-    margin-right: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* See all Button --> achter sara's code button zetten want nu overbodige extra code*/
-.popularEvents > a {
-background-color: white;
-border: solid var(--black) 0.15rem;
-height: fit-content;
-display: flex;
-gap: 2rem;
-}
-
-.popularEvents > a:hover {
-    background-color: var(--black);
-    color: var(--white);
-}
-
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
-
-    .popularEvents h2,
-    .popularEvents > p,
-    .popularEvents > a {
-        margin-left: 2rem;
-    }
-
-   /* Pijlen buttons */
-    .popularEvents > div {
-        display: none;
-    }
-
-    /* Seel al button */
-    .popularEvents > a {
-        grid-column-start: 1;
-        width: fit-content;
-    }
-
-    /* Subtekst */
-    .popularEvents p {
-        flex: 50%;
-        grid-row-start: 2;
-    }
-
-    /* Image event */
-    .detailCard img {
-        height: 10rem;
-    }
-
-    /* 1 card event */
-    .detailCard {
-        width: 18rem; 
-    }
-
-    /* all cards */
-    .slider {
-        scroll-padding: 2rem;
-        gap: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 5rem;
-}
-
-    /* space zijkant */
-    .slider li:first-of-type article {
-        margin-left: 2rem;
-    }
-
-}
-
-
-/******🃏🃏Impression cards🃏🃏********/
-
-.impression .detailCard p,
-.impression .detailCard h3,
-.impression .detailCard button{
-    display: none;
-}
-
-.impression{
-    grid-template-rows: 0.1fr auto;
-}
-
-/******categories cards🃏🃏********/
-
-.categories .detailCard p,
-.categories .detailCard button{
-display: none;
-}
-
-.popularEvents.categories{
-    grid-template-rows: 0.1fr auto;
-    background-color: var(--peachLight);
-    padding: 3rem 0;
-}
-
-.categories ul{
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-/******grid cards🃏🃏********/
-
-.overviewGrid ul{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 4rem;
-    grid-template-rows: auto;
-    margin: 5rem 8rem;
-    justify-content: center;
-    justify-content: center;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem; */
-}
-
-.overviewGrid .detailCard{
-    width: 100%;
-}
-
-/* ipad */
-@media (max-width: 1400px){
-
-    .overviewGrid ul{
-        grid-template-columns: auto auto;
-    }
-
-    .overviewGrid .detailCard{
-        width: 100%;
-    }
-  
-}
-
-/* phone */
-@media (max-width: 1100px){
-
-    .overviewGrid ul{
-        grid-template-columns: auto;
-        margin: 4rem 2rem;
-        gap: 3rem;
-    }
-
-    .overviewGrid .detailCard{
-        width: 100%;
-    }
-}
-
-/******recommended cards🃏🃏********/
-
-.recommended{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0 8rem;
-}
-
-
-.recommended ul{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 4rem;
-    grid-template-rows: auto;
-    justify-content: center;
-}
-
-.recommended .detailCard{
-    width: 100%;
-}
-
-/* screen large */
-@media (max-width: 1400px){
-
-    .recommended ul{
-        grid-template-columns: auto auto;
-    }
-
-    .recommended .detailCard{
-        width: 100%;
-    }
-
-    .recommended ul li:nth-of-type(2){
-        display: none;
-    }
-
-}
-
-/* ipad */
-@media (max-width: 1100px){
-
-    .recommended ul{
-        grid-template-columns: auto;
-        gap: 3rem;
-        justify-content: unset;
-    }
-
-    .recommended .detailCard{
-        width: 100%;
-    }
-
-    .recommended{
-        margin: 0 8rem;
-    }
-
-    .recommended ul li:nth-of-type(3){
-        display: none;
-    }
-
-}
-
-/* phone */
-@media (max-width: 768px) {
-    .recommended{
-        margin: 0 2rem;
-    }
-}
-
-/* ///////////////////////////// */
-/* 📸📸📸 SOCIAL MEDIA WALL 📸📸📸 */
-/* ///////////////////////////// */
-
-.socialMediaWall {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: var(--spaceSides);
-}
-
-.socialMediaWall ul {
-    list-style-type: none; /* Verwijder de standaard bullets */
-    padding: 0; /* Verwijder de standaard padding */
-    margin: 0; /* Verwijder standaard marges */
-    display: grid; /* Gebruik grid layout */
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Responsieve kolommen */
-    gap: 1.2rem; /* Ruimte tussen de items */
-    justify-content: center; /* Centreer de items */
-}
-
-.socialMediaWall li {
-    margin: 0; /* Verwijder marge van de li's */
-    padding: 0; /* Verwijder padding van de li's */
-    transition: transform 0.1s ease-in-out; /* Voeg een soepele overgang toe */
-    transform-origin: center center;
-}
-
-.socialMediaWall img {
-    width: 100%; /* Zorg ervoor dat de afbeelding de breedte van het grid-item vult */
-    height: auto; /* Zorg dat de hoogte automatisch wordt aangepast */
-    aspect-ratio: 1 / 1; /* Maak de afbeelding vierkant */
-    object-fit: cover; /* Zorg ervoor dat de afbeelding het vierkant vult en de juiste verhouding behoudt */
-    display: block; /* Verwijder eventuele onderlijning door de link */
-    border-radius: 1.5rem;
-}
-
-.socialMediaWall ul li:hover {
-    transform: scale(1.03);
-}
-
-/* evt voor ipad */
-@media (max-width: 1100px) {
-    
-    .socialMediaWall ul{
-        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
-    }
-    
-}
-
-@media (max-width: 768px) {
-    
-    .socialMediaWall ul{
-        grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
-    }
-
-    .socialMediaWall{
-        margin: 4rem 2rem;
-    }
-
-    .socialMediaWall ul li:nth-of-type(5),
-    .socialMediaWall ul li:nth-of-type(6){
-        display: none;
-    }
-}
-
-/* ///////////////////////////////// */
-/* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
-/* ///////////////////////////////// */
-
-section.ticker {
-    height: auto;
-    width: auto;
-    background: var(--white);
-    padding: 1.2rem 0;
-    border-top: 0.1rem var(--black) solid;
-}
-
-section.ticker a {
-    height: 2.875rem;
-}
-
-section.ticker a:has(h2) {
-    height: unset;
-}
-
-section.ticker svg, img {
-    height: 70%;
-    margin-top: 0.4rem;
-}
-
-/* TICKER ANIMATION */
-@keyframes ticker1 {
-    0% {
-        transform: translate3d(-20%, 0, 0);
-    }
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
-}
-
-@keyframes ticker2 {
-    0% {
-        transform: translate3d(-10%, 0, 0);
-    }
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
 }
 
-@keyframes ticker3 {
-    0% {
-        transform: translate3d(-40%, 0, 0);
-    }
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
-}
-
-article.transition {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    white-space: nowrap;
-    padding: 0 40% 0 0;
-}
-
-article.animation1 {
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-name: ticker1;
-    animation-duration: 80s;
-}
-
-article.animation2 {
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-name: ticker2;
-    animation-duration: 80s;
-}
-
-article.animation3 {
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-name: ticker3;
-    animation-duration: 80s;
-}
-
-article.transition:hover {
-    animation-play-state: paused;
-    cursor: pointer;
-}
-
-section.ticker:nth-of-type(2) {
-    padding: 0.8rem 0;
-}
-
-section.ticker:last-of-type {
-    border-bottom: 0.1rem var(--black) solid;
-}
-
-/* Smaller gap between items in second ticker */
-section.ticker:nth-of-type(2) article.transition {
-    gap: 0.6rem;
-}
-
-/* ////////////////// */
-/* 👀👀👀 FOOTER 👀👀👀 */
-/* ////////////////// */
-
-footer {
-    color: var(--white);
-    background-color: var(--black);
-}
-
-footer section {
-    display: grid;
-    grid-template-columns: 0.07fr 1fr;
-    grid-template-rows: 0.5fr 0.2fr 0.2fr 0.2fr 0.2fr;
-}
-
-footer article:first-of-type {
-    grid-column-start: 2;
-    grid-row-start: 2;
-}
-
-footer article:first-of-type p {
-    margin-top: 0.6rem;
-}
-
-footer article:nth-of-type(2) {
-    grid-column-start: 2;
-    grid-row-start: 4;
-    display: flex;
-    justify-content: flex-start;
-    gap: 15%;
-}
-
-footer a {
-    color: var(--white);
-}
-
-footer p {
-    font-size: 0.938rem;
-}
-
-footer svg {
-    width: 2rem;
-    height: 2rem;
-}
-
-footer article:nth-of-type(2) div:nth-of-type(3) ul {
-    display: flex;
-    flex-wrap: wrap;
-    width: 8rem;
-}
-
-footer article:nth-of-type(2) ul li:first-of-type p {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    margin: 1.5rem 0;
-}
-
-.grow {
-    flex-basis: 100%;
-}
-
-.break {
-    flex-grow: 1;
-}
-
-section.ticker:nth-of-type(2) {
-    padding: 0.8rem 0;
-}
-
-section.ticker:last-of-type {
-    border-bottom: 0.1rem var(--black) solid;
-}
-
-/* Smaller gap between items in second ticker */
-section.ticker:nth-of-type(2) article.transition {
-    gap: 0.6rem;
-}
 
-/* //////////////////////////// */
-/* 🪪🪪🪪 SIGN UP + LOG IN 🪪🪪🪪 */
-/* //////////////////////////// */
+/*////////////////////////////////////////////////////////*/
+/*//////🪪🪪Signup + login🪪🪪/////////////////////////////*/
+/*////////////////////////////////////////////////////////*/
 
 .loginForm h1,
 .loginForm h2,
 .loginForm form,
 .loginForm article,
 .loginForm p,
-.loginForm ul {
+.loginForm ul{
 padding-left: 5rem;
 padding-right: 5rem;
 }
 
-.loginForm h1 {
+.loginForm h1{
     padding-top: 2.8rem;
     font-size: 3rem;
 }
 
-.loginForm h2 {
+.loginForm h2{
     font-size: 1.2rem; 
     font-family: "NeueMontreal Regular";
     letter-spacing: 1.5px;
 }
 
-.loginForm h2 span {
+.loginForm h2 span{
     font-family: "NeueMontreal Bold";
     color: var(--black);
 }
 
-/* Back button */
-.loginForm > a {
+/* back button */
+.loginForm > a{
     display: none;
 }
 
-/* All links */
+/* all links */
 .loginForm form a:visited,
 .loginForm h2 a,
 .loginForm li a,
-.loginForm > a { 
-    text-decoration: none; color: var(--black);
-}
+.loginForm > a 
+{ text-decoration: none; color: var(--black); }
 
-/* Linkjes signup+terms etc */
+/* linkjes signup+terms etc */
 .loginForm form a,
-.loginForm h2 a {
+.loginForm h2 a{
     text-decoration: none;
     font-family: "NeueMontreal Bold";
     color: var(--black);
 }
 
-/* Hover: linkjes signup+terms etc */
+/* hover: linkjes signup+terms etc */
 .loginForm form a:hover,
-.loginForm h2 a:hover {    
-    text-decoration: underline;
-}
+.loginForm h2 a:hover
+ {    text-decoration: underline;}
 
  .loginForm form a:focus,
- .loginForm h2 a:focus { 
-    text-decoration: underline; color: rgba(0, 0, 0, 0.458); 
-}
+ .loginForm h2 a:focus 
+ { text-decoration: underline; color: rgba(0, 0, 0, 0.458); }
 
 /* pagina */
 .loginForm{
@@ -1416,8 +359,8 @@ padding-right: 5rem;
     gap: 1rem;
 }
 
-/* Img */
-.loginForm > img {
+/* img */
+.loginForm > img{
     grid-column-start: 2;
     grid-row-start: 1;
     grid-row-end: 6; 
@@ -1429,25 +372,25 @@ padding-right: 5rem;
     border-radius: 0 3rem 3rem 0;
 }
 
-/* Formulier */
-.loginForm form {
+/* formulier */
+.loginForm form{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
 }
 
-/* Label titel */
-.loginForm form label {
-    font-family: "NeueMontreal Medium";
+/* label titel */
+.loginForm form label{
+    font-family:  "NeueMontreal Medium";
     font-size: 1rem;
     letter-spacing: 1.5px;
     display: inline-block;
     vertical-align: middle;
-}
+} 
 
-/* Invoerveld */
-.loginForm form input {
+/* invoerveld */
+.loginForm form input{
     border: none;
     border-bottom: 0.1rem solid black; /* standaard border dikte in de root? */
     background-color: transparent;
@@ -1462,18 +405,18 @@ padding-right: 5rem;
 
 
 /* Password veld + oog */
-.loginForm form div:first-of-type {
+.loginForm form div:first-of-type{
     position: relative;
 }
 
 /* Password veld */
-.loginForm form div:first-of-type input {
+.loginForm form div:first-of-type input{
     width: 100%;
     margin-bottom: 1rem;
 }
 
-/* Oog icoon */
-.loginForm form div:first-of-type button {
+/* oog icoon */
+.loginForm form div:first-of-type button{
     position: absolute;
     top: 0;
     right: 0.3rem;
@@ -1485,12 +428,12 @@ padding-right: 5rem;
     transition-duration: 0.4s;
 }
 
-.loginForm form div:first-of-type button:hover {
+.loginForm form div:first-of-type button:hover{
     color: var(--peach);
 }
 
 /* Checkbox privacy + tekst */
-.loginForm form div:last-of-type {
+.loginForm form div:last-of-type{
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -1505,17 +448,18 @@ input[type="checkbox"] {
     accent-color: var(--black);
 }
   
-#checkbox {
+
+#checkbox{
     margin: 0;
 }
 
-/* Space between password & checkbox privacy */
-.loginForm form input:nth-of-type(3) {
+/* space between password & checkbox privacy */
+.loginForm form input:nth-of-type(3){
     margin-bottom: 0.1rem;
 }
 
 /* let's join button */
-section.loginForm a[href="/profile"] {
+section.loginForm a[href="/profile"]{
     font-family: "NeueMontreal Regular";
     background-color: var(--black);
     color: white;
@@ -1528,7 +472,7 @@ section.loginForm a[href="/profile"] {
     transition: background-color .5s ease, transform .5s;
 }
 
-section.loginForm a[href="/profile"]:hover {
+section.loginForm a[href="/profile"]:hover{
     color: var(--black);
     transition: background-color .5s ease, transform .5s;
     background-color: transparent;
@@ -1536,47 +480,45 @@ section.loginForm a[href="/profile"]:hover {
 }
 
 /* or */
-.loginForm p {
+.loginForm p{
     display: flex;
     flex-direction: row;
     margin: 0.7rem 0;
 }
 
 /* ---- or ----- */
-.loginForm p:before, .loginForm p:after {
+.loginForm p:before, .loginForm p:after{
     content: "";
     width: 10rem;
     border-bottom: 0.1rem solid var(--black);
     margin: auto;
-}
+  }
 
-.loginForm p:before {
+  .loginForm p:before {
     margin-right: 10px
-}
-
-.loginForm p:after {
+  }
+  .loginForm p:after {
     margin-left: 10px
-}
+  }
 
-/* Social media */
-.loginForm ul {
+/* social media */
+.loginForm ul{
     display: flex;
     gap: 2rem;
     justify-self: center;
 }
 
-.loginForm ul li {
+.loginForm ul li{
     transition: transform 0.2s ease-in-out;         
 }
 
-.loginForm ul li:hover {
+.loginForm ul li:hover{
     transform: scale(1.1);     
 }
 
 /* ipad formaat */
 @media (max-width: 1350px) {
-
-    .loginForm {
+    .loginForm{
         grid-template-columns: auto 30%; 
     }
 
@@ -1585,21 +527,22 @@ section.loginForm a[href="/profile"]:hover {
     .loginForm form,
     .loginForm article,
     .loginForm p,
-    .loginForm ul {
+    .loginForm ul{
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     }
 
-    .loginForm h1 {
+    .loginForm h1{
         padding-top: 2rem;
     }
 
 }
 
+
 /* phone formaat */
 @media (max-width: 768px) {
 
-    .loginForm > a {
+    .loginForm > a{
         display: block;
         z-index: 3;
         position: absolute;
@@ -1617,11 +560,11 @@ section.loginForm a[href="/profile"]:hover {
         transition: background-color .5s ease, transform .5s
     }
 
-    .loginForm header {
+    .loginForm header{
         display: none;
     }
 
-    .loginForm h1 {
+    .loginForm h1{
         margin-top: -5rem;
         color: var(--peach);
         background-color: white;
@@ -1631,16 +574,17 @@ section.loginForm a[href="/profile"]:hover {
         font-size: 2.5rem;
     }
 
-    .loginForm h2 {
+    .loginForm h2{
         font-size: 1rem;
     }
 
     .loginForm form label,
-    .loginForm form input {
+    .loginForm form input{
         font-size: 0.8rem;
     }
+    
 
-    .loginForm {
+    .loginForm{
         margin: 0;
         height: 75vh;
         background-color: rgb(255, 255, 255);
@@ -1651,11 +595,46 @@ section.loginForm a[href="/profile"]:hover {
         height: 92vh;
     }
     
-    .loginForm img {
+    .loginForm img{
         grid-column-start: 1;
         grid-row-start: 1;
         grid-row-end: 2; 
         border-radius: 0;
         height: -webkit-fill-available;
     }
+}
+
+/*////////////////////////////////////////////////////////*/
+/*//////formStep0 - We want to get to know you! ///////*/
+/*////////////////////////////////////////////////////////*/
+
+.formStep0{
+    margin: 2.5rem;
+    background-color: var(--peachLight);
+    height: 81vh;
+    border-radius: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+}
+
+.formStep0 p,
+.formStep0 h1{
+    width: 60%;
+    color: var(--white);
+}
+
+.formStep0 video {
+    margin: 2.5rem;
+    border-radius: 3rem;
+    position: absolute;
+    height: 81vh;
+    width: calc(100% - 5rem);
+
+    object-fit: cover;
+    z-index: -1;
 }

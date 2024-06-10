@@ -13,4 +13,7 @@ export const routes = {
     '/profile': { view: 'pages/profile', title: 'Profile', scripts: [], functions: [], errors: [], requiresAuth: true },
     '/events': { view: 'pages/events_workshops', title: 'Events & workshops', scripts: [], functions: [], errors: [] },
     '/detailevent': { view: 'pages/detail_event', title: 'Event', scripts: [], functions: [], errors: [] },
+    '/formStep0': { view: 'partials/welcomeForm/formStep0', title: 'Form Step 0', scripts: [], functions: [], errors: [] },
+
+    
 }
