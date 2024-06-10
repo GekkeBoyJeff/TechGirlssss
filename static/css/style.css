@@ -329,6 +329,7 @@ section.profile article.bio p {
     grid-column-start: 2;
     grid-row-start: 3;
     margin-top: 1rem;
+    width: 80%;
 }
 
 /* Switch button */
@@ -381,6 +382,11 @@ section.profile article.switch-buttons .clicked {
 .clicked-svg {
     stroke-width: 2.2;
     stroke: var(--black);
+}
+
+/* 📷 PROFILE RESPONSIVE 📷 */
+@media (max-width: 1400px) {
+    
 }
 
 /* //////////////////////// */
