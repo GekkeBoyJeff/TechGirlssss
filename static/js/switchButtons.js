@@ -30,6 +30,20 @@ upcomingEventsButton.addEventListener("click", function() {
 
     wishlistButton.classList.remove("button-clicked");
     upcomingEventsButton.classList.add("button-clicked");
+
+    let newArticle = document.createElement("article");
+    newArticle.className = 'newArticle';
+
+    newArticle.innerHTML = `
+        <a href=""><p class="tertiary-button-black">Read more</p></a>
+        <button class="deregisterButton"><p>Deregister</p></button>
+    `;
+
+    let containers = document.querySelectorAll(".containerFlexbox");
+    containers.forEach(container => {
+        container.appendChild(newArticle.cloneNode(true));
+    });
+        
 });
 
 wishlistButton.addEventListener("click", function() {
@@ -48,4 +62,9 @@ wishlistButton.addEventListener("click", function() {
 
     upcomingEventsButton.classList.remove("button-clicked");
     wishlistButton.classList.add("button-clicked");
+
+    let articlesToRemove = document.querySelectorAll(".newArticle");
+    articlesToRemove.forEach(article => {
+        article.remove();
+    });
 });
