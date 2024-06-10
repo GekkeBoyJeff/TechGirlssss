@@ -14,6 +14,8 @@ export const routes = {
     '/events': { view: 'pages/events_workshops', title: 'Events & workshops', scripts: [], functions: [], errors: [] },
     '/detailevent': { view: 'pages/detail_event', title: 'Event', scripts: [], functions: [], errors: [] },
     '/formStep0': { view: 'partials/welcomeForm/formStep0', title: 'Form Step 0', scripts: [], functions: [], errors: [] },
+    '/formStep1': { view: 'partials/welcomeForm/formStep1', title: 'Form Step 1', scripts: [], functions: [], errors: [] },
+    '/formStep2': { view: 'partials/welcomeForm/formStep2', title: 'Form Step 2', scripts: [], functions: [], errors: [] },
 
     
 }
