@@ -766,11 +766,11 @@ gap: 1rem;
     grid-column-start: 1;
 }
 
-/* 3x Multiple Cards*/
+/* ul 3x Multiple Cards*/
 .slider {
     margin-top: 2rem;
+    margin-bottom: 8rem;
     padding-right: 8rem;
-    padding-bottom: 3rem;
     display: flex;
     gap: 2.8rem ;
     overflow-x: scroll;
@@ -1092,7 +1092,7 @@ display: none;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 8rem;
+    margin: var(--spaceSides);
 }
 
 .socialMediaWall ul {
