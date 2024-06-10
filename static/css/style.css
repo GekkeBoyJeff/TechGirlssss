@@ -624,8 +624,9 @@ section.loginForm a[href="/profile"]:hover{
 
 .formStep0 p,
 .formStep0 h1{
-    width: 60%;
+    width: 55%;
     color: var(--white);
+    text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
 }
 
 .formStep0 video {
@@ -637,4 +638,12 @@ section.loginForm a[href="/profile"]:hover{
 
     object-fit: cover;
     z-index: -1;
+}
+
+.secondary-button {
+    padding: 0.8rem 1.4rem;
+    border: 0.1rem var(--black) solid;
+    color: var(--white);
+    border-radius: 2rem;
+    background-color: var(--black);
 }
