@@ -698,6 +698,7 @@ article.upcoming-events ul li article.detailCard > button {
 
     article.upcoming-events ul li section {
         justify-content: flex-start;
+        gap: 0.4rem;
     }
 
     .newArticle {
