@@ -1,33 +1,23 @@
 <section class="formStep2">
-    <h1>tekst</h1>
+    <h1>Reveal Your <span>Radiant Self!</span></h1>
     <form action="/welcome" method="post">
         
-        <fieldset>
+        <fieldset class="radio-toolbar">
             <legend><h2>Are you a morning bird or a night owl?</h2></legend>
-            <div class="radio-toolbar">
-                <input type="radio" id="radioApple" name="radioFruit" value="apple">
-                <label for="radioApple">Apple</label>
+                <input type="radio" id="morning" name="activeTime" value="morning">
+                <label for="morning">Morning bird</label>
     
-                <input type="radio" id="radioBanana" name="radioFruit" value="banana">
-                <label for="radioBanana">Banana</label>
-    
-                <input type="radio" id="radioOrange" name="radioFruit" value="orange">
-                <label for="radioOrange">Orange</label> 
-            </div>
+                <input type="radio" id="night" name="activeTime" value="night">
+                <label for="night">Night owl</label>
         </fieldset>
     
-        <fieldset>
+        <fieldset class="radio-toolbar">
             <legend><h2>Are you more of a social butterfly or a cozy bookworm?</h2></legend>
-            <div class="test">
-                <input type="radio" id="joep" name="test" value="joep">
-                <label for="joep">joep</label>
+                <input type="radio" id="social" name="social" value="Extravert">
+                <label for="social">Social butterfly <span>Extravert</span></label>
     
-                <input type="radio" id="man" name="test" value="man">
-                <label for="man">man</label>
-    
-                <input type="radio" id="pech" name="test" value="pech">
-                <label for="pech">pech</label> 
-            </div>
+                <input type="radio" id="bookworm" name="social" value="Introvert">
+                <label for="bookworm">Cozy bookworm <span>Introvert</span></label>
         </fieldset>
     
         <button type="submit" id="backButton" name="action" value="back">Back</button>
