@@ -295,6 +295,18 @@ p {
 .formStep2 h1 span{
     font-family: "PPMondwest Regular";
     font-size: 4.5rem;
+
+}
+
+.formStep2 h2{
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+
+.formStep2 fieldset{
+    border: none;
+
 }
 
 /*////////////////////////////////////////////////////////*/
@@ -345,22 +357,68 @@ p {
 /*//////formStep2 - Reveal Your Radiant Self! ///////*/
 /*////////////////////////////////////////////////////////*/
 
-.formStep2 h2{
-    font-size: 1.8rem;
+.formStep2 h1{
+    padding-top: 6rem;
 }
+
+
+.formStep2 form{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto auto;
+    gap: 3rem;
+    height: 100%;
+    align-content: stretch;
+    align-items: start;
+}
+
+.formStep2 fieldset:nth-of-type(1){
+    grid-row: 1;
+    grid-column: 2;
+}
+
+.formStep2 fieldset:nth-of-type(2){
+    grid-row: 2;
+    grid-column: 2;
+}
+
+/*////// deze zelfde knop staat bij step0 maar die heeft niet die margin en like deze knop lijkt zo klein op dit scherm (step2) ///////*/
+.formStep2 button{
+    margin: 3rem 4rem;
+    align-self: self-end;
+
+    padding: 0.8rem 1.4rem;
+    border: 0.1rem var(--black) solid;
+    color: var(--white);
+    border-radius: 2rem;
+    background-color: var(--black);
+}
+
+.formStep2 button:nth-of-type(1){
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.formStep2 button:nth-of-type(2){
+    grid-column: 3;
+    grid-row: 3;
+}
+
+
 
 .formStep2{
     margin: 2.5rem;
     background-color: var(--peachLight);
     height: 81vh;
     border-radius: 3rem;
-    justify-content: center;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     gap: 5rem;
-    background-color: white;  
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .formStep2 video {
@@ -372,7 +430,15 @@ p {
     z-index: -1;
 }
 
+.formStep2 fieldset{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
 
+.formStep2 legend{
+    margin-bottom: 1.2rem;
+}
 
   /*radio checkbox uit het zicht*/
   .radio-toolbar input[type="radio"]{
@@ -381,7 +447,7 @@ p {
     width: 0;
   }
   
-/*radio checkbox uit het zicht*/
+/* knopjes default */
   .radio-toolbar label{
       display: inline-block;
       padding: 0.8rem 1.4rem;
@@ -391,29 +457,22 @@ p {
       background-color: transparent;
       font-family: "NeueMontreal Regular";
       font-size: 1.2rem;
+      line-height: 23px;
+      letter-spacing: 1.5px;
+      transition: 0.3s;
   }
   
-  .radio-toolbar label:hover{
-    background-color: #dfd;
-  }
-  
+  /* knopjes hover+focus */
+  .radio-toolbar label:hover,
   .radio-toolbar input[type="radio"]:focus + label{
-      border: 2px dashed #444;
+    background-color: var(--peachLight)
   }
-  
+
+/* knopjes clicked */
   .radio-toolbar input[type="radio"]:checked + label{
-      background-color: #bfb;
-      border-color: #4c4;
+      background-color: var(--peach);
   }
 
-
-
-
-
-.formStep2 fieldset{
-    border: none;
-
-}
 
 
 
