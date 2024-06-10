@@ -69,7 +69,7 @@
     --max-width: 10rem 10rem;
     --border-radius: 2rem;
 
-    --spaceSides: 8rem;
+        --spaceSides: 8rem;
 
     --medium: 100;
     --spacing: 0.7px;
@@ -632,6 +632,15 @@ li a svg {
 .event-description-container dt, dd {
     border-bottom: 1.5px solid black;
     margin: 0;
+    position: relative; 
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  font-size: 1rem;
 }
 
 /*Google maps*/
@@ -640,24 +649,63 @@ li a svg {
     display: none;
 }
 
+.toggle-map span {
+  margin-right: 0.5rem;
+}
+
 .toggle-map {
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  vertical-align: middle;
+  padding: 0;
 }
 
 .map {
-  transition: max-height 0.3s ease-in-out;
+  margin-top: 0;
+  border: none; /* Remove the border from the map container */
+  transition: max-height 0.3s ease-out;
   overflow: hidden;
   max-height: 0; /* default state when hidden */
 }
 
+
 .map.expanded {
   max-height: 100%; /* adjust based on your map height */
 }
+
+
+.extra-dd {
+    border-bottom: none; 
+}
+
+
+@media (max-width: 768px ) { 
+    
+.event-description-container {
+    margin: 5rem 2rem;
+    width: 100%;
+}   
+
+.event-description-container dl {
+    grid-template-columns: 0.2fr 0.8fr;
+}
+
+.event-description-container dt {
+    width: 25vw;
+}
+
+.event-description-container dd {
+    width: 50vw;
+}
+
+.event-description-container dt, dd {
+    padding-bottom: 1rem;
+}
+
+}
+
 
 /*/////////////*/
 /*RESPONSIVE DEVICE*/

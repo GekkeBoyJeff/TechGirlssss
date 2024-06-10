@@ -5,12 +5,16 @@
     <dt>Organizer</dt>
     <dd>180 Global</dd>
     <dt>Location</dt>
-    <dd>Amsterdam
-      <button class="toggle-map">Show map
+    <dd class="location">
+      <span>Amsterdam</span>
+      <button class="toggle-map">
+        <span>Show map</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
+    </dd>
+    <dd class="extra-dd">
       <div class="map hideMap">
         <!-- Hier kun je je kaart implementeren, bijvoorbeeld een iframe van Google Maps -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.6512337857345!2d4.895167315815028!3d52.37021607978647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609bc06d92c23%3A0xf4e12a152da6e5e!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1625668682684!5m2!1sen!2sus" width="420" height="380" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -30,7 +34,7 @@
 </div>
 <script>
   document.querySelector('.toggle-map').addEventListener('click', function() {
-    var map = document.querySelector('.map');
+    const map = document.querySelector('.map');
     if (map.classList.contains('hideMap')) {
       map.classList.remove('hideMap');
       map.classList.add('expanded');
