@@ -629,6 +629,11 @@ section.loginForm a[href="/profile"]:hover{
     text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
 }
 
+.formStep0 h1 span{
+    font-family: "PPMondwest Regular";
+    font-size: 4.5rem;
+}
+
 .formStep0 video {
     margin: 2.5rem;
     border-radius: 3rem;
@@ -640,7 +645,7 @@ section.loginForm a[href="/profile"]:hover{
     z-index: -1;
 }
 
-.secondary-button {
+.formStep0 button {
     padding: 0.8rem 1.4rem;
     border: 0.1rem var(--black) solid;
     color: var(--white);
