@@ -16,6 +16,7 @@ export const routes = {
     '/formStep0': { view: 'partials/welcomeForm/formStep0', title: 'Form Step 0', scripts: [], functions: [], errors: [] },
     '/formStep1': { view: 'partials/welcomeForm/formStep1', title: 'Form Step 1', scripts: [], functions: [], errors: [] },
     '/formStep2': { view: 'partials/welcomeForm/formStep2', title: 'Form Step 2', scripts: [], functions: [], errors: [] },
-
+    '/formStep3': { view: 'partials/welcomeForm/formStep3', title: 'Form Step 3', scripts: [], functions: [], errors: [] },
+    '/formStep4': { view: 'partials/welcomeForm/formStep4', title: 'Form Step 4', scripts: [], functions: [], errors: [] },
     
 }
