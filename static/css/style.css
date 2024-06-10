@@ -431,7 +431,7 @@ section.profile article.switch-buttons .clicked {
 }
 
 /* Heart button */
-.detailCard button {
+.detailCard > button {
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -564,7 +564,8 @@ section.profile article.switch-buttons .clicked {
 /* 💗💗💗 CARDS WISHLIST 💗💗💗 */
 /* ////////////////////////// */
 
-article.saved-events ul {
+article.saved-events ul,
+article.upcoming-events ul {
     margin: 3rem 8rem 4rem 8rem;
 }
 
@@ -572,11 +573,89 @@ article.saved-events p:nth-of-type(2) {
     display: none;
 }
 
+/* 💗 RESPONSIVE CARDS WISHLIST 💗 */
 @media (max-width: 1400px) {
-    /* Alleen bij full-screen krijgen */
+    /* Alleen bij twee kolommen */
     article.saved-events img {
         height: 17rem;
     }
+}
+
+/* ///////////////////////////////// */
+/* 🫶🏼🫶🏼🫶🏼 CARDS UPCOMING EVENTS 🫶🏼🫶🏼🫶🏼 */
+/* ///////////////////////////////// */
+
+/* Display flex naar column */
+article.upcoming-events ul {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 16rem 4rem 16rem;
+}
+
+/* Section om tekst toegevoegd en display flex column */
+article.upcoming-events ul li section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 28rem;
+    gap: 1rem;
+}
+
+/* Display van grid naar flex row */
+article.upcoming-events ul li a:first-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+}
+
+/* Image grootte aanpassen, naar vierkant */
+article.upcoming-events ul li a:first-of-type img {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 0;
+}
+
+/* Category details uitzetten */
+article.upcoming-events a:nth-of-type(2) {
+    display: none;
+}
+
+/* Button positie en kleur aanpassen */
+article.upcoming-events ul li article.detailCard > button {
+    position: absolute;
+    left: 0;
+    margin-top: 1.5rem; 
+    margin-left: 1.5rem;
+    background-color: var(--white);
+}
+
+/* Upcoming events buttons display */
+#upcoming-events-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+/* Deregister button */
+.deregisterButton {
+    background-color: transparent;
+    border: none;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+}
+
+.deregisterButton p {
+    padding: 0;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+/* 🫶🏼 RESPONSIVE CARDS WISHLIST 🫶🏼 */
+@media (max-width: 1400px) {
+    
 }
 
 p.category {
