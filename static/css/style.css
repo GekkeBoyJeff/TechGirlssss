@@ -295,7 +295,8 @@ p {
 .formStep2 h1 span,
 .formStep3 h1 span,
 .formStep4 h1 span,
-.formStep5 h1 span{
+.formStep5 h1 span,
+.formStep6 h1 span{
     font-family: "PPMondwest Regular";
     font-size: 4.5rem;
 }
@@ -310,7 +311,8 @@ p {
 .formStep2 fieldset,
 .formStep3 fieldset,
 .formStep4 fieldset,
-.formStep5 fieldset{
+.formStep5 fieldset,
+.formStep6 fieldset{
     border: none;
 
 }
@@ -368,7 +370,8 @@ p {
 .formStep2 h1,
 .formStep3 h1,
 .formStep4 h1,
-.formStep5 h1{
+.formStep5 h1,
+.formStep6 h1{
     padding-top: 6rem;
 }
 
@@ -376,7 +379,8 @@ p {
 .formStep2 form,
 .formStep3 form,
 .formStep4 form,
-.formStep5 form{
+.formStep5 form,
+.formStep6 form{
     width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -390,7 +394,8 @@ p {
 .formStep2 fieldset:nth-of-type(1),
 .formStep3 fieldset:nth-of-type(1),
 .formStep4 fieldset:nth-of-type(1),
-.formStep5 fieldset:nth-of-type(1){
+.formStep5 fieldset:nth-of-type(1),
+.formStep6 fieldset:nth-of-type(1){
     grid-row: 1;
     grid-column: 2;
     display: flex;
@@ -403,7 +408,8 @@ p {
 .formStep2 fieldset:nth-of-type(2),
 .formStep3 fieldset:nth-of-type(2),
 .formStep4 fieldset:nth-of-type(2),
-.formStep5 fieldset:nth-of-type(2){
+.formStep5 fieldset:nth-of-type(2),
+.formStep6 fieldset:nth-of-type(2){
     grid-row: 2;
     grid-column: 2;
     display: flex;
@@ -417,7 +423,8 @@ p {
 .formStep2 button,
 .formStep3 button,
 .formStep4 button,
-.formStep5 button{
+.formStep5 button,
+.formStep6 button{
     margin: 3rem 4rem;
     align-self: self-end;
 
@@ -431,7 +438,8 @@ p {
 .formStep2 button:nth-of-type(1),
 .formStep3 button:nth-of-type(1),
 .formStep4 button:nth-of-type(1),
-.formStep5 button:nth-of-type(1){
+.formStep5 button:nth-of-type(1),
+.formStep6 button:nth-of-type(1){
     grid-column: 1;
     grid-row: 3;
 }
@@ -439,7 +447,8 @@ p {
 .formStep2 button:nth-of-type(2),
 .formStep3 button:nth-of-type(2),
 .formStep4 button:nth-of-type(2),
-.formStep5 button:nth-of-type(2){
+.formStep5 button:nth-of-type(2),
+.formStep6 button:nth-of-type(2){
     grid-column: 3;
     grid-row: 3;
 }
@@ -449,7 +458,8 @@ p {
 .formStep2,
 .formStep3,
 .formStep4,
-.formStep5{
+.formStep5,
+.formStep6{
     margin: 2.5rem;
     background-color: var(--peachLight);
     height: 81vh;
@@ -466,7 +476,8 @@ p {
 .formStep2 video,
 .formStep3 video,
 .formStep4 video,
-.formStep5 video{
+.formStep5 video,
+.formStep6 video{
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -478,7 +489,8 @@ p {
 .formStep2 fieldset,
 .formStep3 fieldset,
 .formStep4 fieldset,
-.formStep5 fieldset{
+.formStep5 fieldset,
+.formStep6 fieldset{
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -487,7 +499,8 @@ p {
 .formStep2 legend,
 .formStep3 legend,
 .formStep4 legend,
-.formStep5 legend{
+.formStep5 legend,
+.formStep6 legend{
     margin-bottom: 1.2rem;
 }
 
