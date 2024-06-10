@@ -52,28 +52,23 @@
     const dropdowns = document.querySelectorAll('.dropdown');
     const overlay = document.querySelector('.page-overlay');
 
-    // Page overlay for opening the menu
-    hamburger.addEventListener('click', function() {
+    function openMenu() {
       nav.classList.add('show');
       overlay.classList.add('is-visible');
       hamburger.style.display = 'none'; // Hide the hamburger when menu is open
-    });
+    }
 
-    // Page overlay for closing the menu
-    closeBtn.addEventListener('click', function() {
+    function closeMenu() {
       nav.classList.remove('show');
       overlay.classList.remove('is-visible');
       hamburger.style.display = 'block'; // Show the hamburger when menu is closed
-    });
+    }
 
-    // Close the menu if the overlay is clicked
-    overlay.addEventListener('click', function() {
-      nav.classList.remove('show');
-      overlay.classList.remove('is-visible');
-      hamburger.style.display = 'block'; // Show the hamburger when menu is closed
-    });
+    hamburger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
 
-    // Handle dropdown menus
+    /* Dropdown phone */
     dropdowns.forEach(dropdown => {
       const link = dropdown.querySelector('a');
       const svg = link.querySelector('svg');
@@ -83,6 +78,19 @@
         megaMenu.classList.toggle('open');
         svg.classList.toggle('rotate');
       });
+    });
+
+    // Ensure menu is closed when resizing the window
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        nav.classList.remove('show');
+        overlay.classList.remove('is-visible');
+        hamburger.style.display = 'none'; // Hide the hamburger for larger screens
+      } else {
+        if (!nav.classList.contains('show')) {
+          hamburger.style.display = 'block'; // Show the hamburger for smaller screens only if menu is not open
+        }
+      }
     });
   });
 </script>
