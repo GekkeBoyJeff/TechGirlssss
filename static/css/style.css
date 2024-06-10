@@ -1046,6 +1046,7 @@ display: none;
     width: 100%;
 }
 
+/* screen large */
 @media (max-width: 1400px){
 
     .recommended ul{
@@ -1062,7 +1063,7 @@ display: none;
 
 }
 
-/* phone */
+/* ipad */
 @media (max-width: 1100px){
 
     .recommended ul{
@@ -1076,13 +1077,20 @@ display: none;
     }
 
     .recommended{
-        margin: 0 2rem;
+        margin: 0 8rem;
     }
 
     .recommended ul li:nth-of-type(3){
         display: none;
     }
 
+}
+
+/* phone */
+@media (max-width: 768px) {
+    .recommended{
+        margin: 0 2rem;
+    }
 }
 
 /* ///////////////////////////// */
