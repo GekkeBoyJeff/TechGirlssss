@@ -293,7 +293,8 @@ p {
 
 .formStep0 h1 span,
 .formStep2 h1 span,
-.formStep3 h1 span{
+.formStep3 h1 span,
+.formStep4 h1 span{
     font-family: "PPMondwest Regular";
     font-size: 4.5rem;
 }
@@ -306,7 +307,8 @@ p {
 
 
 .formStep2 fieldset,
-.formStep3 fieldset{
+.formStep3 fieldset,
+.formStep4 fieldset{
     border: none;
 
 }
@@ -315,8 +317,8 @@ p {
 /*//////formStep0 - We want to get to know you! ///////*/
 /*////////////////////////////////////////////////////////*/
 
-.formStep0,
-.formStep3{
+
+.formStep0{
     margin: 2.5rem;
     background-color: var(--peachLight);
     height: 81vh;
@@ -329,6 +331,7 @@ p {
     text-align: center;
     gap: 5rem;
 }
+
 
 .formStep0 p,
 .formStep0 h1{
@@ -361,13 +364,15 @@ p {
 /*////////////////////////////////////////////////////////*/
 
 .formStep2 h1,
-.formStep3 h1{
+.formStep3 h1,
+.formStep4 h1{
     padding-top: 6rem;
 }
 
 
 .formStep2 form,
-.formStep3 form{
+.formStep3 form,
+.formStep4 form{
     width: 100%;
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -379,7 +384,8 @@ p {
 }
 
 .formStep2 fieldset:nth-of-type(1),
-.formStep3 fieldset:nth-of-type(1){
+.formStep3 fieldset:nth-of-type(1),
+.formStep4 fieldset:nth-of-type(1){
     grid-row: 1;
     grid-column: 2;
     display: flex;
@@ -390,7 +396,8 @@ p {
 }
 
 .formStep2 fieldset:nth-of-type(2),
-.formStep3 fieldset:nth-of-type(2){
+.formStep3 fieldset:nth-of-type(2),
+.formStep4 fieldset:nth-of-type(2){
     grid-row: 2;
     grid-column: 2;
     display: flex;
@@ -402,7 +409,8 @@ p {
 
 /*////// deze zelfde knop staat bij step0 maar die heeft niet die margin en like deze knop lijkt zo klein op dit scherm (step2) ///////*/
 .formStep2 button,
-.formStep3 button{
+.formStep3 button,
+.formStep4 button{
     margin: 3rem 4rem;
     align-self: self-end;
 
@@ -414,13 +422,15 @@ p {
 }
 
 .formStep2 button:nth-of-type(1),
-.formStep3 button:nth-of-type(1){
+.formStep3 button:nth-of-type(1),
+.formStep4 button:nth-of-type(1){
     grid-column: 1;
     grid-row: 3;
 }
 
 .formStep2 button:nth-of-type(2),
-.formStep3 button:nth-of-type(2){
+.formStep3 button:nth-of-type(2),
+.formStep4 button:nth-of-type(2){
     grid-column: 3;
     grid-row: 3;
 }
@@ -428,7 +438,8 @@ p {
 
 
 .formStep2,
-.formStep3{
+.formStep3,
+.formStep4{
     margin: 2.5rem;
     background-color: var(--peachLight);
     height: 81vh;
@@ -443,7 +454,8 @@ p {
 }
 
 .formStep2 video,
-.formStep3 video{
+.formStep3 video,
+.formStep4 video{
     position: absolute;
     height: 100vh;
     width: 100%;
@@ -453,14 +465,16 @@ p {
 }
 
 .formStep2 fieldset,
-.formStep3 fieldset{
+.formStep3 fieldset,
+.formStep4 fieldset{
     display: flex;
     justify-content: center;
     gap: 2rem;
 }
 
 .formStep2 legend,
-.formStep3 legend{
+.formStep3 legend,
+.formStep4 legend{
     margin-bottom: 1.2rem;
 }
 
