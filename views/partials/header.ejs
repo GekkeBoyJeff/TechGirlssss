@@ -1,9 +1,21 @@
 <!--<div class="menu">-->
+<div class="page-overlay"></div>
 <header>
   <a href="index.ejs">
     <img src="/images/logo_cr8.png" alt="cr8">
   </a>
   <nav>
+    <div class="mobile-header">
+      <a href="index.ejs" class="mobile-logo">
+        <img src="/images/logo_cr8.png" alt="cr8">
+      </a>
+      <div class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M19 19L5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
     <ul>
       <li class="dropdown"><a href="#">Events & workshops
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,25 +42,38 @@
       <path d="M4.5 6.23077H19.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
     </svg>
   </div>
-  <div class="close">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M19 19L5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </div>
 </header>
 
 <script>
-  const nav = document.querySelector("nav");
-  const hamBurger = document.querySelector(".hamburger");
-  const close = document.querySelector(".close");
-  const dropdowns = document.querySelectorAll('.dropdown');
+  document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector("nav");
+    const hamburger = document.querySelector(".hamburger");
+    const closeBtn = document.querySelector(".close");
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const overlay = document.querySelector('.page-overlay');
 
-  /*dropdown dekstop*/
-  hamBurger.addEventListener("click", () => {
-    nav.classList.toggle("show");
+    // Page overlay for opening the menu
+    hamburger.addEventListener('click', function() {
+      nav.classList.add('show');
+      overlay.classList.add('is-visible');
+      hamburger.style.display = 'none'; // Hide the hamburger when menu is open
+    });
 
-  /*dropdown phone*/
+    // Page overlay for closing the menu
+    closeBtn.addEventListener('click', function() {
+      nav.classList.remove('show');
+      overlay.classList.remove('is-visible');
+      hamburger.style.display = 'block'; // Show the hamburger when menu is closed
+    });
+
+    // Close the menu if the overlay is clicked
+    overlay.addEventListener('click', function() {
+      nav.classList.remove('show');
+      overlay.classList.remove('is-visible');
+      hamburger.style.display = 'block'; // Show the hamburger when menu is closed
+    });
+
+    // Handle dropdown menus
     dropdowns.forEach(dropdown => {
       const link = dropdown.querySelector('a');
       const svg = link.querySelector('svg');
