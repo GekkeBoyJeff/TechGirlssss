@@ -330,7 +330,8 @@ p {
 }
 
 .filter-dropdown:last-child .filter-dropdown-items a:hover {
-    color: white;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
 }
 
 
@@ -372,9 +373,15 @@ p {
     gap: 1rem;
     margin: 3rem 5rem 3rem 5rem;
 }
+
 .filter-dropdown-items {
     height: 15vh;
 }
+
+.filter-btn svg {
+    margin-left: 1.5rem;
+}
+
 }
 
 /*/////////////*/
