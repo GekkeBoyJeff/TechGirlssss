@@ -386,345 +386,209 @@ section.profile article.switch-buttons .clicked {
 /* //////////////////////// */
 /* 🃏🃏🃏 DETAIL CARDS 🃏🃏🃏 */
 /* //////////////////////// */
-
-.popularEvents {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: 0.1fr 0.1fr 1fr;
-    gap: 1rem;
-    }
     
-    .popularEvents h2 {
-        flex: 50%;
-        grid-column-start: 1;
-    }
+/* Card + HeartButton + text everything*/
+.detailCard {
+    width: 28rem; 
+    position: relative;
+}
     
-    /* p naar volgende regel */
-    .popularEvents p {
-        flex: 50%;
-        grid-column-start: 1;
-    }
-    
-    /* 3x Multiple Cards*/
-    .slider {
-        margin-top: 2rem;
-        padding-right: 8rem;
-        padding-bottom: 3rem;
-        display: flex;
-        gap: 2.8rem ;
-        overflow-x: scroll;
-        list-style: none;
-        scroll-snap-type: x mandatory;  
-        scroll-padding: 8rem;
-        scroll-behavior: smooth;
-        grid-column: 1 / 3;
-    
-        scrollbar-color: var(--peachLight) rgba(223, 223, 219, 0.4);
-        scrollbar-width: thin;
-    }
-    
-    .slider li {
-    scroll-snap-align: start;   
-    /* flex-shrink: 0;    */
-    
-    }
-    
-    /* Card + HeartButton + text everything*/
-    .detailCard {
-        width: 28rem; 
-        position: relative;
-    }
-    
-    /* Card image + text*/
-    .detailCard a {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        text-decoration: none; 
-        color: initial;
-    }
-    
-    /* Margin left first card */
-    .slider li:first-of-type article {
-        margin-left: 8rem;
-    }
-    
-    /* Image event */
-    .detailCard img {
-        height: 15rem;
-        width: 100%;
-        border-radius: 1.8rem;
-        margin-bottom: 0.5rem;
-        object-fit: cover; 
-        border: 0.15rem solid var(--black);
-    }
-    
-    /* Text event, iets van de kant mooi */
-    .detailCard h3,
-    .detailCard p {
-    padding-left: 1rem;
-    }
-    
-    /* Margin-sides */
-    .popularEvents h2,
-    .popularEvents > p {
-        margin-left: 8rem;
-    }
-    
-    /* Margin-sides */
-    .popularEvents div,
-    .popularEvents > a {
-        margin-right: 8rem;
-    }
-    
-    /* Pijlen buttons samen */
-    .popularEvents div {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 3rem;
-    }
-    
-    .popularEvents div button {
-        background-color: transparent;
-        border: none;
-    }
-    
-    /* Heart button */
-    .detailCard button {
-        position: absolute;
-        right: 0;
-        margin-top: 1.5rem; 
-        margin-right: 1.5rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        border: none;
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    }
-    
-    /* See all Button --> achter sara's code button zetten want nu overbodige extra code*/
-    .popularEvents > a {
-    background-color: white;
-    border: solid var(--black) 0.15rem;
-    height: fit-content;
+/* Card image + text*/
+.detailCard a {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-decoration: none; 
+    color: initial;
+}
+
+/* Image event */
+.detailCard img {
+    height: 15rem;
+    width: 100%;
+    border-radius: 1.8rem;
+    margin-bottom: 0.5rem;
+    object-fit: cover; 
+    border: 0.15rem solid var(--black);
+}
+
+/* Text event, iets van de kant mooi */
+.detailCard h3,
+.detailCard p {
+    padding-left: 1rem;
+}
+
+/* Margin-sides */
+.popularEvents h2,
+.popularEvents > p {
+    margin-left: 8rem;
+}
+
+/* Margin-sides */
+.popularEvents div,
+.popularEvents > a {
+    margin-right: 8rem;
+}
+
+/* Heart button */
+.detailCard button {
+    position: absolute;
+    right: 0;
+    margin-top: 1.5rem; 
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Evt voor ipad */
+/* @media (max-width: 946px){
+    .popularEvents h2{
+        color: red;
     }
-    
-    .popularEvents > a:hover {
-        background-color: var(--black);
-        color: var(--white);
+} */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2.2rem;
     }
-    
-    /* Evt voor ipad */
-    /* @media (max-width: 946px){
-        .popularEvents h2{
-            color: red;
-        }
-    } */
-    
-    @media (max-width: 768px) {
-    
-        h1 {
-            font-size: 2.2rem;
-        }
-    
-        h2 {
-            font-size: 1.8rem;
-        }
-    
-        h3 {
-            font-size: 1.2rem;
-        }
-    
-        p {
-            font-size: 0.8rem;
-        }
-    
-        .popularEvents h2,
-        .popularEvents > p,
-        .popularEvents > a {
-            margin-left: 2rem;
-        }
-    
-       /* Pijlen buttons */
-        .popularEvents > div {
-            display: none;
-        }
-    
-        /* Seel al button */
-        .popularEvents > a {
-            grid-column-start: 1;
-            width: fit-content;
-        }
-    
-        /* Subtekst */
-        .popularEvents p {
-            flex: 50%;
-            grid-row-start: 2;
-        }
-    
-        /* Image event */
-        .detailCard img {
-            height: 10rem;
-        }
-    
-        /* 1 card event */
-        .detailCard {
-            width: 18rem; 
-        }
-    
-        /* all cards */
-        .slider {
-            scroll-padding: 2rem;
-            gap: 2rem;
-            margin-top: 1rem;
+
+    h2 {
+        font-size: 1.8rem;
     }
-    
-        /* space zijkant */
-        .slider li:first-of-type article {
-            margin-left: 2rem;
-        }
-    
+
+    h3 {
+        font-size: 1.2rem;
     }
-    
-    
-    /******🃏🃏Impression cards🃏🃏********/
-    
-    .impression .detailCard p,
-    .impression .detailCard h3,
-    .impression .detailCard button{
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .popularEvents h2,
+    .popularEvents > p,
+    .popularEvents > a {
+        margin-left: 2rem;
+    }
+
+    /* Pijlen buttons */
+    .popularEvents > div {
         display: none;
     }
-    
-    .impression{
-        grid-template-rows: 0.1fr auto;
+
+    /* Seel al button */
+    .popularEvents > a {
+        grid-column-start: 1;
+        width: fit-content;
     }
-    
-    /******categories cards🃏🃏********/
-    
-    .categories .detailCard p,
-    .categories .detailCard button{
-    display: none;
+
+    /* Subtekst */
+    .popularEvents p {
+        flex: 50%;
+        grid-row-start: 2;
     }
-    
-    .popularEvents.categories{
-        grid-template-rows: 0.1fr auto;
-        background-color: var(--peachLight);
-        padding: 3rem 0;
+
+    /* Image event */
+    .detailCard img {
+        height: 10rem;
     }
-    
-    /******grid cards🃏🃏********/
-    
+
+    /* 1 card event */
+    .detailCard {
+        width: 18rem; 
+    }
+
+    /* all cards */
+    .slider {
+        scroll-padding: 2rem;
+        gap: 2rem;
+        margin-top: 1rem;
+}
+
+    /* space zijkant */
+    .slider li:first-of-type article {
+        margin-left: 2rem;
+    }
+
+}
+
+/******grid cards🃏🃏********/
+
+.overviewGrid ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    margin: 5rem 8rem;
+    justify-content: center;
+}
+
+.overviewGrid .detailCard {
+    width: 100%;
+}
+
+/* ipad */
+@media (max-width: 1400px){
+
     .overviewGrid ul{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 4rem;
-        grid-template-rows: auto;
-        margin: 5rem 8rem;
-        justify-content: center;
-    
-        /* display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 3rem; */
+        grid-template-columns: auto auto;
     }
-    
+
     .overviewGrid .detailCard{
         width: 100%;
     }
     
-    /* ipad */
-    @media (max-width: 1400px){
-    
-        .overviewGrid ul{
-            grid-template-columns: auto auto;
-        }
-    
-        .overviewGrid .detailCard{
-            width: 100%;
-        }
-      
+}
+
+/* phone */
+@media (max-width: 1100px){
+
+    .overviewGrid ul{
+        grid-template-columns: auto;
+        margin: 4rem 2rem;
+        gap: 3rem;
     }
-    
-    /* phone */
-    @media (max-width: 1100px){
-    
-        .overviewGrid ul{
-            grid-template-columns: auto;
-            margin: 4rem 2rem;
-            gap: 3rem;
-        }
-    
-        .overviewGrid .detailCard{
-            width: 100%;
-        }
-    }
-    
-    /******recommended cards🃏🃏********/
-    
-    .recommended{
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin: 0 8rem;
-    }
-    
-    
-    .recommended ul{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 4rem;
-        grid-template-rows: auto;
-        justify-content: center;
-    }
-    
-    .recommended .detailCard{
+
+    .overviewGrid .detailCard{
         width: 100%;
     }
-    
-    @media (max-width: 1400px){
-    
-        .recommended ul{
-            grid-template-columns: auto auto;
-        }
-    
-        .recommended .detailCard{
-            width: 100%;
-        }
-    
-        .recommended ul li:nth-of-type(2){
-            display: none;
-        }
-    
+}
+
+/* ////////////////////////// */
+/* 💗💗💗 CARDS WISHLIST 💗💗💗 */
+/* ////////////////////////// */
+
+article.saved-events ul {
+    margin: 3rem 8rem 4rem 8rem;
+}
+
+article.saved-events p:nth-of-type(2) {
+    display: none;
+}
+
+@media (max-width: 1400px) {
+    /* Alleen bij full-screen krijgen */
+    article.saved-events img {
+        height: 17rem;
     }
-    
-    /* phone */
-    @media (max-width: 1100px){
-    
-        .recommended ul{
-            grid-template-columns: auto;
-            gap: 3rem;
-            justify-content: unset;
-        }
-    
-        .recommended .detailCard{
-            width: 100%;
-        }
-    
-        .recommended{
-            margin: 0 2rem;
-        }
-    
-        .recommended ul li:nth-of-type(3){
-            display: none;
-        }
-    
-    }
+}
+
+p.category {
+    padding: 0.3rem 0.7rem;
+    margin: 1rem 1rem 0 1rem;
+    height: auto;
+    width: fit-content;
+    border: 0.094rem var(--black) solid;
+    border-radius: 2.5rem;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: 0.938rem;
+}
 
 /* ////////////////// */
 /* 👀👀👀 FOOTER 👀👀👀 */
