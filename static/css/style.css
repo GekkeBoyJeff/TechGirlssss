@@ -238,6 +238,7 @@ p {
     border-radius: 2rem;
     padding: 0.8rem 0.8rem 0.8rem 3rem;
     width: 65vw;
+    max-width: 100%;
     height: auto;
     border: black solid 1.5px;
     background: white;
@@ -270,7 +271,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
-    margin: 3rem 8rem 1rem 8rem;
+    margin: 3rem 12rem 1rem 12rem;
 }
 
 .filter-dropdown {
@@ -343,8 +344,7 @@ p {
 }
 
 .filter-dropdown-items a:hover {
-    color: darkblue;
-    text-decoration: underline;
+    background-color: #f4c6b5;
 }
 
 .show-dropdown {
@@ -357,6 +357,24 @@ p {
 
 .filter-dropdown.expanded {
     margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
+}
+
+@media (max-width: 768px ) {
+
+    .filter-search {
+        width: 75vw;
+    }
+
+    .filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 5rem 3rem 5rem;
+}
+.filter-dropdown-items {
+    height: 15vh;
+}
 }
 
 /*/////////////*/
@@ -413,6 +431,10 @@ p {
 
     p {
         font-size: 0.8rem;
+    }
+
+    h1, p, .pixel_text {
+        margin: 2rem;
     }
     
 }
