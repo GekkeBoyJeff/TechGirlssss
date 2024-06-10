@@ -343,12 +343,6 @@ p {
     font-size: 1.8rem;
 }
 
-.formStep2 form fieldset:nth-of-type(1){
-    background-color: red;
-    border: none;
-    gap: 2rem;
-}
-
 .formStep2{
     margin: 2.5rem;
     background-color: var(--peachLight);
@@ -371,3 +365,56 @@ p {
     object-fit: cover;
     z-index: -1;
 }
+
+
+.radio-toolbar,
+.test {
+    margin: 10px;
+  }
+  
+  .radio-toolbar input[type="radio"],
+  .test input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+  .radio-toolbar label,
+  .test label{
+      display: inline-block;
+      background-color: #ddd;
+      padding: 10px 20px;
+      font-family: sans-serif, Arial;
+      font-size: 16px;
+      border: 2px solid #444;
+      border-radius: 4px;
+  }
+  
+  .radio-toolbar label:hover,
+  .test label:hover {
+    background-color: #dfd;
+  }
+  
+  .radio-toolbar input[type="radio"]:focus + label,
+  .test input[type="radio"]:focus + label{
+      border: 2px dashed #444;
+  }
+  
+  .radio-toolbar input[type="radio"]:checked + label,
+  .test input[type="radio"]:checked + label{
+      background-color: #bfb;
+      border-color: #4c4;
+  }
+
+
+
+
+
+.formStep2 fieldset{
+    border: none;
+
+}
+
+
+
+
