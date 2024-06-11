@@ -1312,7 +1312,8 @@ section.ticker a:has(h2) {
     height: unset;
 }
 
-section.ticker svg, img {
+section.ticker svg, 
+section.ticker img {
     height: 70%;
     margin-top: 0.4rem;
 }
