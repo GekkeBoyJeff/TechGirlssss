@@ -614,7 +614,7 @@ li a svg {
     margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
 }
 
-@media (max-width: 768px ) {
+@media (max-width: 768px) {
 
     .filter-search {
         width: 75vw;
@@ -906,6 +906,7 @@ padding-left: 1rem;
     height: 3rem;
     border-radius: 50%;
     border: none;
+    background-color: var(--white);
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
