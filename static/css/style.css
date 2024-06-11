@@ -331,7 +331,7 @@ p {
 
 .filter-dropdown:last-child .filter-dropdown-items button:hover {
     color: rgb(255, 255, 255);
-    text-decoration: underline;
+    font-family: "NeueMontreal Medium";
 }
 
 
@@ -349,7 +349,7 @@ p {
 
 .filter-dropdown-items button:hover {
     color: #f4c6b5;
-    text-decoration: underline;
+    font-family: "NeueMontreal Medium";
 }
 
 .show-dropdown {
