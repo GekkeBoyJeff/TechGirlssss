@@ -594,8 +594,25 @@ p {
   }
   
   @media (max-width: 1350px) {
-    .formStep2 h1{
+    .formStep0 h1 span,
+    .formStep2 h1 span,
+    .formStep3 h1 span,
+    .formStep4 h1 span,
+    .formStep5 h1 span,
+    .formStep6 h1 span{
+        font-family: "PPMondwest Regular";
+        font-size: 4.5rem;
         color: red;
+    }
+    
+    .formStep2 h2,
+    .formStep3 h2,
+    .formStep4 h2,
+    .formStep5 h2,
+    .formStep6 h2{
+        font-family: "NeueMontreal Regular";
+        font-size: 1.5rem;
+        letter-spacing: 1px;
     }
   }
 
