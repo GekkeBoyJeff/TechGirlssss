@@ -684,6 +684,11 @@ progress::-webkit-progress-value {
     border-radius: 1rem;
 }
 
+
+/*////////////*/
+/*🍄🍄ERROR STATE🍄🍄*/
+/*////////////*/
+
 .error {
     display: flex;
     align-items: center;
@@ -695,6 +700,10 @@ progress::-webkit-progress-value {
     display: flex;
     align-items: center;
     font-size: 10rem;
+}
+
+.error h2 {
+    margin-bottom: 1rem;
 }
 
 .error p {
@@ -711,19 +720,17 @@ progress::-webkit-progress-value {
     margin-right: 1.8rem; 
 }
 
-.container-button-error {
-    margin: 1rem;
+.error a {
     display: flex;
-    align-items: center;
+    gap: 0.5rem;
+    margin-top: 5rem;
 }
 
-.container-button-error .primary_button {
-    padding-left: 3rem;
+.error a svg {
+    order: -1;
 }
 
-.container-button-error svg {
-    position: absolute;
-}
+
 
 
 
