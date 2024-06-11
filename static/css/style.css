@@ -172,7 +172,7 @@ p {
 /*💻💻BANNER HOMEPAGE💻💻*/
 /*//////////////*/
 
-  .container_primarybtn {
+.container_primarybtn {
     grid-column-start: 1;
     grid-row-start: 1;
     z-index: 100;
@@ -684,6 +684,46 @@ progress::-webkit-progress-value {
     border-radius: 1rem;
 }
 
+.error {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem 8rem;
+}
+
+.error h1 {
+    display: flex;
+    align-items: center;
+    font-size: 10rem;
+}
+
+.error p {
+    width: 40vw;
+    text-align: center;
+}
+
+.error span {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 15rem;
+    transform: rotate(90deg);
+    margin-left: 0.9rem;  /* Aanpassen voor visuele balans */
+    margin-right: 1.8rem; 
+}
+
+.container-button-error {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.container-button-error .primary_button {
+    padding-left: 3rem;
+}
+
+.container-button-error svg {
+    position: absolute;
+}
 
 
 
