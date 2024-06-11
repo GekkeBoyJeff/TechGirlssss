@@ -86,6 +86,23 @@ a {
     width: fit-content;
 }
 
+@media (max-width: 768px) {
+    .secondary-button {
+        
+    }
+
+    .tertiary-button {
+
+    }
+
+    p.tertiary-button-black,
+    p.secondary-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.938rem;
+    }
+
+}
+
 .tertiary-button {
     background-color: var(--white);
     border: none;
@@ -175,6 +192,7 @@ p {
     z-index: 0;
 }
 
+/* SPONSORBANNER */
 section.ticker {
     height: auto;
     width: auto;
@@ -331,7 +349,7 @@ section.profile h1 {
     margin-top: 0.5rem;
 }
 
-section.profile article.bio p {
+section.profile article.bio > p {
     grid-column-start: 2;
     grid-row-start: 3;
     margin-top: 1rem;
@@ -387,23 +405,40 @@ section.profile article.switch-buttons .clicked {
 
     section.profile .profileBanner {
         height: 15rem;
+        margin: 1rem 2.5rem 1rem 2.5rem;
     }
 
     section.profile article.bio img {
         height: 7rem;
         width: 7rem;
         border: var(--white) 0.3rem solid;
-        left: 5rem;
+        left: 3.5rem;
         top: 19rem;
     }
 
-    section.profile article.bio p.secondary-button,
+    section.profile article.bio {
+        grid-template-columns: 3.5rem 0.8fr 0.6fr 3.5rem;
+        grid-template-rows: 0.4fr auto auto;
+    }
+
+    section.profile article.bio article {
+        gap: 0.5rem;
+        grid-column: 3 / 5;
+        margin-right: 3.5rem;
+    }
+
+    /* section.profile article.bio p.secondary-button,
     section.profile article.bio p.tertiary-button-black {
-        font-size: 1rem;
+        font-size: 0.938rem;
+        padding: 0.4rem 1rem;
+    } */
+
+    section.profile article.bio p {
+        grid-column: 2 / 5;
     }
 
     section.profile article.switch-buttons {
-        gap: 2.5rem;
+        gap: 1.5rem;
     }
 
     section.profile article.switch-buttons button {
@@ -415,7 +450,7 @@ section.profile article.switch-buttons .clicked {
     }
 
     section.profile article.switch-buttons button p {
-        font-size: 1rem;
+        font-size: 0.938rem;
     }
 }
 
@@ -610,6 +645,13 @@ article.saved-events p:nth-of-type(2) {
 }
 
 /* 💗 RESPONSIVE CARDS WISHLIST 💗 */
+@media (max-width: 768px) {
+    
+    article.saved-events ul, article.upcoming-events ul {
+        margin: 2rem 3.5rem 2rem 3.5rem;
+    }
+}
+
 @media (max-width: 1400px) {
     /* Alleen bij twee kolommen */
     article.saved-events img {
@@ -690,7 +732,7 @@ article.upcoming-events ul li article.detailCard > button {
 }
 
 /* 🫶🏼 RESPONSIVE CARDS UPCOMING EVENTS 🫶🏼 */
-@media (max-width: 1400px) {
+/* @media (max-width: 1400px) {
 
     article.upcoming-events ul li a:first-of-type {
         justify-content: center;
@@ -710,25 +752,56 @@ article.upcoming-events ul li article.detailCard > button {
     }
 
     article.upcoming-events ul li article.detailCard > button {
-        left: 8%;
+        left: 0;
         position: absolute;
     }   
 
-}
-
-@media (max-width: 1100px) {
-
-}
+} */
 
 @media (max-width: 768px) {
 
+    article.upcoming-events article.detailCard {
+        width: 100%;
+        height: 30rem;
+    }
+
     article.upcoming-events ul {
-        margin: 3rem 5.5rem 4rem 5.5rem;
+        margin: 2rem 3.5rem 2rem 3.5rem;
+    }
+
+    article.upcoming-events ul li section {
+        width: auto;
+    }
+
+    article.upcoming-events ul li a:first-of-type {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     article.upcoming-events ul li a:first-of-type img {
-        height: 10rem;
+        width: auto;
+        height: 17rem;
     }
+
+    article.upcoming-events ul li article.detailCard > button {
+        left: auto;
+        margin-top: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .newArticle {
+        left: 0;
+        width: fit-content;
+        flex-direction: row;
+        gap: 1rem;
+        top: auto;
+        margin: 1rem;
+    }
+
+    .deregisterButton p {
+        font-size: 0.938rem;
+    }
+
 }
 
 p.category {
@@ -740,6 +813,12 @@ p.category {
     border-radius: 2.5rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-size: 0.938rem;
+}
+
+section.profile article:nth-of-type(5) {
+    color: #808080;
+    text-align: center;
+    margin: 1rem;
 }
 
 /* ////////////////// */
