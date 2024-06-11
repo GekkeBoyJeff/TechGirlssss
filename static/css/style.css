@@ -290,35 +290,24 @@ p {
 /*//////Form steps algemeen ///////*/
 /*////////////////////////////////////////////////////////*/
 
-
-.formStep0 h1 span,
-.formStep2 h1 span,
-.formStep3 h1 span,
-.formStep4 h1 span,
-.formStep5 h1 span,
-.formStep6 h1 span{
-    font-family: "PPMondwest Regular";
-    font-size: 4.5rem;
+.formStep{
+    padding:4em;
 }
 
-.formStep2 h2,
-.formStep3 h2,
-.formStep4 h2,
-.formStep5 h2,
-.formStep6 h2{
+.formStep h1 span{
+    font-family: "PPMondwest Regular";
+    /* font-size: 4.5rem; */
+}
+
+.formStep h2{
     font-family: "NeueMontreal Regular";
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
 
-.formStep2 fieldset,
-.formStep3 fieldset,
-.formStep4 fieldset,
-.formStep5 fieldset,
-.formStep6 fieldset{
+.formStep fieldset{
     border: none;
-
 }
 
 /*////////////////////////////////////////////////////////*/
@@ -326,7 +315,7 @@ p {
 /*////////////////////////////////////////////////////////*/
 
 
-.formStep0{
+.formStep{
     margin: 2.5rem;
     background-color: var(--peachLight);
     height: 81vh;
@@ -341,14 +330,14 @@ p {
 }
 
 
-.formStep0 p,
-.formStep0 h1{
-    width: 55%;
-    color: var(--white);
-    text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
+.formStep p,
+.formStep h1{
+    /* width: 55%; */
+    /* color: var(--black); */
+    /* text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6); */
 }
 
-.formStep0 video{
+.formStep video{
     margin: 2.5rem;
     border-radius: 3rem;
     position: absolute;
@@ -359,157 +348,61 @@ p {
     z-index: -1;
 }
 
-.formStep0 button {
-    padding: 0.8rem 1.4rem;
+.formStep button, .step0 form button:first-of-type {
+    padding: 0.8rem 2rem;
     border: 0.1rem var(--black) solid;
     color: var(--white);
     border-radius: 2rem;
     background-color: var(--black);
 }
 
+.formStep button:first-of-type {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.step0 h1,
+.step0 p{
+    text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
+    color: var(--white);
+}
+
+.step1 video{
+    border-radius: 0;
+}
 /*////////////////////////////////////////////////////////*/
 /*//////formStep2 - Reveal Your Radiant Self! ///////*/
 /*////////////////////////////////////////////////////////*/
 
-.formStep2 h1,
-.formStep3 h1,
-.formStep4 h1,
-.formStep5 h1,
-.formStep6 h1{
-    padding-top: 6rem;
+.step1 form{
+width: 20%;
+flex-wrap: wrap;
 }
 
-
-.formStep2 form,
-.formStep3 form,
-.formStep4 form,
-.formStep5 form,
-.formStep6 form{
-    width: 100%;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto auto auto;
-    gap: 3rem;
-    height: 100%;
-    align-content: stretch;
-    align-items: start;
-}
-
-.formStep2 fieldset:nth-of-type(1),
-.formStep3 fieldset:nth-of-type(1),
-.formStep4 fieldset:nth-of-type(1),
-.formStep5 fieldset:nth-of-type(1),
-.formStep6 fieldset:nth-of-type(1){
-    grid-row: 1;
-    grid-column: 2;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    /* width: 70%; */
-    justify-content: center;
-}
-
-.formStep2 fieldset:nth-of-type(2),
-.formStep3 fieldset:nth-of-type(2),
-.formStep4 fieldset:nth-of-type(2),
-.formStep5 fieldset:nth-of-type(2),
-.formStep6 fieldset:nth-of-type(2){
-    grid-row: 2;
-    grid-column: 2;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    /* width: 70%; */
-    justify-content: center;
-}
-
-/*////// deze zelfde knop staat bij step0 maar die heeft niet die margin en like deze knop lijkt zo klein op dit scherm (step2) ///////*/
-.formStep2 button,
-.formStep3 button,
-.formStep4 button,
-.formStep5 button,
-.formStep6 button{
-    margin: 3rem 4rem;
-    align-self: self-end;
-    position: absolute;
-    padding: 0.8rem 1.4rem;
-    border: 0.1rem var(--black) solid;
-    color: var(--white);
-    border-radius: 2rem;
-    background-color: var(--black);
-}
-
-.formStep2 button:nth-of-type(1),
-.formStep3 button:nth-of-type(1),
-.formStep4 button:nth-of-type(1),
-.formStep5 button:nth-of-type(1),
-.formStep6 button:nth-of-type(1){
-    grid-column: 1;
-    grid-row: 3;
-}
-
-.formStep2 button:nth-of-type(2),
-.formStep3 button:nth-of-type(2),
-.formStep4 button:nth-of-type(2),
-.formStep5 button:nth-of-type(2),
-.formStep6 button:nth-of-type(2){
-    grid-column: 3;
-    grid-row: 3;
-    right: 2.5rem;
-}
-
-
-
-.formStep2,
-.formStep3,
-.formStep4,
-.formStep5,
-.formStep6{
-    margin: 2.5rem;
-    background-color: var(--peachLight);
-    height: 81vh;
-    border-radius: 3rem;
-    display: flex;
-    text-align: center;
-    gap: 5rem;
+.formStep{
     background-color: white;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    /* padding: 3em; */
 }
 
-.formStep2 video,
-.formStep3 video,
-.formStep4 video,
-.formStep5 video,
-.formStep6 video{
+.formStep video{
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     justify-content: center;
     object-fit: cover;
     z-index: -1;
 }
 
-.formStep2 fieldset,
-.formStep3 fieldset,
-.formStep4 fieldset,
-.formStep5 fieldset,
-.formStep6 fieldset{
+.formStep fieldset{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
 }
 
-.formStep2 legend,
-.formStep3 legend,
-.formStep4 legend,
-.formStep5 legend,
-.formStep6 legend{
+.formStep legend{
     margin-bottom: 1.2rem;
 }
 
-/*////// radio's en meerdere/enkele selecteren ///////*/
 /*radio checkbox uit het zicht*/
   .radio-toolbar input[type="radio"]{
     opacity: 0;
@@ -517,6 +410,7 @@ p {
     width: 0;
   }
 
+  /*checkbox checkbox uit het zicht*/
   .radio-toolbar input[type="checkbox"]{
     opacity: 0;
     position: fixed;
@@ -524,59 +418,66 @@ p {
   }
   
 /* knopjes default */
-  .radio-toolbar label{
-      display: inline-block;
+  .radio-toolbar label,
+  input#age,
+  input#country,
+  input#language,
+  select#language{
       padding: 0.8rem 1.4rem;
       border: 0.1rem var(--black) solid;
       color: var(--black);
       border-radius: 2rem;
-      background-color: transparent;
       font-family: "NeueMontreal Regular";
       font-size: 1.2rem;
-      line-height: 23px;
       letter-spacing: 1.5px;
       transition: 0.3s;
   }
-  
+
+  /* input#age {
+    width: 10%;
+} */
+
+
+
+.step1 fieldset{
+    gap: 0;
+}
+
+.step1 form label {
+    border: 0;
+}
+
+.step1 form label:hover{
+    background-color: var(--white);
+}
+
+input#age:hover,
+input#country:hover,
+input#language:hover,
+select#language:hover{
+    background-color: var(--peachLight);
+}
+
+input#age:focus,
+input#country:focus,
+input#language:focus,
+select#language:focus{
+    outline: transparent;   
+    background-color: var(--peach);  /* oranges! yey */
+  }
+
+
   /* knopjes hover+focus */
   .radio-toolbar label:hover,
   .radio-toolbar input[type="radio"]:focus + label{
-    background-color: var(--peachLight)
+    background-color: var(--peachLight);
   }
+
+
 
 /* knopjes clicked */
   .radio-toolbar input[type="radio"]:checked + label{
       background-color: var(--peach);
-  }
-
-
-/*////// checkboxes en meerdere/enkele selecteren ///////*/
-/*radio checkbox uit het zicht*/
-.radio-toolbar input[type="checkbox"]{
-    opacity: 0;
-    position: fixed;
-    width: 0;
-  }
-
-  .radio-toolbar input[type="checkbox"]{
-    opacity: 0;
-    position: fixed;
-    width: 0;
-  }
-  
-/* knopjes default */
-  .radio-toolbar label{
-      display: inline-block;
-      padding: 0.8rem 1.4rem;
-      border: 0.1rem var(--black) solid;
-      color: var(--black);
-      border-radius: 2rem;
-      background-color: transparent;
-      font-family: "NeueMontreal Regular";
-      font-size: 1.2rem;
-      line-height: 23px;
-      letter-spacing: 1.5px;
-      transition: 0.3s;
   }
   
   /* knopjes hover+focus */
@@ -592,8 +493,68 @@ p {
   .radio-toolbar input[type="checkbox"]:checked + label{
       background-color: var(--peach);
   }
-  
-  @media (max-width: 1350px) {
+
+
+@media (max-width: 1350px) {
+  .step0,
+  .step1 {
+    height: unset;
+}
+
+.formStep h1{
+    font-size: 2.5rem; 
+}
+
+.formStep h1 span{
+    font-size: 3rem;  
+}
+
+}
+
+
+header{
+    color:  red;
+    background-color: blue;
+}
+
+form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formStep form {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    overflow-x: scroll;
+    justify-content: space-between;
+}
+
+.formStep div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.step0 {
+    background: unset;
+    position: relative;
+}
+
+.step0 form{
+    width: auto;
+    height: unset;
+}
+
+.step0 p{
+    width: 70%;
+}
+
+
+
+  /* @media (max-width: 1350px) {
     .formStep0 h1 span,
     .formStep2 h1 span,
     .formStep3 h1 span,
@@ -601,8 +562,18 @@ p {
     .formStep5 h1 span,
     .formStep6 h1 span{
         font-family: "PPMondwest Regular";
-        font-size: 4.5rem;
+        font-size: 3rem;
         color: red;
+    }
+    
+
+    .formStep0 h1,
+    .formStep2 h1,
+    .formStep3 h1,
+    .formStep4 h1,
+    .formStep5 h1,
+    .formStep6 h1{
+        font-size: 2.5rem;  
     }
     
     .formStep2 h2,
@@ -611,16 +582,170 @@ p {
     .formStep5 h2,
     .formStep6 h2{
         font-family: "NeueMontreal Regular";
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         letter-spacing: 1px;
+    }
+
+    .radio-toolbar label{
+        font-size: 1rem;
+  }
+  
+
+
+
+
+.formStep3{
+    /* margin: 2.5rem;
+    padding: -5rem;
+    background-color: var(--peachLight);
+    height: 100%;
+    display: flex;
+    text-align: center;
+    gap: 5rem;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.formStep3 video{
+    height: 130vh;
+}
+
+  /* @media (max-width: 768px) {
+    .formStep2 form,
+    .formStep3 form{
+        /* grid-template-rows: auto auto 1fr;
+        color: blue;
+    }
+
+    .formStep2,
+    .formStep3{
+        gap: 2rem;
+        height: 100%;
+    }
+
+    .formStep2 h1,
+    .formStep3 h1,
+    .formStep4 h1,
+    .formStep5 h1,
+    .formStep6 h1{
+        padding-top: 3rem;
+        /* width: 60%; 
     }
   }
 
+  } */ 
 
-  @media (max-width: 1200px) {
+
+
+  /* knopjes default */
+  /* .radio-toolbar label{ */
+      /* display: inline-block; */
+      /* padding: 0.8rem 1.4rem; */
+      /* border: 0.1rem var(--black) solid; */
+      /* color: var(--black); */
+      /* border-radius: 2rem; */
+      /* background-color: transparent; */
+      /* font-family: "NeueMontreal Regular"; */
+      /* font-size: 1.2rem; */
+      /* line-height: 23px; */
+      /* letter-spacing: 1.5px; */
+      /* transition: 0.3s; */
+  /* } */
+
+
+  /* .formStep2 button:nth-of-type(1),
+.formStep3 button:nth-of-type(1),
+.formStep4 button:nth-of-type(1),
+.formStep5 button:nth-of-type(1),
+.formStep6 button:nth-of-type(1){ */
+    /* grid-column: 1; */
+    /* grid-row: 3; */
+    /* border: 0.1rem var(--black) solid; */
+    /* color: var(--black); */
+    /* border-radius: 2rem; */
+    /* background-color: var(--white); */
+/* } */
+/* 
+.formStep button:nth-of-type(2),
+.formStep button:nth-of-type(2),
+.formStep button:nth-of-type(2),
+.formStep button:nth-of-type(2),
+.formStep button:nth-of-type(2){
+    grid-column: 3;
+    grid-row: 3;
+    right: 2.5rem;
+} */
+
+
+/* .welcome{
     
-  }
+} */
+
+/* .formStep2 h1,
+.formStep3 h1,
+.formStep4 h1,
+.formStep5 h1,
+.formStep6 h1{ */
+    /* padding-top: 4.5rem; */
+/* } */
 
 
+/* .formStep2 form,
+.formStep3 form,
+.formStep4 form,
+.formStep5 form,
+.formStep6 form{ */
+    /* width: 100%; */
+    /* display: grid; */
+    /* grid-template-columns: auto 1fr auto; */
+    /* grid-template-rows: auto auto auto; */
+    /* gap: 3rem; */
+    /* height: 100%; */
+    /* align-content: stretch; */
+    /* align-items: start; */
+/* } */
 
+/* .formStep2 fieldset:nth-of-type(1),
+.formStep3 fieldset:nth-of-type(1),
+.formStep4 fieldset:nth-of-type(1),
+.formStep5 fieldset:nth-of-type(1),
+.formStep6 fieldset:nth-of-type(1){ */
+    /* grid-row: 1; */
+    /* grid-column: 2; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* gap: 1rem; */
+    /* width: 70%; */
+    /* justify-content: center; */
+/* } */
+/* 
+.formStep2 fieldset:nth-of-type(2),
+.formStep3 fieldset:nth-of-type(2),
+.formStep4 fieldset:nth-of-type(2),
+.formStep5 fieldset:nth-of-type(2),
+.formStep6 fieldset:nth-of-type(2){
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+} */
 
+/*////// deze zelfde knop staat bij step0 maar die heeft niet die margin en like deze knop lijkt zo klein op dit scherm (step2) ///////*/
+/* .formStep2 button,
+.formStep3 button,
+.formStep4 button,
+.formStep5 button,
+.formStep6 button{ */
+    /* margin: 3rem 4rem; */
+    /* align-self: self-end; */
+    /* position: absolute; */
+    /* padding: 0.8rem 2rem; */
+    /* border: 0.1rem var(--black) solid; */
+    /* color: var(--white); */
+    /* border-radius: 2rem; */
+    /* background-color: var(--black); */
+/* } */
