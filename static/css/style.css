@@ -642,7 +642,6 @@ li a svg {
 /*////////////////*/
 
 .event-description-container {
-    margin: 5rem 8rem;
     width: 100%;
 }
 
@@ -650,6 +649,7 @@ li a svg {
     display: grid;
     grid-template-columns: 0.2fr auto;
     gap: 1rem;
+    margin: 5rem 8rem;
 }
 
 .event-description-container dt {
@@ -719,12 +719,12 @@ li a svg {
 @media (max-width: 768px ) { 
     
 .event-description-container {
-    margin: 5rem 2rem;
     width: 100%;
 }   
 
 .event-description-container dl {
     grid-template-columns: 0.2fr 0.8fr;
+    margin: 5rem 2rem;
 }
 
 .event-description-container dt {
