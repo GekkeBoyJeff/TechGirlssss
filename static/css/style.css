@@ -181,101 +181,6 @@ li a svg {
         transition: 0.5s;
 }
 
-
-h1 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 4rem;
-}
-
-p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
-}
-
-/*///////////////*/
-/*🧸🧸primary button🧸🧸*/
-/*///////////////*/
-
-.primary_button {
-    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
-    margin: 0;
-    border-radius: 10rem;
-
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
-    background-color: var(--peach);
-    text-decoration: none;
-    color: black;
-    transition: background-color .5s ease, transform .5s
-}
-
-.primary_button svg {
-    vertical-align: middle;
-}
-
-.primary_button:hover {
-    color: white;
-    background-color: black;
-}
-
-/*titel tekst 2*/
-.pixel_text {
-    font-family: var(--titel2);
-    font-size: 4rem;
-}
-
-
-/*///////////////*/
-/*💻💻BANNER HOMEPAGE💻💻*/
-/*//////////////*/
-
-  .container_primarybtn {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    z-index: 100;
-    align-self: center;
-    margin: 14rem 0rem 0rem 2rem;
-}
-
-.home_banner {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: 0.2fr 0;
-    height: 80vh;
-}
-
-.home_banner img:nth-of-type(1) {
-    filter: contrast(105%) brightness(100%) grayscale(10%);
-    width: 100%;
-    height: 75vh;
-    object-fit: cover;
-
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    z-index: 0;
-}
-
-.home_banner img:nth-of-type(2) {
-    filter: contrast(120%) brightness(100%) grayscale(10%);
-    width: 100%;
-    height: 75vh;
-    object-fit: cover;
-
-    grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    z-index: 0;
-}
-
-
 /*Responsive mobile*/
 @media (max-width: 768px) {
 
@@ -370,6 +275,5 @@ p {
         transform: rotate(180deg);
         transition: transform 0.3s ease;
   }
-
 
 }
