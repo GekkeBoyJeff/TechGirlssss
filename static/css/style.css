@@ -2224,3 +2224,216 @@ section.profile article.switch-buttons .clicked {
         font-size: 0.938rem;
     }
 }
+
+/* ////////////////////////// */
+/* 💗💗💗 CARDS WISHLIST 💗💗💗 */
+/* ////////////////////////// */
+
+article.saved-events ul,
+article.upcoming-events ul {
+    margin: 3rem 8rem 4rem 8rem;
+}
+
+article.saved-events p:nth-of-type(2) {
+    display: none;
+}
+
+/* 💗 RESPONSIVE CARDS WISHLIST 💗 */
+@media (max-width: 768px) {
+    
+    article.saved-events ul, article.upcoming-events ul {
+        margin: 2rem 3.5rem 2rem 3.5rem;
+    }
+}
+
+@media (max-width: 1400px) {
+    /* Alleen bij twee kolommen */
+    article.saved-events img {
+        height: 17rem;
+    }
+}
+
+/* ///////////////////////////////// */
+/* 🫶🏼🫶🏼🫶🏼 CARDS UPCOMING EVENTS 🫶🏼🫶🏼🫶🏼 */
+/* ///////////////////////////////// */
+
+/* Display flex naar column */
+article.upcoming-events ul {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 16rem 4rem 16rem;
+}
+
+/* Section om tekst toegevoegd en display flex column */
+article.upcoming-events ul li section.newSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 28rem;
+    gap: 1rem;
+}
+
+article.upcoming-events ul li article.detailCard a.addSection > h3,
+article.upcoming-events ul li article.detailCard a.addSection > p {
+    display: none;
+}
+
+/* Display van grid naar flex row */
+article.upcoming-events ul li a:first-of-type {
+    display: flex;
+    flex-direction: row;
+    gap: 8%;
+}
+
+/* Image grootte aanpassen, naar vierkant */
+article.upcoming-events ul li a:first-of-type img {
+    width: 12.5rem;
+    height: 12.5rem;
+    margin: 0;
+}
+
+/* Category details uitzetten */
+article.upcoming-events a:nth-of-type(2) {
+    display: none;
+}
+
+/* Button positie en kleur aanpassen */
+article.upcoming-events ul li article.detailCard > button {
+    position: absolute;
+    left: 0;
+    margin-top: 1.5rem; 
+    margin-left: 1.5rem;
+    background-color: var(--white);
+}
+
+/* Upcoming events buttons display */
+.newArticle {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+
+/* Deregister button */
+.deregisterButton {
+    background-color: transparent;
+    border: none;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+}
+
+.deregisterButton p {
+    padding: 0;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    text-decoration: underline;
+}
+
+/* 🫶🏼 RESPONSIVE CARDS UPCOMING EVENTS 🫶🏼 */
+@media (max-width: 768px) {
+
+    article.upcoming-events article.detailCard {
+        width: 100%;
+        height: 28rem;
+    }
+
+    article.upcoming-events ul {
+        margin: 2rem 3.5rem 2rem 3.5rem;
+    }
+
+    article.upcoming-events ul li section.newSection {
+        width: auto;
+    }
+
+    article.upcoming-events ul li a:first-of-type {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    article.upcoming-events ul li a:first-of-type img {
+        width: auto;
+        height: 17rem;
+    }
+
+    article.upcoming-events ul li article.detailCard > button {
+        left: auto;
+        margin-top: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .newArticle {
+        left: 0;
+        width: fit-content;
+        flex-direction: row;
+        gap: 1rem;
+        top: auto;
+        margin: 1rem;
+    }
+
+    .deregisterButton p {
+        font-size: 0.938rem;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+
+    article.upcoming-events ul {
+        margin: 2rem 5.3rem 2rem 5.3rem;
+    }
+
+    article.upcoming-events ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    article.upcoming-events ul li section.newSection {
+        justify-content: flex-start;
+        gap: 0.7rem;
+    }
+
+    article.upcoming-events ul li a:first-of-type {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    article.upcoming-events ul li a:first-of-type img {
+        height: 11.5rem;
+    }
+
+    .newArticle {
+        flex-direction: row;
+        gap: 1.5rem;
+        position: absolute;
+        top: 75%;
+        left: 35%;
+    }
+
+    article.upcoming-events ul li article.detailCard {
+        width: fit-content;
+    }
+
+    article.upcoming-events ul li article.detailCard > button {
+        left: 0;
+        position: absolute;
+    }  
+
+}
+
+p.category {
+    padding: 0.3rem 0.7rem;
+    margin: 1rem 1rem 0 1rem;
+    height: auto;
+    width: fit-content;
+    border: 0.094rem var(--black) solid;
+    border-radius: 2.5rem;
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: 0.938rem;
+}
+
+section.profile article:nth-of-type(5) {
+    color: #808080;
+    text-align: center;
+    margin: 1rem;
+}
