@@ -1,0 +1,1 @@
+let heart = document.querySelectorAll(".heartButton"):
