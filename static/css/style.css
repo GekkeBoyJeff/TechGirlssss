@@ -1287,6 +1287,7 @@ display: none;
 /* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
 /* ///////////////////////////////// */
 
+/* SPONSORBANNER */
 section.ticker {
     height: auto;
     width: auto;
@@ -1299,6 +1300,10 @@ section.ticker a {
     height: 2.875rem;
 }
 
+section.ticker em {
+    font-size: 3rem;
+}
+
 section.ticker a:has(h2) {
     height: unset;
 }
@@ -1308,8 +1313,16 @@ section.ticker svg, img {
     margin-top: 0.4rem;
 }
 
+section.ticker h2.secondary-button {
+    font-size: 2.5rem;
+}
+
+.dots {
+    font-size: 2.5rem;
+}
+
 /* TICKER ANIMATION */
-@keyframes ticker1 {
+/* @keyframes ticker1 {
     0% {
         transform: translate3d(-20%, 0, 0);
     }
@@ -1334,7 +1347,7 @@ section.ticker svg, img {
     100% {
         transform: translate3d(-100%, 0, 0);
     }
-}
+} */
 
 article.transition {
     display: flex;
