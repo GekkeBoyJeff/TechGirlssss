@@ -301,7 +301,11 @@ p {
     font-size: 4.5rem;
 }
 
-.formStep2 h2{
+.formStep2 h2,
+.formStep3 h2,
+.formStep4 h2,
+.formStep5 h2,
+.formStep6 h2{
     font-family: "NeueMontreal Regular";
     font-size: 1.5rem;
     letter-spacing: 1px;
@@ -451,7 +455,7 @@ p {
 .formStep6 button:nth-of-type(2){
     grid-column: 3;
     grid-row: 3;
-    right: 0;
+    right: 2.5rem;
 }
 
 
@@ -589,7 +593,16 @@ p {
       background-color: var(--peach);
   }
   
+  @media (max-width: 1350px) {
+    .formStep2 h1{
+        color: red;
+    }
+  }
 
+
+  @media (max-width: 1200px) {
+    
+  }
 
 
 
