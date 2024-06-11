@@ -454,6 +454,15 @@ section.profile article.switch-buttons .clicked {
     }
 }
 
+/* @media (max-width: 1400px) {
+
+    section.profile article.bio > p {
+        grid-column-start: 2;
+        grid-row-start: 3;
+        grid-column: 2 / 4;
+    }
+} */
+
 /* //////////////////////// */
 /* 🃏🃏🃏 DETAIL CARDS 🃏🃏🃏 */
 /* //////////////////////// */
@@ -732,37 +741,11 @@ article.upcoming-events ul li article.detailCard > button {
 }
 
 /* 🫶🏼 RESPONSIVE CARDS UPCOMING EVENTS 🫶🏼 */
-/* @media (max-width: 1400px) {
-
-    article.upcoming-events ul li a:first-of-type {
-        justify-content: center;
-    }
-
-    article.upcoming-events ul li section {
-        justify-content: flex-start;
-        gap: 0.4rem;
-    }
-
-    .newArticle {
-        flex-direction: row;
-        gap: 1.5rem;
-        position: absolute;
-        top: 75%;
-        right: 31.5%;
-    }
-
-    article.upcoming-events ul li article.detailCard > button {
-        left: 0;
-        position: absolute;
-    }   
-
-} */
-
 @media (max-width: 768px) {
 
     article.upcoming-events article.detailCard {
         width: 100%;
-        height: 30rem;
+        height: 28rem;
     }
 
     article.upcoming-events ul {
@@ -801,6 +784,55 @@ article.upcoming-events ul li article.detailCard > button {
     .deregisterButton p {
         font-size: 0.938rem;
     }
+
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+
+    /* article.upcoming-events article.detailCard {
+        width: 100%;
+        height: auto;
+    } */
+
+    article.upcoming-events ul {
+        margin: 2rem 5.3rem 2rem 5.3rem;
+    }
+
+    article.upcoming-events ul li {
+        display: flex;
+        justify-content: center;
+    }
+
+    article.upcoming-events ul li section {
+        justify-content: flex-start;
+        gap: 0.7rem;
+    }
+
+    article.upcoming-events ul li a:first-of-type {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    article.upcoming-events ul li a:first-of-type img {
+        height: 11.5rem;
+    }
+
+    .newArticle {
+        flex-direction: row;
+        gap: 1.5rem;
+        position: absolute;
+        top: 75%;
+        left: 35%;
+    }
+
+    article.upcoming-events ul li article.detailCard {
+        width: fit-content;
+    }
+
+    article.upcoming-events ul li article.detailCard > button {
+        left: 0;
+        position: absolute;
+    }  
 
 }
 
