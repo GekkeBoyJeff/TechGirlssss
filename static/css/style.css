@@ -2437,3 +2437,77 @@ section.profile article:nth-of-type(5) {
     text-align: center;
     margin: 1rem;
 }
+
+/*////////////*/
+/*🍄🍄ERROR STATE🍄*/
+/*////////////*/
+
+.error {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 5rem 8rem;
+}
+
+.error h1, h2, p {
+    text-align: center;
+}
+
+.error h1 {
+    display: flex;
+    align-items: center;
+    font-size: 10rem;
+}
+
+.error h2 {
+    margin-bottom: 1rem;
+}
+
+.error p {
+    width: 40vw;
+}
+
+.error span {
+    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 15rem;
+    transform: rotate(90deg);
+    margin-left: 0.9rem;  /* Aanpassen voor visuele balans */
+    margin-right: 1.8rem; 
+}
+
+.error a {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 5rem;
+}
+
+.error a svg {
+    order: -1;
+}
+
+@media (max-width: 768px) {
+
+    .error {
+        margin: 0rem 2rem;
+    }
+    
+    .error h1 {
+        font-size: 5rem;
+        margin: 1rem 2rem 0rem 2rem  
+    }
+
+    .error h2 {
+        margin-top: 1rem;
+    }
+
+    .error span {
+        font-size: 8rem;
+        margin-left: 0.5rem;
+        margin-right: 1.5rem;
+    }
+    .error p {
+    width: 100%;
+}
+
+}
