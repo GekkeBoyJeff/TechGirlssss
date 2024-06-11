@@ -588,7 +588,6 @@ p {
       background-color: var(--peach);
   }
   
-
 /*///////////////*/
 /*🧪🧪PROGRESSBAR🧪🧪*/
 /*///////////////*/
@@ -686,7 +685,7 @@ progress::-webkit-progress-value {
 
 
 /*////////////*/
-/*🍄🍄ERROR STATE🍄🍄*/
+/*🍄🍄ERROR STATE🍄*/
 /*////////////*/
 
 .error {
@@ -694,6 +693,10 @@ progress::-webkit-progress-value {
     align-items: center;
     flex-direction: column;
     margin: 5rem 8rem;
+}
+
+.error h1, h2, p {
+    text-align: center;
 }
 
 .error h1 {
@@ -708,7 +711,6 @@ progress::-webkit-progress-value {
 
 .error p {
     width: 40vw;
-    text-align: center;
 }
 
 .error span {
@@ -728,6 +730,32 @@ progress::-webkit-progress-value {
 
 .error a svg {
     order: -1;
+}
+
+@media (max-width: 768px) {
+
+    .error {
+        margin: 0rem 2rem;
+    }
+    
+    .error h1 {
+        font-size: 5rem;
+        margin: 1rem 2rem 0rem 2rem  
+    }
+
+    .error h2 {
+        margin-top: 1rem;
+    }
+
+    .error span {
+        font-size: 8rem;
+        margin-left: 0.5rem;
+        margin-right: 1.5rem;
+    }
+    .error p {
+    width: 100%;
+}
+
 }
 
 
