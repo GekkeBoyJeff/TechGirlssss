@@ -330,12 +330,12 @@ p {
 }
 
 
-.formStep p,
-.formStep h1{
+/* .formStep p,
+.formStep h1{ */
     /* width: 55%; */
     /* color: var(--black); */
     /* text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6); */
-}
+/* } */
 
 .formStep video{
     margin: 2.5rem;
