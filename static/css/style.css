@@ -427,7 +427,7 @@ p {
 .formStep6 button{
     margin: 3rem 4rem;
     align-self: self-end;
-
+    position: absolute;
     padding: 0.8rem 1.4rem;
     border: 0.1rem var(--black) solid;
     color: var(--white);
@@ -451,6 +451,7 @@ p {
 .formStep6 button:nth-of-type(2){
     grid-column: 3;
     grid-row: 3;
+    right: 0;
 }
 
 
