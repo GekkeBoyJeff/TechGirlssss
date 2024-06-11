@@ -2072,3 +2072,155 @@ form fieldset {
     width: 70%;
 }
 
+/* /////////////////// */
+/* 📷📷📷 PROFILE 📷📷📷 */
+/* /////////////////// */
+
+section.profile .profileBanner {
+    height: 20rem;
+    width: auto;
+    border-radius: 2rem;
+    margin: 2rem;
+
+    background-image: url("../images/gradient.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+section.profile article.bio {
+    display: grid;
+    grid-template-columns: 5.5rem 0.8fr 0.6fr 0.2fr;
+    grid-template-rows: 0.4fr auto auto;
+}
+
+section.profile article.bio img {
+    height: 10rem;
+    width: 10rem;
+    border: var(--white) 0.5rem solid;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 5rem;
+    top: 23rem;
+}
+
+section.profile article.bio article {
+    display: flex;
+    gap: 1rem;
+    grid-column-start: 3;
+    grid-row-start: 1;
+    justify-self: end;
+}
+
+section.profile h1 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    margin-top: 0.5rem;
+}
+
+section.profile article.bio > p {
+    grid-column-start: 2;
+    grid-row-start: 3;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+/* Switch button */
+section.profile article.switch-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    margin: 2rem 5.5rem;
+}
+
+section.profile article.switch-buttons button {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem 0.8rem 0.5rem;
+
+    --webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+}
+
+section.profile article.switch-buttons button.button-clicked {
+    border-bottom: var(--black) 0.15rem solid;
+}
+
+section.profile article.switch-buttons button p {
+    font-size: 1.125rem;
+    color: #808080;
+}
+
+section.profile .hidden {
+    display: none;
+}
+
+section.profile article.switch-buttons .clicked {
+    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    color: var(--black);
+}
+
+.clicked-svg {
+    stroke-width: 2.2;
+    stroke: var(--black);
+}
+
+/* 📷 PROFILE RESPONSIVE 📷 */
+@media (max-width: 768px) {
+
+    section.profile .profileBanner {
+        height: 15rem;
+        margin: 1rem 2.5rem 1rem 2.5rem;
+    }
+
+    section.profile article.bio img {
+        height: 7rem;
+        width: 7rem;
+        border: var(--white) 0.3rem solid;
+        left: 3.5rem;
+        top: 19rem;
+    }
+
+    section.profile article.bio {
+        grid-template-columns: 3.5rem 0.8fr 0.6fr 3.5rem;
+        grid-template-rows: 0.4fr auto auto;
+    }
+
+    section.profile article.bio article {
+        gap: 0.5rem;
+        grid-column: 3 / 5;
+        margin-right: 3.5rem;
+    }
+
+    /* section.profile article.bio p.secondary-button,
+    section.profile article.bio p.tertiary-button-black {
+        font-size: 0.938rem;
+        padding: 0.4rem 1rem;
+    } */
+
+    section.profile article.bio p {
+        grid-column: 2 / 5;
+    }
+
+    section.profile article.switch-buttons {
+        gap: 1.5rem;
+    }
+
+    section.profile article.switch-buttons button {
+        padding: 0 0.3rem 0.5rem 0.3rem;
+    }
+
+    section.profile article.switch-buttons button svg {
+        width: 1.2rem;
+    }
+
+    section.profile article.switch-buttons button p {
+        font-size: 0.938rem;
+    }
+}
