@@ -1806,4 +1806,269 @@ section.loginForm a[href="/profile"]:hover {
     }
 }
 
+/*////////////////////////////////////////////////////////*/
+/*//////Form steps algemeen ///////*/
+/*////////////////////////////////////////////////////////*/
+
+.formStep{
+    padding:4em;
+}
+
+.formStep h1 span{
+    font-family: "PPMondwest Regular";
+    /* font-size: 4.5rem; */
+}
+
+.formStep h2{
+    font-family: "NeueMontreal Regular";
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+
+.formStep fieldset{
+    border: none;
+}
+
+/*////////////////////////////////////////////////////////*/
+/*//////formStep0 - We want to get to know you! ///////*/
+/*////////////////////////////////////////////////////////*/
+
+
+.formStep{
+    margin: 2.5rem;
+    background-color: var(--peachLight);
+    height: 81vh;
+    border-radius: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+}
+
+
+/* .formStep p,
+.formStep h1{ */
+    /* width: 55%; */
+    /* color: var(--black); */
+    /* text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6); */
+/* } */
+
+.formStep video{
+    margin: 2.5rem;
+    border-radius: 3rem;
+    position: absolute;
+    height: 81vh;
+    width: calc(100% - 5rem);
+
+    object-fit: cover;
+    z-index: -1;
+}
+
+.formStep button, .step0 form button:first-of-type {
+    padding: 0.8rem 2rem;
+    border: 0.1rem var(--black) solid;
+    color: var(--white);
+    border-radius: 2rem;
+    background-color: var(--black);
+}
+
+.formStep button:first-of-type {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.step0 h1,
+.step0 p{
+    text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
+    color: var(--white);
+}
+
+.step1 video{
+    border-radius: 0;
+}
+/*////////////////////////////////////////////////////////*/
+/*//////formStep2 - Reveal Your Radiant Self! ///////*/
+/*////////////////////////////////////////////////////////*/
+
+.step1 form{
+width: 20%;
+flex-wrap: wrap;
+}
+
+.formStep{
+    background-color: white;
+    /* padding: 3em; */
+}
+
+.formStep video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.formStep fieldset{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.formStep legend{
+    margin-bottom: 1.2rem;
+}
+
+/*radio checkbox uit het zicht*/
+  .radio-toolbar input[type="radio"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+
+  /*checkbox checkbox uit het zicht*/
+  .radio-toolbar input[type="checkbox"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+/* knopjes default */
+  .radio-toolbar label,
+  input#age,
+  input#country,
+  input#language,
+  select#language{
+      padding: 0.8rem 1.4rem;
+      border: 0.1rem var(--black) solid;
+      color: var(--black);
+      border-radius: 2rem;
+      font-family: "NeueMontreal Regular";
+      font-size: 1.2rem;
+      letter-spacing: 1.5px;
+      transition: 0.3s;
+  }
+
+  /* input#age {
+    width: 10%;
+} */
+
+
+
+.step1 fieldset{
+    gap: 0;
+}
+
+.step1 form label {
+    border: 0;
+}
+
+.step1 form label:hover{
+    background-color: var(--white);
+}
+
+input#age:hover,
+input#country:hover,
+input#language:hover,
+select#language:hover{
+    background-color: var(--peachLight);
+}
+
+input#age:focus,
+input#country:focus,
+input#language:focus,
+select#language:focus{
+    outline: transparent;   
+    background-color: var(--peach);  /* oranges! yey */
+  }
+
+
+  /* knopjes hover+focus */
+  .radio-toolbar label:hover,
+  .radio-toolbar input[type="radio"]:focus + label{
+    background-color: var(--peachLight);
+  }
+
+
+
+/* knopjes clicked */
+  .radio-toolbar input[type="radio"]:checked + label{
+      background-color: var(--peach);
+  }
+  
+  /* knopjes hover+focus */
+  .radio-toolbar label:hover{
+    background-color: var(--peachLight);
+  }
+
+  .radio-toolbar input[type="checkbox"]:focus + label{
+    background-color: white;
+  }
+
+/* knopjes clicked */
+  .radio-toolbar input[type="checkbox"]:checked + label{
+      background-color: var(--peach);
+  }
+
+
+@media (max-width: 1350px) {
+  .step0,
+  .step1 {
+    height: unset;
+}
+
+.formStep h1{
+    font-size: 2.5rem; 
+}
+
+.formStep h1 span{
+    font-size: 3rem;  
+}
+
+}
+
+
+header{
+    color:  red;
+    background-color: blue;
+}
+
+form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formStep form {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+    overflow-x: scroll;
+    justify-content: space-between;
+}
+
+.formStep div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.step0 {
+    background: unset;
+    position: relative;
+}
+
+.step0 form{
+    width: auto;
+    height: unset;
+}
+
+.step0 p{
+    width: 70%;
+}
 
