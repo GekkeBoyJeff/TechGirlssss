@@ -584,7 +584,6 @@ li a svg {
     font-family: "NeueMontreal Medium";
 }
 
-
 .filter-dropdown-items button {
     display: block;
     padding: 0.8rem 0.8rem;
@@ -642,20 +641,104 @@ li a svg {
 /*🍉🍉EVENT DESCRIPTION🍉🍉*/
 /*////////////////*/
 
+.event-description-container {
+    margin: 5rem 8rem;
+    width: 100%;
+}
+
 .event-description-container dl {
     display: grid;
     grid-template-columns: 0.2fr auto;
-    margin: 5rem 8rem;
     gap: 1rem;
 }
 
 .event-description-container dt {
     grid-column: 1;
-    font-family: var(--p);
+    font-family: var(--text);
+    font-size:  var(--p);
+    padding-bottom: 1rem;
+    width: 12vw;
 }
 
 .event-description-container dd {
     grid-column: 2;
+    width: 30vw;
+    margin: 0;
+}
+
+.event-description-container dt, dd {
+    border-bottom: 1.5px solid black;
+    margin: 0;
+    position: relative; 
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/*Google maps*/
+
+.hideMap {
+    display: none;
+}
+
+.toggle-map span {
+  margin-right: 0.5rem;
+}
+
+.toggle-map {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.map {
+  margin-top: 0;
+  border: none; /* Remove the border from the map container */
+  transition: max-height 0.3s ease-out;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-height: 0; /* default state when hidden */
+}
+
+.map.expanded {
+  max-height: 100%; /* adjust based on your map height */
+}
+
+.extra-dd {
+    border-bottom: none; 
+}
+
+@media (max-width: 768px ) { 
+    
+.event-description-container {
+    margin: 5rem 2rem;
+    width: 100%;
+}   
+
+.event-description-container dl {
+    grid-template-columns: 0.2fr 0.8fr;
+}
+
+.event-description-container dt {
+    width: 25vw;
+}
+
+.event-description-container dd {
+    width: 50vw;
+}
+
+.event-description-container dt, dd {
+    padding-bottom: 1rem;
+}
+
 }
 
 
