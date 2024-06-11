@@ -325,27 +325,31 @@ p {
     background-color: black;
 }
 
-.filter-dropdown:last-child .filter-dropdown-items a {
+.filter-dropdown:last-child .filter-dropdown-items button {
     color: #ffffff;
 }
 
-.filter-dropdown:last-child .filter-dropdown-items a:hover {
-    color: rgb(0, 0, 0);
-    background-color: rgb(255, 255, 255);
+.filter-dropdown:last-child .filter-dropdown-items button:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
 }
 
 
-.filter-dropdown-items a {
+.filter-dropdown-items button {
     display: block;
     padding: 0.8rem 1rem;
     text-decoration: none;
     color: black;
+    background: none;
+    outline: none;
+    border: none;
     font-size: 1rem;
     font-family: "NeueMontreal Regular";
 }
 
-.filter-dropdown-items a:hover {
-    background-color: #f4c6b5;
+.filter-dropdown-items button:hover {
+    color: #f4c6b5;
+    text-decoration: underline;
 }
 
 .show-dropdown {
