@@ -1,1 +1,1 @@
-let heart = document.querySelectorAll(".heartButton"):
+let heart = document.querySelectorAll(".heartButton");

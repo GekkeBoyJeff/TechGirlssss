@@ -43,6 +43,20 @@ upcomingEventsButton.addEventListener("click", function() {
     containers.forEach(container => {
         container.appendChild(newArticle.cloneNode(true));
     });
+
+    let newSection = document.createElement("section");
+    newSection.className = 'newSection';
+
+    newSection.innerHTML = `
+        <h3>Women in Art Foundation // Art Talks</h2>
+        <p>Art Talks for inspiring discussions and insights from talented female artists in the industry!</p>
+        <p>1 june 2024 • Amsterdam •  price €5,00</p>
+    `;
+
+    let containerNewSection = document.querySelectorAll(".addSection");
+    containerNewSection.forEach(container => {
+        container.appendChild(newSection.cloneNode(true));
+    });
         
 });
 
@@ -67,4 +81,10 @@ wishlistButton.addEventListener("click", function() {
     articlesToRemove.forEach(article => {
         article.remove();
     });
+
+    let sectionToRemove = document.querySelectorAll(".newSection");
+    sectionToRemove.forEach(section => {
+        section.remove();
+    });
+    
 });
