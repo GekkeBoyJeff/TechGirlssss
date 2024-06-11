@@ -2449,7 +2449,9 @@ section.profile article:nth-of-type(5) {
     margin: 5rem 8rem;
 }
 
-.error h1, h2, p {
+.error h1, 
+.error h2,
+.error p {
     text-align: center;
 }
 
