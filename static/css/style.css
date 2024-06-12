@@ -316,7 +316,7 @@ nav ul li a:hover {
     transition: color .3s ease;
 }
 
-li a svg {
+nav ul li a svg {
     margin-right: 0.5em;
     vertical-align: middle; 
 }
@@ -1605,12 +1605,17 @@ ul.slider.categories{
 
 /* Password veld */
 .loginForm form div:first-of-type input {
-    width: 100%;
+    /* width: 100%; */
     margin-bottom: 1rem;
 }
 
-/* Oog icoon */
-.loginForm form div:first-of-type button {
+/* lijntje 100% */
+.log form div:first-of-type input{
+    width: 100%; 
+}
+
+/* Oog icoon nvt op werking form*/
+/* .loginForm form div:first-of-type button {
     position: absolute;
     top: 0;
     right: 0.3rem;
@@ -1620,6 +1625,10 @@ ul.slider.categories{
     z-index: 1;
     cursor: pointer;
     transition-duration: 0.4s;
+} */
+
+input:-internal-autofill-selected {
+    background-color: red !important;
 }
 
 .loginForm form div:first-of-type button:hover {
@@ -1652,25 +1661,8 @@ input[type="checkbox"] {
 }
 
 /* let's join button */
-section.loginForm a[href="/profile"] {
-    font-family: "NeueMontreal Regular";
-    background-color: var(--black);
-    color: white;
-    width: fit-content;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    border: solid var(--black) 0.15rem;
-    align-self: center;
-    font-size: 1rem;
-    transition: background-color .5s ease, transform .5s;
-}
-
-section.loginForm a[href="/profile"]:hover {
-    color: var(--black);
-    transition: background-color .5s ease, transform .5s;
-    background-color: transparent;
-    border: solid var(--black) 0.15rem;
-}
+/* section.loginForm a[href="/profile"] {
+} */
 
 /* or */
 .loginForm p {
@@ -1777,7 +1769,7 @@ section.loginForm a[href="/profile"]:hover {
 @media (max-width: 1350px) {
 
     .loginForm {
-        grid-template-columns: auto 30%; 
+        grid-template-columns: auto; 
     }
 
     .loginForm h1,
