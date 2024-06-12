@@ -314,6 +314,8 @@ nav ul li a {
 }
 
 .button-login a {
+    top: 0;
+    bottom: 0;
     border: 0.1rem black solid;
     border-radius: var(--border-radius);
     padding: 0.2rem 0.8rem;

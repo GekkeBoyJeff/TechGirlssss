@@ -95,8 +95,9 @@
     // Ensure menu is closed when resizing the window
     window.addEventListener('resize', function() {
       if (window.innerWidth > 768) {
-        nav.classList.remove('show');
-        overlay.classList.remove('is-visible');
+        if (nav.classList.contains('show')) {
+          closeMenu();
+        }
         hamburger.style.display = 'none'; // Hide the hamburger for larger screens
       } else {
         if (!nav.classList.contains('show')) {
