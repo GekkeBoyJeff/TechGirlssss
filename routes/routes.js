@@ -1,6 +1,7 @@
 import { registerUser, loginUser, logoutUser } from '../controllers/userController.js'
 import { errorReporter } from '../controllers/formErrorHandler.js'
 import { welcomeHandler } from '../controllers/welcomeHandler.js'
+import { fetchPopularEvents, fetchSpecificEvent } from '../api/fetchEventbride.js'
 
 export const routes = {
     '/': { view: 'pages/index', title: 'Home of techGirlsss', layouts: 'default.ejs', scripts: ['script', 'test'], functions: [], errors: [] },
@@ -11,6 +12,6 @@ export const routes = {
     '/logout': { title: 'Logout', scripts: [], functions: [logoutUser], errors: [], onlyPost: true },
     '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [welcomeHandler], errors: [], requiresAuth: true },
     '/profile': { view: 'pages/profile', title: 'Profile', scripts: [], functions: [], errors: [], requiresAuth: true },
-    '/events': { view: 'pages/eventsWorkshops', title: 'Events & workshops', scripts: [], functions: [], errors: [], apiData:[] },
-    '/detailevent': { view: 'pages/detailEvent', title: 'Event', scripts: [], functions: [], errors: [] },
+    '/events': { view: 'pages/events_workshops', title: 'Events & workshops', scripts: [], functions: [], errors: [], apiData:[] },
+    '/events/:id': { view: 'pages/detail_event', title: 'Event', scripts: [], functions: [], errors: [] },
 }
