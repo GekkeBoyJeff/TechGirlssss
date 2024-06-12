@@ -1229,11 +1229,6 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     margin: var(--margin-sides);
     justify-content: center;
     justify-content: center;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem; */
 }
 
 .overviewGrid .detailCard {
@@ -1257,7 +1252,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 
     .overviewGrid ul {
         grid-template-columns: auto;
-        margin: 4rem 2rem;
+        margin: var(--margin-sides-small);
         gap: 3rem;
     }
 
@@ -1481,6 +1476,7 @@ ul.slider.categories{
     margin-bottom: 0;
 }
 
+/* 🐙CATEGORIES CARDS DEFAULT RESPONSIVE🐙 */
 @media (max-width: 768px){
     .popularEvents.categories{
         margin: 2rem 0;
