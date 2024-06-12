@@ -33,6 +33,16 @@
         <li><a href="#">FAQ</a></li>
         <li><a href="#">
             <span>komt later</span></a></li>
+            <% if (user) { %>
+              <form action="/logout" method="post">
+                <button type="submit">Logout</button>
+              </form>
+              <% } else { %>
+              <a href="/login">Login</a>
+              <% } %>
+              </li>
+              </ul>
+              </nav>
       </ul>
     </nav>
     <div class="hamburger">
@@ -96,16 +106,7 @@
   </script>
   
   
-  <!-- <% if (user) { %>
-  <form action="/logout" method="post">
-    <button type="submit">Logout</button>
-  </form>
-  <% } else { %>
-  <a href="/login">Login</a>
-  <% } %>
-  </li>
-  </ul>
-  </nav> -->
+
   <% if (user) { %>
   <p>Welkom terug, <%= user.name %>!</p>
   <% } %>
