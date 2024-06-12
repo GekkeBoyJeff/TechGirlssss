@@ -1395,7 +1395,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 0 8rem;
+    margin: var(--margin-sides);
 }
 
 
@@ -1414,7 +1414,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 /* 🥡 RECOMMENDED CARDS RESPONSIVE 🥡 */
 @media (max-width: 768px) {
     .recommended{
-        margin: 0 2rem;
+        margin: var(--margin-sides-small);
     }
 }
 
@@ -1422,16 +1422,12 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 
     .recommended ul {
         grid-template-columns: auto;
-        gap: 3rem;
+        gap: 0;
         justify-content: unset;
     }
 
     .recommended .detailCard {
         width: 100%;
-    }
-
-    .recommended {
-        margin: 0 8rem;
     }
 
     .recommended ul li:nth-of-type(3) {
