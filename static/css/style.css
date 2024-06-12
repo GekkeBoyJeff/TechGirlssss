@@ -762,138 +762,6 @@ gap: 2rem;
 
 }
 
-/* //////////////////////////// */
-/* 🍋🍋🍋 IMPRESSION CARDS 🍋🍋🍋 */
-/* //////////////////////////// */
-
-.impression .detailCard p,
-.impression .detailCard h3,
-.impression .detailCard button {
-    display: none;
-}
-
-.impression {
-    grid-template-rows: 0.1fr auto;
-}
-
-
-/******grid cards🃏🃏********/
-
-.overviewGrid ul {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 4rem;
-    grid-template-rows: auto;
-    margin: 5rem 8rem;
-    justify-content: center;
-    justify-content: center;
-
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem; */
-}
-
-.overviewGrid .detailCard {
-    width: 100%;
-}
-
-/* ipad */
-@media (max-width: 1400px) {
-
-    .overviewGrid ul{
-        grid-template-columns: auto auto;
-    }
-
-    .overviewGrid .detailCard {
-        width: 100%;
-    }
-  
-}
-
-/* phone */
-@media (max-width: 1100px) {
-
-    .overviewGrid ul {
-        grid-template-columns: auto;
-        margin: 4rem 2rem;
-        gap: 3rem;
-    }
-
-    .overviewGrid .detailCard {
-        width: 100%;
-    }
-}
-
-/******recommended cards🃏🃏********/
-
-.recommended{
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: 0 8rem;
-}
-
-
-.recommended ul{
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 4rem;
-    grid-template-rows: auto;
-    justify-content: center;
-}
-
-.recommended .detailCard{
-    width: 100%;
-}
-
-/* screen large */
-@media (max-width: 1400px){
-
-    .recommended ul{
-        grid-template-columns: auto auto;
-    }
-
-    .recommended .detailCard{
-        width: 100%;
-    }
-
-    .recommended ul li:nth-of-type(2){
-        display: none;
-    }
-
-}
-
-/* ipad */
-@media (max-width: 1100px){
-
-    .recommended ul{
-        grid-template-columns: auto;
-        gap: 3rem;
-        justify-content: unset;
-    }
-
-    .recommended .detailCard{
-        width: 100%;
-    }
-
-    .recommended{
-        margin: 0 8rem;
-    }
-
-    .recommended ul li:nth-of-type(3){
-        display: none;
-    }
-
-}
-
-/* phone */
-@media (max-width: 768px) {
-    .recommended{
-        margin: 0 2rem;
-    }
-}
-
 /* ///////////////////////////// */
 /* 📸📸📸 SOCIAL MEDIA WALL 📸📸📸 */
 /* ///////////////////////////// */
@@ -935,36 +803,35 @@ gap: 2rem;
     transform: scale(1.03);
 }
 
-/* evt voor ipad */
-@media (max-width: 1100px) {
-    
-    .socialMediaWall ul{
-        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
-    }
-    
-}
-
+/* 📸 SOCIAL MEDIA WALL RESPONSIVE 📸 */
 @media (max-width: 768px) {
     
-    .socialMediaWall ul{
+    .socialMediaWall ul {
         grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
     }
 
-    .socialMediaWall{
+    .socialMediaWall {
         margin: 4rem 2rem;
     }
 
     .socialMediaWall ul li:nth-of-type(5),
-    .socialMediaWall ul li:nth-of-type(6){
+    .socialMediaWall ul li:nth-of-type(6) {
         display: none;
     }
+}
+
+@media (max-width: 1100px) {
+    
+    .socialMediaWall ul {
+        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
+    }
+    
 }
 
 /* ///////////////////////////////// */
 /* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
 /* ///////////////////////////////// */
 
-/* SPONSORBANNER */
 section.ticker {
     height: auto;
     width: auto;
@@ -1199,7 +1066,6 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     color: #b7b7b7;
 }
 
-
 .search-container form svg {
     position: absolute;
     top: 0.6rem;
@@ -1308,6 +1174,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
 }
 
+/* 🍭 FILTERS RESPONSIVE 🍭 */
 @media (max-width: 768px) {
 
     .filter-search {
@@ -1315,26 +1182,83 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     }
 
     .filters{
-    display: flex;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        margin: 3rem 5rem 3rem 5rem;
+    }
+
+    .filter-dropdown-items {
+        height: 15vh;
+    }
+
+    .filter-btn svg {
+        margin-left: 1.5rem;
+    }
+
+}
+
+/* ////////////////////////////// */
+/* 🍸🍸🍸 GRID CARDS DEFAULT 🍸🍸🍸 */
+/* ////////////////////////////// */
+
+.overviewGrid ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    margin: 5rem 8rem;
+    justify-content: center;
+    justify-content: center;
+
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
-    margin: 3rem 5rem 3rem 5rem;
+    gap: 3rem; */
 }
 
-.filter-dropdown-items {
-    height: 15vh;
+.overviewGrid .detailCard {
+    width: 100%;
 }
 
-.filter-btn svg {
-    margin-left: 1.5rem;
+/* 🍸 GRID CARDS DEFAULT RESPONSIVE🍸 */
+@media (max-width: 1400px) {
+
+    .overviewGrid ul {
+        grid-template-columns: auto auto;
+    }
+
+    .overviewGrid .detailCard {
+        width: 100%;
+    }
+  
 }
 
+@media (max-width: 1100px) {
+
+    .overviewGrid ul {
+        grid-template-columns: auto;
+        margin: 4rem 2rem;
+        gap: 3rem;
+    }
+
+    .overviewGrid .detailCard {
+        width: 100%;
+    }
 }
 
-/*/////////////////*/
-/*🍉🍉EVENT DESCRIPTION🍉🍉*/
-/*////////////////*/
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////🥟🥟🥟 EVENT DETAIL PAGE 🥟🥟🥟//////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* //////////////////////// */
+/* 💬💬💬 EVENT TITLE 💬💬💬 * /
+/* //////////////////////// */
+
+/* ///////////////////////////// */
+/* 🍉🍉🍉 EVENT DESCRIPTION 🍉🍉🍉 */
+/* ///////////////////////////// */
 
 .event-description-container {
     width: 100%;
@@ -1375,8 +1299,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
   font-size: 1rem;
 }
 
-/*Google maps*/
-
+/* Google maps */
 .hideMap {
     display: none;
 }
@@ -1411,34 +1334,118 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     border-bottom: none; 
 }
 
-@media (max-width: 768px ) { 
+/* 🍉 EVENT DESCRIPTION RESPONSIVE 🍉 */
+@media (max-width: 768px) { 
     
-.event-description-container {
+    .event-description-container {
+        width: 100%;
+    }   
+
+    .event-description-container dl {
+        grid-template-columns: 0.2fr 0.8fr;
+        margin: 5rem 2rem;
+    }
+
+    .event-description-container dt {
+        width: 25vw;
+    }
+
+    .event-description-container dd {
+        width: 50vw;
+    }
+
+    .event-description-container dt, dd {
+        padding-bottom: 1rem;
+    }
+
+}
+
+/* //////////////////////////// */
+/* 🍋🍋🍋 IMPRESSION CARDS 🍋🍋🍋 */
+/* //////////////////////////// */
+
+.impression .detailCard p,
+.impression .detailCard h3,
+.impression .detailCard button {
+    display: none;
+}
+
+.impression {
+    grid-template-rows: 0.1fr auto;
+}
+
+/* ///////////////////////////// */
+/* 🥡🥡🥡 RECOMMENDED CARDS 🥡🥡🥡 */
+/* ///////////////////////////// */
+
+.recommended {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0 8rem;
+}
+
+
+.recommended ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4rem;
+    grid-template-rows: auto;
+    justify-content: center;
+}
+
+.recommended .detailCard {
     width: 100%;
-}   
-
-.event-description-container dl {
-    grid-template-columns: 0.2fr 0.8fr;
-    margin: 5rem 2rem;
 }
 
-.event-description-container dt {
-    width: 25vw;
+/* 🥡 RECOMMENDED CARDS RESPONSIVE 🥡 */
+@media (max-width: 768px) {
+    .recommended{
+        margin: 0 2rem;
+    }
 }
 
-.event-description-container dd {
-    width: 50vw;
+@media (max-width: 1100px) {
+
+    .recommended ul {
+        grid-template-columns: auto;
+        gap: 3rem;
+        justify-content: unset;
+    }
+
+    .recommended .detailCard {
+        width: 100%;
+    }
+
+    .recommended {
+        margin: 0 8rem;
+    }
+
+    .recommended ul li:nth-of-type(3) {
+        display: none;
+    }
+
 }
 
-.event-description-container dt, dd {
-    padding-bottom: 1rem;
-}
+@media (max-width: 1400px) {
+
+    .recommended ul {
+        grid-template-columns: auto auto;
+    }
+
+    .recommended .detailCard {
+        width: 100%;
+    }
+
+    .recommended ul li:nth-of-type(2) {
+        display: none;
+    }
 
 }
 
-/* //////////////////////////// */
-/* 🪪🪪🪪 SIGN UP + LOG IN 🪪🪪🪪 */
-/* //////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////🪪🪪🪪 SIGN UP + LOG IN PAGE 🪪🪪🪪////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .loginForm h1,
 .loginForm h2,
@@ -1446,8 +1453,8 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 .loginForm article,
 .loginForm p,
 .loginForm ul {
-padding-left: 5rem;
-padding-right: 5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .loginForm h1 {
@@ -1554,7 +1561,6 @@ padding-right: 5rem;
     padding: 0.2rem;
     outline: none;
 }
-
 
 /* Password veld + oog */
 .loginForm form div:first-of-type {
@@ -1668,30 +1674,7 @@ section.loginForm a[href="/profile"]:hover {
     transform: scale(1.1);     
 }
 
-/* ipad formaat */
-@media (max-width: 1350px) {
-
-    .loginForm {
-        grid-template-columns: auto 30%; 
-    }
-
-    .loginForm h1,
-    .loginForm h2,
-    .loginForm form,
-    .loginForm article,
-    .loginForm p,
-    .loginForm ul {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-    }
-
-    .loginForm h1 {
-        padding-top: 2rem;
-    }
-
-}
-
-/* phone formaat */
+/* 🪪 SIGN UP + LOG IN PAGE RESPONSIVE 🪪 */
 @media (max-width: 768px) {
 
     .loginForm > a {
@@ -1755,229 +1738,53 @@ section.loginForm a[href="/profile"]:hover {
     }
 }
 
-/*////////////////////////////////////////////////////////*/
-/*//////Form steps algemeen ///////*/
-/*////////////////////////////////////////////////////////*/
+@media (max-width: 1350px) {
 
-.formStep{
+    .loginForm {
+        grid-template-columns: auto 30%; 
+    }
+
+    .loginForm h1,
+    .loginForm h2,
+    .loginForm form,
+    .loginForm article,
+    .loginForm p,
+    .loginForm ul {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .loginForm h1 {
+        padding-top: 2rem;
+    }
+
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////🐆🐆🐆 STEP FORM QUESTION 🐆🐆🐆//////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////// */
+/* 🎲🎲🎲 QUESTIONS ALGEMEEN 🎲🎲🎲 */
+/* ////////////////////////////// */
+
+.formStep {
     padding:4em;
 }
 
-.formStep h1 span{
+.formStep h1 span {
     font-family: "PPMondwest Regular";
     /* font-size: 4.5rem; */
 }
 
-.formStep h2{
+.formStep h2 {
     font-family: "NeueMontreal Regular";
     font-size: 1.5rem;
     letter-spacing: 1px;
 }
 
-
-.formStep fieldset{
+.formStep fieldset {
     border: none;
-}
-
-/*////////////////////////////////////////////////////////*/
-/*//////formStep0 - We want to get to know you! ///////*/
-/*////////////////////////////////////////////////////////*/
-
-
-.formStep{
-    margin: 2.5rem;
-    background-color: var(--peachLight);
-    height: 81vh;
-    border-radius: 3rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 5rem;
-}
-
-
-/* .formStep p,
-.formStep h1{ */
-    /* width: 55%; */
-    /* color: var(--black); */
-    /* text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6); */
-/* } */
-
-.formStep video{
-    margin: 2.5rem;
-    border-radius: 3rem;
-    position: absolute;
-    height: 81vh;
-    width: calc(100% - 5rem);
-
-    object-fit: cover;
-    z-index: -1;
-}
-
-.formStep button, .step0 form button:first-of-type {
-    padding: 0.8rem 2rem;
-    border: 0.1rem var(--black) solid;
-    color: var(--white);
-    border-radius: 2rem;
-    background-color: var(--black);
-}
-
-.formStep button:first-of-type {
-    background-color: var(--white);
-    color: var(--black);
-}
-
-.step0 h1,
-.step0 p{
-    text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
-    color: var(--white);
-}
-
-.step1 video{
-    border-radius: 0;
-}
-/*////////////////////////////////////////////////////////*/
-/*//////formStep2 - Reveal Your Radiant Self! ///////*/
-/*////////////////////////////////////////////////////////*/
-
-.step1 form{
-width: 20%;
-flex-wrap: wrap;
-}
-
-.formStep{
-    background-color: white;
-    /* padding: 3em; */
-}
-
-.formStep video{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.formStep fieldset{
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.formStep legend{
-    margin-bottom: 1.2rem;
-}
-
-/*radio checkbox uit het zicht*/
-  .radio-toolbar input[type="radio"]{
-    opacity: 0;
-    position: fixed;
-    width: 0;
-  }
-
-  /*checkbox checkbox uit het zicht*/
-  .radio-toolbar input[type="checkbox"]{
-    opacity: 0;
-    position: fixed;
-    width: 0;
-  }
-  
-/* knopjes default */
-  .radio-toolbar label,
-  input#age,
-  input#country,
-  input#language,
-  select#language{
-      padding: 0.8rem 1.4rem;
-      border: 0.1rem var(--black) solid;
-      color: var(--black);
-      border-radius: 2rem;
-      font-family: "NeueMontreal Regular";
-      font-size: 1.2rem;
-      letter-spacing: 1.5px;
-      transition: 0.3s;
-  }
-
-  /* input#age {
-    width: 10%;
-} */
-
-
-
-.step1 fieldset{
-    gap: 0;
-}
-
-.step1 form label {
-    border: 0;
-}
-
-.step1 form label:hover{
-    background-color: var(--white);
-}
-
-input#age:hover,
-input#country:hover,
-input#language:hover,
-select#language:hover{
-    background-color: var(--peachLight);
-}
-
-input#age:focus,
-input#country:focus,
-input#language:focus,
-select#language:focus{
-    outline: transparent;   
-    background-color: var(--peach);  /* oranges! yey */
-  }
-
-
-  /* knopjes hover+focus */
-  .radio-toolbar label:hover,
-  .radio-toolbar input[type="radio"]:focus + label{
-    background-color: var(--peachLight);
-  }
-
-
-
-/* knopjes clicked */
-  .radio-toolbar input[type="radio"]:checked + label{
-      background-color: var(--peach);
-  }
-  
-  /* knopjes hover+focus */
-  .radio-toolbar label:hover{
-    background-color: var(--peachLight);
-  }
-
-  .radio-toolbar input[type="checkbox"]:focus + label{
-    background-color: white;
-  }
-
-/* knopjes clicked */
-  .radio-toolbar input[type="checkbox"]:checked + label{
-      background-color: var(--peach);
-  }
-
-
-@media (max-width: 1350px) {
-  .step0,
-  .step1 {
-    height: unset;
-}
-
-.formStep h1{
-    font-size: 2.5rem; 
-}
-
-.formStep h1 span{
-    font-size: 3rem;  
-}
-
 }
 
 form fieldset {
@@ -2006,14 +1813,218 @@ form fieldset {
     position: relative;
 }
 
-.step0 form{
+.step0 form {
     width: auto;
     height: unset;
 }
 
-.step0 p{
+.step0 p {
     width: 70%;
 }
+
+/* //////////////////////////////////////////////////// */
+/* 🥥🥥🥥 QUESTION 1 - WE WANT TO GET TO KNOW YOU! 🥥🥥🥥 */
+/* //////////////////////////////////////////////////// */
+
+.formStep {
+    margin: 2.5rem;
+    background-color: var(--peachLight);
+    height: 81vh;
+    border-radius: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5rem;
+}
+
+/* .formStep p,
+.formStep h1{ */
+    /* width: 55%; */
+    /* color: var(--black); */
+    /* text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6); */
+/* } */
+
+.formStep video {
+    margin: 2.5rem;
+    border-radius: 3rem;
+    position: absolute;
+    height: 81vh;
+    width: calc(100% - 5rem);
+
+    object-fit: cover;
+    z-index: -1;
+}
+
+.formStep button, .step0 form button:first-of-type {
+    padding: 0.8rem 2rem;
+    border: 0.1rem var(--black) solid;
+    color: var(--white);
+    border-radius: 2rem;
+    background-color: var(--black);
+}
+
+.formStep button:first-of-type {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.step0 h1,
+.step0 p {
+    text-shadow: 3px 3px 9.9px rgba(225, 163, 140, 0.6);
+    color: var(--white);
+}
+
+.step1 video {
+    border-radius: 0;
+}
+
+/* ////////////////////////////////////////////////// */
+/* 🔥🔥🔥 QUESTION 2 - REVEAL YOUT RADIENT SELF! 🔥🔥🔥 */
+/* ////////////////////////////////////////////////// */
+
+.step1 form {
+width: 20%;
+flex-wrap: wrap;
+}
+
+.formStep {
+    background-color: white;
+    /* padding: 3em; */
+}
+
+.formStep video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.formStep fieldset {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.formStep legend {
+    margin-bottom: 1.2rem;
+}
+
+/*radio checkbox uit het zicht*/
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+/*checkbox checkbox uit het zicht*/
+.radio-toolbar input[type="checkbox"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+  
+/* knopjes default */
+.radio-toolbar label,
+    input#age,
+    input#country,
+    input#language,
+    select#language {
+        padding: 0.8rem 1.4rem;
+        border: 0.1rem var(--black) solid;
+        color: var(--black);
+        border-radius: 2rem;
+        font-family: "NeueMontreal Regular";
+        font-size: 1.2rem;
+        letter-spacing: 1.5px;
+        transition: 0.3s;
+}
+
+  /* input#age {
+    width: 10%;
+} */
+
+.step1 fieldset {
+    gap: 0;
+}
+
+.step1 form label {
+    border: 0;
+}
+
+.step1 form label:hover {
+    background-color: var(--white);
+}
+
+input#age:hover,
+input#country:hover,
+input#language:hover,
+select#language:hover {
+    background-color: var(--peachLight);
+}
+
+input#age:focus,
+input#country:focus,
+input#language:focus,
+select#language:focus {
+    outline: transparent;   
+    background-color: var(--peach);  /* oranges! yey */
+}
+
+/* knopjes hover+focus */
+.radio-toolbar label:hover,
+.radio-toolbar input[type="radio"]:focus + label{
+background-color: var(--peachLight);
+}
+
+/* knopjes clicked */
+.radio-toolbar input[type="radio"]:checked + label{
+    background-color: var(--peach);
+}
+
+/* knopjes hover+focus */
+.radio-toolbar label:hover{
+background-color: var(--peachLight);
+}
+
+.radio-toolbar input[type="checkbox"]:focus + label{
+background-color: white;
+}
+
+/* knopjes clicked */
+.radio-toolbar input[type="checkbox"]:checked + label{
+    background-color: var(--peach);
+}
+
+/* 🔥 QUESTION 2 - RESPONSIVE 🔥 */
+@media (max-width: 1350px) {
+
+  .step0,
+  .step1 {
+    height: unset;
+    }
+
+    .formStep h1{
+        font-size: 2.5rem; 
+    }
+
+    .formStep h1 span{
+        font-size: 3rem;  
+    }
+
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////🥐🥐🥐 YOUR EVENTS PAGE 🥐🥐🥐///////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////🎱🎱🎱 PROFILE PAGE 🎱🎱🎱/////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* /////////////////// */
 /* 📷📷📷 PROFILE 📷📷📷 */
@@ -2381,9 +2392,9 @@ section.profile article:nth-of-type(5) {
     margin: 1rem;
 }
 
-/*////////////*/
-/*🍄🍄ERROR STATE🍄*/
-/*////////////*/
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////🍄🍄🍄 ERROR STATE 🍄🍄🍄//////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 .error {
     display: flex;
@@ -2431,6 +2442,7 @@ section.profile article:nth-of-type(5) {
     order: -1;
 }
 
+/* 🍄 ERROR STATE RESPONSIVE 🍄 */
 @media (max-width: 768px) {
 
     .error {
@@ -2451,8 +2463,9 @@ section.profile article:nth-of-type(5) {
         margin-left: 0.5rem;
         margin-right: 1.5rem;
     }
+
     .error p {
-    width: 100%;
-}
+     width: 100%;
+    }
 
 }
