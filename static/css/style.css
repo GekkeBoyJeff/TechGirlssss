@@ -2041,6 +2041,103 @@ background-color: white;
 
 }
 
+
+
+/* ////////////////////////////////////////////////// */
+/* ///////////////🧪🧪PROGRESSBAR🧪🧪 //////////////// */
+/* ////////////////////////////////////////////////// */
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.8rem;
+}
+
+progress {
+  border-radius: 1rem; 
+  height: 0.5rem;
+  width: 15vw;
+}
+
+.progress-first::-webkit-progress-bar {
+     background-image:
+    linear-gradient(
+      to right, 
+      #F2B199 0%, 
+      #F2B199 14%, 
+      #FCEEE9 22%, 
+      #FCEEE9 100%
+    );
+    border-radius: 1rem;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 1rem;
+    background: none;
+}
+
+.progress-second::-webkit-progress-bar {
+         background-image:
+    linear-gradient(
+      to right, 
+      #F2B199 0%, 
+      #F2B199 25%, 
+      #FCEEE9 40%, 
+      #FCEEE9 100%
+    );
+    border-radius: 1rem;
+}
+
+.progress-third::-webkit-progress-bar {
+         background-image:
+    linear-gradient(
+      to right, 
+      #F2B199 0%, 
+      #F2B199 45%, 
+      #FCEEE9 55%, 
+      #FCEEE9 100%
+    );
+    border-radius: 1rem;
+}
+
+.progress-fourth::-webkit-progress-bar {
+         background-image:
+    linear-gradient(
+      to right, 
+      #F2B199 0%, 
+      #F2B199 60%, 
+      #FCEEE9 70%, 
+      #FCEEE9 100%
+    );
+    border-radius: 1rem;
+}
+
+.progress-fifth::-webkit-progress-bar {
+         background-image:
+    linear-gradient(
+      to right, 
+      #F2B199 0%, 
+      #F2B199 75%, 
+      #FCEEE9 85%, 
+      #FCEEE9 100%
+    );
+    border-radius: 1rem;
+}
+
+.progress-sixth::-webkit-progress-bar {
+         background-image:
+    linear-gradient(
+      to right, 
+      #F2B199 0%, 
+      #F2B199 100%, 
+      #FCEEE9 0, 
+      #FCEEE9 100%
+    );
+    border-radius: 1rem;
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ////////////////////////////////////////////🥐🥐🥐 YOUR EVENTS PAGE 🥐🥐🥐///////////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
