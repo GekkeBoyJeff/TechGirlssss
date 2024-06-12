@@ -259,7 +259,7 @@ a {
 
 .page-overlay.is-visible{
     visibility: visible;
-    opacity: 5;
+    opacity: 1;
 }
 
 .page-overlay {
@@ -268,7 +268,7 @@ a {
     left: 0;
     height: 100vh;
     width: 100vw;
-    z-index: 10;
+    z-index: 101;
     visibility: hidden;
     opacity: 0;
     background: #5d5d5d9a;
@@ -276,13 +276,15 @@ a {
 }
 
 header {
+    position: relative;
+    z-index: 102;
     justify-content: space-between;
     align-items: center;
     padding: 1em;
     background: white;
     display: flex;
     flex-wrap: wrap;
-    box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
+    box-shadow: 0px 5px 10px 0px rgba(134, 134, 134, 0.271);
 }
 
 header a img {
@@ -298,17 +300,32 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 1em;
+    gap: 1.5em;
     flex-wrap:wrap;
+    align-items: center;
 }
 
 nav ul li a {
     cursor: pointer;
     text-decoration: none;
     color: var(--black);
-    font-family: var(--text);
     font-size: var(--p);
     transition: color .3s ease;
+}
+
+.button-login a {
+    border: 0.1rem black solid;
+    border-radius: var(--border-radius);
+    padding: 0.2rem 0.8rem;
+    margin: 0;
+    align-self: center;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-login a:hover {
+    border: var(--peach) solid 0.1rem;
+    color: var(--peach);
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
 nav ul li a:hover {
@@ -317,7 +334,8 @@ nav ul li a:hover {
 }
 
 li a svg {
-    margin-right: 0.5em;
+    margin-right: 0.1rem;
+    line-height: normal;
     vertical-align: middle; 
 }
 
@@ -325,15 +343,16 @@ li a svg {
 .mega-menu {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     position: absolute;
     z-index: 102;
 
     padding: 1.5em 3em 1.5em 1.5em;
-    top: 5.5em;
+    top: 5.2em;
     overflow: hidden;
     white-space: nowrap;
 
-    background: rgb(255, 255, 255);
+    background: var(--white);
     border-radius: 0.8em;
     box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
 
@@ -411,7 +430,7 @@ li a svg {
         height: 100vh;
         width: 80vw;
         z-index: 103;
-        background: white;
+        background: var(--white);
         transform: translateX(-100vw);
         transition: transform 0.3s ease-in-out;
         box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
@@ -422,7 +441,7 @@ li a svg {
     }
 
     nav ul {
-        gap: 0;
+        gap: 1rem;
         padding: 0;
         align-content: flex-start;
         margin-top: 6rem;
@@ -434,7 +453,11 @@ li a svg {
     }
 
     nav ul li a {
-        font-size: 1.5rem;
+        font-size: var(--h3);
+    }
+
+    .button-login a {
+        padding: var(--padding-button);
     }
 
     .mega-menu {

@@ -31,19 +31,17 @@
       </li>
       <li><a href="#">About us</a></li>
       <li><a href="#">FAQ</a></li>
-      <li><a href="#">
-          <span>komt later</span></a></li>
+      <li><a href="#">My events</a></li>
       <% if (user) { %>
       <form action="/logout" method="post">
         <button type="submit">Logout</button>
       </form>
       <% } else { %>
-      <a href="/login">Login</a>
-      <% } %>
+      <li class="button-login"><a href="/login">Login</a>
+        <% } %>
       </li>
+      <li><a href="#"><img src=""</a></li>
     </ul>
-  </nav>
-  </ul>
   </nav>
   <div class="hamburger">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
