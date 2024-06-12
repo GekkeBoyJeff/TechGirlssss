@@ -597,7 +597,6 @@ gap: 1rem;
 
 /* ul 3x Multiple Cards*/
 .slider {
-    margin-bottom: 5rem;
     padding-right: 8rem;
     display: flex;
     gap: 2.8rem ;
@@ -710,6 +709,21 @@ align-items: center;
 .popularEvents > a:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+/******categories cards🃏🃏********/
+
+.categories .detailCard p,
+.categories .detailCard button{
+display: none;
+}
+
+.popularEvents.categories{
+    grid-template-rows: 0.1fr auto;
+    background-color: var(--peachLight);
+    padding: 4rem 0;
+    margin: 5rem 0;
+
 }
 
 /* 🃏 DETAIL/POPULAIR CARDS RESPONSIVE 🃏 */
