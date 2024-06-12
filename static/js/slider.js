@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    let scrollContainerInstagram = document.getElementsByClassName('slider')[0]; // Selecteer het eerste element
-    let arrowLeftInstagram = document.getElementById('slideRight');
-    let arrowRightInstagram = document.getElementById('slideLeft');
+    let scrollContainer = document.getElementsByClassName('slider')[0]; // Selecteer het eerste element
+    let arrowLeft = document.getElementsByClassName('slideRight');
+    let arrowRight = document.getElementsByClassName('slideLeft');
 
-    if (arrowLeftInstagram && arrowRightInstagram && scrollContainerInstagram) {
-        arrowLeftInstagram.addEventListener('click', function(){
-            scrollContainerInstagram.scrollLeft -= 335;
+    if (arrowLeft && arrowRight && scrollContainer) {
+        arrowLeft.addEventListener('click', function() {
+            scrollContainer.scrollLeft -= 335;
         });
-        arrowRightInstagram.addEventListener('click', function(){
-            scrollContainerInstagram.scrollLeft += 335;
+        arrowRightInstagram.addEventListener('click', function() {
+            scrollContainer.scrollLeft += 335;
         });
     }
 });
