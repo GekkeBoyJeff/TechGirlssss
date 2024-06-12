@@ -767,6 +767,7 @@ align-items: center;
 /* 📸📸📸 SOCIAL MEDIA WALL 📸📸📸 */
 /* ///////////////////////////// */
 
+/* title + img */
 .socialMediaWall {
     display: flex;
     flex-direction: column;
@@ -774,20 +775,21 @@ align-items: center;
     margin: var(--margin-sides);
 }
 
+/* img */
 .socialMediaWall ul {
-    list-style-type: none; /* Verwijder de standaard bullets */
-    padding: 0; /* Verwijder de standaard padding */
-    margin: 0; /* Verwijder standaard marges */
-    display: grid; /* Gebruik grid layout */
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; /* Responsieve kolommen */
-    gap: 1.2rem; /* Ruimte tussen de items */
-    justify-content: center; /* Centreer de items */
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; 
+    gap: 1.2rem; 
+    justify-content: center; 
 }
 
 .socialMediaWall li {
-    margin: 0; /* Verwijder marge van de li's */
-    padding: 0; /* Verwijder padding van de li's */
-    transition: transform 0.1s ease-in-out; /* Voeg een soepele overgang toe */
+    margin: 0; 
+    padding: 0; 
+    transition: transform 0.1s ease-in-out; 
     transform-origin: center center;
 }
 
@@ -804,6 +806,14 @@ align-items: center;
 }
 
 /* 📸 SOCIAL MEDIA WALL RESPONSIVE 📸 */
+@media (max-width: 1100px) {
+    
+    .socialMediaWall ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+}
+
 @media (max-width: 768px) {
     
     .socialMediaWall ul {
@@ -820,13 +830,6 @@ align-items: center;
     }
 }
 
-@media (max-width: 1100px) {
-    
-    .socialMediaWall ul {
-        grid-template-columns: 1fr 1fr 1fr; /* Responsieve kolommen */
-    }
-    
-}
 
 /* ///////////////////////////////// */
 /* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
