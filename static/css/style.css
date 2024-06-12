@@ -581,7 +581,7 @@ li a svg {
 display: grid;
 grid-template-columns: 1fr auto;
 grid-template-rows: 0.1fr 0.1fr 1fr;
-gap: 1rem;
+gap: 1.5rem;
 }
 
 .popularEvents h2 {
@@ -644,7 +644,7 @@ scroll-snap-align: start;
 .detailCard img {
     height: 15rem;
     width: 100%;
-    border-radius: 1.8rem;
+    border-radius: var(--border-radius);
     margin-bottom: 0.5rem;
     object-fit: cover; 
     border: 0.15rem solid var(--black);
@@ -1059,6 +1059,13 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     gap: 1rem;
 }
 
+@media (max-width: 768px) {
+
+    .overviewEvents {
+    margin: var(--margin-sides-small);
+    }
+}
+
 /* ////////////////////// */
 /* 🔎🔎🔎 SEARCH BAR 🔎🔎🔎 */
 /* ////////////////////// */
@@ -1236,7 +1243,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     grid-template-columns: auto auto auto;
     gap: 4rem;
     grid-template-rows: auto;
-    margin: 5rem 8rem;
+    margin: var(--margin-sides);
     justify-content: center;
     justify-content: center;
 
