@@ -177,6 +177,7 @@ a {
     color: var(--black);
     transition: background-color .5s ease, transform .5s;
     text-wrap: nowrap;
+    height: fit-content;
 }
 
 .primary_button:active {
@@ -1031,6 +1032,33 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
 
+/* 👀 FOOTER RESPONSIVE 👀 */
+@media (max-width: 768px) {
+
+    footer section {
+        grid-template-columns: 0.07fr 1fr;
+        grid-template-rows: 0.3fr 0.2fr 0.1fr 0.2fr 0.2fr auto;
+    }
+
+    footer article:nth-of-type(2) {
+        flex-direction: column;
+    }
+
+    .tech-girls {
+        grid-row-start: ;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    footer section p {
+        line-height: var(--line-height);
+    }
+
+}
+
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////////////////✨✨✨ EVENTS & WORKSHOPS PAGE ✨✨✨///////////////////////////////////////////// */
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -1268,6 +1296,130 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 /* //////////////////////// */
 /* 💬💬💬 EVENT TITLE 💬💬💬 * /
 /* //////////////////////// */
+
+article.eventDetailTitle > article {
+    height: 35rem;
+    border-radius: var(--border-radius);
+    margin: 2rem;
+    position: relative;
+}
+
+article.eventDetailTitle article:nth-of-type(3) {
+    margin: var(--margin-sides);
+    height: fit-content;
+}
+
+article.eventDetailTitle article:first-of-type img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    position: relative;
+}
+
+article.eventDetailTitle article.actionButtons {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 10;
+    top: 8rem;
+    right: 4rem;
+}
+
+article.eventDetailTitle section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+article.eventDetailTitle section > * {
+    width: 40%;
+}
+
+article.eventDetailTitle p.category {
+    margin: var(--no-margin);
+    text-wrap: nowrap;
+}
+
+article.eventDetailTitle article.categories  {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+article.eventDetailTitle article:nth-of-type(3) > p {
+    background-color: var(--peach);
+    border-radius: 0.5rem;
+    width: fit-content;
+    font-family: var(--medium);
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 2rem;
+}
+
+article.eventDetailTitle article:nth-of-type(3) article:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+article.eventDetailTitle article:nth-of-type(3) article:first-of-type p {
+    width: 60%;
+}
+
+article.eventDetailTitle article:nth-of-type(3) > article article {
+    display: flex;
+    gap: 1rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+article.eventDetailTitle span {
+    font-family: var(--medium);
+}
+
+article.eventDetailTitle .organiser {
+    display: flex;
+    gap: 2rem;
+    height: fit-content;
+    width: 34rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: var(--border-radius);
+}
+
+article.eventDetailTitle .organiser img {
+    object-fit: contain;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--border-radius);
+}
+
+article.eventDetailTitle .organiser p {
+    flex-grow: 1;
+    font-family: var(--medium);
+    font-size: var(--p-button);
+}
+
+article.eventDetailTitle .organiser button {
+    background-color: var(--white);
+    border: none;
+}
+
+/* 💬 EVENT TITLE RESPONSIVE 💬 */
+@media (max-width: 768px) {
+    
+}
 
 /* ///////////////////////////// */
 /* 🍉🍉🍉 EVENT DESCRIPTION 🍉🍉🍉 */
