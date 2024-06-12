@@ -2005,12 +2005,6 @@ select#language:focus{
 
 }
 
-
-header{
-    color:  red;
-    background-color: blue;
-}
-
 form fieldset {
     display: flex;
     flex-wrap: wrap;
