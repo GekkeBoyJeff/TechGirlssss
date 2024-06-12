@@ -597,7 +597,7 @@ gap: 1rem;
 
 /* ul 3x Multiple Cards*/
 .slider {
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
     padding-right: 8rem;
     display: flex;
     gap: 2.8rem ;
@@ -615,6 +615,7 @@ gap: 1rem;
     display: none;
 }
 
+/* snapt de img */
 .slider li {
 scroll-snap-align: start;
 }
@@ -697,13 +698,13 @@ padding-left: 1rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* See all Button --> achter sara's code button zetten want nu overbodige extra code*/
+/* View all Button  */
 .popularEvents > a {
-background-color: white;
-border: solid var(--black) 0.15rem;
 height: fit-content;
 display: flex;
 gap: 2rem;
+transition: background-color .5s ease, transform .5s;
+align-items: center;
 }
 
 .popularEvents > a:hover {
