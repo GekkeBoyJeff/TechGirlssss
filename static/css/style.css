@@ -1045,7 +1045,7 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     }
 
     .tech-girls {
-        grid-row-start: ;
+        grid-row-start: 5;
         grid-column-start: 1;
         grid-column-end: 3;
         font-size: 0.8rem;
