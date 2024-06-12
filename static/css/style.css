@@ -75,7 +75,6 @@
     /* Button styling */
     --p-button: 1.125rem;
     --padding-button: 0.6rem 1.2rem;
-    --border: 0.1rem var(var(--black)) solid;
 
     /* Button styling small */
     --p-button-small: 1rem;
@@ -138,6 +137,7 @@ a {
     text-decoration: none;
 }
 
+/* ❤️‍🔥 TEXT FORMATTING RESPONSIVE ❤️‍🔥 */
 @media (max-width: 769px) {
 
     h1 {
@@ -199,7 +199,7 @@ a {
     font-family: var(--medium);
     padding: var(--padding-button);
     margin: var(--no-margin);
-    border: var(--border);
+    border: 0.1rem var(--black) solid;
     border-radius: var(--border-radius);
     text-wrap: nowrap;
 }
@@ -248,6 +248,10 @@ a {
     }
 
 }
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////👩🏼‍💻👩🏼‍💻👩🏼‍💻 HOME PAGE 👩🏼‍💻👩🏼‍💻👩🏼‍💻//////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* /////////////////////////// */
 /* 🤩🤩🤩 NAVIGATION MENU 🤩🤩🤩 */
@@ -569,281 +573,9 @@ li a svg {
 
 }
 
-/*///////////////*/
-/*🔎🔎SEARCH BAR🔎🔎*/
-/*//////////////*/
-
-.search-container {
-    display: flex;
-    align-self: start;
-    justify-content: center;
-    margin: 1rem;
-}
-
-.search-container form {
-    position: relative;
-}
-
-.filter-search {
-    border-radius: 2rem;
-    padding: 0.8rem 0.8rem 0.8rem 3rem;
-    width: 65vw;
-    max-width: 100%;
-    height: auto;
-    border: black solid 1.5px;
-    background: white;
-    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-}
-
-.search-container input::placeholder {
-    color: #b7b7b7;
-}
-
-.search-container ::-ms-input-placeholder {
-    color: #b7b7b7;
-}
-
-
-.search-container form svg {
-    position: absolute;
-    top: 0.6rem;
-    bottom: 0.5rem;
-    left: 0.8rem;
-}
-
-/*///////////////*/
-/*🍭🍭FILTERS🍭🍭*/
-/*//////////////*/
-
-.filters{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 3rem 12rem 1rem 12rem;
-}
-
-.filter-dropdown {
-    position: relative;
-    transition: margin-bottom 0.3s ease; /* Smooth transition for margin */
-}
-
-.filter-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    height: auto;
-    padding: 0.5rem 1.2rem;
-    border-radius: 1.5rem;
-    background: white;
-    border: 1.5px black solid;
-    font-size: 1rem;
-    font-family: "NeueMontreal Regular";
-}
-
-.filter-dropdown:last-child .filter-btn {
-    color: white;
-    background: black;
-}
-
-.filter-btn svg {
-    transition: transform 0.3s ease; /* Smooth transition for rotation */
-    margin-left: 3rem;
-}
-
-.filter-dropdown-items {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 1px 5px 0 rgba(48, 49, 51, 0.1), 0 2px 5px 0 rgba(36, 38, 40, 0.1);;
-    width: 100%;
-    height: 18vh;
-    z-index: 103;
-    border-radius: 1rem;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    margin-top: 0.5rem;
-    transition: margin-top .5s ease, opacity .5s ease;
-}
-
-.filter-dropdown:last-child .filter-dropdown-items {
-    background-color: black;
-}
-
-.filter-dropdown:last-child .filter-dropdown-items button {
-    color: #ffffff;
-}
-
-.filter-dropdown:last-child .filter-dropdown-items button:hover {
-    color: rgb(255, 255, 255);
-    font-family: "NeueMontreal Medium";
-}
-
-.filter-dropdown-items button {
-    display: block;
-    padding: 0.8rem 0.8rem;
-    text-decoration: none;
-    color: black;
-    background: none;
-    outline: none;
-    border: none;
-    font-size: 1rem;
-    font-family: "NeueMontreal Regular";
-}
-
-.filter-dropdown-items button:hover {
-    color: #f4c6b5;
-    font-family: "NeueMontreal Medium";
-}
-
-.show-dropdown {
-    display: block;
-}
-
-.icon-rotate {
-    transform: rotate(180deg); /* Rotate the icon */
-}
-
-.filter-dropdown.expanded {
-    margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
-}
-
-@media (max-width: 768px) {
-
-    .filter-search {
-        width: 75vw;
-    }
-
-    .filters{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    margin: 3rem 5rem 3rem 5rem;
-}
-
-.filter-dropdown-items {
-    height: 15vh;
-}
-
-.filter-btn svg {
-    margin-left: 1.5rem;
-}
-
-}
-
-/*/////////////////*/
-/*🍉🍉EVENT DESCRIPTION🍉🍉*/
-/*////////////////*/
-
-.event-description-container {
-    width: 100%;
-}
-
-.event-description-container dl {
-    display: grid;
-    grid-template-columns: 0.2fr auto;
-    gap: 1rem;
-    margin: 5rem 8rem;
-}
-
-.event-description-container dt {
-    grid-column: 1;
-    font-family: var(--text);
-    font-size:  var(--p);
-    padding-bottom: 1rem;
-    width: 12vw;
-}
-
-.event-description-container dd {
-    grid-column: 2;
-    width: 30vw;
-    margin: 0;
-}
-
-.event-description-container dt, dd {
-    border-bottom: 1.5px solid black;
-    margin: 0;
-    position: relative; 
-}
-
-.location {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1rem;
-  font-size: 1rem;
-}
-
-/*Google maps*/
-
-.hideMap {
-    display: none;
-}
-
-.toggle-map span {
-  margin-right: 0.5rem;
-}
-
-.toggle-map {
-  display: flex;
-  align-items: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
-
-.map {
-  margin-top: 0;
-  border: none; /* Remove the border from the map container */
-  transition: max-height 0.3s ease-out;
-  border-radius: 1rem;
-  overflow: hidden;
-  max-height: 0; /* default state when hidden */
-}
-
-.map.expanded {
-  max-height: 100%; /* adjust based on your map height */
-}
-
-.extra-dd {
-    border-bottom: none; 
-}
-
-@media (max-width: 768px ) { 
-    
-.event-description-container {
-    width: 100%;
-}   
-
-.event-description-container dl {
-    grid-template-columns: 0.2fr 0.8fr;
-    margin: 5rem 2rem;
-}
-
-.event-description-container dt {
-    width: 25vw;
-}
-
-.event-description-container dd {
-    width: 50vw;
-}
-
-.event-description-container dt, dd {
-    padding-bottom: 1rem;
-}
-
-}
-
-/* //////////////////////// */
-/* 🃏🃏🃏 DETAIL CARDS 🃏🃏🃏 */
-/* //////////////////////// */
+/* /////////////////////////////////////// */
+/* 🃏🃏🃏 DETAIL/POPULAR EVENTS CARDS 🃏🃏🃏 */
+/* /////////////////////////////////////// */
 
 .popularEvents {
 display: grid;
@@ -884,9 +616,7 @@ gap: 1rem;
 }
 
 .slider li {
-scroll-snap-align: start;   
-/* flex-shrink: 0;    */
-
+scroll-snap-align: start;
 }
 
 /* Card + HeartButton + text everything*/
@@ -981,23 +711,8 @@ gap: 2rem;
     color: var(--white);
 }
 
+/* 🃏 DETAIL/POPULAIR CARDS RESPONSIVE 🃏 */
 @media (max-width: 768px) {
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-
-    p {
-        font-size: 0.8rem;
-    }
 
     .popularEvents h2,
     .popularEvents > p,
@@ -1038,7 +753,7 @@ gap: 2rem;
         gap: 2rem;
         margin-top: 1rem;
         margin-bottom: 5rem;
-}
+    }
 
     /* space zijkant */
     .slider li:first-of-type article {
@@ -1047,40 +762,24 @@ gap: 2rem;
 
 }
 
-
-/******🃏🃏Impression cards🃏🃏********/
+/* //////////////////////////// */
+/* 🍋🍋🍋 IMPRESSION CARDS 🍋🍋🍋 */
+/* //////////////////////////// */
 
 .impression .detailCard p,
 .impression .detailCard h3,
-.impression .detailCard button{
+.impression .detailCard button {
     display: none;
 }
 
-.impression{
+.impression {
     grid-template-rows: 0.1fr auto;
 }
 
-/******categories cards🃏🃏********/
-
-.categories .detailCard p,
-.categories .detailCard button{
-display: none;
-}
-
-.popularEvents.categories{
-    grid-template-rows: 0.1fr auto;
-    background-color: var(--peachLight);
-    padding: 3rem 0;
-}
-
-.categories ul{
-    margin-bottom: 0;
-    margin-top: 0;
-}
 
 /******grid cards🃏🃏********/
 
-.overviewGrid ul{
+.overviewGrid ul {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 4rem;
@@ -1095,33 +794,33 @@ display: none;
     gap: 3rem; */
 }
 
-.overviewGrid .detailCard{
+.overviewGrid .detailCard {
     width: 100%;
 }
 
 /* ipad */
-@media (max-width: 1400px){
+@media (max-width: 1400px) {
 
     .overviewGrid ul{
         grid-template-columns: auto auto;
     }
 
-    .overviewGrid .detailCard{
+    .overviewGrid .detailCard {
         width: 100%;
     }
   
 }
 
 /* phone */
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
 
-    .overviewGrid ul{
+    .overviewGrid ul {
         grid-template-columns: auto;
         margin: 4rem 2rem;
         gap: 3rem;
     }
 
-    .overviewGrid .detailCard{
+    .overviewGrid .detailCard {
         width: 100%;
     }
 }
@@ -1459,6 +1158,282 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     font-size: 0.8rem;
     text-align: center;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////✨✨✨ EVENTS & WORKSHOPS PAGE ✨✨✨///////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////// */
+/* 🔎🔎🔎 SEARCH BAR 🔎🔎🔎 */
+/* ////////////////////// */
+
+.search-container {
+    display: flex;
+    align-self: start;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.search-container form {
+    position: relative;
+}
+
+.filter-search {
+    border-radius: 2rem;
+    padding: 0.8rem 0.8rem 0.8rem 3rem;
+    width: 65vw;
+    max-width: 100%;
+    height: auto;
+    border: black solid 1.5px;
+    background: white;
+    font-family: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+.search-container input::placeholder {
+    color: #b7b7b7;
+}
+
+.search-container ::-ms-input-placeholder {
+    color: #b7b7b7;
+}
+
+
+.search-container form svg {
+    position: absolute;
+    top: 0.6rem;
+    bottom: 0.5rem;
+    left: 0.8rem;
+}
+
+/* /////////////////// */
+/* 🍭🍭🍭 FILTERS 🍭🍭🍭 */
+/* /////////////////// */
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 12rem 1rem 12rem;
+}
+
+.filter-dropdown {
+    position: relative;
+    transition: margin-bottom 0.3s ease; /* Smooth transition for margin */
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    height: auto;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.5rem;
+    background: white;
+    border: 1.5px black solid;
+    font-size: 1rem;
+    font-family: "NeueMontreal Regular";
+}
+
+.filter-dropdown:last-child .filter-btn {
+    color: white;
+    background: black;
+}
+
+.filter-btn svg {
+    transition: transform 0.3s ease; /* Smooth transition for rotation */
+    margin-left: 3rem;
+}
+
+.filter-dropdown-items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 1px 5px 0 rgba(48, 49, 51, 0.1), 0 2px 5px 0 rgba(36, 38, 40, 0.1);;
+    width: 100%;
+    height: 18vh;
+    z-index: 103;
+    border-radius: 1rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    margin-top: 0.5rem;
+    transition: margin-top .5s ease, opacity .5s ease;
+}
+
+.filter-dropdown:last-child .filter-dropdown-items {
+    background-color: black;
+}
+
+.filter-dropdown:last-child .filter-dropdown-items button {
+    color: #ffffff;
+}
+
+.filter-dropdown:last-child .filter-dropdown-items button:hover {
+    color: rgb(255, 255, 255);
+    font-family: "NeueMontreal Medium";
+}
+
+.filter-dropdown-items button {
+    display: block;
+    padding: 0.8rem 0.8rem;
+    text-decoration: none;
+    color: black;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-family: "NeueMontreal Regular";
+}
+
+.filter-dropdown-items button:hover {
+    color: #f4c6b5;
+    font-family: "NeueMontreal Medium";
+}
+
+.show-dropdown {
+    display: block;
+}
+
+.icon-rotate {
+    transform: rotate(180deg); /* Rotate the icon */
+}
+
+.filter-dropdown.expanded {
+    margin-bottom: 10rem; /* Pas dit aan naar wens om genoeg ruimte te maken */
+}
+
+@media (max-width: 768px) {
+
+    .filter-search {
+        width: 75vw;
+    }
+
+    .filters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 5rem 3rem 5rem;
+}
+
+.filter-dropdown-items {
+    height: 15vh;
+}
+
+.filter-btn svg {
+    margin-left: 1.5rem;
+}
+
+}
+
+/*/////////////////*/
+/*🍉🍉EVENT DESCRIPTION🍉🍉*/
+/*////////////////*/
+
+.event-description-container {
+    width: 100%;
+}
+
+.event-description-container dl {
+    display: grid;
+    grid-template-columns: 0.2fr auto;
+    gap: 1rem;
+    margin: 5rem 8rem;
+}
+
+.event-description-container dt {
+    grid-column: 1;
+    font-family: var(--text);
+    font-size:  var(--p);
+    padding-bottom: 1rem;
+    width: 12vw;
+}
+
+.event-description-container dd {
+    grid-column: 2;
+    width: 30vw;
+    margin: 0;
+}
+
+.event-description-container dt, dd {
+    border-bottom: 1.5px solid black;
+    margin: 0;
+    position: relative; 
+}
+
+.location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/*Google maps*/
+
+.hideMap {
+    display: none;
+}
+
+.toggle-map span {
+  margin-right: 0.5rem;
+}
+
+.toggle-map {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.map {
+  margin-top: 0;
+  border: none; /* Remove the border from the map container */
+  transition: max-height 0.3s ease-out;
+  border-radius: 1rem;
+  overflow: hidden;
+  max-height: 0; /* default state when hidden */
+}
+
+.map.expanded {
+  max-height: 100%; /* adjust based on your map height */
+}
+
+.extra-dd {
+    border-bottom: none; 
+}
+
+@media (max-width: 768px ) { 
+    
+.event-description-container {
+    width: 100%;
+}   
+
+.event-description-container dl {
+    grid-template-columns: 0.2fr 0.8fr;
+    margin: 5rem 2rem;
+}
+
+.event-description-container dt {
+    width: 25vw;
+}
+
+.event-description-container dd {
+    width: 50vw;
+}
+
+.event-description-container dt, dd {
+    padding-bottom: 1rem;
+}
+
 }
 
 /* //////////////////////////// */
