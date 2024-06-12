@@ -701,6 +701,11 @@ li a svg {
     font-family: "NeueMontreal Medium";
 }
 
+.filter-dropdown-items button:active {
+    color: #f4c6b5;
+    font-family: "NeueMontreal Medium";
+}
+
 .show-dropdown {
     display: block;
 }

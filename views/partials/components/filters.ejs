@@ -44,9 +44,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Small group (0-10)</button>
-        <button>Medium group (15-30)</button>
-        <button>Big group (50-100)</button>
+        <button data-checkbox="smallGroup">Small group (0-10)</button>
+        <button data-checkbox="middleGroup">Medium group (15-30)</button>
+        <button data-checkbox="bigGroup">Big group (50-100)</button>
       </div>
     </div>
   </div>
@@ -58,9 +58,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Remote</button>
-        <button>Online</button>
-        <button>Events nearby</button>
+        <button data-checkbox="remote">Remote</button>
+        <button data-checkbox="online">Online</button>
+        <button data-checkbox="eventsNearby">Events nearby</button>
       </div>
     </div>
   </div>
@@ -72,9 +72,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Freebie finder</button>
-        <button>Young saver</button>
-        <button>Big spender</button>
+        <button data-checkbox="freebieFinder">Freebie finder</button>
+        <button data-checkbox="youngSaver">Young saver</button>
+        <button data-checkbox="bigSpender">Big spender</button>
       </div>
     </div>
   </div>
@@ -86,10 +86,10 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Upcoming events</button>
-        <button>This week</button>
-        <button>This weekend</button>
-        <button>Calendar</button>
+        <button data-checkbox="upcomingEvents">Upcoming events</button>
+        <button data-checkbox="thisWeek">This week</button>
+        <button data-checkbox="thisWeekend">This weekend</button>
+        <button data-checkbox="calendar">Calendar</button>
       </div>
     </div>
   </div>
@@ -101,11 +101,11 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Morning</button>
-        <button>Afternoon</button>
-        <button>Evening</button>
-        <button>Night</button>
-        <button>All day events</button>
+        <button data-checkbox="morning">Morning</button>
+        <button data-checkbox="afternoon">Afternoon</button>
+        <button data-checkbox="evening">Evening</button>
+        <button data-checkbox="night">Night</button>
+        <button data-checkbox="alldayEvents">All day events</button>
       </div>
     </div>
   </div>
@@ -117,9 +117,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Dutch</button>
-        <button>English</button>
-        <button>Multilingual Events</button>
+        <button data-checkbox="dutch">Dutch</button>
+        <button data-checkbox="english">English</button>
+        <button data-checkbox="multilingualEvents">Multilingual Events</button>
       </div>
     </div>
   </div>
@@ -131,10 +131,10 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Popular</button>
-        <button>New events</button>
-        <button>Price low - high</button>
-        <button>Price high - low</button>
+        <button data-checkbox="popular">Popular</button>
+        <button data-checkbox="newEvents">New events</button>
+        <button data-checkbox="priceLowHigh">Price low - high</button>
+        <button data-checkbox="priceHighLow">Price high - low</button>
       </div>
     </div>
   </div>
@@ -172,50 +172,6 @@
   <input type="checkbox" name="Sorting" class="newEvents" value="newEvents">
   <input type="checkbox" name="Sorting" class="priceLowHigh" value="priceLowHigh">
   <input type="checkbox" name="Sorting" class="priceHighLow" value="priceHighLow">
+  <button type="submit">submit</button>
+
 </form>
-
-
-
-<script>
-  //// dropdown filter items
-  document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-
-    filterButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        const dropdown = button.nextElementSibling;
-        const parent = button.closest('.filter-dropdown');
-        const icon = button.querySelector('svg');
-        dropdown.classList.toggle('show-dropdown');
-        dropdown.classList.toggle('hide-dropdown');
-        icon.classList.toggle('icon-rotate');
-        parent.classList.toggle('expanded');
-      });
-    });
-  });
-
-  /*
-    document.addEventListener('DOMContentLoaded', function() {
-      const filterButtons = document.querySelectorAll('.filter-btn');
-
-      // Functie om de breedte van de filterknoppen aan te passen op basis van de inhoud van de dropdown-items
-      function adjustButtonWidths() {
-        filterButtons.forEach(button => {
-          const dropdown = button.nextElementSibling;
-          if (dropdown && dropdown.classList.contains('filter-dropdown-items')) {
-            const dropdownWidth = dropdown.getBoundingClientRect().width;
-            button.style.width = `${dropdownWidth}px`;
-          }
-        });
-      }
-
-      // Roep de functie aan wanneer de pagina is geladen
-      adjustButtonWidths();
-
-      // Roep de functie aan wanneer het formaat van het venster verandert
-      window.addEventListener('resize', adjustButtonWidths);
-    });
-    */
-</script>
