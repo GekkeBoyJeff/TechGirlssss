@@ -32,8 +32,12 @@
         </fieldset>
     
         <div>
-            <button type="submit" id="backButton" name="action" value="back">Back</button>
-            <button type="submit">Next</button>
+            <button class="secondary-button" type="submit" id="backButton" name="action" value="back">Back</button>
+            <div class="progress-container">
+                <p>Step 1 of 6</p>
+                <progress class="progress-first" value="10" max="100">10%</progress>
+            </div>
+            <button class="tertiary-button-black" type="submit">Next</button>
         </div>
     </form>
     
@@ -42,10 +46,5 @@
         <source src="../images/shadergradient.webm" type="video/webm">
         <!-- Voeg alternatieve bronnen toe voor verschillende videoformaten -->
     </video>
-
-    <div class="progress-container">
-        <p>Step 1 of 6</p>
-        <progress class="progress-first" value="10" max="100">10%</progress>
-    </div>
       
     </section>
