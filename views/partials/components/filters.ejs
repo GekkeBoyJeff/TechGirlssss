@@ -1,12 +1,13 @@
 <!-- bron:https://nikitahl.com/search-icon-inside-input -->
 <!--Search bar-->
+
 <div class="search-container">
   <form role="search" name="search">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M10.7828 18.8276C12.3741 18.8298 13.9302 18.3601 15.2544 17.4781C16.5785 16.596 17.6112 15.3413 18.2216 13.8726C18.832 12.4039 18.9929 10.7872 18.6837 9.2271C18.3746 7.66702 17.6093 6.23364 16.4849 5.10831C15.3604 3.98299 13.9272 3.2163 12.3666 2.90525C10.8061 2.5942 9.18823 2.75277 7.71786 3.3609C6.24748 3.96902 4.99062 4.99937 4.10632 6.32158C3.22202 7.64379 2.75 9.19844 2.75 10.7888C2.75 12.919 3.59596 14.9621 5.10209 16.4693C6.60821 17.9766 8.65135 18.8248 10.7828 18.8276Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
       <path d="M16.4883 16.491L21.25 21.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
     </svg>
-    <input class="filter-search" aria-label="Search for events & workshops" type="search" name="search" placeholder="What are you looking for?" autocomplete="off" list="search-suggestions">
+    <input class="filter-search" aria-label="Click and type this search bar to search for workshops & events" type="search" name="search" placeholder="What are you looking for?" autocomplete="off" list="search-suggestions">
     <datalist id="search-suggestions">
       <option value="JavaScript">
       <option value="CSS">
@@ -71,7 +72,7 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Freebie Finder</button>
+        <button>Freebie finder</button>
         <button>Young saver</button>
         <button>Big spender</button>
       </div>
@@ -130,8 +131,7 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <button>Populair</button>
-        <button>Trending</button>
+        <button>Popular</button>
         <button>New events</button>
         <button>Price low - high</button>
         <button>Price high - low</button>
@@ -139,6 +139,43 @@
     </div>
   </div>
 </div>
+
+<form>
+  <input type="checkbox" name="AmountofPeople" class="smallGroup" value="smallGroup">
+  <input type="checkbox" name="AmountofPeople" class="middleGroup" value="middleGroup">
+  <input type="checkbox" name="AmountofPeople" class="bigGroup" value="bigGroup">
+
+  <input type="checkbox" name="Location" class="remote" value="remote">
+  <input type="checkbox" name="Location" class="online" value="online">
+  <input type="checkbox" name="Location" class="eventsNearby" value="eventsNearby">
+
+  <input type="checkbox" name="Price" class="freebieFinder" value="freebieFinder">
+  <input type="checkbox" name="Price" class="youngSaver" value="youngSaver">
+  <input type="checkbox" name="Price" class="bigSpender" value="bigSpender">
+
+  <input type="checkbox" name="Date" class="upcomingEvents" value="upcomingEvents">
+  <input type="checkbox" name="Date" class="thisWeek" value="thisWeek">
+  <input type="checkbox" name="Date" class="thisWeekend" value="thisWeekend">
+  <input type="checkbox" name="Date" class="calendar" value="calendar">
+
+  <input type="checkbox" name="Time" class="morning" value="morning">
+  <input type="checkbox" name="Time" class="afternoon" value="afternoon">
+  <input type="checkbox" name="Time" class="evening" value="evening">
+  <input type="checkbox" name="Time" class="night" value="night">
+  <input type="checkbox" name="Time" class="alldayEvents" value="alldayEvents">
+
+  <input type="checkbox" name="Language" class="dutch" value="dutch">
+  <input type="checkbox" name="Language" class="english" value="english">
+  <input type="checkbox" name="Language" class="multilingualEvents" value="multilingualEvents">
+
+  <input type="checkbox" name="Sorting" class="popular" value="popular">
+  <input type="checkbox" name="Sorting" class="newEvents" value="newEvents">
+  <input type="checkbox" name="Sorting" class="priceLowHigh" value="priceLowHigh">
+  <input type="checkbox" name="Sorting" class="priceHighLow" value="priceHighLow">
+</form>
+
+
+
 <script>
   //// dropdown filter items
   document.addEventListener('DOMContentLoaded', function() {
@@ -158,26 +195,27 @@
       });
     });
   });
-/*
-  document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
 
-    // Functie om de breedte van de filterknoppen aan te passen op basis van de inhoud van de dropdown-items
-    function adjustButtonWidths() {
-      filterButtons.forEach(button => {
-        const dropdown = button.nextElementSibling;
-        if (dropdown && dropdown.classList.contains('filter-dropdown-items')) {
-          const dropdownWidth = dropdown.getBoundingClientRect().width;
-          button.style.width = `${dropdownWidth}px`;
-        }
-      });
-    }
+  /*
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
 
-    // Roep de functie aan wanneer de pagina is geladen
-    adjustButtonWidths();
+      // Functie om de breedte van de filterknoppen aan te passen op basis van de inhoud van de dropdown-items
+      function adjustButtonWidths() {
+        filterButtons.forEach(button => {
+          const dropdown = button.nextElementSibling;
+          if (dropdown && dropdown.classList.contains('filter-dropdown-items')) {
+            const dropdownWidth = dropdown.getBoundingClientRect().width;
+            button.style.width = `${dropdownWidth}px`;
+          }
+        });
+      }
 
-    // Roep de functie aan wanneer het formaat van het venster verandert
-    window.addEventListener('resize', adjustButtonWidths);
-  });
-  */
+      // Roep de functie aan wanneer de pagina is geladen
+      adjustButtonWidths();
+
+      // Roep de functie aan wanneer het formaat van het venster verandert
+      window.addEventListener('resize', adjustButtonWidths);
+    });
+    */
 </script>
