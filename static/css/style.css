@@ -712,23 +712,6 @@ align-items: center;
     color: var(--white);
 }
 
-/******categories cards🃏🃏********/
-
-.categories .detailCard p,
-.categories .detailCard button{
-display: none;
-}
-
-.popularEvents.categories{
-    grid-template-rows: 0.1fr auto;
-    background-color: var(--peachLight);
-    padding: 4rem 0;
-    margin: 5rem 0;
-}
-
-ul.slider.categories{
-    margin-bottom: 0;
-}
 
 /* 🃏 DETAIL/POPULAIR CARDS RESPONSIVE 🃏 */
 @media (max-width: 768px) {
@@ -1476,6 +1459,26 @@ footer article:nth-of-type(2) ul li:first-of-type p {
         display: none;
     }
 
+}
+
+/* ///////////////////////////// */
+/* 🐙🐙🐙 CATEGORIES CARDS 🐙🐙🐙 */
+/* ///////////////////////////// */
+
+.categories .detailCard p,
+.categories .detailCard button{
+display: none;
+}
+
+.popularEvents.categories{
+    grid-template-rows: 0.1fr auto;
+    background-color: var(--peachLight);
+    padding: 4rem 0;
+    margin: 5rem 0;
+}
+
+ul.slider.categories{
+    margin-bottom: 0;
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
