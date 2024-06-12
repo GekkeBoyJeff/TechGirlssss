@@ -1627,9 +1627,6 @@ ul.slider.categories{
     transition-duration: 0.4s;
 } */
 
-input:-internal-autofill-selected {
-    background-color: red !important;
-}
 
 .loginForm form div:first-of-type button:hover {
     color: var(--peach);
@@ -1972,9 +1969,6 @@ flex-wrap: wrap;
         transition: 0.3s;
 }
 
-  /* input#age {
-    width: 10%;
-} */
 
 .step1 fieldset {
     gap: 0;
@@ -2000,7 +1994,6 @@ input#country:focus,
 input#language:focus,
 select#language:focus {
     outline: transparent;   
-    background-color: var(--peach);  /* oranges! yey */
 }
 
 /* knopjes hover+focus */
@@ -2012,6 +2005,7 @@ background-color: var(--peachLight);
 /* knopjes clicked */
 .radio-toolbar input[type="radio"]:checked + label{
     background-color: var(--peach);
+    border: 0.1rem var(--white) solid;
 }
 
 /* knopjes hover+focus */
@@ -2026,6 +2020,7 @@ background-color: white;
 /* knopjes clicked */
 .radio-toolbar input[type="checkbox"]:checked + label{
     background-color: var(--peach);
+    border: 0.1rem var(--white) solid;
 }
 
 /* 🔥 QUESTION 2 - RESPONSIVE 🔥 */
