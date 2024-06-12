@@ -32,6 +32,9 @@
 }
 
 :root {
+    /* Margin & padding */
+    --no-margin: 0;
+
     /* Colours */
     --white: #ffffff;
     --black: #1f1f1f;
@@ -39,38 +42,44 @@
     --peach: #F2B199;
     --peachLight: rgba(242,177,153,0.4);
 
-
     /* Fonts */
-    --titel1: "NeueMontreal Medium";
-    --titel2: "PPMondwest Regular";
-    --text: "NeueMontreal Regular";
+    --medium: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    --pixel: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+    --regular: "NeueMontreal Regular", Arial, Helvetica, sans-serif;
 
     /* Font sizes big screen */
     --h1: 4rem;
+    --h2: 2.5rem;
+    --h3: 1.5rem;
     --p: 1rem;
 
-    /* Font sizes small screen screen */
-    --h1-small: 2.2rem;
+    --letter-spacing: 0.07rem;
+    --line-height: 1.438rem;
+
+    /* Font sizes small screen */
+    --h1-small: 2.5rem;
+    --h2-small: 1.8rem;
+    --h3-small: 1.2rem;
     --p-small: 0.8rem;
 
-
+    --letter-spacing-small: 0.05rem;
+    --line-height-small: 1.188;
+    
     /* Desktop margin */
-
+    --margin-sides: 5rem 8rem;
 
     /* Phone margin */
-    --margin-small: 2rem;
-    --padding: 1em;
-    --margin: 1em;
-    --border-radius: 0.5em;
-
-    --max-width: 10rem 10rem;
+    --margin-sides-small: 2rem;
     --border-radius: 2rem;
 
-        --spaceSides: 8rem;
+    /* Button styling */
+    --p-button: 1.125rem;
+    --padding-button: 0.6rem 1.2rem;
+    --border: 0.1rem var(var(--black)) solid;
 
-    --medium: 100;
-    --spacing: 0.7px;
-
+    /* Button styling small */
+    --p-button-small: 1rem;
+    --padding-button: 0.4rem 1rem;
 }
 
 /* /////////////////////////// */
@@ -89,36 +98,38 @@
 /* /////////////////////////// */
 
 body {
-    font-family: 'NeueMontreal Regular', Arial, Helvetica, sans-serif;
+    font-family: var(--regular);
     background: var(--white);
     color: var(--black);
 }
 
-
 h1 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 4rem;
-
+    font-family: var(--medium);
+    /* font-weight: 300; */
+    font-size: var(--h1);
 }
 
 h2 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-size: 2.5rem; 
-    font-weight: 300; 
+    font-family: var(--medium);
+    font-size: var(--h2); 
+    /* font-weight: 300;  */
 }
 
 h3 {
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    font-size: 1.5rem; 
-    font-weight: 300; 
+    font-family: var(--medium);
+    font-size: var(--h3); 
+    /* font-weight: 300; */
 }
 
 p {
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
+    font-family: var(--regular);
+    font-size: var(--p);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+}
+
+.pixel_text {
+    font-family: var(--pixel);
 }
 
 a {
@@ -126,14 +137,30 @@ a {
     text-decoration: none;
 }
 
-.pixel_text {
-    font-family: "PPMondwest Regular", Arial, Helvetica, sans-serif;
+@media (max-width: 769px) {
+    h1 {
+        font-size: var(--h1-small);
+    }
+    
+    h2 {
+        font-size: var(--h2-small); 
+    }
+    
+    h3 {
+        font-size: var(--h3-small); 
+    }
+    
+    p {
+        font-size: var(--p-small);
+        line-height: var(--line-height-small);
+        letter-spacing: var(--letter-spacing-small);
+    }
+
 }
 
-
-/*///////////////*/
-/*🤩🤩navigation menu🤩🤩*/
-/*///////////////*/
+/* /////////////////////////// */
+/* 🤩🤩🤩 NAVIGATION MENU 🤩🤩🤩 */
+/* /////////////////////////// */
 
 .page-overlay.is-visible{
     visibility: visible;
@@ -199,8 +226,7 @@ li a svg {
     vertical-align: middle; 
 }
 
-
-/* dropdown menu */
+/* Dropdown menu */
 .mega-menu {
     display: flex;
     flex-direction: column;
@@ -226,7 +252,7 @@ li a svg {
     opacity: 0;
 }
 
-/* dropdown hover */
+/* Dropdown hover */
 .dropdown:hover > .mega-menu,
 .dropdown:focus-within > .mega-menu,
 .mega-menu:hover,
@@ -296,7 +322,6 @@ li a svg {
         box-shadow: 0px 3px 10px 0px rgba(169, 169, 169, 0.20);
     }
 
-
     nav.show {
         transform: translateX(0);
     }
@@ -352,20 +377,19 @@ li a svg {
 /* 🧸🧸🧸 BUTTONS 🧸🧸🧸 */
 /*/////////////////////*/
 
-.primary_button,
-.popularEvents > a {
-    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
-    margin: 0;
-    border-radius: 10rem;
+/* 🍑 PEACH 🍑 */
+.primary_button {
+    padding: var(--padding-button);
+    margin: var(--no-margin);
+    border-radius: var(--border-radius);
 
-    font-family: "NeueMontreal Regular";
-    font-size: 1rem;
-    line-height: 23px;
-    letter-spacing: 1.5px;
+    font-family: var(--medium);
+    font-size: var(--p-button);
     background-color: var(--peach);
     text-decoration: none;
-    color: black;
-    transition: background-color .5s ease, transform .5s
+    color: var(--black);
+    transition: background-color .5s ease, transform .5s;
+    text-wrap: nowrap;
 }
 
 .primary_button svg {
@@ -373,24 +397,63 @@ li a svg {
 }
 
 .primary_button:hover {
-    color: white;
-    background-color: black;
+    color: var(--white);
+    background-color: var(--black);
 }
 
+/* 〰️ BLACK BORDER 〰️ */
 .secondary-button {
-    padding: 0.3rem 0.8rem;
-    border: 0.1rem var(--black) solid;
-    border-radius: 2rem;
+    font-size: var(--p-button);
+    font-family: var(--medium);
+    padding: var(--padding-button);
+    margin: var(--no-margin);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    text-wrap: nowrap;
 }
 
-.tertiary-button {
+/* 🍒 WHITE 🍒 */
+.tertiary-button-white {
     background-color: var(--white);
+    color: var(--black);
+    margin: var(--no-margin);
     border: none;
-    border-radius: 2rem;
-    padding: 0.4rem 1.2rem;
+    border-radius: var(--border-radius);
+    padding: var(--padding-button);
     text-decoration: none;
-    font-size: 1.125rem;
-    font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    font-size: var(--p-button);
+    font-family: var(--medium);
+    text-wrap: nowrap;
+}
+
+/* 🖤 BLACK 🖤 */
+.tertiary-button-black {
+    background-color: var(--black);
+    color: var(--white);
+    margin: var(--no-margin);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: var(--padding-button);
+    text-decoration: none;
+    font-size: var(--p-button);
+    font-family: var(--medium);
+    text-wrap: nowrap;
+    width: fit-content;
+}
+
+/* ////////////////////////////// */
+/* 👋👋👋 RESPONSIVE BUTTONS 👋👋👋 */
+/* ////////////////////////////// */
+@media (max-width: 768px) {
+
+    .primary_button,
+    .secondary-button,
+    .tertiary-button-white,
+    .tertiary-button-black {
+        padding: var(--padding-button-small);
+        font-size: var(--padding-button-small);
+    }
+
 }
 
 /* /////////////////////////// */
