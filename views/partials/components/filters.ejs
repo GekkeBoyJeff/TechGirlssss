@@ -26,12 +26,12 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <a href="#">a</a>
-        <a href="#">b</a>
-        <a href="#">c</a>
-        <a href="#">d</a>
-        <a href="#">e</a>
-        <a href="#">f</a>
+        <button>Theatre</button>
+        <button>Dance</button>
+        <button>Fine art</button>
+        <button>Painting</button>
+        <button>Craft</button>
+        <button>Design</button>
       </div>
     </div>
   </div>
@@ -43,14 +43,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <div class="number-controls">
-          <button class="decrement">-</button>
-          <input type="number" id="numberInput" min="0" max="100" value="50">
-          <button class="increment">+</button>
-        </div>
-        <div class="amount-range">
-        <input type="range" min="0" max="100" value="50">
-        </div>
+        <button>Small group (0-10)</button>
+        <button>Medium group (15-30)</button>
+        <button>Big group (50-100)</button>
       </div>
     </div>
   </div>
@@ -62,9 +57,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <a href="#">a</a>
-        <a href="#">b</a>
-        <a href="#">c</a>
+        <button>Remote</button>
+        <button>Online</button>
+        <button>Events nearby</button>
       </div>
     </div>
   </div>
@@ -76,24 +71,9 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <div class="price-input">
-          <div class="field">
-            <span>Min</span>
-            <input type="number" class="input-min" value="20">
-          </div>
-          <div class="separator">-</div>
-          <div class="field">
-            <span>Max</span>
-            <input type="number" class="input-min" value="60">
-          </div>
-        </div>
-        <div class="slider">
-          <div class="progress"></div>
-          <div class="range-input">
-            <input type="range" class="range-min" min="0" max="100" value="20" step="0">
-            <input type="range" class="range-max" min="0" max="100" value="60" step="0">
-          </div>
-        </div>
+        <button>Freebie Finder</button>
+        <button>Young saver</button>
+        <button>Big spender</button>
       </div>
     </div>
   </div>
@@ -105,9 +85,10 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <a href="#">a</a>
-        <a href="#">b</a>
-        <a href="#">c</a>
+        <button>Upcoming events</button>
+        <button>This week</button>
+        <button>This weekend</button>
+        <button>Calendar</button>
       </div>
     </div>
   </div>
@@ -119,9 +100,11 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <a href="#">a</a>
-        <a href="#">b</a>
-        <a href="#">c</a>
+        <button>Morning</button>
+        <button>Afternoon</button>
+        <button>Evening</button>
+        <button>Night</button>
+        <button>All day events</button>
       </div>
     </div>
   </div>
@@ -133,23 +116,25 @@
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <a href="#">a</a>
-        <a href="#">b</a>
-        <a href="#">c</a>
+        <button>Dutch</button>
+        <button>English</button>
+        <button>Multilingual Events</button>
       </div>
     </div>
   </div>
   <div class="filter-dropdown">
     <div class="filter-menu">
-      <button class="filter-btn" aria-expanded="false">Popularity
+      <button class="filter-btn" aria-expanded="false">Sorting
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
       <div class="filter-dropdown-items hide-dropdown">
-        <a href="#">a</a>
-        <a href="#">b</a>
-        <a href="#">c</a>
+        <button>Populair</button>
+        <button>Trending</button>
+        <button>New events</button>
+        <button>Price low - high</button>
+        <button>Price high - low</button>
       </div>
     </div>
   </div>
@@ -173,49 +158,26 @@
       });
     });
   });
+/*
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-  ///Price range
-
-  const rangeInput = document.querySelectorAll(".range-input input");
-  priceInput = document.querySelectorAll(".price-input input");
-  progress = document.querySelector(".slider .progress");
-  let priceGap = 30;
-
-  priceInput.forEach(input => {
-    input.addEventListener("input", e => {
-      let minVal = parseInt(priceInput[0].value),
-        maxVal = parseInt(priceInput[1].value);
-
-      if ((maxVal - minVal >= priceGap) && maxVal <= 100) {
-        if (e.target.className === "input-min") {
-          rangeInput[0].value = minVal;
-          progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-        } else {
-          rangeInput[1].value = maxVal;
-          progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+    // Functie om de breedte van de filterknoppen aan te passen op basis van de inhoud van de dropdown-items
+    function adjustButtonWidths() {
+      filterButtons.forEach(button => {
+        const dropdown = button.nextElementSibling;
+        if (dropdown && dropdown.classList.contains('filter-dropdown-items')) {
+          const dropdownWidth = dropdown.getBoundingClientRect().width;
+          button.style.width = `${dropdownWidth}px`;
         }
-      } 
-    });
-  })
+      });
+    }
 
-   rangeInput.forEach(input => {
-    input.addEventListener("input", e => {
-      let minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
+    // Roep de functie aan wanneer de pagina is geladen
+    adjustButtonWidths();
 
-      if (maxVal - minVal < priceGap) {
-        if (e.target.className === "range-min") {
-          rangeInput[0].value = maxVal - priceGap;
-        } else {
-          rangeInput[1].value = minVal + priceGap;
-        }
-      } else {
-        priceInput[0].value = minVal;
-        priceInput[1].value = maxVal;
-        progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-        progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-      }
-    });
-  })
-
+    // Roep de functie aan wanneer het formaat van het venster verandert
+    window.addEventListener('resize', adjustButtonWidths);
+  });
+  */
 </script>
