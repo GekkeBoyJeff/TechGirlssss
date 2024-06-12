@@ -597,6 +597,7 @@ gap: 1rem;
 
 /* ul 3x Multiple Cards*/
 .slider {
+    margin-bottom: 5rem;
     padding-right: 8rem;
     display: flex;
     gap: 2.8rem ;
@@ -723,7 +724,10 @@ display: none;
     background-color: var(--peachLight);
     padding: 4rem 0;
     margin: 5rem 0;
+}
 
+ul.slider.categories{
+    margin-bottom: 0;
 }
 
 /* 🃏 DETAIL/POPULAIR CARDS RESPONSIVE 🃏 */
