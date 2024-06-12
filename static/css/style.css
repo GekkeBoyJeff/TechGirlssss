@@ -168,6 +168,7 @@ a {
 .primary_button {
     padding: var(--padding-button);
     margin: var(--no-margin);
+    border: none;
     border-radius: var(--border-radius);
 
     font-family: var(--medium);
