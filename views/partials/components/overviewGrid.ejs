@@ -1,18 +1,40 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
 <section class="overviewGrid">
-    <ul>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-    </ul>
+    <div id="test-list">
+    <input type="text" class="search" />
+    <ul class="list">
+            <!-- <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>        
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>        
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li>     
+            <li class="name"><%- include('./detailCard.ejs') %></li>
+            <li class="name"><%- include('./detailCard.ejs') %></li> -->
+
+            <li class="name"><img src="images/memoji.png" alt="x"></li> 
+            <li class="name"><img src="images/painting.jpg" alt="x"></li> 
+            <li class="name"><img src="images/patta-logo.png" alt="x"></li> 
+            <li class="name"><img src="images/logo_cr8.svg" alt="x"></li> 
+            <li class="name"><img src="images/memoji.png" alt="x"></li> 
+            <li class="name"><img src="images/memoji.png" alt="x"></li> 
+            <li class="name"><img src="images/memoji.png" alt="x"></li> 
+            <li class="name"><img src="images/memoji.png" alt="x"></li> 
+        </ul>
+        <ul class="pagination"></ul>
+    </div>
 </section>
+
+<script>
+    var monkeyList = new List('test-list', {
+    valueNames: ['name'],
+    page: 3,
+    pagination: true
+  });
+</script>
