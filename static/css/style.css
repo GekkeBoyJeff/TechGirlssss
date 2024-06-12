@@ -771,7 +771,7 @@ align-items: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: var(--spaceSides);
+    margin: var(--margin-sides);
 }
 
 .socialMediaWall ul {
@@ -792,12 +792,11 @@ align-items: center;
 }
 
 .socialMediaWall img {
-    width: 100%; /* Zorg ervoor dat de afbeelding de breedte van het grid-item vult */
-    height: auto; /* Zorg dat de hoogte automatisch wordt aangepast */
-    aspect-ratio: 1 / 1; /* Maak de afbeelding vierkant */
-    object-fit: cover; /* Zorg ervoor dat de afbeelding het vierkant vult en de juiste verhouding behoudt */
-    display: block; /* Verwijder eventuele onderlijning door de link */
-    border-radius: 1.5rem;
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 1 / 1; 
+    object-fit: cover; 
+    border-radius: var(--border-radius);
 }
 
 .socialMediaWall ul li:hover {
@@ -808,11 +807,11 @@ align-items: center;
 @media (max-width: 768px) {
     
     .socialMediaWall ul {
-        grid-template-columns: 1fr 1fr; /* Responsieve kolommen */
+        grid-template-columns: 1fr 1fr;
     }
 
     .socialMediaWall {
-        margin: 4rem 2rem;
+        margin: var(--margin-sides-small);
     }
 
     .socialMediaWall ul li:nth-of-type(5),
