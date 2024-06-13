@@ -1,9 +1,21 @@
 <!--<div class="menu">-->
+<div class="page-overlay"></div>
 <header>
-  <a href="#">
-    <img src="/images/logo_cr8.png" alt="cr8">
+  <a href="index.ejs">
+    <img class="logo-cr8" src="/images/logo_cr8.svg" alt="cr8">
   </a>
   <nav>
+    <div class="mobile-header">
+      <a href="index.ejs" class="mobile-logo">
+        <img src="/images/logo_cr8.svg" alt="cr8">
+      </a>
+      <div class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M19 19L5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
     <ul>
       <li class="dropdown"><a href="#">Events & workshops
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -12,15 +24,27 @@
         </a>
         <ul class="mega-menu hidden">
           <li><a href="#">Populair events</a></li>
-          <li><a href="#">bla</a></li>
-          <li><a href="#">bla</a></li>
-          <li><a href="#">bla</a></li>
+          <li><a href="#">Events nearby</a></li>
+          <li><a href="#">Create events</a></li>
+          <li><a href="#">Event calendar</a></li>
         </ul>
       </li>
       <li><a href="#">About us</a></li>
       <li><a href="#">FAQ</a></li>
-      <li><a href="#">
-          <span>komt later</span></a></li>
+      <li><a href="#">My events</a></li>
+      <% if (user) { %>
+      <form action="/logout" method="post">
+        <button type="submit">Logout</button>
+      </form>
+      <% } else { %>
+      <li class="button-login"><a href="/login">Login</a>
+        <% } %>
+      </li>
+      <li>
+        <a href="#">
+          <img class="profile-icon" src="images/memoji.png" alt="Your profile picture">
+        </a>
+      </li>
     </ul>
   </nav>
   <div class="hamburger">
@@ -30,24 +54,33 @@
       <path d="M4.5 6.23077H19.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
     </svg>
   </div>
-  <div class="close">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-      <path d="M19 19L5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </div>
 </header>
 
 <script>
-  const nav = document.querySelector("nav");
-  const hamBurger = document.querySelector(".hamburger");
-  const close = document.querySelector(".close");
-  const dropdowns = document.querySelectorAll('.dropdown');
+  document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector("nav");
+    const hamburger = document.querySelector(".hamburger");
+    const closeBtn = document.querySelector(".close");
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const overlay = document.querySelector('.page-overlay');
 
-  /*dropdown dekstop*/
-  hamBurger.addEventListener("click", () => {
-    nav.classList.toggle("show");
+    function openMenu() {
+      nav.classList.add('show');
+      overlay.classList.add('is-visible');
+      hamburger.style.display = 'none'; // Hide the hamburger when menu is open
+    }
 
+    function closeMenu() {
+      nav.classList.remove('show');
+      overlay.classList.remove('is-visible');
+      hamburger.style.display = 'block'; // Show the hamburger when menu is closed
+    }
+
+    hamburger.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+
+    /* Dropdown phone */
     dropdowns.forEach(dropdown => {
       const link = dropdown.querySelector('a');
       const svg = link.querySelector('svg');
@@ -58,20 +91,25 @@
         svg.classList.toggle('rotate');
       });
     });
+
+    // Ensure menu is closed when resizing the window
+    window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+        if (nav.classList.contains('show')) {
+          closeMenu();
+        }
+        hamburger.style.display = 'none'; // Hide the hamburger for larger screens
+      } else {
+        if (!nav.classList.contains('show')) {
+          hamburger.style.display = 'block'; // Show the hamburger for smaller screens only if menu is not open
+        }
+      }
+    });
   });
 </script>
 
 
-<!-- <% if (user) { %>
-<form action="/logout" method="post">
-  <button type="submit">Logout</button>
-</form>
-<% } else { %>
-<a href="/login">Login</a>
-<% } %>
-</li>
-</ul>
-</nav> -->
+
 <% if (user) { %>
 <p>Welkom terug, <%= user.name %>!</p>
 <% } %>

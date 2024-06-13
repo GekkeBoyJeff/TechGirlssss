@@ -1,0 +1,83 @@
+<%= console.log(specificEvent) %>
+<div class="event-description-container">
+  <dl>
+    <dt>Name event</dt>
+    <dd> <%= specificEvent.name.text %> </dd>
+    <dt>Organizer</dt>
+    <dd>180 Global</dd>
+    <dt>Location</dt>
+    <dd class="location">
+      <span>
+        <% if (specificEvent.address) { %>
+        <%= specificEvent.address.address.address_1 %>
+        <% } else { %>
+        <%= 'online' %>
+        <% } %>
+      </span>
+
+      <button class="toggle-map">
+        <span>Show map</span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </dd>
+    <dd class="extra-dd">
+      <% if (specificEvent.address) { %>
+      <div class="map hideMap">
+        <iframe src="https://maps.google.com/maps?q=<%= specificEvent.address.latitude %>,<%= specificEvent.address.longitude %>&hl=nl&z=14&amp;output=embed" frameborder="0" width="100%"></iframe>
+        <!-- Hier kun je je kaart implementeren, bijvoorbeeld een iframe van Google Maps -->
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2436.6512337857345!2d4.895167315815028!3d52.37021607978647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609bc06d92c23%3A0xf4e12a152da6e5e!2sAmsterdam%2C%20Netherlands!5e0!3m2!1sen!2sus!4v1625668682684!5m2!1sen!2sus" width="520" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+      </div>
+      <% } %>
+    </dd>
+    <dt>Price</dt>
+    <dd>
+      <ul>
+        <% 
+      let allFree = true;
+      for (let value of Object.values(specificEvent.price)) {
+        if (value.cost && value.cost.display) {
+          allFree = false;
+          break;
+        }
+      } 
+      if (allFree) { %>
+        <li>
+          <p>Free</p>
+        </li>
+        <% } else { %>
+        <% for (let value of Object.values(specificEvent.price)) { %>
+        <li>
+          <% if (value.cost && value.cost.display) { %>
+          <p><%= value.cost.display %></p>
+          <% } else { %>
+          <p>Free</p>
+          <% } %>
+        </li>
+        <% }} %>
+      </ul>
+    </dd>
+
+    <dt>Date & time</dt>
+    <dd>Wed, 26 jun. 2024 17:30 pm - 20:00 pm</dd>
+    <dt>Duration</dt>
+    <dd>2 hours and 30 minutes</dd>
+    <dt>Amount of people</dt>
+    <dd><%= specificEvent.capacity || 'No limit' %></dd>
+    <dt>Main language</dt>
+    <dd><%= specificEvent.locale%></dd>
+  </dl>
+</div>
+<script>
+  document.querySelector('.toggle-map').addEventListener('click', function() {
+    const map = document.querySelector('.map');
+    if (map.classList.contains('hideMap')) {
+      map.classList.remove('hideMap');
+      map.classList.add('expanded');
+    } else {
+      map.classList.add('hideMap');
+      map.classList.remove('expanded');
+    }
+  });
+</script>
