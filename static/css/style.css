@@ -1752,11 +1752,11 @@ section.loginForm a[href="/profile"]:hover {
     .loginForm h2 {
         font-size: 1rem;
     }
-
     .loginForm form label,
     .loginForm form input {
         font-size: 0.8rem;
     }
+
 
     .loginForm {
         margin: 0;
