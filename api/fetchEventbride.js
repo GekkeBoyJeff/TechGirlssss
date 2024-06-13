@@ -154,25 +154,25 @@ export async function fetchTicketClasses(req, eventId) {
 // }
 
 // export async function fetchFullEventDescription(req, eventId) {
-//   const url = `https://www.eventbriteapi.com/v3/events/${eventId}/description/`;
+//   const url = `https://www.eventbriteapi.com/v3/events/${eventId}/description/`
 //   try {
 //     payload.headers = {
 //       Authorization: `Bearer ${process.env.privateToken}`,
-//     };
-//     const response = await fetch(url, payload);
+//     }
+//     const response = await fetch(url, payload)
 //     if (!response.ok) {
-//       console.error("Fetch error:", url);
-//       console.error(await response.text());
+//       console.error("Fetch error:", url)
+//       console.error(await response.text())
 //       throw new Error(
 //         `HTTP error! status: ${response.status} ${response.statusText}`
 //       );
 //     }
 //     const data = await response.json();
-//     console.log(data);
-//     return data;
+//     console.log(data)
+//     return data
 //   } catch (error) {
-//     console.error("Fetch error:", error);
-//     throw error;
+//     console.error("Fetch error:", error)
+//     throw error
 //   }
 // }
 
