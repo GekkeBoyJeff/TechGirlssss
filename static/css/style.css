@@ -705,8 +705,8 @@ padding-left: 1rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.heartButton svg:hover,
-.heartButton svg:hover path {
+.heartButton:hover svg,
+.heartButton:hover svg path {
     animation-name: peach-on-hover;
     animation-timing-function: linear;
     animation-duration: 0.1s;
@@ -714,7 +714,7 @@ padding-left: 1rem;
     cursor: pointer;
 }
 
-.heartButton svg:focus-within,
+.heartButton,
 .heartButton svg:focus-within path {
     animation-name: fill-on-click;
     animation-timing-function: linear;
