@@ -3016,6 +3016,7 @@ img {
 
 p.summary {
     height: 7em;
+    overflow: hidden;
 }
 
 .results a h3{
