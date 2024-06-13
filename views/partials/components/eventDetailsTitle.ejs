@@ -1,6 +1,7 @@
+<%= console.log(specificEvent.logo.original.url) %>
 <article class="eventDetailTitle">
     <article>
-        <img src="images/gradient.jpg" alt="">
+        <img src="<%= specificEvent.logo.original.url %>" alt="">
     </article>
     <article class="actionButtons">
         <button>
@@ -17,7 +18,7 @@
         </button>
     </article>
     <section>
-        <h1>Event title</h1>
+        <h1><%= specificEvent.name.text %></h1>
         <article class="categories">
             <a href="">
                 <p class="category">💗 Creative</p>
@@ -29,7 +30,7 @@
                 <p class="category">🍋 Food</p>
             </a>
         </article>
-        <p>The future of fashion needs to change: join us to learn theories and skills that will help you lead the way!</p>
+        <p><%= specificEvent.description.text %></p>
     </section>
     <article>
         <p>🔥 Almost full</p>
@@ -43,7 +44,7 @@
             </article>
         </article>
         <article class="organiser">
-            <img src="images/organiser-logo.jpeg" alt="">
+            <img src="<%= specificEvent.logo.original.url %>" alt="">
             <p>Event organiser</p>
             <button>
                 <p class="secondary-button">Follow</p>

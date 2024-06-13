@@ -754,11 +754,6 @@ transition: background-color .5s ease, transform .5s;
 align-items: center;
 }
 
-.popularEvents > a:hover {
-    background-color: var(--black);
-    color: var(--white);
-}
-
 
 /* 🃏 DETAIL/POPULAIR CARDS RESPONSIVE 🃏 */
 @media (max-width: 768px) {
@@ -2213,6 +2208,10 @@ font-size: 0.8rem;
     justify-content: center;
     object-fit: cover;
     z-index: -1;
+}
+
+.step1 video{
+    border-radius: none;
 }
 
 
