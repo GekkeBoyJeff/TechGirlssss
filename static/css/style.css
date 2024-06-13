@@ -2640,6 +2640,30 @@ section.profile article.switch-buttons .clicked {
     }
 }
 
+/* //////////////////////// */
+/* 1️⃣2️⃣3️⃣ PAGINATION 4️⃣5️⃣6️⃣  */
+/* //////////////////////// */
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: var(--peachLight);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+}
+
+.pagination .active a{
+    color: var(--peach);
+    border-bottom: solid 0.2rem var(--peach);
+    font-family:  "NeueMontreal Medium";
+}
+
 /* ////////////////////////// */
 /* 💗💗💗 CARDS WISHLIST 💗💗💗 */
 /* ////////////////////////// */
