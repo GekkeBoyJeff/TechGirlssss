@@ -168,6 +168,7 @@ a {
 .primary_button {
     padding: var(--padding-button);
     margin: var(--no-margin);
+    border: none;
     border-radius: var(--border-radius);
 
     font-family: var(--medium);
@@ -177,6 +178,7 @@ a {
     color: var(--black);
     transition: background-color .5s ease, transform .5s;
     text-wrap: nowrap;
+    height: fit-content;
 }
 
 .primary_button:active {
@@ -245,7 +247,7 @@ a {
     .tertiary-button-white,
     .tertiary-button-black {
         padding: var(--padding-button-small);
-        font-size: var(--padding-button-small);
+        font-size: var(--p-button-small);
     }
 
 }
@@ -906,7 +908,7 @@ section.ticker h2.secondary-button {
 }
 
 /* TICKER ANIMATION */
-/* @keyframes ticker1 {
+@keyframes ticker1 {
     0% {
         transform: translate3d(-20%, 0, 0);
     }
@@ -931,7 +933,7 @@ section.ticker h2.secondary-button {
     100% {
         transform: translate3d(-100%, 0, 0);
     }
-} */
+}
 
 article.transition {
     display: flex;
@@ -1064,6 +1066,33 @@ footer article:nth-of-type(2) ul li:first-of-type p {
     font-size: 0.8rem;
     text-align: center;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+/* 👀 FOOTER RESPONSIVE 👀 */
+@media (max-width: 768px) {
+
+    footer section {
+        grid-template-columns: 0.07fr 1fr;
+        grid-template-rows: 0.3fr 0.2fr 0.1fr 0.2fr 0.2fr auto;
+    }
+
+    footer article:nth-of-type(2) {
+        flex-direction: column;
+    }
+
+    .tech-girls {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        font-size: 0.8rem;
+        text-align: center;
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+    }
+
+    footer section p {
+        line-height: var(--line-height);
+    }
+
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -1304,6 +1333,247 @@ footer article:nth-of-type(2) ul li:first-of-type p {
 /* 💬💬💬 EVENT TITLE 💬💬💬 * /
 /* //////////////////////// */
 
+article.eventDetailTitle > article {
+    height: 35rem;
+    border-radius: var(--border-radius);
+    margin: 2rem;
+    position: relative;
+}
+
+article.eventDetailTitle article:nth-of-type(3) {
+    margin: var(--margin-sides);
+    height: fit-content;
+}
+
+article.eventDetailTitle article:first-of-type img {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+    position: relative;
+}
+
+article.eventDetailTitle article.actionButtons {
+    display: flex;
+    gap: 1.5rem;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    z-index: 10;
+    top: 8rem;
+    right: 4rem;
+    margin: 0;
+}
+
+article.eventDetailTitle article.actionButtons > button {
+    background-color: transparent;
+    border: none;
+}
+
+article.eventDetailTitle article.actionButtons > button path {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+article.eventDetailTitle article.actionButtons button:nth-of-type(2) {
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--white);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+article.eventDetailTitle section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 30%;
+}
+
+article.eventDetailTitle section > * {
+    width: 40%;
+}
+
+article.eventDetailTitle p.category {
+    margin: var(--no-margin);
+    text-wrap: nowrap;
+}
+
+article.eventDetailTitle article.categories  {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+article.eventDetailTitle article:nth-of-type(3) > p {
+    background-color: var(--peach);
+    border-radius: 0.5rem;
+    width: fit-content;
+    font-family: var(--medium);
+    padding: 0.2rem 0.6rem;
+    margin-bottom: 2rem;
+}
+
+article.eventDetailTitle article:nth-of-type(3) article:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+article.eventDetailTitle article:nth-of-type(3) article:first-of-type p {
+    width: 60%;
+}
+
+article.eventDetailTitle article:nth-of-type(3) > article article {
+    display: flex;
+    gap: 1rem;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+article.eventDetailTitle span {
+    font-family: var(--medium);
+}
+
+article.eventDetailTitle .organiser {
+    display: flex;
+    gap: 2rem;
+    height: fit-content;
+    width: 34rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 4rem;
+    border: 0.1rem var(--black) solid;
+    border-radius: var(--border-radius);
+}
+
+article.eventDetailTitle .organiser img {
+    object-fit: contain;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--border-radius);
+}
+
+article.eventDetailTitle .organiser p {
+    flex-grow: 1;
+    font-family: var(--medium);
+    font-size: var(--p-button);
+}
+
+article.eventDetailTitle .organiser button {
+    background-color: var(--white);
+    border: none;
+}
+
+/* 💬 EVENT TITLE RESPONSIVE 💬 */
+
+@media (max-width: 768px) {
+
+    article.eventDetailTitle section {
+        top: 27%;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) {
+        margin: var(--margin-sides-small);
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) > p {
+        margin: 0 0 1rem 0;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) article:first-of-type  article {
+        flex-direction: column-reverse;
+        gap: 0.7rem;
+        text-align: center;
+    }
+
+    article.eventDetailTitle .organiser {
+        width: 100%;
+    }
+
+    article.eventDetailTitle .organiser p {
+        font-size: var(--p-button-small);
+    }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+
+    article.eventDetailTitle > article {
+        height: 17rem;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    article.eventDetailTitle > article {
+        height: 16rem;
+        margin: 1rem;
+    }
+
+    article.eventDetailTitle article.actionButtons {
+        top: 6.5rem;
+        right: 2rem;
+        gap: 0.5rem;
+    }
+
+    article.eventDetailTitle article.actionButtons button,
+    article.eventDetailTitle article.actionButtons button:nth-of-type(2) {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    article.eventDetailTitle article.actionButtons button svg,
+    article.eventDetailTitle article.actionButtons button:nth-of-type(2) svg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    article.eventDetailTitle section {
+        top: 21%;
+    }
+
+    article.eventDetailTitle section > * {
+        width: 60%;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) {
+        margin: var(--margin-sides-small);
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) article:first-of-type {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) article:first-of-type p {
+        width: 100%;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) article:first-of-type article {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    article.eventDetailTitle .organiser {
+        margin-top: 2rem;
+    }
+
+}
+
 /* ///////////////////////////// */
 /* 🍉🍉🍉 EVENT DESCRIPTION 🍉🍉🍉 */
 /* ///////////////////////////// */
@@ -1507,7 +1777,7 @@ ul.slider.categories{
     margin-bottom: 0;
 }
 
-/* 🐙CATEGORIES CARDS DEFAULT RESPONSIVE🐙 */
+/* 🐙 CATEGORIES CARDS DEFAULT RESPONSIVE 🐙 */
 @media (max-width: 768px){
     .popularEvents.categories{
         margin: 2rem 0;
@@ -2560,6 +2830,14 @@ p.category {
     border-radius: 2.5rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-size: 0.938rem;
+}
+
+@media (max-width: 768px) {
+
+    p.category {
+        font-size: var(--p-small);
+    }
+
 }
 
 section.profile article:nth-of-type(5) {
