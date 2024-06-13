@@ -8,7 +8,7 @@ export const routes = {
     '/login': { view: 'pages/login', title: 'Login', scripts: [], functions: [loginUser, errorReporter], fetches: [], errors: [] },
     '/register': { view: 'pages/register', title: 'Register', scripts: [], functions: [registerUser, errorReporter], fetches: [], errors: [] },
     '/about': { view: 'pages/about', title: 'About', scripts: [], functions: [], errors: [], fetches: [] },
-    '/faq': { view: 'pages/faq', title: 'FAQ', scripts: [], functions: [], errors: [], fetches: [] },
+    '/faq': { view: 'pages/faq', title: 'FAQ', scripts: ['pedro'], functions: [], errors: [], fetches: [] },
     '/search': { view: 'pages/search', title: 'Search', scripts: [], functions: [autoCompleteSearch], errors: [], fetches:[], givenQuery: ''},
     '/logout': { title: 'Logout', scripts: [], functions: [logoutUser], errors: [], onlyPost: true, fetches: [] },
     '/welcome': { view: 'pages/welcome', title: 'Introduction', scripts: [], functions: [welcomeHandler], errors: [], requiresAuth: true, fetches: [] },
