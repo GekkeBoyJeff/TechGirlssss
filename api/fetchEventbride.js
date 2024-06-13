@@ -97,7 +97,7 @@ export async function fetchSpecificEvent(req, res, next) {
         const vanue = await fetchVanueForLocation(req, data.venue_id)
         req.vanue = vanue
     }
-    data.ticket_classes = ticketClasses
+    // data.ticket_classes = ticketClasses
     req.specificEvent = data
     req.specificEvent.price = ticketClasses
     next()
