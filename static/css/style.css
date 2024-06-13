@@ -53,6 +53,7 @@
     --h3: 1.5rem;
     --p: 1rem;
 
+    --font-weight-medium: 300;
     --letter-spacing: 0.07rem;
     --line-height: 1.438rem;
 
@@ -63,7 +64,7 @@
     --p-small: 0.8rem;
 
     --letter-spacing-small: 0.05rem;
-    --line-height-small: 1.188;
+    --line-height-small: 1.2rem;
     
     /* Desktop margin */
     --margin-sides: 5rem 8rem;
@@ -75,6 +76,7 @@
     /* Button styling */
     --p-button: 1.125rem;
     --padding-button: 0.6rem 1.2rem;
+    --border-radius-button: 2.5rem;
 
     /* Button styling small */
     --p-button-small: 1rem;
@@ -105,20 +107,20 @@ body {
 
 h1 {
     font-family: var(--medium);
-    /* font-weight: 300; */
     font-size: var(--h1);
+    font-weight: var(--font-weight-medium);
 }
 
 h2 {
     font-family: var(--medium);
     font-size: var(--h2); 
-    /* font-weight: 300;  */
+    font-weight: var(--font-weight-medium);
 }
 
 h3 {
     font-family: var(--medium);
     font-size: var(--h3); 
-    /* font-weight: 300; */
+    font-weight: var(--font-weight-medium);
 }
 
 p {
@@ -130,6 +132,7 @@ p {
 
 .pixel_text {
     font-family: var(--pixel);
+    font-style: normal;
 }
 
 a {
@@ -202,9 +205,14 @@ a {
     padding: var(--padding-button);
     margin: var(--no-margin);
     border: 0.1rem var(--black) solid;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-button);
     text-wrap: nowrap;
     background-color: var(--white);
+}
+
+.secondary-button:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /* 🍒 WHITE 🍒 */
@@ -873,47 +881,54 @@ align-items: center;
 /* 🎞️🎞️🎞️ TICKER/SPONSOR BANNER 🎞️🎞️🎞️ */
 /* ///////////////////////////////// */
 
-section.ticker {
+article.ticker {
     height: auto;
-    width: auto;
+    width: 100vw;
+    overflow: hidden;
     background: var(--white);
     padding: 1.2rem 0;
     border-top: 0.1rem var(--black) solid;
 }
 
-section.ticker a {
+article.ticker a {
     height: 2.875rem;
 }
 
-section.ticker em {
+article.ticker em {
     font-size: 3rem;
 }
 
-section.ticker a:has(h2) {
+article.ticker a:has(h2) {
     height: unset;
 }
 
-section.ticker svg, 
-section.ticker img {
+article.ticker svg, 
+article.ticker img {
     height: 70%;
     margin-top: 0.4rem;
 }
 
-section.ticker h2.secondary-button {
-    font-size: 2.5rem;
+article.ticker h2.secondary-button {
+    font-size: var(--h2);
 }
 
 .dots {
-    font-size: 2.5rem;
+    font-size: var(--h2);
+}
+
+article.wrapper {
+	width: 100%;
+	background-color: transparent;
+	position: relative;
 }
 
 /* TICKER ANIMATION */
 @keyframes ticker1 {
     0% {
-        transform: translate3d(-20%, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
     100% {
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-43%, 0, 0);
     }
 }
 
@@ -922,63 +937,62 @@ section.ticker h2.secondary-button {
         transform: translate3d(-10%, 0, 0);
     }
     100% {
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-60%, 0, 0);
     }
 }
 
 @keyframes ticker3 {
     0% {
-        transform: translate3d(-40%, 0, 0);
+        transform: translate3d(-20%, 0, 0);
     }
     100% {
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-60%, 0, 0);
     }
 }
 
-article.transition {
+section.transition {
     display: flex;
     align-items: center;
     gap: 2rem;
     white-space: nowrap;
-    padding: 0 40% 0 0;
 }
 
-article.animation1 {
+section.animation1 {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: ticker1;
-    animation-duration: 80s;
+    animation-duration: 20s;
 }
 
-article.animation2 {
+section.animation2 {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: ticker2;
-    animation-duration: 80s;
+    animation-duration: 20s;
 }
 
-article.animation3 {
+section.animation3 {
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     animation-name: ticker3;
-    animation-duration: 80s;
+    animation-duration: 20s;
 }
 
-article.transition:hover {
+section.transition:hover {
     animation-play-state: paused;
     cursor: pointer;
 }
 
-section.ticker:nth-of-type(2) {
+article.ticker:nth-of-type(2) {
     padding: 0.8rem 0;
 }
 
-section.ticker:last-of-type {
+article.ticker:last-of-type {
     border-bottom: 0.1rem var(--black) solid;
 }
 
 /* Smaller gap between items in second ticker */
-section.ticker:nth-of-type(2) article.transition {
+article.ticker:nth-of-type(2) section.transition {
     gap: 0.6rem;
 }
 
