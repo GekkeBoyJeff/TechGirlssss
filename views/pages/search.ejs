@@ -1,0 +1,33 @@
+<section class="basic">
+    <h1>Find an event that suits you!</h1>
+    <form action="/search" method="post">
+        <label for="query">Search for events</label>
+        <input type="text" id="query" name="query" value="">
+        <button type="submit">search</button>
+    </form>
+</section>
+<% if(givenQuery) {%>
+<section class="basic">
+    <h2>Results for <%= givenQuery %></h2>
+        <% if(autoComplete) { console.log(autoComplete) %>
+            <ul>
+                <% autoComplete.event.forEach(function(event) { %>
+                    <li>
+                        <a href="/events/<%= event.id %>">
+                            <img src="<%= event.image.url %>" alt="<%= event.name %>">
+                            <h3><%= event.name %></h3>
+                            <p><%= event.description %></p>
+                            <p><%= event.start_date %></p>
+                            <p><%= event.summary %></p>
+                            <ul class="tags">
+                                <% event.tags.forEach(function(tags) { %>
+                                    <li><%= tags.display_name %></li>
+                                <% }) %>
+                            </ul>
+                        </a>
+                    </li>
+                <% }) %>
+            </ul>
+        <% } %>
+</section>
+<% } %>

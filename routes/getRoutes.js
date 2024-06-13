@@ -15,6 +15,7 @@ export default function (app) {
                 res.render(route.view, {...route, 
                     specificEvent: req.specificEvent, 
                     popularEvents: req.popularEvents,
+                    popularEventOrganizers: req.popularEventOrganizers,
                     apiData: req.apiData,}
                 )                
             })
