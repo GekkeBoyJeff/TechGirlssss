@@ -1,7 +1,6 @@
 import {routes} from './routes.js'
 import xssMiddleware from '../middlewares/xssMiddleware.js'
 import isAuthenticated from '../middlewares/isAuthenticated.js'
-// import { fetchApi } from '../api/fetchEventbride.js'
 
 export default function (app) {
     for (const [path, route] of Object.entries(routes)) {
@@ -15,6 +14,7 @@ export default function (app) {
                 res.render(route.view, {...route, 
                     specificEvent: req.specificEvent, 
                     popularEvents: req.popularEvents,
+                    popularEventOrganizers: req.popularEventOrganizers,
                     apiData: req.apiData,}
                 )                
             })

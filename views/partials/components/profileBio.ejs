@@ -1,3 +1,6 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
 <section class="profile">
     <div class="profileBanner">
     </div>
@@ -45,28 +48,40 @@
         </ul>
     </article>
     <article class="upcoming-events hidden overviewGrid">
-        <ul>
-            <li>
+        <div id="test-list">
+            <input type="text" class="search" />
+            <ul class="list">
+            <li class="name">
                 <%- include('../components/detailCard.ejs') %>
             </li>
-            <li>
+            <li class="name">
                 <%- include('../components/detailCard.ejs') %>
             </li>
-            <li>
+            <li class="name">
                 <%- include('../components/detailCard.ejs') %>
             </li>
-            <li>
+            <li class="name">
                 <%- include('../components/detailCard.ejs') %>
             </li>
-            <li>
+            <li class="name">
                 <%- include('../components/detailCard.ejs') %>
             </li>
-            <li>
+            <li class="name">
                 <%- include('../components/detailCard.ejs') %>
             </li>
         </ul>
+        <ul class="pagination"></ul>
+    </div>
     </article>
-    <article>
+    <!-- <article>
         <p>4/16 of your saved events seen</p>
-    </article>
+    </article> -->
 </section>
+
+<script>
+    var monkeyList = new List('test-list', {
+    valueNames: ['name'],
+    page: 3,
+    pagination: true
+  });
+</script>
