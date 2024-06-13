@@ -3043,7 +3043,7 @@ img {
 .tags li {
     background: var(--peach);
     padding: .5em;
-    flex: 1;
+    flex: 1 1 26%;
     display: flex;
     align-self: stretch;
     align-items: center;

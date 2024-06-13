@@ -20,9 +20,9 @@
                             <p><%= event.start_date %></p>
                             <p class="summary"><%= event.summary %></p>
                             <ul class="tags">
-                                <% event.tags.forEach(function(tags) { %>
-                                    <li><%= tags.display_name %></li>
-                                <% }) %>
+                                <% for(let i = 0; i < Math.min(6, event.tags.length); i++) { %>
+                                    <li><%= event.tags[i].display_name %></li>
+                                <% } %>
                             </ul>
                         </a>
                     </li>
