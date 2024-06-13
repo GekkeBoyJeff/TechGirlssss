@@ -532,6 +532,7 @@ li a svg {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.5fr 0.5fr;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 .home_banner img:nth-of-type(1) {
@@ -713,6 +714,14 @@ padding-left: 1rem;
 .popularEvents div,
 .popularEvents > a {
     margin-right: 8rem;
+}
+
+.popularEvents > a{
+    margin-right: 8rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Pijlen buttons samen */
