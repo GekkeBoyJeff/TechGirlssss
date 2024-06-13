@@ -11,9 +11,12 @@ export default function (app) {
         }
         if (!route.onlyPost) {
             app.get(path, middlewares, ...route.fetches, (req, res) => { 
-                console.log(req.acceptsLanguages()) // get user language https://expressjs.com/en/api.html#req.acceptsLanguages
-                res.render(route.view, route)
-                // console.log('route: ' + JSON.stringify(req.apiData))            
+                // console.log(req.acceptsLanguages()) // get user language https://expressjs.com/en/api.html#req.acceptsLanguages
+                res.render(route.view, {...route, 
+                    specificEvent: JSON.stringify(req.specificEvent), 
+                    popularEvents: JSON.stringify(req.popularEvents),
+                    apiData: JSON.stringify(req.apiData),}
+                )                
             })
         }
     }
