@@ -93,13 +93,14 @@ export async function fetchSpecificEvent(req, res, next) {
     }
     const data = await response.json()
     const ticketClasses = await fetchTicketClasses(req, id)
-    if(data.venue_id){
-        const vanue = await fetchVanueForLocation(req, data.venue_id)
-        req.vanue = vanue
-    }
+    
     // data.ticket_classes = ticketClasses
     req.specificEvent = data
     req.specificEvent.price = ticketClasses
+    if(data.venue_id){
+      const vanue = await fetchVanueForLocation(req, data.venue_id)
+      req.specificEvent.address = vanue
+  }
     next()
   } catch (error) {
     console.log(error)
