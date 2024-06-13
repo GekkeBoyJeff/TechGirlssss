@@ -2977,3 +2977,114 @@ section.profile article:nth-of-type(5) {
     }
 
 }
+
+.basic {
+    padding: var(--margin-sides-small);
+    text-align: center;
+    text-align: -webkit-center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+    max-width: 70em;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.results a {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    height: 100%;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+.results a h3{
+    width: 100%;
+}
+
+.results > li {
+    border-radius: 1em;
+    overflow: hidden;
+    padding: 1em;
+    flex: 1 1 20em;
+    background: var(--peachLight);
+    transition: .5s;
+}
+
+.results > li img {
+    width: 100%;
+    height: 14em;
+    object-fit: cover;
+    border-radius: .5em;
+}
+
+.tags {
+    display: flex;
+    gap: .5em;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.tags li {
+    background: var(--peach);
+    padding: .5em;
+    flex: 1;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    border-radius: .3em;
+}
+
+.basic form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.basic form label{
+    display:none;
+}
+
+.basic form input {
+    padding: 1em;
+    border: none;
+    background: var(--peachLight);
+    border-radius: 12em;
+    flex: 1 1 15em;
+}
+
+.basic form button{
+    height: 3em;
+    flex: 0 1 9em;
+}
+
+.basic button, .basic a {
+    cursor: pointer;
+}
+
+.results > li:hover {
+    background: var(--peach);
+    transform: scale(1.02);
+}
+
+.results > li:hover .tags li{
+    background: #fae0d7;
+}
