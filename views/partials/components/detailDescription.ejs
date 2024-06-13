@@ -1,4 +1,9 @@
-<%= console.log(specificEvent) %>
+<% const start = new Date(specificEvent.start.local); %>
+<% const end = new Date(specificEvent.end.local); %>
+
+
+
+<%= console.log(specificEvent.locale) %>
 <div class="event-description-container">
   <dl>
     <dt>Name event</dt>
@@ -60,9 +65,9 @@
     </dd>
 
     <dt>Date & time</dt>
-    <dd>Wed, 26 jun. 2024 17:30 pm - 20:00 pm</dd>
+    <dd><%= specificEvent.start.local || 'No limit' %></dd>
     <dt>Duration</dt>
-    <dd>2 hours and 30 minutes</dd>
+    <dd id="event-duration">Timeless Tunes: No Duration</dd>
     <dt>Amount of people</dt>
     <dd><%= specificEvent.capacity || 'No limit' %></dd>
     <dt>Main language</dt>
@@ -70,6 +75,7 @@
   </dl>
 </div>
 <script>
+  
   document.querySelector('.toggle-map').addEventListener('click', function() {
     const map = document.querySelector('.map');
     if (map.classList.contains('hideMap')) {
@@ -80,4 +86,16 @@
       map.classList.remove('expanded');
     }
   });
+
+
+  const startTime = new Date('<%= specificEvent.start.local %>');
+  const endTime = new Date('<%= specificEvent.end.local %>');
+  const durationInMs = endTime - startTime;
+  const durationInMinutes = Math.floor(durationInMs / 60000);
+  const hours = Math.floor(durationInMinutes / 60);
+  const minutes = durationInMinutes % 60;
+  const durationText = `${hours} hour(s) and ${minutes} minute(s)`;
+
+  // Insert duration into the HTML
+  document.getElementById('event-duration').textContent = durationText;
 </script>
