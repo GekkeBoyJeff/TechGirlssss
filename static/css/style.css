@@ -336,7 +336,7 @@ nav ul li a {
     transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.button-login a, .logout-button:hover {
+.button-login a:hover, .logout-button:hover {
     border: var(--peach) solid 0.1rem;
     color: var(--peach);
     transition: color 0.3s ease, border-color 0.3s ease;
@@ -752,6 +752,11 @@ display: flex;
 gap: 2rem;
 transition: background-color .5s ease, transform .5s;
 align-items: center;
+}
+
+.popularEvents > a:hover {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 
@@ -2208,10 +2213,6 @@ font-size: 0.8rem;
     justify-content: center;
     object-fit: cover;
     z-index: -1;
-}
-
-.step1 video{
-    border-radius: none;
 }
 
 
