@@ -2646,6 +2646,7 @@ section.profile article.switch-buttons .clicked {
 
 .pagination{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     gap: 2rem;
     align-items: center;
@@ -2680,7 +2681,8 @@ article.saved-events p:nth-of-type(2) {
 /* 💗 RESPONSIVE CARDS WISHLIST 💗 */
 @media (max-width: 768px) {
     
-    article.saved-events ul, article.upcoming-events ul {
+    article.saved-events ul, 
+    article.upcoming-events ul:first-of-type {
         margin: 2rem 3.5rem 2rem 3.5rem;
     }
 }
@@ -2704,7 +2706,7 @@ article.upcoming-events ul {
 }
 
 /* Section om tekst toegevoegd en display flex column */
-article.upcoming-events ul li section.newSection {
+article.upcoming-events ul:first-of-type li section.newSection {
     display: flex;
     flex-direction: column;
     justify-content: center;
