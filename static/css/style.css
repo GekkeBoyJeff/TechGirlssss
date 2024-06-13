@@ -3074,6 +3074,7 @@ img {
 .basic form button{
     height: 3em;
     flex: 0 1 9em;
+    transition: .5s;
 }
 
 .basic button, .basic a {
