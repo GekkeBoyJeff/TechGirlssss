@@ -707,7 +707,7 @@ padding-left: 1rem;
 
 @keyframes peach-on-hover {
     from {
-        fill: none;
+        fill: var(--peach);
         stroke: var(--peach);
         scale: 106%;
     }
@@ -728,21 +728,9 @@ padding-left: 1rem;
 }
 
 .heartButtonIsClicked {
-    animation-name: fill-on-click;
-    animation-timing-function: linear;
-    animation-duration: 0.1s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes fill-on-click {
-    from {
-        stroke: var(--peach);
-        scale: 106%;
-    }
-    to {
-        stroke: var(--black);
-        scale: 106%;
-    }
+    stroke: var(--peach);
+    fill: var(--peach);
+    cursor: pointer;
 }
 
 /* View all Button  */

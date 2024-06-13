@@ -4,10 +4,11 @@ heartButtonClick.forEach(button => {
     button.addEventListener('click', () => {
         console.log('heart button werkt');
 
-        let heartIcon = button.querySelector("heartIcon");
-        let heartPath = button.querySelector("heartPath");
+        let heartIcon = button.querySelector(".heartIcon");
+        let heartPath = button.querySelector(".heartPath");
 
-        heartButtonIcon.classList.add("heartButtonIsClicked");
-        heartButtonPath.classList.add("heartButtonIsClicked");
-})
+        heartIcon.classList.toggle("heartButtonIsClicked");
+        heartPath.classList.toggle("heartButtonIsClicked");
+
+    })
 })
