@@ -93,11 +93,11 @@ export async function fetchSpecificEvent(req, res, next) {
     }
     const data = await response.json()
     const ticketClasses = await fetchTicketClasses(req, id)
-    // const description = await fetchFullEventDescription(req, id)
+    const vanue = await fetchVanueForLocation(req, data.venue_id)
     data.ticket_classes = ticketClasses
+    req.vanue = vanue
     req.specificEvent = data
     req.specificEvent.price = ticketClasses
-    req.specificEvent.description = description
     next()
   } catch (error) {
     console.log(error)
@@ -128,6 +128,29 @@ export async function fetchTicketClasses(req, eventId) {
     console.error("Fetch error:", error)
     throw error
   }
+}
+
+export async function fetchVanueForLocation(req, eventId){
+  const url = `https://www.eventbriteapi.com/v3/venues/${eventId}/`
+  try {
+    payload.headers = {
+      Authorization: `Bearer ${process.env.privateToken}`,
+    };
+    const response = await fetch(url, payload)
+    if (!response.ok) {
+      console.error("Fetch error:", url)
+      console.error(await response.text())
+      throw new Error(
+        `HTTP error! status: ${response.status} ${response.statusText}`
+      );
+    }
+    const data = await response.json();
+    console.log(data)
+    return data
+} catch (error) {
+    console.error("Fetch error:", error)
+    throw error
+}
 }
 
 // export async function fetchEventCapacity(req, eventId) {
