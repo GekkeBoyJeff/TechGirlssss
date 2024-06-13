@@ -3026,7 +3026,7 @@ section.profile article:nth-of-type(5) {
     margin: 0 auto;
 }
 
-img {
+.basic img {
     max-width: 100%;
 }
 
