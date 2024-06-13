@@ -2208,6 +2208,10 @@ font-size: 0.8rem;
     z-index: -1;
 }
 
+.step1 video{
+    border-radius: none;
+}
+
 
 /* knopjes hover+focus */
 .radio-toolbar label:hover,
