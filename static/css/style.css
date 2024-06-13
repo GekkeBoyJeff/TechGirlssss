@@ -246,7 +246,7 @@ a {
     .tertiary-button-white,
     .tertiary-button-black {
         padding: var(--padding-button-small);
-        font-size: var(--padding-button-small);
+        font-size: var(--p-button-small);
     }
 
 }
@@ -873,7 +873,7 @@ section.ticker h2.secondary-button {
 }
 
 /* TICKER ANIMATION */
-/* @keyframes ticker1 {
+@keyframes ticker1 {
     0% {
         transform: translate3d(-20%, 0, 0);
     }
@@ -898,7 +898,7 @@ section.ticker h2.secondary-button {
     100% {
         transform: translate3d(-100%, 0, 0);
     }
-} */
+}
 
 article.transition {
     display: flex;
@@ -1443,11 +1443,8 @@ article.eventDetailTitle .organiser button {
 }
 
 /* 💬 EVENT TITLE RESPONSIVE 💬 */
-@media (max-width: 768px) {
 
-    article.eventDetailTitle > article {
-        height: 25rem;
-    }
+@media (max-width: 768px) {
 
     article.eventDetailTitle section {
         top: 27%;
@@ -1458,17 +1455,86 @@ article.eventDetailTitle .organiser button {
     }
 
     article.eventDetailTitle article:nth-of-type(3) > p {
-        margin-bottom: 1rem;
+        margin: 0 0 1rem 0;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) article:first-of-type  article {
+        flex-direction: column-reverse;
+        gap: 0.7rem;
+        text-align: center;
+    }
+
+    article.eventDetailTitle .organiser {
+        width: 100%;
+    }
+
+    article.eventDetailTitle .organiser p {
+        font-size: var(--p-button-small);
+    }
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+
+    article.eventDetailTitle > article {
+        height: 17rem;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    article.eventDetailTitle > article {
+        height: 16rem;
+        margin: 1rem;
+    }
+
+    article.eventDetailTitle article.actionButtons {
+        top: 6.5rem;
+        right: 2rem;
+        gap: 0.5rem;
+    }
+
+    article.eventDetailTitle article.actionButtons button,
+    article.eventDetailTitle article.actionButtons button:nth-of-type(2) {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    article.eventDetailTitle article.actionButtons button svg,
+    article.eventDetailTitle article.actionButtons button:nth-of-type(2) svg {
+        width: 1.3rem;
+        height: 1.3rem;
+    }
+
+    article.eventDetailTitle section {
+        top: 21%;
+    }
+
+    article.eventDetailTitle section > * {
+        width: 60%;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) {
+        margin: var(--margin-sides-small);
     }
 
     article.eventDetailTitle article:nth-of-type(3) article:first-of-type {
-        display: flex;
-        justify-content: space-between;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 2rem;
     }
 
     article.eventDetailTitle article:nth-of-type(3) article:first-of-type p {
-        width: 50%;
+        width: 100%;
+    }
+
+    article.eventDetailTitle article:nth-of-type(3) article:first-of-type article {
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    article.eventDetailTitle .organiser {
+        margin-top: 2rem;
     }
 
 }
@@ -1676,7 +1742,7 @@ ul.slider.categories{
     margin-bottom: 0;
 }
 
-/* 🐙CATEGORIES CARDS DEFAULT RESPONSIVE🐙 */
+/* 🐙 CATEGORIES CARDS DEFAULT RESPONSIVE 🐙 */
 @media (max-width: 768px){
     .popularEvents.categories{
         margin: 2rem 0;
@@ -2616,6 +2682,14 @@ p.category {
     border-radius: 2.5rem;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
     font-size: 0.938rem;
+}
+
+@media (max-width: 768px) {
+
+    p.category {
+        font-size: var(--p-small);
+    }
+
 }
 
 section.profile article:nth-of-type(5) {
