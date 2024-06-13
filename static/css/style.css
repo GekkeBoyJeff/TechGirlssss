@@ -743,7 +743,7 @@ padding-left: 1rem;
 }
 
 /* Heart button */
-.detailCard button {
+.detailCard button.heartButton {
     position: absolute;
     right: 0;
     margin-top: 1.5rem; 
@@ -2687,31 +2687,6 @@ section.profile article.switch-buttons .clicked {
     }
 }
 
-/* //////////////////////// */
-/* 1️⃣2️⃣3️⃣ PAGINATION 4️⃣5️⃣6️⃣  */
-/* //////////////////////// */
-
-.pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    align-items: center;
-    font-size: 1.4rem;
-    background-color: var(--peachLight);
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem 2rem;
-    border-radius: var(--border-radius);
-}
-
-.pagination .active a {
-    color: var(--peach);
-    border-bottom: solid 0.2rem var(--peach);
-    font-family:  "NeueMontreal Medium";
-}
-
 /* ////////////////////////// */
 /* 💗💗💗 CARDS WISHLIST 💗💗💗 */
 /* ////////////////////////// */
@@ -2810,19 +2785,6 @@ article.upcoming-events ul li article.detailCard > button {
     background-color: transparent;
     border: none;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
-    position: absolute;
-    right: 0;
-    margin-top: 1.5rem;
-    margin-right: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    height: fit-content;
-    border-radius: var(--border-radius-button);
-    border: 0.1rem var(--black) solid;
-    background-color: transparent;
-    box-shadow: none;
 }
 
 .deregisterButton p {
@@ -2889,7 +2851,7 @@ article.upcoming-events ul li article.detailCard > button {
         justify-content: center;
     }
 
-    article.upcoming-events ul li section.newSection {
+    article.upcoming-events ul:first-of-type li section.newSection {
         justify-content: flex-start;
         gap: 0.7rem;
     }
@@ -2945,6 +2907,31 @@ section.profile article:nth-of-type(5) {
     color: #808080;
     text-align: center;
     margin: 1rem;
+}
+
+/* //////////////////////// */
+/* 1️⃣2️⃣3️⃣ PAGINATION 4️⃣5️⃣6️⃣  */
+/* //////////////////////// */
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    font-size: 1.4rem;
+    background-color: var(--peachLight);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+}
+
+.pagination .active a {
+    color: var(--peach);
+    border-bottom: solid 0.2rem var(--peach);
+    font-family:  "NeueMontreal Medium";
 }
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
