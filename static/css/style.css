@@ -736,7 +736,7 @@ padding-left: 1rem;
 }
 
 /* View all Button  */
-.popularEvents > a {
+.popularEvents a p {
 height: fit-content;
 display: flex;
 gap: 2rem;
