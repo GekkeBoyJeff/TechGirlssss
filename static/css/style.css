@@ -1578,6 +1578,7 @@ ul.slider.categories{
 
 /* pagina */
 .loginForm{
+    position: relative;
     margin: 2.5rem;
     background-color: var(--peachLight);
     height: 81vh;
@@ -1823,8 +1824,29 @@ input[type="checkbox"] {
 /* ////////////////////////////// */
 /* 🔥🔥🔥 ERROR MESSAGE 🔥🔥🔥 */
 /* ////////////////////////////// */
+ul.errorMessage {
+    position: absolute;
+    top: 12rem;
+    left: 16%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    align-items: flex-end;
+}
 
+ul.errorMessage li {
+color: rgba(177, 39, 39, 0.6);
+width: fit-content;
+text-align: end;
+font-size: 0.8rem;
+}
 
+@media (max-width: 768px) {
+    ul.errorMessage{
+        top: 22rem;   
+        left: 30%;
+    }
+}
 
 /* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////////////////////🐆🐆🐆 STEP FORM QUESTION 🐆🐆🐆//////////////////////////////////////////////// */

@@ -1,4 +1,4 @@
-<%= console.log(specificEvent.name.text) %>
+<%= console.log(specificEvent) %>
 <div class="event-description-container">
     <dl>
       <dt>Name event</dt>
@@ -28,7 +28,7 @@
       <dt>Duration</dt>
       <dd>2 hours and 30 minutes</dd>
       <dt>Amount of people</dt>
-      <dd>0 - 50 middle</dd>
+      <dd><%= specificEvent.capacity || 'No limit' %></dd>
       <dt>Main language</dt>
       <dd>English</dd>
     </dl>
