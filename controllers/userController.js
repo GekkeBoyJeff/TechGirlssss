@@ -5,6 +5,7 @@ import { errorReporter } from './formErrorHandler.js'
 import { validate } from '../utils/inputValidation.js'
 
 export const registerUser = async (req, res) => {
+    console.log('registerUser', req.body)
     try {
         const errors = validate(req.body, req.route)
         if (errors) {

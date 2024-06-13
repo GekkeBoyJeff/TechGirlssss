@@ -18,8 +18,8 @@ export function validate(data, route) {
   
   if (route.path !== '/login') {
     rules.name = 'required|min:2' 
-    rules.password += '|regex:/[A-Z]/|regex:/\d/|regex:/[^a-zA-Z0-9]/'
-  }
+    rules.password += '|regex:^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[^a-zA-Z0-9]).+$'
+    }
 
   const validation = new Validator(data, rules, messages)
 

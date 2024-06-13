@@ -10,6 +10,7 @@
     </main>
     <%- include('../partials/footer'); %>
     <% if (scripts) { %>
+        <script src="js/header.js"></script>
         <% scripts.forEach(function(script) { %>
             <script src="js/<%= script %>.js"></script>
         <% }) %>

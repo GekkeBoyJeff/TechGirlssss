@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.49 218.89">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: NeueMontreal-Regular, 'Neue Montreal';
+        font-size: 218px;
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        font-family: PPMondwest-Regular, 'PP Mondwest';
+        font-size: 241px;
+        letter-spacing: 0em;
+      }
+    </style>
+  </defs>
+  <text transform="translate(0 183.1)"><tspan><tspan class="cls-1" x="0" y="0">CR</tspan><tspan class="cls-2" x="294.74" y="0">8.</tspan></tspan></text>
+</svg>

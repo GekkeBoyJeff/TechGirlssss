@@ -1,21 +1,59 @@
+<!--<div class="menu">-->
+<div class="page-overlay"></div>
 <header>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li>
-                <% if (user) { %>
-                    <form action="/logout" method="post">
-                        <button type="submit">Logout</button>
-                    </form>
-                <% } else { %>
-                    <a href="/login">Login</a>
-                <% } %>
-            </li>
-                </ul>
-    </nav>
-    <% if (user) { %>
-        <p>Welkom terug, <%= user.name %>!</p> 
-    <% } %>
+  <a href="/">
+    <img class="logo-cr8" src="/images/logo_cr8.svg" alt="cr8">
+  </a>
+  <nav>
+    <div class="mobile-header">
+      <a href="/" class="mobile-logo">
+        <img src="/images/logo_cr8.svg" alt="cr8">
+      </a>
+      <div class="close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 5L5 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M19 19L5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+    <ul>
+      <li class="dropdown"><a href="/events">Events & workshops
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 8.41693L10.5866 15.0037C10.9633 15.375 11.471 15.5831 12 15.5831C12.529 15.5831 13.0367 15.375 13.4134 15.0037L20 8.41693" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+        <ul class="mega-menu hidden">
+          <li><a href="#">Populair events</a></li>
+          <li><a href="#">Events nearby</a></li>
+          <li><a href="#">Create events</a></li>
+          <li><a href="#">Event calendar</a></li>
+        </ul>
+      </li>
+      <li><a href="/search">Search</a></li>
+      <li><a href="/about">About us</a></li>
+      <li><a href="/faq">FAQ</a></li>
+      <% if (user) { %>
+      <li><a href="#">My events</a></li>
+      <li>
+        <a href="/profile">
+          <img class="profile-icon" src="images/memoji.png" alt="Your profile picture">
+        </a>
+      </li>
+      <li>
+        <form action="/logout" method="post">
+          <button class="logout-button" type="submit">Logout</button>
+        </form>
+      </li>
+      <% } else { %>
+      <li class="button-login"><a href="/login">Login</a></li>
+      <% } %>
+    </ul>
+  </nav>
+  <div class="hamburger">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4.5 12H19.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+      <path d="M4.5 17.7692H19.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+      <path d="M4.5 6.23077H19.5" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" />
+    </svg>
+  </div>
 </header>

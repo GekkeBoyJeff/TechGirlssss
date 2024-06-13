@@ -9,9 +9,14 @@ export default function (app) {
             middlewares.push(isAuthenticated);
         }
         if (!route.onlyPost) {
-            app.get(path, middlewares, (req, res) => { 
-                console.log(req.acceptsLanguages()) // get user language https://expressjs.com/en/api.html#req.acceptsLanguages
-                res.render(route.view, route);
+            app.get(path, middlewares, ...route.fetches, (req, res) => { 
+                // console.log(req.acceptsLanguages()) // get user language https://expressjs.com/en/api.html#req.acceptsLanguages
+                res.render(route.view, {...route, 
+                    specificEvent: req.specificEvent, 
+                    popularEvents: req.popularEvents,
+                    popularEventOrganizers: req.popularEventOrganizers,
+                    apiData: req.apiData,}
+                )                
             })
         }
     }

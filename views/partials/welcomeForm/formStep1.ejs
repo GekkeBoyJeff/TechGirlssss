@@ -1,18 +1,50 @@
-<h1>Welcome <%= user.name %></h1>
-<form action="/welcome" method="post">
-    <fieldset>
-        <label for="age">Hi, my name is <span><%= user.name %></span>, I'm </label>
-        <input type="number" id="age" name="age" required value="<%= user.age %>">
-        <label for="age">years old.</label>
-    </fieldset>
-    <fieldset>
-        <label for="country">I live in</label>
-        <input type="text" id="country" name="country" required value="<%= user.country %>">
-        <label for="language">and I speak</label>
-        <input type="text" id="language" name="language" required value="<%= user.language %>">
-    </fieldset>
-    <div>
-        <button type="submit" id="backButton" name="action" value="back">Back</button>
-        <button type="submit">Next</button>
-    </div>
-</form>
+<section class="formStep step1">
+    <h1>Hi, let’s <span>introduce yourself</span> <%=  %></h1>
+    <form action="/welcome" method="post">
+    
+        <fieldset class="radio-toolbar">
+            <label for="age">Hi, my name is <span><%=  %></span>, I'm </label>
+            <input type="number" id="age" name="age" min="0" max="100" required value="<%= %>">
+            <label for="age">years old.</label>
+        </fieldset>
+    
+        <fieldset class="radio-toolbar">
+            <label for="country">I live in</label>
+            <input type="text" id="country" name="country" list="cityname" required value="<%=  %>">
+            <datalist id="cityname">
+                <option value="Amsterdam">Amsterdam</option>
+                <option value="Alkmaar">Alkmaar</option>
+                <option value="Groningen">Groningen</option>
+                <option value="Haarlem">Haarlem</option>
+                <option value="Leiden">Leiden</option>
+                <option value="Utrecht">Utrecht</option>
+            </datalist>
+        </fieldset>
+    
+        <fieldset class="radio-toolbar">
+            <label for="language">and I speak</label>
+            <select name="language" id="language" required value="<%=  %>">
+                <option value="">... language</option>
+                <option value="english">English</option>
+                <option value="dutch">Dutch</option>
+                <option value="english">Multilingual</option>
+              </select>
+        </fieldset>
+    
+        <div>
+            <button class="secondary-button" type="submit" id="backButton" name="action" value="back">Back</button>
+            <div class="progress-container">
+                <p>Step 1 of 6</p>
+                <progress class="progress-first" value="10" max="100">10%</progress>
+            </div>
+            <button class="tertiary-button-black" type="submit">Next</button>
+        </div>
+    </form>
+    
+    
+    <video autoplay loop muted>
+        <source src="../images/shadergradient.webm" type="video/webm">
+        <!-- Voeg alternatieve bronnen toe voor verschillende videoformaten -->
+    </video>
+      
+    </section>
