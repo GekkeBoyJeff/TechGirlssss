@@ -2583,7 +2583,7 @@ section.profile article:nth-of-type(5) {
 .error a {
     display: flex;
     gap: 0.5rem;
-    margin-top: 5rem;
+    margin: 5rem 0rem 2rem 0rem;
 }
 
 .error a svg {
