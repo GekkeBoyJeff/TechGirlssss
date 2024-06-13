@@ -700,6 +700,49 @@ padding-left: 1rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.heartButton svg:hover,
+.heartButton svg:hover path {
+    animation-name: peach-on-hover;
+    animation-timing-function: linear;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+.heartButton svg:focus-within,
+.heartButton svg:focus-within path {
+    animation-name: fill-on-click;
+    animation-timing-function: linear;
+    animation-duration: 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes peach-on-hover {
+    0% {
+        fill: none;
+        stroke: var(--peach);
+        scale: 106%;
+    }
+    100% {
+        fill: var(--peach);
+        stroke: var(--peach);
+        scale: 106%;
+    }
+}
+
+@keyframes fill-on-click {
+    0% {
+        fill: var(--peach);
+        stroke: var(--peach);
+        scale: 106%;
+    }
+    100% {
+        fill: var(--black);
+        stroke: var(--black);
+        scale: 106%;
+    }
+}
+
 /* View all Button  */
 .popularEvents > a {
 height: fit-content;
