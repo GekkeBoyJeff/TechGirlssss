@@ -16,8 +16,7 @@
                         <a href="/events/<%= event.id %>">
                             <img src="<%= event.image.url %>" alt="<%= event.name %>">
                             <h3><%= event.name %></h3>
-                            <p><%= event.description %></p>
-                            <p><%= event.start_date %></p>
+                            <p class="floatingInImage"><%= event.start_date %></p>
                             <p class="summary"><%= event.summary %></p>
                             <ul class="tags">
                                 <% for(let i = 0; i < Math.min(6, event.tags.length); i++) { %>
