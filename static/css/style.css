@@ -2691,7 +2691,7 @@ section.profile article.switch-buttons .clicked {
 /* 1️⃣2️⃣3️⃣ PAGINATION 4️⃣5️⃣6️⃣  */
 /* //////////////////////// */
 
-.pagination{
+.pagination {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -2706,7 +2706,7 @@ section.profile article.switch-buttons .clicked {
     border-radius: var(--border-radius);
 }
 
-.pagination .active a{
+.pagination .active a {
     color: var(--peach);
     border-bottom: solid 0.2rem var(--peach);
     font-family:  "NeueMontreal Medium";
@@ -2810,6 +2810,19 @@ article.upcoming-events ul li article.detailCard > button {
     background-color: transparent;
     border: none;
     font-family: "NeueMontreal Medium", Arial, Helvetica, sans-serif;
+    position: absolute;
+    right: 0;
+    margin-top: 1.5rem;
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border-radius: var(--border-radius-button);
+    border: 0.1rem var(--black) solid;
+    background-color: transparent;
+    box-shadow: none;
 }
 
 .deregisterButton p {
@@ -3026,7 +3039,7 @@ section.profile article:nth-of-type(5) {
     margin: 0 auto;
 }
 
-.basic img {
+img {
     max-width: 100%;
 }
 
