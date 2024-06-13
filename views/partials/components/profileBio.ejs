@@ -1,11 +1,14 @@
 <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>  
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/min/dropzone.min.js"></script>
 
 <section class="profile">
     <div class="profileBanner">
     </div>
     <article class="bio">
-        <img src="images/memoji.png" alt="Your profile picture">
+        <form action="/file-upload" class="dropzone" id="my-awesome-dropzone"></form>
+        <!-- <img src="images/memoji.png" alt="Your profile picture"> -->
             <article>
                 <a href=""><p class="tertiary-button-black">Edit profile</p></a>
                 <a href=""><p class="secondary-button">Settings</p></a>
@@ -74,6 +77,15 @@
         <p>4/16 of your saved events seen</p>
     </article>
 </section>
+
+<script>
+    Dropzone.options.myAwesomeDropzone = {
+      paramName: "file", // The name that will be used to transfer the file
+      maxFilesize: 2, // Maximum file size in MB
+      acceptedFiles: ".jpg,.png,.gif", // Allowed file types
+      dictDefaultMessage: "Add and drop your profile pic 👀" // Custom message
+    };
+  </script>
 
 <!-- <script>
     var monkeyList = new List('test-list', {
