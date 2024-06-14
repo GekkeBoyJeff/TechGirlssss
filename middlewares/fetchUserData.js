@@ -6,7 +6,7 @@ export default async function fetchUserData(req, res, next){
         console.log("fetchUserData middleware triggered for: ", req.originalUrl); 
         try{
             user = await User.findById(req.session.userId)
-            console.log(user)
+            // console.log(user)
             res.locals.user = {
                 id: user._id,
                 name: user.name,
@@ -22,7 +22,8 @@ export default async function fetchUserData(req, res, next){
                 spendingTimePreferences: user.spendingTimePreferences,
                 preferredArtForm: user.preferredArtForm,
                 musicStyle: user.musicStyle,
-                emotion: user.emotion
+                emotion: user.emotion,
+                advertise: user.advertise
             }
             user = res.locals.user
             // console.log(user)

@@ -1,8 +1,16 @@
 <section class="recommended">
     <h2>Recommended for you</h2>
     <ul>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
-        <li><%- include('./detailCard.ejs') %></li>
+        <% if(user) { %>
+            <% multipleSpecificEvent.forEach(function(event) { %>
+                <li>
+                    <a href="/events/<%= event.id %>">
+                        <img src="<%= event.logo.url %>" alt="<%= event.name %>">
+                        <h3><%= event.name.text %></h3>
+                        <p><%= event.description.text %></p>
+                    </a>
+                </li>
+            <% }); %>
+        <% } %>
     </ul>
 </section>

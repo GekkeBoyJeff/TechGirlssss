@@ -1,16 +1,16 @@
-var audio = document.getElementById("myAudio");
-var audioButton = document.getElementById("audioButton");
+var audio = document.getElementById("myAudio")
+var audioButton = document.getElementById("audioButton")
 
 audioButton.addEventListener("click", function(){
     if (audio.paused) {
-        audio.play();
-        audioButton.textContent = '';
+        audio.play()
+        audioButton.textContent = ''
     } else {
-        audio.pause();
-        audioButton.textContent = '';
+        audio.pause()
+        audioButton.textContent = ''
     }
-});
+})
 
 audio.addEventListener("ended", function(){
-    audioButton.textContent = '';
-});
+    audioButton.textContent = ''
+})
