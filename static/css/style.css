@@ -2567,6 +2567,32 @@ section.profile article.bio img {
     top: 23rem;
 }
 
+form.dropzone {
+    background-color: #e7e7e7;
+    height: 10rem;
+    width: 10rem;
+    border: var(--white) 0.5rem solid;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    left: 5rem;
+    top: 23rem;
+}
+
+form.dropzone button {
+    font-family: var(--medium);
+}
+
+.dropzone .dz-preview .dz-image {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+
 section.profile article.bio article {
     display: flex;
     gap: 1rem;
