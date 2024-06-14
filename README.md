@@ -1,6 +1,10 @@
 # TechGirlssss
 
-Ja, ik ben ook een van de meiden (slay)
+## Ons concept
+Mensen worden gematcht met een evenement/workshop aanbevolen op basis van hun art voorkeuren. Hen wordt eerst persoonlijke- en kunst gerelateerde vragen gesteld met een interactieve quiz. Hierna krijgt de gebruiker een reeks evenementen aangeboden die bij hem/haar passen.
+
+### Made by:
+Jeffrey, Abby, Tessa en Sara
 
 # Bronnen:
 
