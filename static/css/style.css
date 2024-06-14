@@ -1409,6 +1409,7 @@ article.eventDetailTitle article:first-of-type img {
     border-radius: var(--border-radius);
     object-fit: cover;
     position: relative;
+    filter:opacity(50%);
 }
 
 article.eventDetailTitle article.actionButtons {
