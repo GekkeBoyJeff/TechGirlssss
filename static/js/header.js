@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const link = dropdown.querySelector('a');
       const svg = link.querySelector('svg');
       link.addEventListener('click', function(e) {
-        e.preventDefault();
+        // e.preventDefault();
         const megaMenu = dropdown.querySelector('.mega-menu');
         megaMenu.classList.toggle('open');
         svg.classList.toggle('rotate');
