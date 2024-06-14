@@ -60,6 +60,9 @@ const userSchema = new mongoose.Schema({
     emotion:{
         type: Array
     },
+    advertise:{
+        type: Array
+    }
 }, 
 {
     timestamps: true
