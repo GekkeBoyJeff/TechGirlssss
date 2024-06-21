@@ -58,7 +58,7 @@ export async function popularEventOrganizers(req, res, next) {
 
 export async function fetchSpecificEvent(req, res, next) {
   const { id } = req.params
-  console.log(id)
+  // console.log(id)
   const url = eventURL + id
   try {
     const response = await fetch(url, payload)
@@ -119,7 +119,7 @@ export async function fetchVanueForLocation(req, eventId) {
       console.error(await response.text())
     }
     const data = await response.json()
-    console.log(data)
+    // console.log(data)
     return data
   } catch (error) {
     console.error("Fetch error:", error)
