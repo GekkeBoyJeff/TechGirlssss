@@ -1,5 +1,5 @@
-var audio = document.getElementById("myAudio")
-var audioButton = document.getElementById("audioButton")
+const audio = document.getElementById("myAudio")
+const audioButton = document.getElementById("audioButton")
 
 audioButton.addEventListener("click", function(){
     if (audio.paused) {
